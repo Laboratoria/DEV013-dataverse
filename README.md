@@ -968,5 +968,4 @@ Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 Recuerda que debes hacer una autoevaluación de _objetivos de aprendizaje_ y
 _life skills_ desde tu dashboard de estudiante.
 
-Si no has completado todo lo anterior, no consideramos que estás lista para
-tu sesión de Project Feedback.
+
