@@ -1,8 +1,6 @@
 export default [
   {
-
     //Ornamentales
-
     "id": "begonia",
     "name": "Begonia",
     "description": "La Begonia es una planta de flores vistosas, conocida por su variedad en formas, tamaños y colores. Es popular tanto en jardines como en macetas interiores.", 
@@ -66,7 +64,6 @@ export default [
       "climaticData": "Se adapta a una variedad de climas, prefiere suelo húmedo."
     }
   },
-  
   {
     "id": "clivia",
     "name": "Clivia",
@@ -88,7 +85,6 @@ export default [
       "climaticData": "Prefiere sombra parcial y suelo bien drenado."
     }
   },
-
   //Medicinales
   {
     "id": "aloe-vera",
