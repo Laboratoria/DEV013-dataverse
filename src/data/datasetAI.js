@@ -5,7 +5,7 @@ export default [
     "name": "Begonia",
     "description": "La Begonia es una planta de flores vistosas, conocida por su variedad en formas, tamaños y colores. Es popular tanto en jardines como en macetas interiores.", 
     "shortDescription": "Planta de flores vistosas, ideal para jardines y macetas interiores.",
-    "imageUrl": "2.png",
+    "imageUrl": "resources/Images/2.png",
     "facts": {
       "botanicalFamily": "Begoniaceae",
       "birthPlace": "Ambientes tropicales y subtropicales",

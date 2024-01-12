@@ -1,0 +1,329 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html {
+    /* background-color: olive; */
+    margin-top: 10px;
+}
+
+/* body {
+    background-color: olivedrab;
+    /* font-family: 'Lato', sans-serif;
+    font-family: 'Marcellus', serif;
+    font-family: 'Marcellus SC', serif; *//*
+} */
+
+/* Header styles */
+header {
+    /* background-color: aquamarine; */
+    margin: auto;
+    /* margin: 30px 10px 10px 10px; */
+    padding: 10px;
+    max-width: 800px;
+}
+
+/* Brand Styles */
+ header #brand{
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    font-family: 'Marcellus', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+header #brand img {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+
+header #brand h1 {
+    margin: 10px;
+}
+
+/* Categories aside styles */
+header aside {
+    /* background-color: #008000; */
+    display: flex;
+    /* justify-content: center; */
+    font-family: 'Marcellus', serif;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+header aside article {
+    /* background-color: aliceblue; */
+    padding: 10px;
+    
+}
+
+/* header input {
+    background-color: green;
+}
+
+header label {
+    background-color: green;
+} */
+
+/* Order by styles */
+header .orderBy {
+    /* background-color: aqua; */
+    margin: auto;
+}
+
+/* Main styles */
+main {
+    /* background-color: green; */
+    max-width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+section[name="cards"] {
+    background-color: #EBD0BF;
+    width: 276px;
+    border-radius: 10px;
+    height: 481px;
+    padding: 5px;
+    margin: 30px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+#cardContainer {
+    /* background-color: blue; */
+    padding: 5px;
+}
+
+#frontCard {
+    /* background-color: #EBD0BF; */
+    padding: 5px;
+    height: 458px;
+    margin: auto;
+}
+
+#frontCard h2 {
+    text-align: center;
+    font-family: 'Marcellus', serif;
+    color: #AF4401;
+    padding: 10px;
+}
+
+#frontCard .topCard {
+    /* background-color: black; */
+    display: flex;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+}
+
+#frontCard img {
+    margin: 0;
+    /* background-color: #AF4401; */
+}
+
+#frontCard #facts {
+    /* background-color: aqua; */
+    text-align: center;
+    margin: auto;
+    padding: 30px 0 20px 0;
+}
+
+#frontCard #facts h4 {
+    padding: 10px;
+}
+
+#frontCard #facts .amount {
+    /* background-color: blue; */
+    display: flex;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: #8A988C 2px solid;
+    box-shadow: 1px 1px 5px grey;
+}
+
+#frontCard .amount img {
+    /* background-color: white; */
+    width: 20px;
+    height: 20px;
+    /* margin: 5px 0; */
+}
+
+#frontCard .amount img.inactiva {
+    opacity: .5;
+}
+
+#frontCard p {
+    /* background-color: aliceblue; */
+    padding: 5px;
+    margin: 10px 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    height: 60px;
+}
+
+#frontCard .buttonContainer {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+}
+
+#frontCard button {
+    background-color: #D7A180;
+    width: 137px;
+    height: 32px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 5px grey;
+}
+
+/* Back card style */
+#backCard {
+    /* background-color: white; */
+    padding: 1px;
+    text-align:right;
+    height: 461px;
+    display: none;
+}
+
+#backCard h2 {
+    /* background-color: aquamarine; */
+    font-size: 26px;
+    color: #AF4401;
+    font-family: 'Marcellus', serif;
+}
+
+/* #backCard .topCard {
+    background-color: #D7A180;
+} */
+
+#backCard h3 {
+    /* background-color: aquamarine; */
+    font-size: 18px;
+    color: #AF4401;
+    margin: -10px -5px 5px 0;
+    font-family: 'Marcellus', serif;
+}
+
+#backCard .detail {
+    /* background-color: #AF4401; */
+    width: 147px;
+    margin-right: -5px;
+}
+
+#backCard h4 {
+    /* background-color: aquamarine; */
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+}
+
+#backCard p {
+    /* background-color: black; */
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+#backCard img {
+    /* background-color: #8A988C; */
+    width: 92px;
+    height: 156px;
+    margin: 0 5px 0 -5px;
+    /* margin-right: 10px; */
+    /* margin-left: -5px; */
+}
+
+#backCard .topCard {
+    display: flex;
+    padding: 5px;
+    margin: 5px 0 10px 0;
+    text-align: right;
+}
+
+#backCard #description {
+    text-align: left;
+    height: 205px;
+}
+
+#backCard #icons {
+    /* background-color: #AF4401; */
+    height: 30px;
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+#backCard #icons img {
+    width: 30px;
+    height: 30px;
+}
+
+#backCard #icons .stats {
+    /* background-color: black; */
+    margin: 0 0 0 15px;
+    display: flex;
+    padding-right: 10px;
+}
+
+#backCard #icons .stats .stats1 {
+    /* background-color: aqua; */
+    margin-right: 20px;
+}
+
+#backCard #icons .back {
+    /* background-color: black; */
+    width: 30px;
+    margin: 0 0 0 120px;
+}
+
+/* header aside {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    font-family: 'Marcellus', serif;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+header aside label {
+    margin: 30px;
+} */
+
+
+
+
+/* section[name="cards"] {
+    background-color: #153119;
+    padding: 10px;
+    max-width: 300px;
+}
+
+#card {
+    background-color: #4F6F1D;
+    padding: 10px;
+}
+
+.front-card {
+    background-color: #EBD0BF;
+    padding: 10px;
+}
+
+.back-card {
+    background-color: #EBD0BF;
+    padding: 10px;
+} */
