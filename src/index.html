@@ -10,47 +10,52 @@
     />
     <title>My Beauty Plants</title>
     <link rel="icon" src="resources/Icons/Logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <header>
-      <section id="brand">
-        <img src="resources/Icons/Logo.png" alt="Logo" />
+      <img src="resources/Icons/Logo.png" alt="Logo" height="60px" width="60px"/>
+      <section>
         <h1>My Beauty Plants</h1>
       </section>
       <hr>
-
       <aside>
-        <article>
+        <div class="itemAside">
           <input type="image" id="Ornamentales" name="Ornamentales" class="category" src="resources/Icons/Ornamentales.png" height="40px" width="40px"/>
           <label for="Ornamentales">Ornamentales </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Medicinales" name="Name" class="category" src="resources/Icons/Medicinales.png" height="40px" width="40px"/>
           <label for="Medicinales">Medicinales </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Desérticas" name="Name" class="category" src="resources/Icons/Desérticas.png" height="40px" width="40px"/>
-          <label for="Desérticas"> Desérticas</label>
-        </article>
-        <article>
+          <label for="Desérticas"> Desérticas</label></div>
+        <div class="itemAside">
           <input type="image" id="Árboles" name="Árboles" class="category" src="resources/Icons/Árboles.png" height="40px" width="40px"/>
           <label for="Árboles">Árboles </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Aromáticas" name="Name" class="category" src="resources/Icons/Aromáticas.png" height="40px" width="40px"/>
           <label for="Aromáticas">Aromáticas </label>
-        </article>
-        <article class="orderBy">
-          <label for="order">Ordenar por:</label>
-          <select name="order" id="order">
-            <option value="a-z">A - Z</option>
-            <option value="z-a">Z - A</option>
-          </select>
-        </article>
+        </div>
+          <div class="dropdown">
+          <label for="order" class="dropbtn">Ordenar por</label>
+          <ul class="itemOrder">
+            <li>A - Z</li>
+            <li>Z - A</li>
+          </ul>
+        </div>
+          <!--
+          <div> 
+        <label for="order" class="dropbtn">Ordenar por</label>
+        <select name="order" id="order">
+          <option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select> 
+        </div>
+         -->
       </aside>
       <hr>
     </header>
