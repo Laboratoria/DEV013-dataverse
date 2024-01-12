@@ -9,90 +9,137 @@
       content="This is the second proyect of Laboratoria bootcamp, first time working as a team"
     />
     <title>My Beauty Plants</title>
-    <link rel="icon" href="resources/Icons/Logo.png" />
+    <link rel="icon" src="resources/Icons/Logo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="main.js" type="module"></script>
-    <header> 
+
+    <header>
       <img src="resources/Icons/Logo.png" alt="Logo" height="60px" width="60px"/>
-      <h1>My Beauty Plants</h1>
-
+      <section>
+        <h1>My Beauty Plants</h1>
+      </section>
+      <hr>
       <aside>
-        <label for="Ornamentales">Ornamentales </label>
-        <input type="image" id="Ornamentales" name="Ornamentales" class="category" src="resources/Icons/Ornamentales.png" height="40px" width="40px"/>
-
-        <label for="Medicinales">Medicinales </label>
-        <input type="image" id="Medicinales" name="Name" class="category" src="resources/Icons/Medicinales.png" height="40px" width="40px"/>
-
-        <label for="Desérticas"> Desérticas</label>
-        <input type="image" id="Desérticas" name="Name" class="category" src="resources/Icons/Desérticas.png" height="40px" width="40px"/>
-
-        <label for="Árboles">Árboles </label>
-        <input type="image" id="Árboles" name="Árboles" class="category" src="resources/Icons/Árboles.png" height="40px" width="40px"/>
-
-        <label for="Aromáticas">Aromáticas </label>
-        <input type="image" id="Aromáticas" name="Name" class="category" src="resources/Icons/Aromáticas.png" height="40px" width="40px"/>
-
-        <label for="order">Ordenar por:</label>
+        <div class="itemAside">
+          <input type="image" id="Ornamentales" name="Ornamentales" class="category" src="resources/Icons/Ornamentales.png" height="40px" width="40px"/>
+          <label for="Ornamentales">Ornamentales </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Medicinales" name="Name" class="category" src="resources/Icons/Medicinales.png" height="40px" width="40px"/>
+          <label for="Medicinales">Medicinales </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Desérticas" name="Name" class="category" src="resources/Icons/Desérticas.png" height="40px" width="40px"/>
+          <label for="Desérticas"> Desérticas</label></div>
+        <div class="itemAside">
+          <input type="image" id="Árboles" name="Árboles" class="category" src="resources/Icons/Árboles.png" height="40px" width="40px"/>
+          <label for="Árboles">Árboles </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Aromáticas" name="Name" class="category" src="resources/Icons/Aromáticas.png" height="40px" width="40px"/>
+          <label for="Aromáticas">Aromáticas </label>
+        </div>
+          <div class="dropdown">
+          <label for="order" class="dropbtn">Ordenar por</label>
+          <ul class="itemOrder">
+            <li>A - Z</li>
+            <li>Z - A</li>
+          </ul>
+        </div>
+          <!--
+          <div> 
+        <label for="order" class="dropbtn">Ordenar por</label>
         <select name="order" id="order">
           <option value="a-z">A - Z</option>
           <option value="z-a">Z - A</option>
-        </select>
+        </select> 
+        </div>
+         -->
       </aside>
-
-    </header>
-  <main>
-<h2>Plantas</h2>
-<section name="cards">
-  <div id="card">
-    <div class="front-card show" id="front-card">
-      <h2>Nombre Común</h2>
-      <img alt="Nombre" src="resources/Images/1.png" />
-      <div class="facts">
-        <label>Agua</label>
-        <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
-        <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
-        <img alt="Gota" src="resources/Icons/Agua inactiva.png" height="30px" width="30px"/> <br>
-        <label>Luz</label>
-        <img alt="Sol" src="resources/Icons/Luz activa.png" height="30px" width="30px"/>
-        <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/>
-        <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/><br>
-        <label>Cuidado</label>
-        <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" height="30px" width="30px"/>
-        <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" height="30px" width="30px"/>
-        <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" height="30px" width="30px"/>
-        <p><strong>Descripcion corta </strong> tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button type="button" id="seeMoreButton">Detalles</button>
-      </div>
-    </div>
       <hr>
-    <div class="back-card" id="back-card">
-      <img alt="Nombre" src="resources/Images/1.png"/>
-      <h2>Nombre Común</h2>
-      <h3>Nombre científico</h3>
-      <h4>Familia botanica</h4>
-      <p>Lorem ipsum</p>
-      <h4>Uso</h4>
-      <p>Dolor sit amet</p>
-      <h4>Datos climaticos</h4>
-      <p>Consectetur adipiscing</p>
-      <h4>Descripción</h4>
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <h4>Mantenimiento</h4>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <input type="image" id="stats1" src="resources/Icons/Estadísticas 1.png" height="30px" width="30px"/>
-      <input type="image" id="stats2" src="resources/Icons/Estadísticas 2.png" height="30px" width="30px"/>
-      <input type="image" id="return" src="resources/Icons/Regresar.png" height="30px" width="30px"/>
-    </div>
-    <hr>
-  </div>
-</section>
+    </header>
+
+
+  <main>
+    <h2>Plantas</h2>
+    <!--<section name="cards">
+    <article id="cardContainer">
+      <article id="frontCard">
+        <h2>Plant Name</h2>
+        <img alt="Plant Name" src="resources/Images/1.png" />
+        <article id="facts">
+          <article id="water">
+            <h4>Water</h4>
+            <article id="water amount">
+              <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
+              <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
+              <img alt="Gota" src="resources/Icons/Agua inactiva.png" height="30px" width="30px"/>
+            </article>
+          </article>
+          <article id="light">
+            <h4>Light</h4>
+            <article id="light amount">
+              <img alt="Sol" src="resources/Icons/Luz activa.png" height="30px" width="30px"/>
+              <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/>
+              <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/>
+            </article>
+          </article>
+          <article id="care">
+            <h4>Care</h4>
+            <article id="care amount">
+              <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" height="30px" width="30px"/>
+              <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" height="30px" width="30px"/>
+              <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" height="30px" width="30px"/>
+            </article>
+          </article>
+        </article>
+        <p>Short description</p>
+        <button>DETALLES</button>
+      </article>
+      <hr>
+      <article id="backCard">
+        <img alt="Plant Name" src="resources/Images/1.png" />
+        <h2>Plant Name</h2>
+        <h3>Scientific Plant Name</h3>
+        <article id="deails">
+          <h4>Botanical Family</h4>
+          <p>Lorem ipsum</p>
+          <h4>Usage</h4>
+          <p>Dolor sit amet</p>
+          <h4>Climate data</h4>
+          <p>Consectetur adipiscin</p>
+        </article>
+        <article id="description">
+          <h4>Description</h4>
+          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h4>Maintenance</h4>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </article>
+        <article id="icons">
+          <img alt="Estadisticas 1" src="resources/Icons/Estadísticas 1.png" height="30px" width="30px"/>
+          <img alt="Estadisticas 1" src="resources/Icons/Estadísticas 2.png" height="30px" width="30px"/>
+          <img alt="Regresar" src="resources/Icons/Regresar.png" height="30px" width="30px"/>
+        </article>
+      </article>
+    </article>
+    </section> -->
   </main>
   <footer>
-   <p>My Beauty Plants</p>
-   &copy; Etelbina Cañedo Joseline García
-   <p>Bootcamp Laboratoria</p>
+   <!-- <img src="resources/Icons/Logo.png" alt="Logo" height="30px" width="30px"/> -->
+    <p class="footer">MY BEAUTY PLANT</p>
+    <p class="footer">Etelbina Cañedo & Joseline García</p>
+    <p class="footer">Bootcamp Laboratoria</p>
   </footer>
   </body>
+  <script src="main.js" type="module"></script> 
 </html>
+
+
+
+
+
+
+
+
+
