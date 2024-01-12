@@ -90,25 +90,25 @@ export default [
       "mainField": "Literatura"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=Viv5M5VT&id=D77BB7A17DD837F580C491CDB28B6DB97BCD07A4&thid=OIP.Viv5M5VTWQFSt8Shw1VJ2QHaKL&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.562bf9339553590152b7c4a1c35549d9%3frik%3dpAfNe7lti7LNkQ%26riu%3dhttp%253a%252f%252f4.bp.blogspot.com%252f-5HZXq3byWus%252fUSYlOAEMdOI%252fAAAAAAAAADI%252fHS5o-Yxc97E%252fs1600%252fagatha-christie.jpg%26ehk%3dfObIS%252b7Lvj9fSETZCZeNV0%252bkUCwg6KQHX5JB7uL59Og%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1600&expw=1164&q=Agatha+Christie&simid=608036338881401166&FORM=IRPRST&ck=4EDD6E4F42EF0B381A36F5B2E7D06199&selectedIndex=2&itb=0&ajaxhist=0&ajaxserp=0"
     }
   },
-  {
-    "id": "007",
-    "name": "Charlotte Brontë",
-    "shortDescription": "Novelista británica, autora de la célebre obra 'Jane Eyre'.",
-    "description": "Charlotte Brontë fue una destacada novelista británica del siglo XIX, conocida por su obra maestra 'Jane Eyre'. Su escritura introspectiva y su exploración de la condición femenina en la sociedad victoriana han dejado una marca duradera en la literatura clásica. Brontë sigue siendo una figura venerada en la historia de la literatura.",
-    "imageUrl": "URL_DE_LA_IMAGEN",
-    "facts": {
-      "yearOfBirth": "1816",
-      "yearOfDeath": "1855",
-      "birthPlace": "Thornton, Reino Unido",
-      "mainField": "Literatura"
-    },
-    "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
-    }
+ {
+  "id": "007",
+  "name": "Gabriela Mistral",
+  "shortDescription": "Poeta chilena y diplomática, primera latinoamericana en recibir el Premio Nobel de Literatura.",
+  "description": "Gabriela Mistral, seudónimo de Lucila de María del Perpetuo Socorro Godoy Alcayaga, fue una destacada poeta chilena y diplomática. Nació el 7 de abril de 1889 en Vicuña, Chile, y falleció el 10 de enero de 1957. Mistral fue la primera latinoamericana en recibir el Premio Nobel de Literatura, otorgado en 1945. Su obra poética aborda temas como la maternidad, la naturaleza y la injusticia social. Algunas de sus obras más conocidas incluyen 'Desolación' y 'Lagar'. Además de su labor literaria, Mistral se destacó como educadora y diplomática, representando a Chile en diversos países.",
+  "imageUrl": "URL_DE_LA_IMAGEN",
+  "facts": {
+    "yearOfBirth": "1889",
+    "yearOfDeath": "1957",
+    "birthPlace": "Vicuña, Chile",
+    "mainField": "Poesía"
   },
+  "extraInfo": {
+    "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+  }
+},
   {
     "id": "008",
     "name": "Claribel Alegría",
@@ -122,7 +122,7 @@ export default [
       "mainField": "Poesía, Novela"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.buscabiografias.com/biografia/verDetalle/6461/Claribel%20Alegria"
     }
   },
   {
@@ -137,7 +137,7 @@ export default [
       "mainField": "Literatura"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "Uhttps://www.thescottishsun.co.uk/fabulous/5489621/harry-potter-jk-rowling/"
     }
   },
   {
@@ -153,7 +153,7 @@ export default [
       "mainField": "Literatura"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=2zyET30q&id=30EED5E2C8F21E7AE0F3D792494DFA7021345A94&thid=OIP.2zyET30qOhO5FWOojjpVdAAAAA&mediaurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FRothwellMaryShelley.jpg%2F1200px-RothwellMaryShelley.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.db3c844f7d2a3a13b91563a88e3a5574%3Frik%3DlFo0IXD6TUmS1w%26pid%3DImgRaw%26r%3D0&exph=577&expw=474&q=Mary+Shelley&simid=608038692494511836&form=IRPRST&ck=8AFF163AF26C9A19789A962F3DC7D714&selectedindex=1&itb=0&ajaxhist=0&ajaxserp=0&vt=0&sim=11"
     }
   },
   {
@@ -169,7 +169,7 @@ export default [
       "mainField": "Poesía"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.bing.com/images/create/crea-una-imagen-de-la-escritora-mujer-emily-dickin/1-659eee6c9b2d4a44898e0d5f11eab3e5?darkschemeovr=0&FORM=GENCRE"
     }
   },
   {
@@ -312,20 +312,21 @@ export default [
     }
   },
   {
-    "id": "021",
-    "name": "Amy Tan",
-    "shortDescription": "Escritora estadounidense conocida por sus obras sobre la experiencia china-americana.",
-    "description": "Amy Tan es una destacada escritora estadounidense cuyas obras exploran la complejidad de la identidad china-americana y las relaciones familiares. Su novela más conocida, 'El club de la buena estrella', aborda temas de cultura, tradición y la conexión entre generaciones. Tan ha dejado una marca significativa en la literatura contemporánea.",
-    "imageUrl": "URL_DE_LA_IMAGEN",
-    "facts": {
-      "yearOfBirth": "1952",
-      "birthPlace": "Oakland, California, EE. UU.",
-      "mainField": "Literatura"
-    },
-    "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
-    }
+  "id": "021",
+  "name": "Julia de Burgos",
+  "shortDescription": "Poeta y escritora puertorriqueña, conocida por su poesía comprometida y su activismo.",
+  "description": "Julia de Burgos fue una destacada poeta y escritora puertorriqueña nacida el 17 de febrero de 1914 en Carolina, Puerto Rico, y falleció el 6 de julio de 1953. Conocida por su poesía comprometida y su activismo social, Burgos dejó un legado duradero en la literatura puertorriqueña. Su obra abordó temas como la igualdad racial, la emancipación de la mujer y la justicia social. Algunas de sus obras más reconocidas incluyen 'Poema en veinte surcos' y 'Canción de la verdad sencilla'. Además de su labor literaria, Burgos también participó activamente en movimientos sociales y políticos de su tiempo.",
+  "imageUrl": "URL_DE_LA_IMAGEN",
+  "facts": {
+    "yearOfBirth": "1914",
+    "yearOfDeath": "1953",
+    "birthPlace": "Carolina, Puerto Rico",
+    "mainField": "Poesía"
   },
+  "extraInfo": {
+    "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+  }
+},
   {
     "id": "022",
     "name": "Piedad Bonnet",
