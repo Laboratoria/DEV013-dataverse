@@ -2,46 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="authors" content="Joseline García & Etelbina Cañedo" />
+    <meta name="authors" content="Joseline García & Etelbina Cañedo">
     <title>Dataverse</title>
-    <meta
-      name="description"
-      content="This is the second proyect of Laboratoria bootcamp, first time working as a team"
-    />
-    <title>My Beauty Plants</title>
-    <link rel="icon" src="resources/Icons/Logo.png" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="This is the second proyect of Laboratoria bootcamp, first time working as a team">
+    <link rel="icon" href="resources/Icons/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <header>
-      <img src="resources/Icons/Logo.png" alt="Logo" height="60px" width="60px"/>
-      <section>
+      <section id="brand">
+        <img src="resources/Icons/Logo.png" alt="Logo">
         <h1>My Beauty Plants</h1>
       </section>
       <hr>
       <aside>
         <div class="itemAside">
-          <input type="image" id="Ornamentales" name="Ornamentales" class="category" src="resources/Icons/Ornamentales.png" height="40px" width="40px"/>
+          <input type="image" id="Ornamentales" name="Ornamentales" alt="Ornamentales" class="category" src="resources/Icons/Ornamentales.png">
           <label for="Ornamentales">Ornamentales </label>
         </div>
         <div class="itemAside">
-          <input type="image" id="Medicinales" name="Name" class="category" src="resources/Icons/Medicinales.png" height="40px" width="40px"/>
+          <input type="image" id="Medicinales" name="Medicinales" alt="Medicinales" class="category" src="resources/Icons/Medicinales.png">
           <label for="Medicinales">Medicinales </label>
         </div>
         <div class="itemAside">
-          <input type="image" id="Desérticas" name="Name" class="category" src="resources/Icons/Desérticas.png" height="40px" width="40px"/>
+          <input type="image" id="Desérticas" name="Desérticas" alt="Desérticas" class="category" src="resources/Icons/Desérticas.png">
           <label for="Desérticas"> Desérticas</label></div>
         <div class="itemAside">
-          <input type="image" id="Árboles" name="Árboles" class="category" src="resources/Icons/Árboles.png" height="40px" width="40px"/>
+          <input type="image" id="Árboles" name="Árboles" alt="Árboles" class="category" src="resources/Icons/Árboles.png">
           <label for="Árboles">Árboles </label>
         </div>
         <div class="itemAside">
-          <input type="image" id="Aromáticas" name="Name" class="category" src="resources/Icons/Aromáticas.png" height="40px" width="40px"/>
+          <input type="image" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="resources/Icons/Aromáticas.png">
           <label for="Aromáticas">Aromáticas </label>
         </div>
           <div class="dropdown">
-          <label for="order" class="dropbtn">Ordenar por</label>
+          <label id="order" class="dropbtn">Ordenar por</label>
           <ul class="itemOrder">
             <li>A - Z</li>
             <li>Z - A</li>
@@ -61,89 +60,88 @@
     </header>
 
   <main>
-    <h2>Plantas</h2>
-    <!--<section name="cards">
-    <article id="cardContainer">
-      <article id="frontCard">
-        <h2>Plant Name</h2>
-        <article class="topCard">
-          <img alt="Plant Name" src="resources/Images/agave azul.png" />
-          <article id="facts">
-            <article id="water" class="fact">
-              <h4>Water</h4>
-              <article id="water amount" class="amount">
-                <img alt="Gota" src="resources/Icons/Agua activa.png" />
-                <img alt="Gota" src="resources/Icons/Agua activa.png" />
-                <img alt="Gota" src="resources/Icons/Agua inactiva.png" class="inactiva"/>
+    <h2 class="unnecessary">Plantas</h2>
+    <div class="cards">
+      <div class="card-container">
+        <article id="front-card">
+          <h2>Plant Name</h2>
+          <div class="top-card">
+            <img alt="Plant Name" src="resources/Images/agave-azul.png">
+            <div id="facts">
+              <div id="water" class="fact">
+                <h4>Water</h4>
+                <div id="water-amount" class="amount">
+                  <img alt="Gota" src="resources/Icons/agua-activa.png">
+                  <img alt="Gota" src="resources/Icons/agua-activa.png">
+                  <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva">
+                </div>
+              </div>
+              <article id="light" class="fact">
+                <h4>Light</h4>
+                <div id="light-amount" class="amount">
+                  <img alt="Sol" src="resources/Icons/luz-activa.png">
+                  <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva">
+                  <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva">
+                </div>
+              </article>
+              <article id="care" class="fact">
+                <h4>Care</h4>
+                <div id="care-amount" class="amount">
+                  <img alt="Semaforo" src="resources/Icons/cuidado-activa.png">
+                  <img alt="Semaforo" src="resources/Icons/cuidado-activa.png">
+                  <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" class="inactiva">
+                </div>
+              </article>
+            </div>
+          </div>
+          <p>Short description tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="button-container">
+            <button>Detalles</button>
+          </div>
+        </article>
+        <article id="back-card">
+          <h2>Plant Name</h2>
+          <div class="top-card">
+            <img alt="Plant Name" src="resources/Images/agave-azul.png">
+            <article id="deails">
+              <h3>Scientific Name</h3>
+              <article class="detail">
+                <h4>Botanical Family</h4>
+                <p>Lorem ipsum</p>
+              </article>
+              <article class="detail">
+                <h4>Usage</h4>
+                <p>Dolor sit amet</p>
+              </article>
+              <article class="detail">
+                <h4>Climate data</h4>
+                <p>Consectetur adipiscin</p>
               </article>
             </article>
-            <article id="light" class="fact">
-              <h4>Light</h4>
-              <article id="light amount" class="amount">
-                <img alt="Sol" src="resources/Icons/Luz activa.png" />
-                <img alt="Sol" src="resources/Icons/Luz inactiva.png" class="inactiva"/>
-                <img alt="Sol" src="resources/Icons/Luz inactiva.png" class="inactiva"/>
-              </article>
-            </article>
-            <article id="care" class="fact">
-              <h4>Care</h4>
-              <article id="care amount" class="amount">
-                <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" />
-                <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" />
-                <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" class="inactiva"/>
-              </article>
-            </article>
+          </div>
+          <article id="description">
+            <h4>Description</h4>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h4>Maintenance</h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </article>
+          <div id="icons">
+            <div class="stats">
+              <img class="stats1" alt="Estadisticas 1" src="resources/Icons/estadisticas-1.png">
+              <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
+            </div>
+            <div class="back">
+              <img alt="Regresar" src="resources/Icons/regresar.png">
+            </div>
+          </div>
         </article>
-        <p>Short description tempor incididunt ut labore et dolore magna aliqua.</p>
-        <article class="buttonContainer">
-          <button>Detalles</button>
-        </article>
-      </article>
-      <article id="backCard">
-        <h2>Plant Name</h2>
-        <article class="topCard">
-          <img alt="Plant Name" src="resources/Images/agave azul.png" />
-          <article id="deails">
-            <h3>Scientific Name</h3>
-            <article class="detail">
-              <h4>Botanical Family</h4>
-              <p>Lorem ipsum</p>
-            </article>
-            <article class="detail">
-              <h4>Usage</h4>
-              <p>Dolor sit amet</p>
-            </article>
-            <article class="detail">
-              <h4>Climate data</h4>
-            <p>Consectetur adipiscin</p>
-            </article>
-        </article>
-        </article>
-        <article id="description">
-          <h4>Description</h4>
-          <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <h4>Maintenance</h4>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </article>
-        <article id="icons">
-          <article class="stats">
-            <img class="stats1" alt="Estadisticas 1" src="resources/Icons/Estadísticas 1.png" />
-            <img class="stats2" alt="Estadisticas 1" src="resources/Icons/Estadísticas 2.png" />
-          </article>
-          <article class="back">
-            <img alt="Regresar" src="resources/Icons/Regresar.png" />
-          </article>
-        </article>
-      </article>
-      </article>
-    </article>
-    </section>
+      </div>
+    </div>
   </main>
   <footer>
-   <!-- <img src="resources/Icons/Logo.png" alt="Logo" height="30px" width="30px"/> -->
-   <p>Bootcamp Laboratoria</p>
-   &copy; Etelbina Cañedo \& Joseline García
+    <p class="footer">MY BEAUTY PLANT</p>
+    <p class="footer">Etelbina Cañedo & Joseline García</p>
+    <p class="footer">Bootcamp Laboratoria</p>
   </footer>
   </body>
   <script src="main.js" type="module"></script> 
