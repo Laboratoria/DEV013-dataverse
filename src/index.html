@@ -22,44 +22,50 @@
         <h1>My Beauty Plants</h1>
       </section>
       <hr>
-
       <aside>
-        <article>
+        <div class="itemAside">
           <input type="image" id="Ornamentales" name="Ornamentales" class="category" src="resources/Icons/Ornamentales.png" height="40px" width="40px"/>
           <label for="Ornamentales">Ornamentales </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Medicinales" name="Name" class="category" src="resources/Icons/Medicinales.png" height="40px" width="40px"/>
           <label for="Medicinales">Medicinales </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Desérticas" name="Name" class="category" src="resources/Icons/Desérticas.png" height="40px" width="40px"/>
-          <label for="Desérticas"> Desérticas</label>
-        </article>
-        <article>
+          <label for="Desérticas"> Desérticas</label></div>
+        <div class="itemAside">
           <input type="image" id="Árboles" name="Árboles" class="category" src="resources/Icons/Árboles.png" height="40px" width="40px"/>
           <label for="Árboles">Árboles </label>
-        </article>
-        <article>
+        </div>
+        <div class="itemAside">
           <input type="image" id="Aromáticas" name="Name" class="category" src="resources/Icons/Aromáticas.png" height="40px" width="40px"/>
           <label for="Aromáticas">Aromáticas </label>
-        </article>
-        <article class="orderBy">
-          <label for="order">Ordenar por:</label>
-          <select name="order" id="order">
-            <option value="a-z">A - Z</option>
-            <option value="z-a">Z - A</option>
-          </select>
-        </article>
+        </div>
+          <div class="dropdown">
+          <label for="order" class="dropbtn">Ordenar por</label>
+          <ul class="itemOrder">
+            <li>A - Z</li>
+            <li>Z - A</li>
+          </ul>
+        </div>
+          <!--
+          <div> 
+        <label for="order" class="dropbtn">Ordenar por</label>
+        <select name="order" id="order">
+          <option value="a-z">A - Z</option>
+          <option value="z-a">Z - A</option>
+        </select> 
+        </div>
+         -->
       </aside>
       <hr>
     </header>
 
+
   <main>
     <h2>Plantas</h2>
-    
-    <section name="cards">
-
+    <!--<section name="cards">
     <article id="cardContainer">
       <article id="frontCard">
         <h2>Plant Name</h2>
@@ -135,13 +141,23 @@
       </article>
       </article>
     </article>
-    </section>
+    </section> -->
   </main>
   <footer>
    <!-- <img src="resources/Icons/Logo.png" alt="Logo" height="30px" width="30px"/> -->
-   <p>Bootcamp Laboratoria</p>
-   &copy; Etelbina Cañedo \& Joseline García
+    <p class="footer">MY BEAUTY PLANT</p>
+    <p class="footer">Etelbina Cañedo & Joseline García</p>
+    <p class="footer">Bootcamp Laboratoria</p>
   </footer>
   </body>
-  <!-- <script src="main.js" type="module"></script> -->
+  <script src="main.js" type="module"></script> 
 </html>
+
+
+
+
+
+
+
+
+
