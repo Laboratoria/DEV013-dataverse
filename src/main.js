@@ -1,6 +1,17 @@
 import { renderItems } from './view.js';
 import data from './data/datasetAI.js';
 
+//seleccionar el lugar donde se va a imprimir la data 
+//puede ser con query selector
+
+const cards=renderItems(data);
+
+document.body.appendChild(cards);
+
+
+
+
+//document.querySelector('#root').appendChild(renderItems(data));
 
 document.addEventListener('DOMContentLoaded', () => {
   const tarjetas = renderItems(data);
