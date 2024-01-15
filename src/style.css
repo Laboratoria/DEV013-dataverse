@@ -308,9 +308,6 @@ header aside label {
     margin: 30px;
 } */
 
-
-
-
 /* section[name="cards"] {
     background-color: #153119;
     padding: 10px;
@@ -331,3 +328,114 @@ header aside label {
     background-color: #EBD0BF;
     padding: 10px;
 } */
+
+aside{
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+}
+
+.itemAside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=image]{
+    width: 40px;
+    height: 40px;
+}
+
+label{
+    margin-top: 5px;
+}
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropbtn{
+    position: absolute;
+    top: -5px;
+    left:0px;
+    z-index: 2;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+
+    background: #C4CBC5;
+    border: #8A988C solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: smaller;
+} 
+
+.dropdown select{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    width: 60px;
+    height: 20px;
+
+    text-align: center;
+    background-color:#FFFFFF;
+    border: #8A988C;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+
+footer{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height: 70px;
+    width:100%;
+    background-color: #D7A180;
+}
+.footer{
+    color:#FFFFFF;
+    margin:2px;
+    font-weight: bold;
+}
+
+
+/*
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropbtn{
+    background: #C4CBC5;
+    border: #8A988C solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itemOrder{
+    position:absolute;
+    display:none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(218, 210, 200);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown:hover .itemOrder{
+    display:block;
+    text-align: center;
+    background-color:#FFFFFF;
+    border: #8A988C;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    text-decoration:none;
+    font-weight: bold;
+}*/
