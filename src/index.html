@@ -28,32 +28,35 @@
           <label for="Medicinales">Medicinales </label>
         </div>
         <div class="itemAside">
-          <input type="image" id="Desérticas" name="Desérticas" alt="Desérticas" class="category" src="resources/Icons/Desérticas.png">
+          <input type="image" id="Desérticas" name="Desérticas" alt="Desérticas" class="category" src="resources/Icons/deserticas.png">
           <label for="Desérticas"> Desérticas</label></div>
         <div class="itemAside">
-          <input type="image" id="Árboles" name="Árboles" alt="Árboles" class="category" src="resources/Icons/Árboles.png">
+          <input type="image" id="Árboles" name="Árboles" alt="Árboles" class="category" src="resources/Icons/arboles.png">
           <label for="Árboles">Árboles </label>
         </div>
         <div class="itemAside">
-          <input type="image" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="resources/Icons/Aromáticas.png">
+          <input type="image" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="resources/Icons/aromaticas.png">
           <label for="Aromáticas">Aromáticas </label>
-        </div>
+          </div>
+
+          <!--
           <div class="dropdown">
-          <label id="order" class="dropbtn">Ordenar por</label>
+          <label id="order" class="dropbtn">Ordenar</label>
           <ul class="itemOrder">
             <li>A - Z</li>
             <li>Z - A</li>
           </ul>
         </div>
-          <!--
-          <div> 
-        <label for="order" class="dropbtn">Ordenar por</label>
-        <select name="order" id="order">
+      -->
+      
+          <div class="dropdown"> 
+        <label id="order" class="dropbtn">Ordenar</label>
+        <select name="order" id="itemOrder">
           <option value="a-z">A - Z</option>
           <option value="z-a">Z - A</option>
         </select> 
         </div>
-         -->
+
       </aside>
       <hr>
     </header>
@@ -140,7 +143,7 @@
   </main>
   <footer>
     <p class="footer">MY BEAUTY PLANT</p>
-    <p class="footer">Etelbina Cañedo & Joseline García</p>
+    <p class="footer">Etelbina Cañedo y Joseline García</p>
     <p class="footer">Bootcamp Laboratoria</p>
   </footer>
   </body>
@@ -153,5 +156,36 @@
 
 
 
+<!--const personas = [
+  {
+    nombre: "Christian",
+    facts: {
+      pais: "México",
+      musica: {
+        rock: [],
+        pop: [],
+        luisMiguel: ['Cuando calienta el sol', 'Inolvidable', {
+          album: 'México en la Piel',
+          cancion: 'México'
+        }]
+      }
+    }
+  },
+  {
+    nombre: "Wendy",
+    facts: {
+      pais: "Venezuela"
+    }
+  },
+  {
+    nombre: "Camila",
+    facts: {
+      pais: "Ecuador"
+    }
+  }
+];
 
+personas.forEach((persona) => {
+  document.write(`<h2>${persona.facts.musica.luisMiguel[2].album}</h2>`);
+});-->
 
