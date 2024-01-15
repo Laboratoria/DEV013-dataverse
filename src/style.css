@@ -102,6 +102,10 @@ main .unnecessary {
     box-shadow: 2px 2px 5px gray;
 }
 
+ul {
+    list-style:none
+}
+
 .card-container {
     /* background-color: blue; */
     padding: 5px;
@@ -112,6 +116,7 @@ main .unnecessary {
     padding: 5px;
     height: 458px;
     margin: auto;
+    display: none;
 }
 
 #front-card h2 {
@@ -201,7 +206,7 @@ main .unnecessary {
     padding: 1px;
     text-align:right;
     height: 461px;
-    display: none;
+    /* display: none; */
 }
 
 #back-card h2 {
