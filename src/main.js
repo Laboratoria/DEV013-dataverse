@@ -7,7 +7,7 @@ const cards=renderItems(data);
 
 document.body.appendChild(cards);
 
-seleccionar el boton en
+//seleccionar el boton 
 //agregar un event listener al los botones 
 // el evento a escuchar seria un click 
 //al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
