@@ -152,6 +152,9 @@ ul {
     height: 471px;
 }
 
+.hide {
+    display: none;
+}
 
 #front-card {
     background-color: #EBD0BF;
@@ -255,7 +258,7 @@ ul {
     padding: 1px;
     text-align: right;
     height: 461px;
-    display: none;
+    /*display: none;*/
 }
 
 #back-card h2 {
