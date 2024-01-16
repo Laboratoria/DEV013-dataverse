@@ -1,23 +1,69 @@
-#root {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  li {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  
-  h2 {
-    margin-bottom: 5px;
-  }
-  
-  p {
-    margin: 5px 0;
-  }
+header {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100px;
+  height: 120px;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 8 px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+dd[itemprop="name"] {
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+dd[itemprop="Descripción"] {
+  text-align: justify;
+}
+
+dd[itemprop="fechaNacimiento"],
+dd[itemprop="fechaMuerte"],
+dd[itemprop="LugarNacimiento"],
+dd[itemprop="género"]
+{
+text-align: justify;
+}
+
+dt[itemprop="fechaNacimiento"],
+dt[itemprop="fechaMuerte"],
+dt[itemprop="LugarNacimiento"],
+dt[itemprop="género"] {
+  text-align: justify;
+  display: inline;
+  margin: 0;
+ }
+
+dt {
+  font-weight: bold;
+}
+footer {
+  background-color: #fcf8f8;
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
