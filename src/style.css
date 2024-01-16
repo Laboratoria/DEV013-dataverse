@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
   background-color: white;
   padding: 10px 20px;
@@ -67,3 +68,49 @@ footer {
   text-align: center;
   padding: 10px;
 }
+=======
+#root {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  body{
+    margin: 0;
+  }
+  
+  li {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+  }
+  
+  header {
+    font-family:inherit;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1); 
+}
+
+  h1{
+   text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+
+  footer{
+    font-family: inherit;
+    text-align: center;
+  }
+>>>>>>> 0fe25188d37b97a505d1c694296db39c0d94eb2e

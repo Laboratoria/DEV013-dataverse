@@ -185,7 +185,7 @@ const data = [
       "mainField": "Poesía, Novela"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://media.vogue.es/photos/5db83156eff8ad0008ae18e2/2:3/w_2240,c_limit/GettyImages-515404262.jpg"
     }
   },
   {
@@ -201,7 +201,7 @@ const data = [
       "mainField": "Literatura"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://es.babelio.com/users/AVT_Harper-Lee_6495.jpg"
     }
   },
   {
@@ -216,7 +216,7 @@ const data = [
       "mainField": "Literatura"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www3.gobiernodecanarias.org/medusa/proyecto/38015175-0003/wp-content/uploads/sites/322/2019/02/02-chimamanda-2-w512-h600-2x.jpg"
     }
   },
   {
@@ -232,7 +232,7 @@ const data = [
       "mainField": "Poesía, Autobiografía"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.usatoday.com/gcdn/-mm-/a0666bbc7cf0321038277471f57c92bd680559c4/c=0-314-1370-1087/local/-/media/USATODAY/GenericImages/2014/05/28//1401284180000-XXX-ANGELOU-MOM-BOOKS-2370.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp"
     }
   },
   {
