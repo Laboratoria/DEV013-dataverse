@@ -8,15 +8,15 @@
 /* html {
     background-color: olive;
     padding: 5px;
-}*/
+} */
 
-/* body {
-    background-color: olivedrab;
-    padding: 5px; */
+body {
+    /* background-color: olivedrab;  */
+    padding: 0 50px;
     /* font-family: 'Lato', sans-serif;
     font-family: 'Marcellus', serif;
-    font-family: 'Marcellus SC', serif; *//*
-}*/
+    font-family: 'Marcellus SC', serif; */
+}
 
 /* Header styles */
 header {
@@ -33,7 +33,7 @@ header #brand {
     font-family: 'Marcellus', serif;
     text-transform: uppercase;
     font-size: 23px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
  
 header #brand img {
@@ -52,7 +52,10 @@ header #brand h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
 }
    
 .itemAside {
@@ -121,37 +124,43 @@ label {
 
 /* Main styles */
 main {
-    /* background-color: green; */
+    /* background-color: plum; */
+    padding: 0 80px;
+    width: 1600px;
     max-width: 80%;
+    /* height: 100%; */
     display: flex;
     margin: auto;
     justify-content: center;
+    margin-left: 175px;
 }
  
 main .unnecessary {
     display: none;
 }
 
-ul {
-    list-style:none
+#root {
+    /* background-color: #AF4401; */
+    width: 100%;
+    margin: 10px 0 120px 0;
+    /* margin-bottom: 120px; */
 }
 
-.cards {
-    background-color: #EBD0BF;
-    width: 276px;
-    border-radius: 10px;
-    height: 481px;
-    padding: 5px;
-    margin: 30px;
-    box-shadow: 2px 2px 5px gray;
+ul {
+    /* background-color: purple; */
+    list-style: none;
 }
 
 .card-container {
-    /* background-color: blue; */
+    background-color: #EBD0BF;
     padding: 5px;
-    height: 471px;
+    width: 276px;
+    border-radius: 10px;
+    height: 481px;
+    margin: 30px 40px;
+    box-shadow: 2px 2px 5px gray;
+    float: left;
 }
-
 
 #front-card {
     background-color: #EBD0BF;
@@ -252,9 +261,9 @@ ul {
 /* Back card style */
  #back-card {
     /* background-color: white; */
-    padding: 1px;
+    padding: 5px 5px;
     text-align: right;
-    height: 461px;
+    height: 471px;
     display: none;
 }
 
@@ -267,10 +276,10 @@ ul {
 
 #back-card .top-card {
     /* background-color: #D7A180; */
-    height: 156px;
+    height: 150px;
     display: flex;
     padding: 0 5px;
-    margin: 5px 0 0 0;
+    margin: 5px 0 10px 0;
     text-align: right;
 }
 
@@ -283,19 +292,36 @@ ul {
 
 #back-card dt.scientific {
     /* background-color: aquamarine; */
-    font-size: 18px;
+    font-size: 16px;
     color: #AF4401;
-    margin: -10px 0 5px 0;
+    margin-top: -10px;
+    width: 167px;
+    padding: 5px;
     font-family: 'Marcellus', serif;
+}
+
+#back-card img {
+    /* background-color: #8A988C; */
+    width: 85px;
+    height: 156px;
+    margin: -20px 5px 0 -5px;
+    /* margin-right: 5px; */
+    margin-left: -5px;
+}
+
+#back-card .top-card dl {
+    /* background-color: beige; */
+    /* margin: 0 -5px 0 0; */
+    /* width: 350px; */
 }
 
 #back-card dt {
     /* background-color: #AF4401; */
-    width: 152px;
+    width: 167px;
     /* margin-right: -5px; */
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 
@@ -313,24 +339,15 @@ ul {
     font-size: 14px;
 }
 
-#back-card img {
-    /* background-color: #8A988C; */
-    width: 92px;
-    height: 156px;
-    margin: 0 5px 0 -5px;
-    margin-right: 10px;
-    margin-left: -5px;
-}
-
 /* #back-card .bottom-card {
-    background-color: #AF4401;
-    height: 200px;
+    background-color: blue;
+    height: 170px;
 } */
 
 #back-card #description {
     /* background-color: aqua; */
     text-align: left;
-    height: 225px;
+    height: 236px;
 }
 
 #back-card #icons {

@@ -5,7 +5,7 @@ import data from './data/datasetAI.js';
 
 const cards=renderItems(data);
 
-document.body.appendChild(cards);
+document.main.appendChild(cards);
 
 //seleccionar el boton 
 //agregar un event listener al los botones 
@@ -14,7 +14,7 @@ document.body.appendChild(cards);
 
 function turnCard() {
 
-};
+}
 
 
 button-container.addEventListener('click',turnCard)
