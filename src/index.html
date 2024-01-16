@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <dl itemscope itemtype="http://schema.org/Person">
-      <img src="URL_DE_LA_IMAGEN" alt="Jane Austen">
-      <dt>Nombre:</dt><dd itemprop="name">Jane Austen</dd>
-      <dt>Descripción corta:</dt><dd itemprop="description">Escritora británica conocida por sus novelas románticas realistas.</dd>
-      <dt>Descripción:</dt><dd itemprop="additionalType">Jane Austen fue una destacada novelista británica del siglo XIX, conocida por sus novelas que exploran la condición de las mujeres en la sociedad de la época y su aguda crítica social...</dd>
-      <dt>Año de nacimiento:</dt><dd itemprop="birthDate">1775</dd>
-      <dt>Año de fallecimiento:</dt><dd itemprop="deathDate">1817</dd>
-      <dt>Lugar de nacimiento:</dt><dd itemprop="birthPlace">Steventon, Reino Unido</dd>
-      <dt>Campo principal:</dt><dd itemprop="mainField">Literatura</dd>
-      <dt>Enlace de imagen:</dt><dd itemprop="image" content="URL_DE_LA_IMAGEN"></dd>
-      <dt>Enlace de fuente de imagen:</dt><dd itemprop="source" content="https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"></dd>
-    </dl>
-    <script src="main.js" type="module"></script>
-  </body>
+<html lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escritoras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1>
+  </header>
+
+  <div id="root">
+    <ul id="cardList"></ul>
+  </div>
+
+  <script src="view.js" type="module"></script>
+  <script src="dataset.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  <script src="dataFunctions.js" type="module"></script>
+
+  <footer>
+    Desarrolladoras: Raiza Gatica/Elizabeth Patiño J.
+  </footer>
+</body>
+
 </html>
