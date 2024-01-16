@@ -1,15 +1,31 @@
 import { renderItems } from './view.js';
 import data from './data/datasetAI.js';
 
+//seleccionar el lugar donde se va a imprimir la data (puede ser con query selector)
 
-document.querySelector('section[name="cards"]').appendChild(renderItems(data))
-//console.log(renderItems(data), );
-/*
-const seeMoreButton = document.getElementById("seeMoreButton");
-seeMoreButton.addEventListener("click", function seeMore() {
-    // document.getElementsByID("front-card").className = "front-card hide";
-    // document.getElementsByID("back-card").className = "back-card show";
-});*/
+const cards=renderItems(data);
+
+document.body.appendChild(cards);
+
+//seleccionar el boton 
+//agregar un event listener al los botones 
+// el evento a escuchar seria un click 
+//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
+
+function turnCard() {
+
+};
 
 
-//renderItems(data)
+button-container.addEventListener('click',turnCard)
+
+
+
+//document.querySelector('#root').appendChild(renderItems(data));
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tarjetas = renderItems(data);
+
+  // para que se agregue las tarjetas como hijas del elemento main
+  document.body.appendChild(tarjetas);  
+});

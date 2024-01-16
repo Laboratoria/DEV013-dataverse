@@ -1,56 +1,80 @@
 export const renderItems = (data) => {
-  const container = document.createElement('section');
-  // console.log(data)
+  //crear el contenedor y guardarlo en una variable 
+  const cardList = document.createElement('ul');
+
+  //iterar en el arreglo (usar for each)
+  // por cada elemento se debe crear un li 
+  //cada li debe tener la estructura html predefinida 
+  //cada li se debe agregar a la ul 
+  //insertar el ul completo al dom 
+
+  /** Template string **/ 
+  // container.innerHTML += `<p>${element.name}</p>`
+
   data.forEach(element => {
-    //console.log(element);
-    /** Template string **/ 
-    // container.innerHTML += `<p>${element.name}</p>`
-    container.innerHTML += `<div id="card">
-    <div class="front-card" id="front-card">
+    const cardItem = document.createElement('li')
+
+    cardItem.innerHTML += `<li class="card-container" itemscope itemtype="https://schema.org">
+    <article id="front-card">
       <h2>${element.name}</h2>
-      <img alt="Nombre" src="${element.imageUrl}" />
-      <div class="facts">
-        <label>Agua</label>
-        <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
-        <img alt="Gota" src="resources/Icons/Agua activa.png" height="30px" width="30px"/>
-        <img alt="Gota" src="resources/Icons/Agua inactiva.png" height="30px" width="30px"/> <br>
-
-        <label>Luz</label>
-        <img alt="Sol" src="resources/Icons/Luz activa.png" height="30px" width="30px"/>
-        <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/>
-        <img alt="Sol" src="resources/Icons/Luz inactiva.png" height="30px" width="30px"/><br>
-
-        <label>Cuidado</label>
-        <img alt="Semaforo" src="resources/Icons/Cuidado activa.png" height="30px" width="30px"/>
-        <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" height="30px" width="30px"/>
-        <img alt="Semaforo" src="resources/Icons/Cuidado inactiva.png" height="30px" width="30px"/>
-
-        <p><strong>Descripcion corta </strong> tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button type="button" id="seeMoreButton">Detalles</button>
+      <div class="top-card">
+        <img alt="Plant Name" src="${element.imageUrl}">
+        <dl itemscope itemtype="https://schema.org">
+          <dt itemprop="water-amount" class="amount">Water</dt>
+            <dd>
+              <img alt="Gota" src="${element.facts.water}" width="30px" height="30px">
+              <img alt="Gota" src="${element.facts.water}" width="30px" height="30px">
+              <img alt="Gota" src="${element.facts.water}" class="inactiva" width="30px" height="30px">
+            </dd>
+          <dt itemprop="light-amount" class="amount">Light</dt>
+            <dd>
+              <img alt="Sol" src="${element.facts.sunLigth}" width="30px" height="30px">
+              <img alt="Sol" src="${element.facts.sunLigth}" class="inactiva" width="30px" height="30px">
+              <img alt="Sol" src="${element.facts.sunLigth}" class="inactiva" width="30px" height="30px">
+            </dd>
+          <dt itemprop="care-amount" class="amount">Care</dt>
+            <dd>
+              <img alt="Semaforo" src="${element.facts.careDifficulty}" width="30px" height="30px">
+              <img alt="Semaforo" src="${element.facts.careDifficulty}" width="30px" height="30px">
+              <img alt="Semaforo" src="${element.facts.careDifficulty}" class="inactiva" width="30px" height="30px">
+            </dd>
+        </dl>
       </div>
-    </div>
-      <hr>
-    <div class="back-card" id="back-card">
-      <img alt="Nombre" src="resources/Images/1.png"/>
-      <h2>Nombre Común</h2>
-      <h3>Nombre científico</h3>
-      <h4>Familia botanica</h4>
-      <p>Lorem ipsum</p>
-      <h4>Uso</h4>
-      <p>Dolor sit amet</p>
-      <h4>Datos climaticos</h4>
-      <p>Consectetur adipiscing</p>
-      <h4>Descripción</h4>
-      <p>${element.description}</p>
-      <h4>Mantenimiento</h4>
-      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <input type="image" id="stats1" src="resources/Icons/Estadísticas 1.png" height="30px" width="30px"/>
-      <input type="image" id="stats2" src="resources/Icons/Estadísticas 2.png" height="30px" width="30px"/>
-      <input type="image" id="return" src="resources/Icons/Regresar.png" height="30px" width="30px"/>
-    </div>
-    <hr>
-  </div>`
+      <p>${element.shortDescription}</p>
+      <div class="button-container">
+        <button>Detalles</button>
+      </div>
+    </article>
+    <article id="back-card">
+      <h2>${element.name}</h2>
+      <div class="top-card">
+        <img alt="Plant Name" src="${element.imageUrl}">
+        <dl itemscope itemtype="https://schema.org">
+          <dt>${element.scientificName}</dt>
+          <dt class="detail">Botanical Family</dt><dd>${element.botanicalFamily}</dd>
+          <dt class="detail">Usage</dt><dd>${element.applications}</dd>
+          <dt class="detail">Climate data</dt><dd>${element.climaticData}</dd>
+        </dl>
+        <dl id="description">
+          <dt>Description</dt><dd>${element.description}</dd>
+          <dt>Maintenance</dt><dd>${element.maintenance}</dd>
+        </dl>
+      </div>
+      <div id="icons">
+        <div class="stats">
+          <img class="stats1" alt="Estadisticas 1" src="resources/Icons/estadisticas-1.png">
+          <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
+        </div>
+        <div class="back">
+          <img alt="Regresar" src="resources/Icons/Regresar.png">
+        </div>
+      </div>
+    </article>
+  </li>`
+
+    cardList.appendChild(cardItem);
+
   });
   
-  return container;
+  return cardList;
 };
