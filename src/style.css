@@ -380,3 +380,35 @@ footer{
     font-weight: bold;
     font-size: larger;
 }
+
+/*
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropbtn{
+    background: #C4CBC5;
+    border: #8A988C solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.itemOrder{
+    position:absolute;
+    display:none;
+    list-style: none;
+    width: 100px;
+    background-color: rgb(218, 210, 200);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown:hover .itemOrder{
+    display:block;
+    text-align: center;
+    background-color:#FFFFFF;
+    border: #8A988C;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    text-decoration:none;
+    font-weight: bold;
+}*/
