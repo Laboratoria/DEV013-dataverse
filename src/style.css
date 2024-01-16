@@ -162,6 +162,10 @@ ul {
     float: left;
 }
 
+.hide {
+    display: none;
+}
+
 #front-card {
     background-color: #EBD0BF;
     padding: 5px;
@@ -264,7 +268,7 @@ ul {
     padding: 5px 5px;
     text-align: right;
     height: 471px;
-    display: none;
+    /*display: none;*/
 }
 
 #back-card h2 {
