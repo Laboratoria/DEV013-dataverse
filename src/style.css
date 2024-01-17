@@ -1,20 +1,22 @@
-<<<<<<< HEAD
-header {
+<<<<<<< HEAD header {
   background-color: white;
   padding: 10px 20px;
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: inherit;
+  text-align: center;
 }
 
 .card img {
-  width: 100px;
-  height: 120px;
+  width: 190px;
+  height: 160px;
   border-radius: 10px 10px 0 0;
   display: block;
   margin: 0 auto;
-}
+  margin-bottom:12px;
+  }
 
 ul {
   list-style: none;
@@ -37,16 +39,15 @@ dd[itemprop="name"] {
   text-align: center;
 }
 
-dd[itemprop="Descripción"] {
+dd[itemprop="shortDescription"] {
   text-align: justify;
-}
+  }
 
 dd[itemprop="fechaNacimiento"],
 dd[itemprop="fechaMuerte"],
 dd[itemprop="LugarNacimiento"],
-dd[itemprop="género"]
-{
-text-align: justify;
+dd[itemprop="género"] {
+  text-align: justify;
 }
 
 dt[itemprop="fechaNacimiento"],
@@ -56,61 +57,59 @@ dt[itemprop="género"] {
   text-align: justify;
   display: inline;
   margin: 0;
- }
+}
 
 dt {
   font-weight: bold;
+  text-align: justify;
 }
+
 footer {
-  background-color: #fcf8f8;
+  background-color: #f2d290;
   font-family: sans-serif;
   color: black;
   text-align: center;
   padding: 10px;
-}
-=======
-#root {
-    max-width: 800px;
-    margin: 20px auto;
+  font-family: inherit;
   }
 
-  body{
-    margin: 0;
-  }
-  
-  li {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    list-style: none;
-  }
-  
-  header {
-    font-family:inherit;
-    align-items: center;
-    text-align: center;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1); 
+======#root {
+  max-width: 800px;
+  margin: 50px auto;
 }
 
-  h1{
-   text-align: center;
-  }
-  
-  h2 {
-    margin-bottom: 5px;
-  }
-  
-  p {
-    margin: 5px 0;
+body {
+  margin: 0;
   }
 
-  footer{
-    font-family: inherit;
-    text-align: center;
+li {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: #f0ae345e;
   }
->>>>>>> 0fe25188d37b97a505d1c694296db39c0d94eb2e
+
+img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f1c4705e;
+ }
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 5px;
+}
+
+dd{
+  margin-inline-start: 2px;
+}
+>>>>>>>0fe25188d37b97a505d1c694296db39c0d94eb2e
