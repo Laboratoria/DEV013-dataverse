@@ -209,7 +209,7 @@ const data = [
     "name": "Chimamanda Ngozi Adichie",
     "shortDescription": "Escritora nigeriana conocida por sus obras feministas y sociales.",
     "description": "Chimamanda Ngozi Adichie es una destacada escritora nigeriana cuyas obras exploran temas feministas y sociales en el contexto de la cultura africana. Su novela 'Americanah' y su famoso discurso TED 'Todos deberíamos ser feministas' han contribuido a la conversación global sobre igualdad de género. Adichie ha recibido numerosos premios por su impactante contribución a la literatura contemporánea.",
-    "imageUrl": "https://i.postimg.cc/KjNJ7k1F/013-Harper-Lee.png",
+    "imageUrl": "https://i.postimg.cc/DZ3gtdsn/014-Chimamanda-Ngozi-Adichie.png",
     "facts": {
       "yearOfBirth": "1977",
       "birthPlace": "Enugu, Nigeria",

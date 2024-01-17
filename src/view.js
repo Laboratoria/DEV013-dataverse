@@ -17,7 +17,7 @@ export const renderItems = (data) => {
         <dt>Género:</dt><dd itemprop="genero">${data.facts.mainField}</dd>
          `
     itemContainer.setAttribute("itemscope", "");
-    itemContainer.setAttribute("itemtype", "películas");
+    itemContainer.setAttribute("itemtype", "escritoras");
 
     itemList.appendChild(itemContainer);
     list.appendChild(itemList)
