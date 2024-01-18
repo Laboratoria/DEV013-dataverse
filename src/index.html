@@ -49,7 +49,7 @@
           -->
       
         <div class="dropdown"> 
-          <label id="order" class="dropbtn">Ordenar</label>
+          <label for="itemOrder" id="order" class="dropbtn">Ordenar</label>
           <select name="order" id="itemOrder">
             <!-- <option value="order">Ordenar</option> -->
             <option value="a-z">A - Z</option>
@@ -59,82 +59,82 @@
 
       </aside>
     </header>
-
-  <main>
-    <h2 class="unnecessary">Plantas</h2>
-    <div id="root">
-      <!-- <div class="container"> -->
-        <ul class="cards" id="ulCards">
-          <li class="card-container" itemscope itemtype="https://schema.org">
-            <article id="front-card">
-              <h2>Plant Name</h2>
-              <div class="top-card">
-                <img alt="Plant Name" src="resources/Images/agave-azul.png">
-                <dl itemscope itemtype="https://schema.org" class="facts">
-                  <div class="amounts">
-                    <dt itemprop="water-amount" class="amount">Water</dt>
-                    <dd>
-                      <img alt="Gota" src="resources/Icons/agua-activa.png" >
-                      <img alt="Gota" src="resources/Icons/agua-activa.png" >
-                      <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva" >
-                    </dd>
-                  </div>
-                  <div class="amounts">
-                    <dt itemprop="light-amount" class="amount">Light</dt>
-                    <dd>
-                      <img alt="Sol" src="resources/Icons/luz-activa.png" >
-                      <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
-                      <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
-                    </dd>
-                  </div>
-                  <div class="amounts">
-                    <dt itemprop="care-amount" class="amount">Care</dt>
-                    <dd>
-                      <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
-                      <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
-                      <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" >
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-              <p>Short description tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="button-container">
-                <button>Detalles</button>
-              </div>
-            </article>
-            <article id="back-card">
-              <h2>Plant Name</h2>
-              <div class="top-card">
-                <img alt="Plant Name" src="resources/Images/agave-azul.png">
-                <dl itemscope itemtype="https://schema.org">
-                  <dt class="scientific">Scientific Name</dt>
-                  <dt class="detail">Botanical Family</dt><dd>Lorem ipsum</dd>
-                  <dt class="detail">Usage</dt><dd>Dolor sit amet</dd>
-                  
-                </dl>
-              </div>
-              <div class="bottom-card">
-                <dl id="description">
-                  <dt>Climate data</dt><dd>Consectetur adipiscin</dd>
-                  <dt>Description</dt><dd>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-                  <dt>Maintenance</dt><dd>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</dd>
-                </dl>
-                <div id="icons">
-                  <div class="stats">
-                    <img class="stats1" alt="Estadisticas 1" src="resources/Icons/estadisticas-1.png">
-                    <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
-                  </div>
-                  <div class="back">
-                    <img alt="Regresar" src="resources/Icons/regresar.png">
+    <main>
+      <h2 class="unnecessary">Plantas</h2>
+      <div id="root">
+        <!-- <div class="container"> -->
+          <ul class="cards" id="ulCards">
+          <!-- <li class="card-container" itemscope itemtype="https://schema.org">
+           <article id="front-card">
+                <h2>Plant Name</h2>
+                <div class="top-card">
+                  <img alt="Plant Name" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org" class="facts">
+                    <div class="amounts">
+                      <dt itemprop="water-amount" class="amount">Water</dt>
+                      <dd>
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="light-amount" class="amount">Light</dt>
+                      <dd>
+                        <img alt="Sol" src="resources/Icons/luz-activa.png" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="care-amount" class="amount">Care</dt>
+                      <dd>
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" >
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <p>Short description tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="button-container">
+                  <button onclick="turnCard()">Detalles</button>
+                </div>
+              </article>
+              <article id="back-card" class="hide">
+                <h2>Plant Name</h2>
+                <div class="top-card">
+                  <img alt="Plant Name" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org">
+                    <dt class="scientific">Scientific Name</dt>
+                    <dt class="detail">Botanical Family</dt><dd>Lorem ipsum</dd>
+                    <dt class="detail">Usage</dt><dd>Dolor sit amet</dd>
+                    
+                  </dl>
+                </div>
+                <div class="bottom-card">
+                  <dl id="description">
+                    <dt>Climate data</dt><dd>Consectetur adipiscin</dd>
+                    <dt>Description</dt><dd>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                    <dt>Maintenance</dt><dd>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</dd>
+                  </dl>
+                  <div id="icons">
+                    <div class="stats">
+                      <img class="stats1" alt="Estadisticas 1" src="resources/Icons/estadisticas-1.png">
+                      <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
+                    </div>
+                    <div class="back" id="back">
+                      <input type="button" onclick="returnCard()" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+                      <img alt="Regresar" src="resources/Icons/Regresar.png">
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          </li>
-        </ul>
-      <!-- </div> -->
-    </div>
-  </main>
+              </article>
+            </li> -->
+          </ul>
+        <!-- </div> -->
+      </div>
+    </main>
   <footer>
     <p class="footer">MY BEAUTY PLANTS</p>
     <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
