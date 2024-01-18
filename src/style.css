@@ -125,14 +125,12 @@ label {
 /* Main styles */
 main {
     /* background-color: plum; */
-    padding: 0 80px;
-    width: 1600px;
-    max-width: 80%;
-    /* height: 100%; */
+    padding: 10px;
+    width: 90%;
     display: flex;
     margin: auto;
     justify-content: center;
-    margin-left: 175px;
+    margin-bottom: 100px;
 }
  
 main .unnecessary {
@@ -141,14 +139,20 @@ main .unnecessary {
 
 #root {
     /* background-color: #AF4401; */
-    width: 100%;
-    margin: 10px 0 120px 0;
-    /* margin-bottom: 120px; */
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;  
 }
 
 ul {
     /* background-color: purple; */
     list-style: none;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-container {
@@ -159,7 +163,7 @@ ul {
     height: 481px;
     margin: 30px 40px;
     box-shadow: 2px 2px 5px gray;
-    float: left;
+    /* float: left; */
 }
 
 .hide {
@@ -316,7 +320,7 @@ ul {
 /*#back-card .top-card dl {
     /* background-color: beige; */
     /* margin: 0 -5px 0 0; */
-    /* width: 350px; */
+    /* width: 350px;
 }*/
 
 #back-card dt {
@@ -376,9 +380,10 @@ ul {
     height: 40px;
 } */
 
-#back-card #icons .back {
+#back-card #icons .back #Regresar {
     /* background-color: gray; */
     width: 30px;
+    height: 30px;
     margin: 0 0 0 110px;
 }
 
