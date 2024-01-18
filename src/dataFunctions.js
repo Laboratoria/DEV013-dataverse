@@ -16,13 +16,13 @@ El tercer parámetro,`value`, indica el valor de campo que queremos filtrar.
 para ser mostrados de acuerdo a la data proporcionada, 
 esta función debe usar el método reduce.
 */
-export const filterData = (data,filterBy,value) => {
+/*export const filterData = ( data, filterBy, value) => {
   
 };
 
-export const sortData = (data,sortBy,sortOrder) => {
+export const sortData = () => {
   
 };
-
+*/
 
 

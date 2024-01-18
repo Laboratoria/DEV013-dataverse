@@ -1,378 +1,468 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
+    //Ornamentales
+    "id": "begonia",
+    "category":"ornamental",
+    "name": "Begonia",
+    "description": "La Begonia es una planta de flores vistosas, conocida por su variedad en formas, tamaños y colores. Es popular tanto en jardines como en macetas interiores.", 
+    "shortDescription": "Planta de flores vistosas, ideal para jardines y macetas interiores.",
+    "imageUrl": "resources/Images/begonia.png",
+    "maintenance": "Necesita riego regular y evitar la luz solar directa.",
+    "scientificName": "Begonia",
+    "applications": "Jardinería decorativa, colecciones botánicas.",
+    "climaticData": "Prefiere ambientes húmedos y sombreados.",
+    "botanicalFamily": "Begoniaceae",
+    "birthPlace": "Ambientes tropicales y subtropicales",
+    "mainField": "Botánica, Jardinería Decorativa",
     "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "water":1,
+      "sunLigth": 2,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
-    }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
+    "id": "azalea",
+    "name": "Azalea",
+    "description": "La Azalea, famosa por sus flores brillantes y vistosas, es un arbusto común en jardines de todo el mundo. Requiere cuidados especiales para mantener su floración.",
+    "shortDescription": "Arbusto con flores brillantes, común en jardines.",
+    "imageUrl": "resources/Images/azalea.png",
+    "botanicalFamily": "Rhododendron",
+    "birthPlace": "Asia, Europa y América del Norte",
+    "mainField": "Jardinería Ornamental, Botánica",
+    "maintenance": "Requiere suelo ácido y poda después de la floración.",
+    "scientificName": "Rhododendron",
+    "applications": "Jardinería ornamental, cultivo en macetas.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
-    }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
+    "id": "lirio",
+    "name": "Lirio",
+    "description": "Los Lirios son plantas perennes conocidas por sus grandes y coloridas flores. Son populares en jardines y como flores cortadas debido a su belleza y variedad de colores.",
+    "shortDescription": "Planta perenne con grandes flores coloridas.",
+    "imageUrl": "resources/Images/lirio.png",
+    "botanicalFamily": "Liliaceae",
+    "birthPlace": "Europa, Asia y América del Norte",
+    "mainField": "Jardinería, Floricultura",
+    "maintenance": "Retirar flores marchitas y dividir bulbos cada pocos años.",
+    "scientificName": "Lilium",
+    "applications": "Jardinería, arreglos florales, decoración.",
+    "climaticData": "Se adapta a una variedad de climas, prefiere suelo húmedo.",
     "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
-    }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
+    "id": "clivia",
+    "name": "Clivia",
+    "description": "La Clivia es una planta perenne con llamativas flores de color naranja. Es ideal para cultivo interior y popular por su baja necesidad de luz.",
+    "shortDescription": "Planta perenne con flores naranjas, ideal para interiores.",
+    "imageUrl": "resources/Images/clivia.png",
+    "botanicalFamily": "Amaryllidaceae",
+    "birthPlace": "Sudáfrica",
+    "mainField": "Jardinería Interior, Botánica",
+    "maintenance": "Limitar riego en invierno y proporcionar luz indirecta.",
+    "scientificName": "Clivia miniata",
+    "applications": "Decoración interior, jardinería de sombra.",
+    "climaticData": "Prefiere sombra parcial y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
-    }
+  },
+  //Medicinales
+  {
+    "id": "aloe-vera",
+    "name": "Aloe Vera",
+    "description": "El Aloe Vera es conocido por sus propiedades medicinales y su uso en productos de belleza. Es una planta suculenta que requiere poco cuidado.",
+    "shortDescription": "Planta suculenta conocida por sus propiedades medicinales.",
+    "imageUrl": "resources/Images/aloe-vera.png",
+    "botanicalFamily": "Asphodelaceae",
+    "birthPlace": "Península Arábiga",
+    "mainField": "Medicina, Cosmética",
+    "maintenance": "Riego escaso y exposición a pleno sol o sombra parcial.",
+    "scientificName": "Aloe barbadensis miller",
+    "applications": "Productos medicinales y cosméticos, jardinería.",
+    "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
+    "facts": {
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
+    },
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
+    "id": "manzanilla",
+    "name": "Manzanilla",
+    "description": "La Manzanilla es una hierba aromática conocida por sus flores pequeñas y sus propiedades calmantes. Se usa comúnmente en infusiones y remedios naturales.",
+    "shortDescription": "Hierba aromática con propiedades calmantes, usada en infusiones.",
+    "imageUrl": "resources/Images/manzanilla.png",
+    "botanicalFamily": "Asteraceae",
+    "birthPlace": "Europa y Asia occidental",
+    "mainField": "Herbolaria, Medicina Natural",
+    "maintenance": "Necesita sol pleno y suelo bien drenado.",
+    "scientificName": "Matricaria chamomilla",
+    "applications": "Infusiones, remedios naturales, cosmética.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
+    "id": "echineacea",
+    "name": "Echinacea",
+    "description": "La Echinacea es una planta conocida por sus propiedades inmunoestimulantes y su uso en medicina natural. Sus flores de color rosa púrpura son distintivas y atractivas.",
+    "shortDescription": "Planta medicinal con flores de color rosa púrpura.",
+    "imageUrl": "resources/Images/echineacea.png",
+    "botanicalFamily": "Asteraceae",
+    "birthPlace": "América del Norte",
+    "mainField": "Medicina natural, Jardinería ornamental",
+    "maintenance": "Resistente a sequías, requiere poco cuidado una vez establecida.",
+    "scientificName": "Echinacea purpurea",
+    "applications": "Suplementos de salud, jardinería ornamental.",
+    "climaticData": "Resistente a climas variados, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
+    "id": "valeriana",
+    "name": "Valeriana",
+    "description": "La Valeriana es una planta perenne conocida por sus propiedades relajantes y su uso en tratamientos para el insomnio. Sus flores son pequeñas y de color blanco o rosa.",
+    "shortDescription": "Planta perenne con propiedades relajantes, usada en tratamientos para el insomnio.",
+    "imageUrl": "resources/Images/valeriana.png",
+    "botanicalFamily": "Valerianaceae",
+    "birthPlace": "Europa y Asia",
+    "mainField": "Medicina natural, Jardinería",
+    "maintenance": "Prefiere sol o sombra parcial y suelo húmedo.",
+    "scientificName": "Valeriana officinalis",
+    "applications": "Tratamientos de insomnio, jardinería ornamental.",
+    "climaticData": "Prefiere suelos húmedos y lugares sombreados.",
     "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
-    }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
+    "id": "lavanda",
+    "name": "Lavanda",
+    "description": "La Lavanda es famosa por su aroma relajante y sus flores de color púrpura. Se utiliza ampliamente en aromaterapia, cosmética y cocina.",
+    "shortDescription": "Planta aromática con flores púrpura, usada en cosmética y aromaterapia.",
+    "imageUrl": "resources/Images/lavanda.png",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Mediterráneo",
+    "mainField": "Aromaterapia, Cosmética, Jardinería",
+    "maintenance": "Requiere sol pleno, suelo bien drenado y poda regular.",
+    "scientificName": "Lavandula",
+    "applications": "Aceites esenciales, perfumería, gastronomía.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
-    }
+  },
+  //Aromaticas
+  {
+    "id": "menta",
+    "name": "Menta",
+    "description": "La Menta es una hierba aromática popular, conocida por su refrescante sabor y aroma. Se utiliza en una amplia gama de aplicaciones culinarias y medicinales.",
+    "shortDescription": "Hierba aromática refrescante, usada en cocina y medicina.",
+    "imageUrl": "resources/Images/menta.png",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Europa, Asia y África",
+    "mainField": "Gastronomía, Medicina Herbal",
+    "maintenance": "Controlar su crecimiento invasivo y proporcionar suficiente agua.",
+    "scientificName": "Mentha",
+    "applications": "Cocina, bebidas, productos de higiene, remedios naturales.",
+    "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
+    "facts": {
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
+    },
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
+    "id": "albahaca",
+    "name": "Albahaca",
+    "description": "La Albahaca es una hierba culinaria esencial, famosa por su papel en la cocina italiana. Posee un aroma y sabor distintivos, y es fácil de cultivar.",
+    "shortDescription": "Hierba culinaria clave en la cocina italiana, de aroma y sabor distintivos.",
+    "imageUrl": "resources/Images/albahaca.png",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "India, Asia Sudoriental",
+    "mainField": "Gastronomía, Jardinería",
+    "maintenance": "Requiere sol pleno y riego regular, evitar exceso de humedad.",
+    "scientificName": "Ocimum basilicum",
+    "applications": "Cocina, jardinería ornamental, aceites esenciales.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
-    }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
+    "id": "cilantro",
+    "name": "Cilantro",
+    "description": "El Cilantro es una hierba aromática popular en la cocina mundial. Sus hojas frescas y semillas secas (conocidas como coriandro) son ampliamente utilizadas en diversas cocinas.",
+    "shortDescription": "Hierba aromática con hojas y semillas utilizadas en cocina.",
+    "imageUrl": "resources/Images/cilantro.png",
+    "botanicalFamily": "Apiaceae",
+    "birthPlace": "Regiones mediterráneas, Europa del Sur",
+    "mainField": "Gastronomía, Medicina Herbal",
+    "maintenance": "Sembrar sucesivamente y evitar el exceso de calor.",
+    "scientificName": "Coriandrum sativum",
+    "applications": "Cocina, medicina natural, aromaterapia.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
-    }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
+    "id": "romero",
+    "name": "Romero",
+    "description": "El Romero es una hierba perenne muy aromática, utilizada tanto en la cocina como en la medicina natural. Sus hojas en forma de aguja tienen un sabor y aroma distintivos.",
+    "shortDescription": "Hierba perenne aromática, utilizada en cocina y medicina.",
+    "imageUrl": "resources/Images/romero.png",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Mediterráneo",
+    "mainField": "Gastronomía, Medicina Herbal",
+    "maintenance": "Prefiere clima cálido, suelo bien drenado y no requiere mucha agua.",
+    "scientificName": "Rosmarinus officinalis",
+    "applications": "Cocina, aceites esenciales, productos de higiene.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
-    }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
+    "id": "oregano",
+    "name": "Orégano",
+    "description": "El Orégano es una hierba esencial en la cocina mediterránea y mexicana, conocida por su aroma y sabor fuertes. Se utiliza tanto fresco como seco.",
+    "shortDescription": "Hierba clave en la cocina mediterránea y mexicana.",
+    "imageUrl": "resources/Images/oregano.png",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Europa occidental, Mediterráneo",
+    "mainField": "Gastronomía, Jardinería",
+    "maintenance": "Cortar tallos para promover un crecimiento más tupido.",
+    "scientificName": "Origanum vulgare",
+    "applications": "Cocina, jardinería ornamental, aceites esenciales.",
+    "climaticData": "Adaptable a varios climas, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
-    }
+  },
+
+  // Deserticas
+  {
+    "id": "cactus-saguaro",
+    "name": "Cactus Saguaro",
+    "description": "El Cactus Saguaro es un icono del desierto de Sonora, conocido por su altura imponente y sus brazos en forma de candelabro. Es vital para el ecosistema desértico.",
+    "shortDescription": "Icono del desierto con forma de candelabro, vital para su ecosistema.",
+    "imageUrl": "resources/Images/cactus-saguaro.png",
+    "botanicalFamily": "Cactaceae",
+    "birthPlace": "Desierto de Sonora",
+    "mainField": "Ecología del Desierto, Botánica",
+    "maintenance": "Mínimo riego, evitar temperaturas bajo cero.",
+    "scientificName": "Carnegiea gigantea",
+    "applications": "Jardinería desértica, simbolismo cultural.",
+    "climaticData": "Resistente a la sequía, prefiere climas cálidos y secos.",
+    "facts": {
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
+    },
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
+    "id": "ocotillo",
+    "name": "Ocotillo",
+    "description": "El Ocotillo es una planta del desierto con tallos largos y espinosos. Florece con brillantes flores rojas y es popular en jardinería xerófila.",
+    "shortDescription": "Planta desértica con tallos espinosos y flores rojas.",
+    "imageUrl": "resources/Images/ocotillo.png",
+    "botanicalFamily": "Fouquieriaceae",
+    "birthPlace": "Suroeste de Estados Unidos y México",
+    "mainField": "Jardinería Desértica, Ecología",
+    "maintenance": "Requiere poca agua y suelo bien drenado.",
+    "scientificName": "Fouquieria splendens",
+    "applications": "Jardinería xerófila, ornamentación, cercas vivas.",
+    "climaticData": "Adaptable a condiciones áridas, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
-    }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
+    "id": "agave-azul",
+    "name": "Agave Azul",
+    "description": "El Agave Azul es famoso por ser la planta base para la producción de tequila. Es una planta suculenta con hojas gruesas y puntiagudas.",
+    "shortDescription": "Planta suculenta usada en la producción de tequila.",
+    "imageUrl": "resources/Images/agave-azul.png",
+    "botanicalFamily": "Asparagaceae",
+    "birthPlace": "México",
+    "mainField": "Industria del Tequila, Jardinería",
+    "maintenance": "Riego limitado, resistente a la sequía y al calor.",
+    "scientificName": "Agave tequilana",
+    "applications": "Producción de tequila, jardinería ornamental.",
+    "climaticData": "Prefiere climas secos y suelos bien drenados.",
     "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
-    }
+  },
+ 
+  {
+    "id": "palo-verde",
+    "name": "Palo Verde",
+    "description": "El Palo Verde es un árbol característico de los desiertos, conocido por su corteza verde y su capacidad para sobrevivir en condiciones áridas.",
+    "shortDescription": "Árbol desértico con corteza verde, adaptado a condiciones áridas.",
+    "imageUrl": "resources/Images/palo-verde.png",
+    "botanicalFamily": "Fabaceae",
+    "birthPlace": "Desiertos del suroeste de Estados Unidos y México",
+    "mainField": "Ecología del Desierto, Botánica",
+    "maintenance": "Adaptable a suelos pobres, requiere poca agua.",
+    "scientificName": "Parkinsonia",
+    "applications": "Jardinería xerófila, restauración ecológica.",
+    "climaticData": "Resistente a la sequía, prefiere suelos bien drenados.",
+    "facts": {
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
+    },
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
+    "id": "yucca",
+    "name": "Yucca",
+    "description": "La Yucca es una planta suculenta característica de regiones áridas. Es conocida por sus hojas en forma de espada y sus flores blancas en racimos.",
+    "shortDescription": "Planta suculenta con hojas en forma de espada y flores blancas.",
+    "imageUrl": "resources/Images/yuca.png",
+    "botanicalFamily": "Asparagaceae",
+    "birthPlace": "América del Norte y Central",
+    "mainField": "Jardinería Xerófila, Botánica",
+    "maintenance": "Resistente a la sequía, requiere poco mantenimiento.",
+    "scientificName": "Yucca",
+    "applications": "Jardinería en zonas áridas, ornamentación, uso medicinal.",
+    "climaticData": "Resistente a la sequía, prefiere suelos arenosos.",
     "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
-    }
+  },
+
+  //Arboles 
+  {
+    "id": "roble",
+    "name": "Roble",
+    "description": "El Roble es un árbol majestuoso y duradero, conocido por su madera fuerte y resistente. Es ampliamente utilizado en carpintería y construcción.",
+    "shortDescription": "Árbol duradero con madera fuerte, usado en carpintería.",
+    "imageUrl": "resources/Images/roble.png",
+    "botanicalFamily": "Fagaceae",
+    "birthPlace": "Hemisferio Norte",
+    "mainField": "Silvicultura, Carpintería",
+    "maintenance": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
+    "scientificName": "Quercus",
+    "applications": "Construcción, muebles, barriles para vino.",
+    "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
+    "facts": {
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
+    },
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
+    "id": "sauce-lloron",
+    "name": "Sauce Llorón",
+    "description": "El Sauce Llorón es conocido por sus ramas largas y colgantes. Este árbol es un elemento común en paisajes románticos y parques.",
+    "shortDescription": "Árbol con ramas colgantes, común en paisajes y parques.",
+    "imageUrl": "resources/Images/sauce-lloron.png",
+    "botanicalFamily": "Salicaceae",
+    "birthPlace": "China",
+    "mainField": "Jardinería Paisajista, Botánica",
+    "maintenance": "Prefiere suelos húmedos y pleno sol.",
+    "scientificName": "Salix babylonica",
+    "applications": "Jardinería paisajista, estabilización de suelos.",
+    "climaticData": "Prefiere suelos húmedos, cercanos a cuerpos de agua.",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
-    }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
+    "id": "secuoya-roja",
+    "name": "Secuoya Roja",
+    "description": "La Secuoya Roja es uno de los árboles más altos del mundo, famoso por su impresionante altura y longevidad. Es un símbolo de la costa oeste de Estados Unidos.",
+    "shortDescription": "Uno de los árboles más altos del mundo, símbolo de la costa oeste de EE. UU.",
+    "imageUrl": "resources/Images/secuoya-roja.png",
+    "botanicalFamily": "Cupressaceae",
+    "birthPlace": "Costa oeste de Estados Unidos",
+    "mainField": "Conservación, Botánica",
+    "maintenance": "Necesita mucho espacio para crecer, prefiere suelo húmedo.",
+    "scientificName": "Sequoia sempervirens",
+    "applications": "Conservación de la naturaleza, atractivo turístico.",
+    "climaticData": "Prefiere climas húmedos y neblinosos.",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
-    }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
+    "id": "arce",
+    "name": "Arce",
+    "description": "El Arce es conocido por su savia, que se utiliza para hacer jarabe de arce. Sus hojas coloridas en otoño lo hacen popular en jardinería paisajista.",
+    "shortDescription": "Árbol famoso por su savia para jarabe y hojas otoñales coloridas.",
+    "imageUrl": "resources/Images/arce.png",
+    "botanicalFamily": "Sapindaceae",
+    "birthPlace":"América del norte",
+    "mainField": "Botánica, Jardinería Paisajista",
+    "maintenance": "Requiere poda ocasional y suelo bien drenado.",
+    "scientificName": "Acer",
+    "applications": "Producción de jarabe de arce, jardinería.",
+    "climaticData": "Prefiere climas templados y suelos fértiles.",
     "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
-    }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
+    "id": "baobab",
+    "name": "Baobab",
+    "description": "El Baobab es conocido por su tronco grueso y capacidad de almacenar agua. Este árbol icónico es un símbolo de vida en regiones áridas de África.",
+    "shortDescription": "Árbol con tronco grueso, símbolo de vida en regiones áridas.",
+    "imageUrl": "resources/Images/baobab.png",
+    "botanicalFamily": "Malvaceae",
+    "birthPlace": "África, Madagascar, Australia",
+    "mainField": "Ecología, Botánica",
+    "maintenance": "Extremadamente resistente a la sequía, requiere muy poco riego.",
+    "scientificName": "Adansonia",
+    "applications": "Conservación ecológica, uso medicinal y alimenticio.",
+    "climaticData": "Adaptado a regiones áridas y semiáridas.",
     "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+      "water":"",
+      "sunLigth": "",
+      "careDifficulty":"",
     },
-    "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
-    }
-  },
-  {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
-    "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
-    },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
-    }
-  },
-  {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
-    "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
-    }
-  },
-  {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
-    "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
-    }
-  },
-  {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
-    "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
-    },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
-  },
-  {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
-    "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
-    },
-    "extraInfo": {
-      "imageSource": ""
-    }
   }
-];
+]
+  
