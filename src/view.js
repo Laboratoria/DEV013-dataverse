@@ -1,4 +1,5 @@
 export const renderItems = (data) => {
+  
   //crear el contenedor y guardarlo en una variable 
   const cardList = document.getElementById("ulCards");
 
@@ -6,7 +7,7 @@ export const renderItems = (data) => {
   // por cada elemento se debe crear un li 
   //cada li debe tener la estructura html predefinida 
   //cada li se debe agregar a la ul 
-  //insertar el ul completo al dom 
+  //insertar el ul completa al dom 
 
   /** Template string **/ 
   // container.innerHTML += `<p>${element.name}</p>`
@@ -16,7 +17,7 @@ export const renderItems = (data) => {
     const cardItem = document.createElement('li');
 
     cardItem.innerHTML += `<li class="card-container" itemscope itemtype="https://schema.org">
-    <article id="front-card">
+    <article id="front-card" class="front-card">
       <h2>${element.name}</h2>
       <div class="top-card">
         <img alt="Plant Name" src="${element.imageUrl}">
@@ -49,10 +50,10 @@ export const renderItems = (data) => {
       </div>
       <p>${element.shortDescription}</p>
       <div class="button-container">
-        <button>Detalles</button>
+        <button id="detalles" onclick="turnCard(this)">Detalles</button>
       </div>
     </article>
-    <article id="back-card">
+    <article id="back-card" class="hide" class="back-card">
       <h2>${element.name}</h2>
       <div class="top-card">
         <img alt="Plant Name" src="${element.imageUrl}">
@@ -75,7 +76,7 @@ export const renderItems = (data) => {
             <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
           </div>
           <div class="back">
-            <img alt="Regresar" src="resources/Icons/Regresar.png">
+          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
         </div>
       </div>
@@ -88,3 +89,28 @@ export const renderItems = (data) => {
   
   return cardList;
 };
+
+
+//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
+function turnCard(botton) {
+  const cardContainer=  botton.closest('.card-container');
+  const frontCard=cardContainer.querySelector("#front-card");
+  const backCard=cardContainer.querySelector("#back-card");
+
+  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjet
+  // Alternar la clase 'hide' en la parte posterior de la tarjeta.
+  backCard.classList.toggle('hide');
+  frontCard.classList.toggle('hide');
+}
+ 
+function returnCard (botton) {
+  const cardContainer=  botton.closest('.card-container');
+  const frontCard=cardContainer.querySelector("#front-card");
+  const backCard=cardContainer.querySelector("#back-card")
+
+  backCard.classList.toggle('hide');
+  frontCard.classList.toggle('hide');
+}
+
+window.turnCard=turnCard;
+window.returnCard=returnCard;
