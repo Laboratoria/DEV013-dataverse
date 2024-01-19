@@ -1,4 +1,4 @@
-<<<<<<< HEAD header {
+HEAD header {
   background-color: white;
   padding: 10px 20px;
   border-radius: 15px;
@@ -7,7 +7,7 @@
   justify-content: center;
   font-family: inherit;
   text-align: center;
-}
+  }
 
 .card img {
   width: 190px;
@@ -15,7 +15,7 @@
   border-radius: 10px 10px 0 0;
   display: block;
   margin: 0 auto;
-  margin-bottom:12px;
+  margin-bottom:3px;
   }
 
 ul {
@@ -24,16 +24,11 @@ ul {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-}
-
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  text-align:justify;
 }
 
 dd[itemprop="name"] {
-  color: #333;
+  color: #000000;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -48,6 +43,7 @@ dd[itemprop="fechaMuerte"],
 dd[itemprop="LugarNacimiento"],
 dd[itemprop="género"] {
   text-align: justify;
+  display:flexbox;
 }
 
 dt[itemprop="fechaNacimiento"],
@@ -55,9 +51,8 @@ dt[itemprop="fechaMuerte"],
 dt[itemprop="LugarNacimiento"],
 dt[itemprop="género"] {
   text-align: justify;
-  display: inline;
   margin: 0;
-}
+ }
 
 dt {
   font-weight: bold;
@@ -73,21 +68,24 @@ footer {
   font-family: inherit;
   }
 
-======#root {
+====#root {
   max-width: 800px;
-  margin: 50px auto;
-}
+  }
 
 body {
   margin: 0;
+  background-color: #f4c7735e;
+
   }
 
-li {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-  list-style: none;
-  background-color: #f0ae345e;
+  li {
+    border: 1px solid #ede2e2; 
+    border-radius: 10px; 
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: #edcd925e;
+    font-family:Georgia;
   }
 
 img {
@@ -99,17 +97,17 @@ img {
 
 h1 {
   text-align: center;
+  font-family: Georgia;
 }
 
 h2 {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 p {
-  margin: 5px;
+  margin: 2px;
 }
 
 dd{
-  margin-inline-start: 2px;
+  margin-inline-start: 3px;
 }
->>>>>>>0fe25188d37b97a505d1c694296db39c0d94eb2e

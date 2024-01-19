@@ -3,106 +3,107 @@ const data = [
     "id": "001",
     "name": "Jane Austen",
     "shortDescription": "Escritora británica conocida por sus novelas románticas realistas.",
-    "description": "Jane Austen fue una destacada novelista británica del siglo XIX, conocida por sus novelas que exploran la condición de las mujeres en la sociedad de la época y su aguda crítica social. Algunas de sus obras más famosas incluyen 'Orgullo y prejuicio', 'Emma' y 'Sentido y sensibilidad'. Su agudo ingenio y su estilo literario han dejado un impacto duradero en la literatura inglesa.",
+    "description": "Jane Austen, destacada novelista británica del siglo XIX, es reconocida por explorar la condición de las mujeres y realizar agudas críticas sociales en sus obras. Entre sus novelas más famosas se encuentran 'Orgullo y prejuicio', 'Emma' y 'Sentido y sensibilidad'. Austen dejó un impacto duradero en la literatura inglesa gracias a su agudo ingenio y estilo literario distintivo, que capturan la sociedad de su tiempo. Su legado perdura a través de generaciones, y sus escritos continúan siendo apreciados por su profunda observación de la naturaleza humana y su aguda representación de la sociedad de la época",
     "imageUrl": "https://i.postimg.cc/25MJ3ZZK/001-Jane-Austen.png",
     "facts": {
       "yearOfBirth": "1775",
       "yearOfDeath": "1817",
       "birthPlace": "Steventon, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Orgullo y Prejuicio, Sentido y sensibilidad, Emma, Persuación"
+      "famousBooks": "Orgullo y Prejuicio"
       },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "002",
     "name": "Amy Tan",
     "shortDescription": "Escritora estadounidense conocida por sus obras sobre la experiencia china-americana.",
-    "description": "Amy Tan es una escritora estadounidense cuyas obras exploran la complejidad de la identidad china-americana y las relaciones familiares. Su novela más conocida, 'El club de la buena estrella', aborda temas de cultura, tradición y la conexión entre generaciones. Tan ha dejado una marca significativa en la literatura contemporánea con su narrativa única y perspicaz.",
+    "description": "Amy Tan, nacida en Oakland, California, en 1952, es una reconocida escritora estadounidense de origen chino. Su obra más conocida, 'El club de la buena estrella', explora la compleja relación entre madres e hijas inmersas en la cultura china-americana. Tan, hábil narradora, ha abordado temas de identidad, familia y legado cultural en novelas como 'Hijas de la fortuna' y 'El valle del asombro'. Su capacidad para tejer historias con sensibilidad y empatía le ha valido el reconocimiento internacional, consolidándola como una destacada voz en la literatura contemporánea que celebra la diversidad cultural y la conexión humana.",
     "imageUrl": "https://i.postimg.cc/FKdCtHBg/002-Amy-Tan.png",
     "facts": {
       "yearOfBirth": "1952",
       "birthPlace": "Oakland, California, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Literatura",
-      "Books": "El club de la buena estrella, Hijas de la suerte, La hija del curandero, El Valle del Asombro, Cien secretos felices"
+      "famousBook": "Hijas de la suerte"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "003",
     "name": "Virginia Woolf",
     "shortDescription": "Escritora británica modernista, pionera en la técnica narrativa.",
-    "description": "Virginia Woolf fue una influyente escritora británica del movimiento modernista del siglo XX. Reconocida por sus innovadoras técnicas narrativas, Woolf exploró la complejidad de la conciencia y las experiencias femeninas en sus obras. Algunas de sus obras más destacadas incluyen 'La señora Dalloway' y 'Al faro'. Su contribución a la literatura sigue siendo objeto de estudio y admiración.",
+    "description": "Virginia Woolf (1882-1941), novelista y ensayista británica, es una de las figuras más influyentes del modernismo literario. Su obra, que incluye 'La señora Dalloway' y 'Al faro', destaca por su exploración psicológica y experimentación narrativa. Woolf, co-fundadora del grupo literario Bloomsbury, abordó temas como la condición de la mujer y la naturaleza efímera de la vida. Su prosa innovadora y su enfoque en la conciencia individual la han establecido como una pionera literaria. A pesar de los desafíos personales, su legado perdura, influyendo en generaciones de escritores y destacando su contribución duradera a la literatura moderna.",
     "imageUrl": "https://i.postimg.cc/13zYHH0d/003-Virginia-Woolf.png",
     "facts": {
       "yearOfBirth": "1882",
       "yearOfDeath": "1941",
       "birthPlace": "Londres, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "La señora Dalloway, Al faro, Orlando, Las olas, Una habitación propia"
+      "famousBook": "La señora Dalloway"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "004",
     "name": "Isabel Allende",
     "shortDescription": "Escritora chilena conocida por su realismo mágico y sus novelas históricas.",
-    "description": "Isabel Allende es una destacada escritora chilena cuya obra ha capturado la atención mundial. Reconocida por su estilo de realismo mágico y sus narrativas históricas, algunas de sus obras más conocidas incluyen 'La casa de los espíritus' y 'Eva Luna'. Allende ha dejado una marca indeleble en la literatura contemporánea latina.",
+    "description": "Isabel Allende es una destacada escritora cuya obra ha cautivado la atención mundial. Reconocida por su estilo de realismo mágico y sus narrativas históricas, algunas de sus obras más conocidas incluyen 'La casa de los espíritus' y 'Eva Luna'. Allende ha dejado una marca indeleble en la literatura contemporánea latina, tejiendo historias emotivas y complejas que abordan temas sociales y políticos. A lo largo de su carrera, ha recibido numerosos premios, destacando su contribución a la literatura latinoamericana y su dedicación a la justicia social.",
     "imageUrl": "https://i.postimg.cc/X74PZ3r4/004-Isabel-Allende.png",
     "facts": {
       "yearOfBirth": "1942",
       "birthPlace": "Lima, Perú",
-      "country": "Perú",
+      "countryNacimiento": "Chile",
       "mainField": "Literatura",
-      "Books": "La casa de los espíritus, Eva Luna, Paula, Hija de la fortuna, Retrato en sepia"
+      "famousBook": "La casa de los espíritus"
     },
     "extraInfo": {
-      "imageSource": "https://www.sapere.it/sapere/pillole-di-sapere/cultura-e-spettacolo/Isabel-Allende--la-vita-straordinaria-di-una-scrittrice-divisa-tra-realta-e-letteratura.html"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "005",
     "name": "Charlotte Brontë",
     "shortDescription": "Novelista británica, autora de la célebre obra 'Jane Eyre'.",
-    "description": "Charlotte Brontë fue una destacada novelista británica del siglo XIX, conocida por su obra maestra 'Jane Eyre'. Su escritura introspectiva y su exploración de la condición femenina en la sociedad victoriana han dejado una marca duradera en la literatura clásica. Brontë sigue siendo una figura venerada en la historia de la literatura.",
+    "description": 
+    "Charlotte Brontë, eminente novelista británica del siglo XIX, alcanzó renombre con su obra maestra 'Jane Eyre'. Su escritura introspectiva y la penetrante exploración de la condición femenina en la sociedad victoriana la distinguen. Brontë, venerada figura literaria, dejó una huella imborrable en la literatura clásica. Su capacidad para plasmar emociones y desafiar convenciones sociales ha perdurado, consolidándola como una autora esencial. A través de 'Jane Eyre' y otras obras, Brontë continúa inspirando lectores y manteniendo viva su contribución inmortal al panorama literario británico del siglo XIX.",
     "imageUrl": "https://i.postimg.cc/RZbpbHXZ/005-Charlotte-Bronte.png",
     "facts": {
       "yearOfBirth": "1816",
       "yearOfDeath": "1855",
       "birthPlace": "Thornton, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Jane Eyre, Cumbres Borrascosas (de Emily Brontë), Shirley, Villette, El profesor"
+      "famousBook": "Jane Eyre"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=CHyjXL8p&id=A6E622FDFC3561BD645DBA7C5818D8194BA0CA98&thid=OIP.CHyjXL8pjodlvDX8SU03sAHaI7&mediaurl=https%3A%2F%2Fd3d00swyhr67nd.cloudfront.net%2Fw1200h1200%2Fcollection%2FWYR%2FBPM%2FWYR_BPM_P25-001.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.087ca35cbf298e8765bc35fc494d37b0%3Frik%3DmMqgSxnYGFh8ug%26pid%3DImgRaw%26r%3D0&exph=1200&expw=996&q=Charlotte+Bront%c3%ab&simid=607990666220811425&form=IRPRST&ck=AC4400517E5800BC49B573EFD1D97442&selectedindex=2&itb=0&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_NNyF6mND*cp_1E0632823FC55FED6F6FD5893A39BF73*mid_2CA2572639DE8ACC6A23B5FF2BC62EC3632A5C64*simid_608021551305094902*thid_OIP.NNyF6mNDQDlId3GMPZfAlgHaJY&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "006",
     "name": "Agatha Christie",
     "shortDescription": "Escritora británica, célebre por sus novelas de misterio y detectives.",
-    "description": "Agatha Christie fue una prolífica escritora británica conocida como la 'Reina del Crimen'. Sus ingeniosas novelas de misterio y sus personajes icónicos, como Hercule Poirot y Miss Marple, la convirtieron en una de las autoras más vendidas de todos los tiempos. Christie dejó un legado duradero en el género de la novela detectivesca.",
+    "description": "Agatha Christie, la célebre 'Reina del Crimen', fue una destacada escritora británica conocida por sus ingeniosas novelas de misterio. Con personajes icónicos como Hercule Poirot y Miss Marple, Christie se convirtió en una de las autoras más vendidas de todos los tiempos. Su astucia narrativa y giros inesperados mantienen a los lectores cautivados, dejando un legado duradero en el género de la novela detectivesca. A lo largo de su prolífica carrera, escribió innumerables obras que han perdurado en el tiempo, consolidándola como una figura indiscutible en la literatura criminal y un referente inmortal en la historia de la escritura.",
     "imageUrl": "https://i.postimg.cc/NfDzmVXT/006-Agatha-Christie.png",
     "facts": {
       "yearOfBirth": "1890",
       "yearOfDeath": "1976",
       "birthPlace": "Torquay, Reino Unido",
-      "bcountry": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Asesinato en el Orient Express, Diez negritos, Asesinato en Mesopotamia, Asesinato en el campo de golf, El asesinato de Roger Ackroyd"
+      "famousBook": "Diez negritos"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=Viv5M5VT&id=D77BB7A17DD837F580C491CDB28B6DB97BCD07A4&thid=OIP.Viv5M5VTWQFSt8Shw1VJ2QHaKL&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.562bf9339553590152b7c4a1c35549d9%3frik%3dpAfNe7lti7LNkQ%26riu%3dhttp%253a%252f%252f4.bp.blogspot.com%252f-5HZXq3byWus%252fUSYlOAEMdOI%252fAAAAAAAAADI%252fHS5o-Yxc97E%252fs1600%252fagatha-christie.jpg%26ehk%3dfObIS%252b7Lvj9fSETZCZeNV0%252bkUCwg6KQHX5JB7uL59Og%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1600&expw=1164&q=Agatha+Christie&simid=608036338881401166&FORM=IRPRST&ck=4EDD6E4F42EF0B381A36F5B2E7D06199&selectedIndex=2&itb=0&ajaxhist=0&ajaxserp=0"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
  {
@@ -115,240 +116,240 @@ const data = [
     "yearOfBirth": "1889",
     "yearOfDeath": "1957",
     "birthPlace": "Vicuña, Chile",
-    "country": "Chile",
+    "countryNacimiento": "Chile",
     "mainField": "Poesía",
-    "Books": "Desolación, Lagar, Lagar II, Ternura, Lagar III"
+    "famousBook": "Desolación"
   },
   "extraInfo": {
-    "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+    "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
   }
 },
   {
     "id": "008",
     "name": "Claribel Alegría",
     "shortDescription": "Poeta y novelista nicaragüense-salvadoreña, destacada en la literatura centroamericana.",
-    "description": "Claribel Alegría fue una destacada poeta y novelista nacida en Nicaragua y nacionalizada salvadoreña. Su obra abordó temas como la justicia social, la identidad y la lucha política en América Central. Alegría contribuyó significativamente al desarrollo de la literatura en la región y recibió varios premios por su impactante obra literaria.",
+    "description": "Claribel Alegría fue una destacada poetisa y novelista nicaragüense. Reconocida por su poesía comprometida y su habilidad para fusionar la tradición literaria con la realidad política y social de América Latina. Alegría coqueteó con diversas formas artísticas, explorando temas como la guerra civil y la identidad cultural en su obra. Fue galardonada con premios importantes, como el Casa de las Américas en Poesía, y su legado literario abarca desde el modernismo hasta la poesía testimonial. Su contribución a la literatura latinoamericana la posiciona como una figura clave, influyente y valiente en el panorama literario del siglo XX.",
     "imageUrl": "https://i.postimg.cc/rySbFzFf/008-Claribel-Alegria.png",
     "facts": {
       "yearOfBirth": "1924",
       "yearOfDeath": "2018",
       "birthPlace": "Estelí, Nicaragua",
-      "country": "Nicaragua",
+      "countryNacimiento": "Nicaragua",
       "mainField": "Poesía, Novela",
-      "Books": "Cenizas de Izalco, Caudal de ausencia, La mujer del rio Sumpul, Cantos de Cifar y del Mar Dulce, Saudade"
+      "famousBook": "Cenizas de Izalco"
     },
     "extraInfo": {
-      "imageSource": "https://www.buscabiografias.com/biografia/verDetalle/6461/Claribel%20Alegria"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "009",
     "name": "J.K. Rowling",
     "shortDescription": "Escritora británica, autora de la serie 'Harry Potter'.",
-    "description": "J.K. Rowling es una escritora británica mundialmente famosa, conocida por crear la exitosa serie de libros 'Harry Potter'. Sus libros han cautivado a lectores de todas las edades y se han convertido en un fenómeno cultural. Además de su trabajo en la serie Potter, Rowling ha participado en proyectos benéficos y escritura bajo el seudónimo Robert Galbraith.",
+    "description": "J.K. Rowling, nacida en 1965 en el Reino Unido, es una destacada escritora conocida por la aclamada serie de libros de Harry Potter. Su habilidad para crear mundos mágicos y personajes entrañables la ha convertido en una de las autoras más exitosas y queridas del mundo. Además de la saga de Harry Potter, Rowling ha incursionado en la escritura de novelas para adultos, como 'Una vacante imprevista' y 'El canto del cuco', bajo el seudónimo Robert Galbraith. Su impacto en la literatura contemporánea y su dedicación a causas sociales la han consolidado como una figura influyente.",
     "imageUrl": "https://i.postimg.cc/pTjSjLQX/009-J-K-Rowling.png",
     "facts": {
       "yearOfBirth": "1965",
       "birthPlace": "Yate, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Harry Potter y la piedra filosofal, Harry Potter y la cámara secreta, Harry Potter y el prisionero de Azkaban, Harry Potter y el cáliz de fuego, Harry Potter y la Orden del Fénix"
+      "famousBook": "Harry Potter y la piedra filosofal"
     },
     "extraInfo": {
-      "imageSource": "https://www.thescottishsun.co.uk/fabulous/5489621/harry-potter-jk-rowling/"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "010",
     "name": "Mary Shelley",
     "shortDescription": "Novelista británica, autora de 'Frankenstein'.",
-    "description": "Mary Shelley fue una escritora británica del siglo XIX, conocida por su influyente novela gótica 'Frankenstein'. Shelley, junto con su esposo Percy Bysshe Shelley y Lord Byron, fue parte del círculo literario romántico. Su obra maestra ha dejado una huella duradera en la literatura y la cultura popular.",
+    "description": "Mary Shelley (1797-1851), escritora británica pionera, es célebre por su obra maestra 'Frankenstein'. Nacida en una familia literaria, su creatividad se desplegó desde temprana edad. Shelley desafió las normas de su tiempo con la creación de un monstruo trágico y reflexivo. Su legado trasciende el horror gótico, explorando la ética científica y la alienación. Además de 'Frankenstein', sus novelas 'El último hombre' y 'Mathilda' destacan su habilidad narrativa. Shelley, una figura fascinante del Romanticismo, ha dejado una huella duradera en la literatura, influyendo en generaciones de escritores y exploradores de la ciencia ficción.",
     "imageUrl": "https://i.postimg.cc/wMcbW4bC/010-Mary-Shelley.png",
     "facts": {
       "yearOfBirth": "1797",
       "yearOfDeath": "1851",
       "birthPlace": "Londres, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Frankenstein o el moderno Prometeo, El último hombre, Matilda, Valperga, Falkner"
+      "famousBook": "Frankenstein"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=2zyET30q&id=30EED5E2C8F21E7AE0F3D792494DFA7021345A94&thid=OIP.2zyET30qOhO5FWOojjpVdAAAAA&mediaurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FRothwellMaryShelley.jpg%2F1200px-RothwellMaryShelley.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.db3c844f7d2a3a13b91563a88e3a5574%3Frik%3DlFo0IXD6TUmS1w%26pid%3DImgRaw%26r%3D0&exph=577&expw=474&q=Mary+Shelley&simid=608038692494511836&form=IRPRST&ck=8AFF163AF26C9A19789A962F3DC7D714&selectedindex=1&itb=0&ajaxhist=0&ajaxserp=0&vt=0&sim=11"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "011",
     "name": "Emily Dickinson",
     "shortDescription": "Poeta estadounidense, conocida por su poesía innovadora.",
-    "description": "Emily Dickinson fue una destacada poeta estadounidense del siglo XIX, conocida por su poesía innovadora y su estilo distintivo. Aunque gran parte de su obra fue publicada póstumamente, sus poemas reflexivos sobre la vida, la muerte y la naturaleza la han consagrado como una figura clave en la poesía estadounidense.",
+    "description": "Emily Dickinson (1830-1886), poetisa estadounidense, es reconocida por su genialidad poética y su enfoque introspectivo. Vivía una vida reclusa en Amherst, Massachusetts, y escribió más de 1,800 poemas, muchos de los cuales fueron descubiertos tras su muerte. La obra de Dickinson, caracterizada por su estilo único y conciso, explora temas como la muerte, el amor y la naturaleza. Su contribución a la poesía estadounidense es incalculable, y su habilidad para capturar la esencia de la vida cotidiana la ha convertido en una figura venerada en la literatura mundial.",
     "imageUrl": "https://i.postimg.cc/pTK0T1xm/011-Emily-Dickinson.png",
     "facts": {
       "yearOfBirth": "1830",
       "yearOfDeath": "1886",
       "birthPlace": "Amherst, Massachusetts, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Poesía", 
-      "Books": "Poesía completa de Emily Dickinson, Cartas de Emily Dickinson, Vida de Emily Dickinson, Viviendo con Emily Dickinson, Me llamo Emily Dickinson"
+      "famousBook": "Me llamo Emily Dickinson"
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/crea-una-imagen-de-la-escritora-mujer-emily-dickin/1-659eee6c9b2d4a44898e0d5f11eab3e5?darkschemeovr=0&FORM=GENCRE"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "012",
     "name": "Sylvia Plath",
     "shortDescription": "Poeta y novelista estadounidense, figura del confesionalismo.",
-    "description": "Sylvia Plath fue una influyente poeta y novelista estadounidense del siglo XX, asociada con el movimiento confesional. Su obra más conocida, 'La campana de cristal', exploró temas de identidad, depresión y feminismo. La escritura de Plath sigue siendo objeto de estudio y su impacto en la literatura contemporánea es innegable.",
+    "description": "Sylvia Plath (1932-1963), poetisa y novelista estadounidense, es conocida por su escritura intensamente emotiva y su exploración de la angustia psicológica. Su obra maestra, 'La campana de cristal', refleja sus luchas personales. Plath, figura central del Confesionalismo, aborda temas como la identidad, la opresión femenina y la enfermedad mental. Su poesía, como 'Ariel', revela una profunda conexión con la naturaleza. Aunque su vida fue trágicamente breve, la influencia de Plath en la poesía contemporánea es duradera, marcando su legado como una de las voces más impactantes del siglo XX.",
     "imageUrl": "https://i.postimg.cc/D0FxbdyB/012-Sylvia-Plath.png",
     "facts": {
       "yearOfBirth": "1932",
       "yearOfDeath": "1963",
       "birthPlace": "Boston, Massachusetts, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Poesía, Novela", 
-      "Books": "La campana de cristal, Ariel, Tres mujeres, Invierno en Madrid, Johnny Panic y la Biblia de sueños"
+      "famousBook": "Ariel"
     },
     "extraInfo": {
-      "imageSource": "https://media.vogue.es/photos/5db83156eff8ad0008ae18e2/2:3/w_2240,c_limit/GettyImages-515404262.jpg"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "013",
     "name": "Harper Lee",
     "shortDescription": "Escritora estadounidense, autora de 'Matar a un ruiseñor'.",
-    "description": "Harper Lee fue una destacada escritora estadounidense conocida por su novela clásica 'Matar a un ruiseñor'. La obra aborda temas de injusticia racial y ha dejado una marca perdurable en la literatura estadounidense. Aunque publicó solo una novela, su impacto cultural y literario es significativo.",
+    "description": "Harper Lee (1926-2016), novelista estadounidense, es célebre por su influyente obra 'Matar a un ruiseñor'. Nacida en Alabama, su novela, que aborda temas de raza y justicia, se convirtió en un clásico instantáneo y ganó el Premio Pulitzer. Aunque Lee publicó solo una novela durante su vida, su impacto fue significativo. Su habilidad para abordar cuestiones sociales complejas y su narrativa conmovedora le valieron el reconocimiento duradero como una de las escritoras más importantes del siglo XX, influenciando generaciones de lectores y escritores con su perspicacia y humanidad.",
     "imageUrl": "https://i.postimg.cc/KjNJ7k1F/013-Harper-Lee.png",
     "facts": {
       "yearOfBirth": "1926",
       "yearOfDeath": "2016",
       "birthPlace": "Monroeville, Alabama, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Literatura", 
-      "Books": "Matar a un ruiseñor, Ve y pon un centinela, El verano que murió Chica"
+      "famousBook": "Matar a un ruiseñor"
     },
     "extraInfo": {
-      "imageSource": "https://es.babelio.com/users/AVT_Harper-Lee_6495.jpg"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "014",
     "name": "Chimamanda Ngozi Adichie",
     "shortDescription": "Escritora nigeriana conocida por sus obras feministas y sociales.",
-    "description": "Chimamanda Ngozi Adichie es una destacada escritora nigeriana cuyas obras exploran temas feministas y sociales en el contexto de la cultura africana. Su novela 'Americanah' y su famoso discurso TED 'Todos deberíamos ser feministas' han contribuido a la conversación global sobre igualdad de género. Adichie ha recibido numerosos premios por su impactante contribución a la literatura contemporánea.",
+    "description": "Chimamanda Ngozi Adichie, nacida en Nigeria en 1977, es una destacada escritora y feminista. Su obra, que incluye 'Hibisco morado' y 'Americanah', explora la identidad, la cultura y la experiencia de las mujeres africanas. Adichie ha ganado reconocimiento mundial por su estilo literario distintivo y su compromiso con la igualdad de género. Su famoso discurso 'Todos deberíamos ser feministas' ha resonado globalmente. Adichie, con su aguda observación y narrativa cautivadora, ha dejado una profunda huella en la literatura contemporánea y en el movimiento feminista, consolidándose como una voz influyente y visionaria.",
     "imageUrl": "https://i.postimg.cc/DZ3gtdsn/014-Chimamanda-Ngozi-Adichie.png",
     "facts": {
       "yearOfBirth": "1977",
       "birthPlace": "Enugu, Nigeria",
-      "country": "Nigeria",
+      "countryNacimiento": "Nigeria",
       "mainField": "Literatura", 
-      "Books": "La flor púrpura, Medio sol amarillo, El peligro de la historia única, Americanah, Querida Ijeawele"
+      "famousBook": "La flor púrpura"
     },
     "extraInfo": {
-      "imageSource": "https://www3.gobiernodecanarias.org/medusa/proyecto/38015175-0003/wp-content/uploads/sites/322/2019/02/02-chimamanda-2-w512-h600-2x.jpg"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "015",
     "name": "Maya Angelou",
     "shortDescription": "Poeta, cantante y activista estadounidense, figura clave del movimiento de derechos civiles.",
-    "description": "Maya Angelou fue una polifacética artista estadounidense conocida por su destacada labor como poeta, cantante y activista de los derechos civiles. Su autobiografía 'I Know Why the Caged Bird Sings' es un relato influyente de su vida. Angelou dejó un impacto duradero en la literatura y la lucha por la igualdad racial.",
+    "description": " Maya Angelou (1928-2014), poetisa, escritora y activista estadounidense, es una luminaria de la literatura y los derechos civiles. Su autobiografía 'Yo sé por qué canta el pájaro enjaulado' es una odisea emocional que explora la superación personal y la lucha contra la discriminación racial y de género. Angelou, con una prosa poética única, ha dejado un legado poderoso que abarca desde su papel como poeta laureada de EE. UU. hasta su contribución a la música y el teatro. Su voz resonante y su impacto duradero la consolidan como una figura inolvidable en la historia cultural y literaria estadounidense.",
     "imageUrl": "https://i.postimg.cc/zfstq1mm/015-Maya-Angelou.png",
     "facts": {
       "yearOfBirth": "1928",
       "yearOfDeath": "2014",
       "birthPlace": "St. Louis, Missouri, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Poesía, Autobiografía", 
-      "Books": "Yo sé por qué canta el pájaro enjaulado, Reúne mis lágrimas con tus labios, Noches en la taberna del arco iris, La jaula de la memoria, Todavía me levanto"
+      "famousBook": "Todavía me levanto"
     },
     "extraInfo": {
-      "imageSource": "https://www.usatoday.com/gcdn/-mm-/a0666bbc7cf0321038277471f57c92bd680559c4/c=0-314-1370-1087/local/-/media/USATODAY/GenericImages/2014/05/28//1401284180000-XXX-ANGELOU-MOM-BOOKS-2370.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "016",
     "name": "Louisa May Alcott",
     "shortDescription": "Escritora estadounidense, autora de 'Mujercitas'.",
-    "description": "Louisa May Alcott fue una destacada escritora estadounidense del siglo XIX, conocida por su novela 'Mujercitas', que se ha convertido en un clásico de la literatura juvenil. Alcott abordó temas como la familia, la feminidad y la búsqueda de la identidad en sus escritos. Su obra sigue siendo querida por generaciones de lectores.",
+    "description": "Louisa May Alcott (1832-1888)es una novelista estadounidense conocida por 'Mujercitas', una obra clásica que refleja la vida familiar del siglo XIX. Nacida en Germantown, Pensilvania, Alcott fue también abolicionista y sufragista. Su legado abarca más allá de la literatura juvenil, influyendo en generaciones con su perspectiva progresista y su habilidad para plasmar las complejidades de la vida femenina en esa época. Una figura destacada del siglo XIX, Louisa May Alcott contribuyó significativamente al movimiento literario y social de su tiempo.",
     "imageUrl": "https://i.postimg.cc/vZD39mbF/016-Louisa-May-Alcott.png",
     "facts": {
       "yearOfBirth": "1832",
       "yearOfDeath": "1888",
       "birthPlace": "Germantown, Pennsylvania, EE. UU.",
-      "country": "EE. UU.",
+      "countryNacimiento": "EE. UU.",
       "mainField": "Literatura", 
-      "Books": "Mujercitas, Hombrecitos, Aquí comienzan mis consejos, Hombres buenos, Bajo las lilas"
+      "famousBook": "Mujercitas"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "017",
     "name": "Jhumpa Lahiri",
     "shortDescription": "Escritora estadounidense de origen indio, ganadora del Premio Pulitzer.",
-    "description": "Jhumpa Lahiri es una escritora estadounidense de origen indio, conocida por sus obras que exploran la experiencia de la diáspora india en Estados Unidos. Su colección de cuentos 'Intérprete del dolor' y su novela 'La hondonada' le valieron el reconocimiento internacional, incluido el Premio Pulitzer. Lahiri ha contribuido significativamente a la literatura contemporánea.",
+    "description": "Jhumpa Lahiri, nacida en Londres en 1967, es una destacada escritora y traductora estadounidense de origen indio. Su obra, que incluye 'El intérprete del dolor' y 'El buen nombre', explora las complejidades de la identidad y la diáspora india. Lahiri ha ganado renombre por su prosa evocadora y sus narrativas que revelan las intersecciones culturales. Ganadora del Premio Pulitzer, su habilidad para tejer historias íntimas que trascienden fronteras geográficas y emocionales la ha consolidado como una voz distintiva en la literatura contemporánea, explorando la experiencia inmigrante con sensibilidad y profundidad.",
     "imageUrl": "https://i.postimg.cc/XYhxg0YZ/017-Jhumpa-Lahiri.png",
     "facts": {
       "yearOfBirth": "1967",
       "birthPlace": "Londres, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura",
-      "Books": "Intérprete de emociones, El intérprete del dolor, Unaccustomed Earth, La hondonada, La señora de los objetos perdidos"
+      "famousBook": "Intérprete de emociones"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "018",
     "name": "Zadie Smith",
     "shortDescription": "Escritora británica, autora de 'Dientes blancos' y 'Sobre la belleza'.",
-    "description": "Zadie Smith es una destacada escritora británica conocida por sus novelas que exploran la identidad, la raza y la multiculturalidad en la sociedad contemporánea. Su debut, 'Dientes blancos', recibió aclamación crítica, al igual que sus obras posteriores, como 'Sobre la belleza'. Smith es una voz influyente en la literatura británica contemporánea.",
+    "description": "Zadie Smith, nacida en Londres en 1975, es una destacada novelista, ensayista y profesora británica. Su obra, que incluye 'Dientes blancos' y 'Sobre la belleza', refleja su aguda observación de la sociedad contemporánea. Smith, conocida por su estilo literario vibrante y su exploración de temas como la identidad y la multiculturalidad, ha recibido numerosos premios y elogios. Además de su éxito como novelista, su enfoque reflexivo en sus ensayos aborda cuestiones culturales y políticas. Zadie Smith, con su perspicacia y versatilidad literaria, se ha convertido en una figura influyente en la literatura contemporánea.",
     "imageUrl": "https://i.postimg.cc/vmVhqS40/018-Zadie-Smith.png",
     "facts": {
       "yearOfBirth": "1975",
       "birthPlace": "Londres, Reino Unido",
-      "country": "Reino Unido",
+      "countryNacimiento": "Reino Unido",
       "mainField": "Literatura", 
-      "Books": "Dientes blancos, Sobre la belleza, NW, El guardián, Salvaje lauryn"
+      "famousBook": "Dientes blancos"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "019",
     "name": "Yaa Gyasi",
     "shortDescription": "Escritora ghanesa-estadounidense, autora de 'Cántame, oh musa'.",
-    "description": "Yaa Gyasi es una escritora ghanesa-estadounidense cuya primera novela, 'Cántame, oh musa', recibió elogios de la crítica. Su obra examina la diáspora africana a lo largo de generaciones y ha sido aclamada por su narrativa potente y evocadora. Gyasi se ha destacado como una voz emergente en la literatura contemporánea.",
+    "description": "Yaa Gyasi, nacida en Ghana en 1989, es una talentosa novelista estadounidense. Su aclamada obra 'Hijos de la Yoruba' la catapultó a la escena literaria mundial. Gyasi, con maestría narrativa, explora la herencia y la diáspora africana a través de generaciones. La novela, que abarca siglos y continentes, examina temas profundos como la esclavitud, la identidad y la conexión humana. Gyasi ha recibido elogios por su habilidad para tejer historias impactantes con riqueza histórica. Su contribución a la literatura contemporánea la ha establecido como una voz destacada, revelando la complejidad de la experiencia africana y afroamericana.",
     "imageUrl": "https://i.postimg.cc/QNk4ZP0P/019-Yaa-Gyasi.png",
     "facts": {
       "yearOfBirth": "1989",
       "birthPlace": "Mampong, Ghana",
-      "country": "Ghana",
+      "countryNacimiento": "Ghana",
       "mainField": "Literatura", 
-      "Books": "Canciones de cuna, Trascender, Un lugar llamado Noche"
+      "famousBook": "Canciones de cuna"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "020",
     "name": "Margaret Atwood",
     "shortDescription": "Escritora canadiense, autora de 'El cuento de la criada'.",
-    "description": "Margaret Atwood es una destacada escritora canadiense conocida por su obra distópica 'El cuento de la criada'. Su prolífica carrera abarca diversos géneros, incluyendo la ciencia ficción, la poesía y la novela histórica. Atwood ha recibido numerosos premios y es considerada una de las figuras más importantes de la literatura contemporánea.",
+    "description": "Margaret Atwood, nacida en Ottawa, Canadá, en 1939, es una destacada novelista, poetisa y crítica literaria. Su obra distópica, como 'El cuento de la criada', ha dejado una marca indeleble en la literatura contemporánea. Atwood, conocida por su maestría en explorar temas feministas y distópicos, ha ganado numerosos premios, incluido el Premio Booker. Sus novelas, que incluyen 'Alias Grace' y 'El año del diluvio', revelan su aguda percepción y su habilidad para abordar cuestiones sociales y medioambientales. Margaret Atwood, una voz influyente, ha desafiado géneros literarios y dejado una profunda huella en la literatura global.",
     "imageUrl": "https://i.postimg.cc/SNSZSrPK/020-Margaret-Atwood.png",
     "facts": {
       "yearOfBirth": "1939",
       "birthPlace": "Ottawa, Ontario, Canadá",
-      "country": "Canadá",
+      "countryNacimiento": "Canadá",
       "mainField": "Literatura", 
-      "Books": "El cuento de la criada, Alias Grace, Oryx y Crake, El año del diluvio, MaddAddam"
+      "famousBook": "El cuento de la criada"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
@@ -361,63 +362,63 @@ const data = [
     "yearOfBirth": "1914",
     "yearOfDeath": "1953",
     "birthPlace": "Carolina, Puerto Rico",
-    "country": "Puerto Rico",
+    "countryNacimiento": "Puerto Rico",
     "mainField": "Poesía", 
-    "Books": "Poema en veinte surcos, Canción de la verdad sencilla, Poema heroico, Poema negrura, Poema en reloj de arena"
+    "famousBook": "Poema en veinte surcos"
   },
   "extraInfo": {
-    "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+    "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
   }
 },
   {
     "id": "022",
     "name": "Piedad Bonnet",
     "shortDescription": "Poeta y novelista colombiana, conocida por su obra lírica y emotiva.",
-    "description": "Piedad Bonnet es una destacada poeta y novelista colombiana reconocida por su obra lírica y emotiva. Su poesía aborda temas como el amor, la pérdida y la memoria. Bonnet ha recibido elogios por su contribución a la literatura latinoamericana contemporánea y su capacidad para transmitir emociones profundas a través de sus palabras.",
+    "description": "Piedad Bonnett, nacida en Amalfi, Colombia, en 1951, es una destacada poetisa, dramaturga y novelista. Su obra poética, que incluye 'Explicaciones no pedidas' y 'Lo que no tiene nombre', refleja una exploración íntima de la vida, la pérdida y la memoria. Bonnett, reconocida por su sensibilidad y profundidad emocional, ha recibido numerosos premios literarios. Además de su contribución a la poesía colombiana contemporánea, su incursión en la prosa ha consolidado su posición como una figura influyente en la literatura latinoamericana, explorando la complejidad de la existencia humana con una voz distintiva y conmovedora.",  
     "imageUrl": "https://i.postimg.cc/1t0HPnc6/022-Piedad-Bonnet.png",
     "facts": {
       "yearOfBirth": "1951",
       "birthPlace": "Amalfi, Antioquia, Colombia",
-      "country": "Colombia",
+      "countryNacimiento": "Colombia",
       "mainField": "Poesía, Novela",
-      "Books": "Lo que no tiene nombre, Siempre en mi recuerdo, Nadie escucha mi hablar, Tretas del débil"
+      "famousBook": "Lo que no tiene nombre"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "023",
     "name": "Laura Esquivel",
     "shortDescription": "Escritora mexicana, autora de 'Como agua para chocolate'.",
-    "description": "Laura Esquivel es una destacada escritora mexicana conocida por su obra más famosa, 'Como agua para chocolate'. Su novela, que combina la magia con la gastronomía, ha ganado reconocimiento internacional y ha sido adaptada a la pantalla. Esquivel ha explorado temas de amor, familia y tradición en sus obras, consolidándose como una figura influyente en la literatura mexicana contemporánea.",
+    "description": "Laura Esquivel, nacida en Ciudad de México en 1950, es una renombrada escritora y guionista mexicana. Su obra más conocida, 'Como agua para chocolate', fusiona la magia realista con la vida cotidiana, explorando temas como el amor y la cocina. Esquivel ha recibido reconocimiento internacional por su capacidad para mezclar lo mágico con lo mundano. Además de su éxito literario, ha incursionado en el cine y el teatro. Con una narrativa vibrante y emotiva, Esquivel ha dejado una marca duradera en la literatura latinoamericana, celebrando la conexión entre la gastronomía y las emociones con ingenio y originalidad.",
     "imageUrl": "https://i.postimg.cc/ZnVxBGQ5/023-Laura-Esquivel.png",
     "facts": {
       "yearOfBirth": "1950",
       "birthPlace": "Ciudad de México, México",
-      "country": "México",
+      "countryNacimiento": "México",
       "mainField": "Literatura", 
-      "Books": "Como agua para chocolate, La ley del amor, Tan veloz como el deseo, La suma de los días"
+      "famousBook": "Como agua para chocolate"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   },
   {
     "id": "024",
     "name": "Gioconda Belli",
     "shortDescription": "Poeta y novelista nicaragüense, figura destacada en la literatura contemporánea.",
-    "description": "Gioconda Belli es una reconocida poeta y novelista nicaragüense cuya obra ha dejado una marca significativa en la literatura contemporánea. Su poesía y novelas, como 'La mujer habitada', exploran temas feministas y políticos. Belli, además de su contribución literaria, ha sido activista y participante en eventos clave en la historia de Nicaragua.",
+    "description": "Gioconda Belli, nacida en Managua, Nicaragua, en 1948, es una destacada poetisa y novelista reconocida por su compromiso político y su exploración de la condición femenina. Su obra, que incluye 'La mujer habitada' y 'El país bajo mi piel', refleja la fusión de la poesía con la narrativa, abordando temas sociales y de género. Belli, activista y revolucionaria, ha participado en movimientos por la justicia y los derechos de las mujeres. Su habilidad para entrelazar lo íntimo y lo político la ha establecido como una voz influyente en la literatura centroamericana contemporánea.",
     "imageUrl": "https://i.postimg.cc/1X9KzmJd/024-Gioconda-Belli.png",
     "facts": {
       "yearOfBirth": "1948",
       "birthPlace": "Managua, Nicaragua",
-      "country": "Nicaragua",
+      "countryNacimiento": "Nicaragua",
       "mainField": "Poesía, Novela", 
-      "Books": "La mujer habitada, Sofía de los presagios, Waslala, El país de las mujeres, El pergamino de la seducción"
+      "famousBook": "La mujer habitada"
     },
     "extraInfo": {
-      "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
+      "imageSource": "https://www.canva.com/design/DAF5m8QT6AQ/YcmdwNC1ccb9Edu-GefCRg/edit"
     }
   }
 ];

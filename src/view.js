@@ -8,12 +8,11 @@ export const renderItems = (data) => {
     itemContainer.classList.add("card");
 
     itemContainer.innerHTML = `
-        <img src=${data.imageUrl} alt=${data.name}/> <br><br>
-        <dd itemprop="name">${data.name}</dd> <br>
-        <dt></dt><dd itemprop="DescripciónC"> ${data.shortDescription}</dd><br><br><br>
+        <img src=${data.imageUrl} alt=${data.name}/><br>
+        <dd itemprop="name">${data.name}</dd><br>
+        <dd itemprop="DescripciónC"> ${data.shortDescription}</dd><br>
+        <dt> Nacionalidad:</dt><dd itemprop="country">${data.facts.countryNacimiento}</dd>
         <dt>Fecha de nacimiento:</dt><dd itemprop="fechaNacimiento">${data.facts.yearOfBirth}</dd>
-        <dt> Pais de nacimiento:</dt><dd itemprop="country">${data.facts.country}</dd>
-        <dt>Fecha de muerte:</dt><dd itemprop="fechaMuerte">${data.facts.yearOfDeath || '----' }</dd>
         <dt>Género:</dt><dd itemprop="genero">${data.facts.mainField}</dd>
         `
     itemContainer.setAttribute("itemscope", "");
