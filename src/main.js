@@ -5,12 +5,15 @@ import data from './data/dataset.js';
 //guardar la ul con los items en una variable
 const cards=renderItems(data);
 //seleccionar el lugar donde se va a imprimir la data ("main")
-//se puede usar appenChild nuevamente y agregar la ul como hijo del elemento main
-document.querySelector("#root");
+//document.body.appentChild(cards)
 // lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
+const mainContainer=document.querySelector("#root");
+mainContainer.appendChild(cards);
+//se puede usar appenChild nuevamente y agregar la ul como hijo del elemento main
 
-//funcion de girar tarjetas. Trabajar en view. y usar "onClick" (recomendacion de coach)
-//Delegacion de eventos (otra opcion)
+
+
+
 
 
 
