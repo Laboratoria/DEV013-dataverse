@@ -66,13 +66,14 @@ header #brand h1 {
 }
      
 input[type=image] {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    /* margin: 2px 0 0 2px; */
 }
     
 label {
     /* background-color: #D7A180; */
-    padding: 2px 30px;
+    padding: 0 30px;
     margin-top: 5px;
 }
 
@@ -284,10 +285,10 @@ ul {
 
 #back-card .top-card {
     /* background-color: #D7A180; */
-    height: 150px;
+    height: 110px;
     display: flex;
-    padding: 0 5px;
-    margin: 5px 0 10px 0;
+    padding: 0 10px;
+    margin: 5px 0 15px 0;
     text-align: right;
 }
 
@@ -302,7 +303,7 @@ ul {
     /* background-color: aquamarine; */
     font-size: 16px;
     color: #AF4401;
-    margin-top: -10px;
+    margin: -10px 0 0 -4px;
     width: 167px;
     padding: 5px;
     font-family: 'Marcellus', serif;
@@ -312,9 +313,9 @@ ul {
     /* background-color: #8A988C; */
     width: 85px;
     height: 156px;
-    margin: -20px 5px 0 -5px;
+    margin: -20px 0 0 0;
     /* margin-right: 5px; */
-    margin-left: -5px;
+    /* margin-left: -5px; */
 }
 
 /*#back-card .top-card dl {
@@ -325,7 +326,7 @@ ul {
 
 #back-card dt {
     /* background-color: #AF4401; */
-    width: 167px;
+    width: 160px;
     /* margin-right: -5px; */
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -345,6 +346,7 @@ ul {
     /* background-color: #FFFFFF; */
     font-family: 'Lato', sans-serif;
     font-size: 14px;
+    width: 160px;
 }
 
 /* #back-card .bottom-card {
@@ -355,21 +357,24 @@ ul {
 #back-card #description {
     /* background-color: aqua; */
     text-align: left;
-    height: 236px;
+    margin: 30px 0 0 5px;
+    height: 235px;
 }
 
 #back-card #icons {
     /* background-color: #AF4401; */
-    height: 30px;
+    height: 35px;
+    width: 278px;
     display: flex;
-    padding: 0 5px 0 10px;
-    /* margin: 0 0 0 30px; */
+    margin: 15px 0 0 -10px;
+    /* padding: 0 5px 0 10px; */
+    
 }
 
 #back-card #icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px 0 13px;
 }
 
 /* #back-card #icons .stats {
@@ -382,9 +387,9 @@ ul {
 
 #back-card #icons .back #Regresar {
     /* background-color: gray; */
-    width: 30px;
-    height: 30px;
-    margin: 0 0 0 110px;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 0 120px;
 }
 
 /* Footer styles */

@@ -6,7 +6,7 @@ import data from './data/dataset.js';
 const cards=renderItems(data);
 //seleccionar el lugar donde se va a imprimir la data ("main")
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento main
-document.main.appendChild(cards);
+document.querySelector("#root");
 // lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
 
 //funcion de girar tarjetas. Trabajar en view. y usar "onClick" (recomendacion de coach)
