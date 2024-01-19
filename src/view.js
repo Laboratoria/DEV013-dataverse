@@ -25,25 +25,25 @@ export const renderItems = (data) => {
           <div class="amounts">
             <dt itemprop="water-amount" class="amount">Agua</dt>
               <dd>
-                <img alt="Gota" src="https://raw.githubusercontent.com/Etelbina/dataverse/4799d18b2c4c0c8f69766aa0154376b8272c43be/agua-activa.png" >
-                <img alt="Gota" src="https://raw.githubusercontent.com/Etelbina/dataverse/4799d18b2c4c0c8f69766aa0154376b8272c43be/agua-activa.png" >
-                <img alt="Gota" class="inactiva" src="https://raw.githubusercontent.com/Etelbina/dataverse/4799d18b2c4c0c8f69766aa0154376b8272c43be/agua-inactiva.png" >
+                <img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
+                <img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
+                <img alt="Gota" class="inactiva" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true" >
               </dd>
           </div>
           <div class="amounts">
             <dt itemprop="light-amount" class="amount">Luz</dt>
               <dd>
-                <img alt="Sol" src="resources/Icons/luz-activa.png" >
-                <img alt="Sol" class="inactiva"  src="resources/Icons/luz-inactiva.png" >
-                <img alt="Sol" class="inactiva"  src="resources/Icons/luz-inactiva.png">
+                <img alt="Sol" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-activa.png?raw=true" >
+                <img alt="Sol" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true" >
+                <img alt="Sol" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true">
               </dd>
           </div>
           <div class="amounts">
             <dt itemprop="care-amount" class="amount">Cuidado</dt>
               <dd>
-                <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
-                <img alt="Semaforo" class="inactiva"  src="resources/Icons/cuidado-inactiva.png" class="inactiva" >
-                <img alt="Semaforo" class="inactiva"  src="resources/Icons/cuidado-inactiva.png" class="inactiva" >
+                <img alt="Semaforo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-activa.png?raw=true" >
+                <img alt="Semaforo" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
+                <img alt="Semaforo" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
               </dd>
           </div>
         </dl>
