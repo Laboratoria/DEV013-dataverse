@@ -72,11 +72,11 @@ export const renderItems = (data) => {
         </dl>
         <div id="icons">
           <div class="stats">
-            <img class="stats1" alt="Estadisticas 1" src="resources/Icons/estadisticas-1.png">
-            <img class="stats2" alt="Estadisticas 1" src="resources/Icons/estadisticas-2.png">
+            <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
+            <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
           </div>
           <div class="back">
-          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
           </div>
         </div>
       </div>
