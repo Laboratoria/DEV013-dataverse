@@ -1,5 +1,5 @@
 import { renderItems } from './view.js';
-import data from './data/datasetAI.js';
+import data from './data/dataset.js';
 
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
@@ -11,6 +11,15 @@ document.querySelector("#root");
 
 //funcion de girar tarjetas. Trabajar en view. y usar "onClick" (recomendacion de coach)
 //Delegacion de eventos (otra opcion)
+
+
+
+
+
+
+
+
+
 
 
 

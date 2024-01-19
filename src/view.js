@@ -23,7 +23,7 @@ export const renderItems = (data) => {
         <img alt="Plant Name" src="${element.imageUrl}">
         <dl itemscope itemtype="https://schema.org" class="facts">
           <div class="amounts">
-            <dt itemprop="water-amount" class="amount">Water</dt>
+            <dt itemprop="water-amount" class="amount">Agua</dt>
               <dd>
                 <img alt="Gota" src="resources/Icons/agua-activa.png" >
                 <img alt="Gota" src="resources/Icons/agua-activa.png" >
@@ -31,7 +31,7 @@ export const renderItems = (data) => {
               </dd>
           </div>
           <div class="amounts">
-            <dt itemprop="light-amount" class="amount">Light</dt>
+            <dt itemprop="light-amount" class="amount">Luz</dt>
               <dd>
                 <img alt="Sol" src="resources/Icons/luz-activa.png" >
                 <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
@@ -39,7 +39,7 @@ export const renderItems = (data) => {
               </dd>
           </div>
           <div class="amounts">
-            <dt itemprop="care-amount" class="amount">Care</dt>
+            <dt itemprop="care-amount" class="amount">Cuidado</dt>
               <dd>
                 <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
                 <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" class="inactiva" >
@@ -59,16 +59,15 @@ export const renderItems = (data) => {
         <img alt="Plant Name" src="${element.imageUrl}">
         <dl itemscope itemtype="https://schema.org">
           <dt class="scientific">${element.scientificName}</dt>
-          <dt class="detail">Botanical Family</dt><dd>${element.botanicalFamily}</dd>
-          <dt class="detail">Usage</dt><dd>${element.applications}</dd>
-          
+          <dt class="detail">Familia botánica</dt><dd>${element.botanicalFamily}</dd>
+          <dt>Lugar de origen</dt><dd>${element.birthPlace}</dd>
         </dl>
       </div>
       <div class="bottom-card">
         <dl id="description">
-        <dt>Climate data</dt><dd>${element.climaticData}</dd>
-          <dt>Description</dt><dd>${element.description}</dd>
-          <dt>Maintenance</dt><dd>${element.maintenance}</dd>
+        <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
+        <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
+        <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
         </dl>
         <div id="icons">
           <div class="stats">
