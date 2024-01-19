@@ -5,11 +5,11 @@ import data from './data/dataset.js';
 //guardar la ul con los items en una variable
 const cards=renderItems(data);
 //seleccionar el lugar donde se va a imprimir la data ("main")
-//document.body.appentChild(cards)
+//document.body.appendChild(cards) 
 // lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
 const mainContainer=document.querySelector("#root");
 mainContainer.appendChild(cards);
-//se puede usar appenChild nuevamente y agregar la ul como hijo del elemento main
+//se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
 
 
 

@@ -72,10 +72,10 @@ export const renderItems = (data) => {
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
+            <input type="image" onclick="popUpDescription(this)" id="popUpDescription"  alt="Descripcion" src="resources/Icons/descripcion.png">
           </div>
           <div class="back">
-          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
+          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
         </div>
       </div>
@@ -113,3 +113,12 @@ function returnCard (botton) {
 
 window.turnCard=turnCard;
 window.returnCard=returnCard;
+
+/*function popUpDescription(botton){
+  const popUpDescrip= botton.closest('.card-container');
+  const popUp= popUpDescrip.querySelector('popUpDescription');
+
+
+}
+
+window.popUpDescription=popUpDescription;*/
