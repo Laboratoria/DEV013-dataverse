@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="authors" content="Joseline García & Etelbina Cañedo">
+    <title>Dataverse</title>
+    <meta name="description" content="This is the second proyect of Laboratoria bootcamp, first time working as a team">
+    <link rel="icon" href="resources/Icons/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script src="main.js" type="module"></script>
-  </body>
+    <header>
+      <section id="brand">
+        <img src="resources/Icons/Logo.png" alt="Logo">
+        <h1>My Beauty Plants</h1>
+      </section>
+      <aside>
+        <div class="itemAside">
+          <input type="image" id="Ornamentales" name="Ornamentales" alt="Ornamentales" class="category" src="resources/Icons/Ornamentales.png">
+          <label for="Ornamentales">Ornamentales </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Medicinales" name="Medicinales" alt="Medicinales" class="category" src="resources/Icons/Medicinales.png">
+          <label for="Medicinales">Medicinales </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Desérticas" name="Desérticas" alt="Desérticas" class="category" src="resources/Icons/deserticas.png">
+          <label for="Desérticas"> Desérticas</label></div>
+        <div class="itemAside">
+          <input type="image" id="Árboles" name="Árboles" alt="Árboles" class="category" src="resources/Icons/arboles.png">
+          <label for="Árboles">Árboles </label>
+        </div>
+        <div class="itemAside">
+          <input type="image" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="resources/Icons/aromaticas.png">
+          <label for="Aromáticas">Aromáticas </label>
+        </div>
+
+          <!--
+          <div class="dropdown">
+          <label id="order" class="dropbtn">Ordenar</label>
+          <ul class="itemOrder">
+            <li>A - Z</li>
+            <li>Z - A</li>
+          </ul>
+          </div>
+          -->
+      
+        <div class="dropdown"> 
+          <label for="itemOrder" id="order" class="dropbtn">Ordenar</label>
+          <select name="order" id="itemOrder">
+            <!-- <option value="order">Ordenar</option> -->
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+          </select> 
+        </div>
+
+      </aside>
+    </header>
+    <main>
+      <h2 class="unnecessary">Plantas</h2>
+      <div id="root">
+        <!-- <div class="container"> -->
+          <ul class="cards" id="ulCards">
+            <li class="unnecessary"></li>
+          <!-- <li class="card-container" itemscope itemtype="https://schema.org">
+           <article id="front-card">
+                <h2>Agave Azul</h2>
+                <div class="top-card">
+                  <img alt="Agave Azul" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org" class="facts">
+                    <div class="amounts">
+                      <dt itemprop="water-amount" class="amount">Agua</dt>
+                      <dd>
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="light-amount" class="amount">Luz</dt>
+                      <dd>
+                        <img alt="Sol" src="resources/Icons/luz-activa.png" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="care-amount" class="amount">Cuidado</dt>
+                      <dd>
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" >
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <p>Planta suculenta usada en la producción de tequila.</p>
+                <div class="button-container">
+                  <button id="detalles" onclick="turnCard(this)">Detalles</button>
+                </div>
+              </article>
+              <article id="back-card" class="hide">
+                <h2>Agave Azul</h2>
+                <div class="top-card">
+                  <img alt="Plant Name" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org">
+                    <dt class="scientific">Agave tequilana</dt>
+                    <dt class="detail">Familia botánica</dt><dd>Asparagaceae</dd>
+                    <dt>Lugar de origen</dt><dd>México</dd>
+                  </dl>
+                </div>
+                <div class="bottom-card">
+                  <dl id="description">
+                    <dt class="detail">Usos</dt><dd>Producción de tequila, jardinería ornamental.</dd>
+                    <dt>Datos climáticos</dt><dd>Prefiere climas secos y suelos bien drenados.</dd>
+                    <dt>Mantenimiento</dt><dd>Riego limitado, resistente a la sequía y al calor.</dd>
+                  </dl>
+                  <div id="icons">
+                    <div class="stats">
+                      <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
+                      <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
+                    </div>
+                    <div class="back">
+                    <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>-->
+          </ul>
+        </div
+      </div>
+    </main>
+  <footer>
+    <p class="footer">MY BEAUTY PLANTS</p>
+    <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
+    <p class="footer">Bootcamp Laboratoria</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+  </body> 
 </html>
