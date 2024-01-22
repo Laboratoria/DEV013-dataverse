@@ -1,180 +1,362 @@
 :root {
-  --color-fondo: #f1e0d9; /* Fondo principal */
-  --color-titulo: #c23071; /* Texto Titulo */
-  --color-texto1: #bb1662; /* Texto general */
+  --color-fondo: #f1e0d9;
+  /* Fondo principal */
+  --color-titulo: #c23071;
+  /* Texto Titulo */
+  --color-texto1: #bb1662;
+  /* Texto general */
 }
 
 * {
   /*background-color: var(--color-fondo);*/
-  font-family: roboto;
   color: var(--color-texto1);
+  font-family: "roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-html{
-  background-color: #f1e0d9;
+html {
+  background: rgb(241, 224, 217);
+  background: linear-gradient(90deg,
+      rgba(241, 224, 217, 1) 15%,
+      rgba(227, 170, 185, 1) 39%,
+      rgba(241, 224, 217, 1) 58%,
+      rgba(227, 170, 185, 1) 79%);
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-header{
-  color: var(--color-titulo);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 50px;
-  padding: 0px;
-  margin: 30px 0 10px;
-  border-bottom: solid #EA1B7B 2px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+/*NAV BAR*/
+.container {
+  /*utilites*/
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
 }
 
-.cards{
+header {
+  background-color: #9A5C75;
+  box-shadow: 0px 5px 10px 0px #919191;
+  width: 100%;
+  opacity: 0.85;
+  z-index: 999;
+  position: fixed;
+}
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);  /*cambiar color*/
+}
+
+.navbar-logo-img {
+  max-height: 50px;
+  width: 70px;
+}
+
+/* opciones de navbar */
+.nav-menu-links {
+  display: inline-block;
+  padding: 0 20px;
+
+}
+
+.nav-menu-links:hover {
+  transform: scale(1.1);
+}
+
+.nav-menu-links a {
+  font-size: 700;
+  color: snow;
+  /*cambiar color*/
+  text-decoration: none;
+}
+
+.nav-menu-links a:hover {
+  color: #490726;
+  /*cambiar color*/
+}
+
+/*seccion INICIO */
+
+.inicio-section {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: snow; */
+}
+
+.content-left {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  align-items: flex-start;
+}
+
+.content-left-tittle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.sakura-img {
+  max-width: 90%;
+  height: auto;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 30px 0;
+  text-align: justify;
+}
+
+/* aqui empiezan la Seccion -  CARTAS */
+.cards-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  /* background-color: snow; */
+}
+
+/* subtitulo cartas clow */
+
+h3 {
+  text-align: end;
+  text-decoration: underline;
+  width: 50%;
+  padding-right: 50px;
+  margin: 0 auto;
+  font-size: 3rem;
+  max-width: 1200px;
+  width: 90%;
+  height: 100px;
+  text-transform: uppercase;
+}
+
+/* filtros */
+.container-filtros {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+select[data-testid="select-filter"] {
+  height: 40px;
+  width: 160px;
+  padding: 0 10px;
+}
+
+#ordenarFilter {
+  height: 40px;
+  width: 160px;
+  padding: 0 10px;
+}
+
+.container-ordenar {
+  text-align: end;
+ }
+
+.reset-btn {
+  width: 95%;
+  text-align: center;
+   margin: auto;
+  padding: 10px 20px;
+  margin-left: 50px;
+  border-radius: 5px;
+  background-color: #7a234c8f;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: snow;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+}
+
+
+/* cartas */
+.container-cards {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90%;
-  padding: 2rem;
-  margin: 1rem;
+  justify-content: space-between;
+  margin: auto;
+
 
 }
-h2{
-  padding: 50% black;
-  position: relative;
-}
-
-
-ul{
-  list-style: none;
-  width: 200px;
-  height: auto;
-  padding: 0 auto;
-  position: relative;
+ 
+ul {
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
+  list-style: none;
   justify-content: center;
-  margin: 1rem;
-  
 }
 
-.card{
-  width: 250px;
-  height: 400px;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 10px;
-  
- } 
-.imagen{
-  width: 250px;
-  height: 400px;
-  border-radius: 15px;
-  margin: 0;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
-
-.img-card{
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  object-position: 20% 50%;
-  top: 0;
-  left: 0;
-}
-
-.cardInfo{
+.card {
+  width: 240px;
+  height: 430px;
   background-color: #9A5C75;
-  border-radius: 0 0 12px 12px;
-  position: relative;
-  height: 40px;
-  bottom: 100px;
-  padding: 45px 0;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
-.cardName{
-  color: white;
+
+/* .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: translateY(-5px);
+} */
+
+dl {
+  margin: 0;
+  width: 240px;
+  height: 300px;
+  position: relative;
+}
+
+.img-container {
+  margin-left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.img-card {
+  position: absolute;
+  width: 100%;
+  height: 160%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cardName {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 
-.cardDescription{
-  color: white;
-  margin-top: 5px;
+.cardDescription {
+  margin: 0;
+  font-weight: 400;
+  color: snow;
+  margin-top: 10px;
   z-index: 5;
 }
 
-
-
-/*main{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-
-}
-li{
-  list-style: none;
-}
-dl{
-
-  width: 300px;
-  height: 500px;
-  background-color: aqua;
-  padding: 2rem;
-}
-dd{
-  display: flex;
-  justify-content: center;
-  margin: 0;
+.card-button {
+  margin: 10px;
+  /* height: 30px;
+  width: 100px; */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: lowercase;
+  font-weight: 500;
+  background-color: #7a234c8f;
+  color: snow;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
 }
 
-.img-card{
-  width: 100px;
-  height: auto;
-  border-radius: 12px;
+.card-button:hover {
+  background-color: #ffffff59;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  box-shadow: snow (0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transform: translateY(-2px);
+
 }
 
+/* Carta POPUP box */
 
-div{
-  width: 280px;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  left: 0;
-  right: 0;
-  box-sizing: border-box;
-}
-
-/* 
-li { CONTENEDOR de imagen y descripcion
-  display: flex;
-  list-style: none;
-  background-color: rgb(214, 96, 96);
-  width: 300px;
-  height: 442px;
-  border-radius: 12px;
-  
-}
-
-/* dd{ /*contiene las cartas
- display: flex;
- margin-inline-start:0px;
-}
-
-.img-card{
-  
-  width: 100%;
+.popup-box{
+  position: fixed;
   height: 100%;
-  border-radius: 12px 12px 0 0;
-  box-shadow: 5px 5px 10px grey;
-  display: block; /* Elimina espacio adicional 
-  background-color: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0,0.5);;
+  background-color: transparent;
+  z-index: 500;
+  visibility: hidden;
+  opacity: 0;
+   
 }
-dt{ /* contiene a las propiedades 
-text-align: center;
-margin-bottom: 10px;
-} */
+ 
+.popup-content{
+  background-color: #ffffff;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.pop-header{
+padding: 15px 40px 15px 15px;
+border-bottom: 1px solid #dddd;
+}
+
+.popup-body{
+  padding: 15px;
+  color: #5555;
+  margin: 0 0 15px;
+}
+
+.popup-footer{
+  padding: 15px;
+  border-top: 1px solid #dddd;
+}
+.popup-close-btn{
+  padding: 8px 15px;
+  border: 1px solid #5555;
+  font-size: 16px;
+}
+
+
+/* seccion del footer */
+.footer-section {
+  background-color: #9A5C75;
+  font-size: 1rem;
+  color: snow;
+  height: 64px;
+  text-align: center;
+  padding: 20px;
+}
