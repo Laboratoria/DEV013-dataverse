@@ -96,13 +96,14 @@ function turnCard(botton) {
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card");
 
-  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjet
-  // Alternar la clase 'hide' en la parte posterior de la tarjeta.
+  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
+  // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
   backCard.classList.toggle('hide');
   frontCard.classList.toggle('hide');
 }
  
 function returnCard (botton) {
+  //lo mismo, pero al reves xd 
   const cardContainer=  botton.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card")
@@ -111,6 +112,7 @@ function returnCard (botton) {
   frontCard.classList.toggle('hide');
 }
 
+//hacer las variable globales 
 window.turnCard=turnCard;
 window.returnCard=returnCard;
 
@@ -122,3 +124,4 @@ window.returnCard=returnCard;
 }
 
 window.popUpDescription=popUpDescription;*/
+
