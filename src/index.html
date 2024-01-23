@@ -6,26 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escritoras</title>
   <link rel="stylesheet" href="style.css" />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  </head>
 
 <body>
   <header>
-    <a href=""><img class="home" src="./data/img/banner_escritoras.png" alt="banner"/></a>
-    <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1>
+    <a href=""><img class="home" src="./data/img/banner_escritoras.png" alt="banner" /></a>
+    <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1><br>
   </header>
 
-  <div class="rectangle"></div>
+  <div class="form">
+    <label for="type-select">Género literario:</label>
+    <select name="type" id="type-select" data-testid="filter-type">
+      <option value="">Elegir una opción</option>
+      <option value="">Literatura</option>
+      <option value=""> Poesía</option>
+      <option value="">Poesía, Novela</option>
+    </select>
+
+    <label for="type-select">País de Nacimiento</label>
+    <select name="type" id="type-select" data-testid="filter-data">
+      <option value="">Elige una opción</option>
+      <option value="">Reino Unido</option>
+      <option value="">Chile</option>
+      <option value="">Nicaragua</option>
+      <option value="">Colombia</option>
+      <option value="">Nigeria</option>
+      <option value="">Ghana</option>
+      <option value="">Canadá</option>
+      <option value="">México</option>
+      <option value="">Puerto Rico</option>
+    </select>
+
+    <label for="sort-select">Ordenar por</label>
+    <select name="ordenar" id="sort-select" data-testid="select-sort">
+      <option value="none">Elige una opción</option>
+      <option value="asc">A-Z</option>
+      <option value="desc">Z-A</option>
+    </select>
+  </div>
 
   <div id="root">
     <ul id="cardList"></ul>
-  </div>
+  </div> <br><br><br><br><br><br><br>
 
   <script src="view.js" type="module"></script>
   <script src="main.js" type="module"></script>
   <script src="dataFunctions.js" type="module"></script>
 
   <footer>
-    Desarrolladoras: Raiza Gatica/Elizabeth Patiño J.
+    El mundo a través de grandes escritoras<br>
+    Desarrolladoras: Raiza Gatica/Elizabeth Patiño J.<br>
+    Laboratoria<br>
   </footer>
 </body>
 

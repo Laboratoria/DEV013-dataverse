@@ -1,53 +1,88 @@
-<<<<<<< HEAD header {
+/* Estilo para HEAD header */
+HEAD header {
   background-color: white;
-  padding: 10px 20px;
+  padding: 2% 4%; 
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: inherit;
   text-align: center;
+  font-family: 'Marcellus', serif;
+}
+
+#root {
+  max-width: 100%;
+  margin: 10% auto;
+  display: flex;
+}
+
+body{
+  font-family: 'Marcellus', serif;
+  margin:0;
+}
+
+h1 {
+  text-align: center;
+  font-family:'Marcellus', serif;
+}
+
+.form-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 1%;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+select {
+  width: 15%;
+  padding: 1%;
+  margin-bottom: 1.5%; 
+  border: 1% solid #ccc; 
+  border-radius: 4%;
+  font-family: 'Marcellus', serif;
 }
 
 .card img {
-  width: 70%;
+  width: 80%; 
   height: auto;
   border-radius: 10px 10px 0 0;
   display: flex;
   margin: 0 auto;
-  margin-bottom:12px;
-  }
+  margin-bottom: 1.5%; 
+}
 
 ul {
   list-style: none;
-  padding: 8 px;
+  padding: 1%; 
   display: grid;
-  gap: 20px;
+  gap: 2%; 
   grid-template-columns: repeat(4, 1fr);
-}
-
-dl {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  text-align: justify;
+  font-size: small;
 }
 
 dd[itemprop="name"] {
-  color: #333;
-  font-size: 22px;
+  color: #000000;
   font-weight: bold;
   text-align: center;
 }
 
 dd[itemprop="shortDescription"] {
   text-align: justify;
-  }
+}
 
 dd[itemprop="fechaNacimiento"],
 dd[itemprop="fechaMuerte"],
 dd[itemprop="LugarNacimiento"],
 dd[itemprop="género"] {
   text-align: justify;
+  display: flex; 
 }
 
 dt[itemprop="fechaNacimiento"],
@@ -55,7 +90,6 @@ dt[itemprop="fechaMuerte"],
 dt[itemprop="LugarNacimiento"],
 dt[itemprop="género"] {
   text-align: justify;
-  display: inline;
   margin: 0;
 }
 
@@ -64,52 +98,31 @@ dt {
   text-align: justify;
 }
 
-footer {
-  background-color: #f2d290;
-  font-family: sans-serif;
-  color: black;
-  text-align: center;
-  padding: 10px;
-  font-family: inherit;
-  }
-
-======#root {
-  max-width: 800px;
-  margin: 50px auto;
-}
-
-body {
-  margin: 0;
-  }
-
 li {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
+  border: 1% solid #ede2e2; 
+  border-radius: 10px;
+  margin: 1%; 
+  padding: 2%; 
   list-style: none;
-  background-color: #f0ae345e;
-  }
+  background-color: #edcd925e;
+  font-family: 'Marcellus', serif;;
+}
 
 img {
   width: 100%;
   height: auto;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f1c4705e;
- }
+  background-color: #f1cd885e;
+}
 
-h1 {
+dd {
+  margin-inline-start: 3px;
+}
+
+footer {
+  background-color: #f2d290;
+  font-family: 'Marcellus', serif;;
+  color: black;
   text-align: center;
-}
-
-h2 {
-  margin-bottom: 5px;
-}
-
-p {
-  margin: 5px;
-}
-
-dd{
-  margin-inline-start: 2px;
-}
->>>>>>>0fe25188d37b97a505d1c694296db39c0d94eb2e
+  padding: 2%; 
+}94eb2e
