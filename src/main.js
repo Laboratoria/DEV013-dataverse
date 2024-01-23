@@ -1,5 +1,6 @@
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
+import { filterData } from './dataFunctions.js';
 
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
@@ -8,20 +9,33 @@ const cards=renderItems(data);
 //document.body.appendChild(cards) 
 // lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
 const mainContainer=document.querySelector("#root");
-mainContainer.appendChild(cards);
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
+mainContainer.appendChild(cards);
 
 
-
-
-
-
-
-
-
-
-
-
+//usar onClick en cada boton descartado 
+//se agrego clase comun a los botones para agregarles el listener a todos de un solo
+//al hacer click en alguno de ellos se va a ejecutar la funcion definida
+// identificar a que boton se le dio click
+//llamar a la funcion de filtrado para que cree el nuevo array con la categoria que fue identificada
+const categoryButtons=document.querySelectorAll('.category');
+categoryButtons.forEach(button => {
+  button.addEventListener('click',(e)=> {
+    const category = e.target.getAttribute('data-category');
+    const filteredData = filterData(data, 'categoryPlant', category);
+    //console.log(filteredData)
+    //console.log(e.target)
+    clearView();
+    renderItems(filteredData);
+  });
+});
+//hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
+//antes habria que limpiar/eliminar todas las tarjetas 
+//creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
+function clearView(){
+  const cardsContainer=document.getElementById("ulCards");
+  cardsContainer.innerHTML="";
+}
 
 
 
