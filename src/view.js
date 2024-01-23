@@ -50,7 +50,7 @@ export const renderItems = (data) => {
       </div>
       <p>${element.shortDescription}</p>
       <div class="button-container">
-        <button id="detalles" onclick="turnCard(this)">Detalles</button>
+        <button id="detalles" onclick="turnCard(this)" >Detalles</button>
       </div>
     </article>
     <article id="back-card" class="hide" class="back-card">
@@ -72,8 +72,7 @@ export const renderItems = (data) => {
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <input type="image" onclick="popUpDescription(this)" id="popUpDescription"  alt="Descripcion" src="resources/Icons/descripcion.png">
-          </div>
+            <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
           <div class="back">
           <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
@@ -91,6 +90,7 @@ export const renderItems = (data) => {
 
 
 //al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
+
 function turnCard(botton) {
   const cardContainer=  botton.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");
@@ -115,6 +115,10 @@ function returnCard (botton) {
 //hacer las variable globales 
 window.turnCard=turnCard;
 window.returnCard=returnCard;
+
+
+//Ventanas Modales/Popup
+
 
 /*function popUpDescription(botton){
   const popUpDescrip= botton.closest('.card-container');

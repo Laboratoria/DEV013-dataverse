@@ -18,7 +18,6 @@ mainContainer.appendChild(cards);
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida
 // identificar a que boton se le dio click
 //llamar a la funcion de filtrado para que cree el nuevo array con la categoria que fue identificada
-
 const categoryButtons=document.querySelectorAll('.category');
 categoryButtons.forEach(button => {
   button.addEventListener('click',(e)=> {
@@ -30,24 +29,13 @@ categoryButtons.forEach(button => {
     renderItems(filteredData);
   });
 });
-
+//hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
+//antes habria que limpiar/eliminar todas las tarjetas 
+//creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
 function clearView(){
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
 }
-
-//hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
-//antes habria que limpiar/eliminar todas las tarjetas 
-//creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
-
-
-
-
-
-
-
-
-
 
 
 
