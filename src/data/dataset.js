@@ -9,8 +9,10 @@ const data = [
       "yearOfBirth": "1775",
       "yearOfDeath": "1817",
       "birthPlace": "Steventon, Reino Unido",
-      "mainField": "Literatura"
-    },
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Orgullo y Prejuicio, Sentido y sensibilidad, Emma, Persuación"
+      },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
     }
@@ -24,7 +26,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1952",
       "birthPlace": "Oakland, California, EE. UU.",
-      "mainField": "Literatura"
+      "country": "EE. UU.",
+      "mainField": "Literatura",
+      "Books": "El club de la buena estrella, Hijas de la suerte, La hija del curandero, El Valle del Asombro, Cien secretos felices"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
@@ -40,7 +44,9 @@ const data = [
       "yearOfBirth": "1882",
       "yearOfDeath": "1941",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "La señora Dalloway, Al faro, Orlando, Las olas, Una habitación propia"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create?toWww=1&redig=9531C02FE1A24ED1A2F124F4F6BB18D8"
@@ -55,7 +61,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1942",
       "birthPlace": "Lima, Perú",
-      "mainField": "Literatura"
+      "country": "Perú",
+      "mainField": "Literatura",
+      "Books": "La casa de los espíritus, Eva Luna, Paula, Hija de la fortuna, Retrato en sepia"
     },
     "extraInfo": {
       "imageSource": "https://www.sapere.it/sapere/pillole-di-sapere/cultura-e-spettacolo/Isabel-Allende--la-vita-straordinaria-di-una-scrittrice-divisa-tra-realta-e-letteratura.html"
@@ -71,7 +79,9 @@ const data = [
       "yearOfBirth": "1816",
       "yearOfDeath": "1855",
       "birthPlace": "Thornton, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Jane Eyre, Cumbres Borrascosas (de Emily Brontë), Shirley, Villette, El profesor"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=CHyjXL8p&id=A6E622FDFC3561BD645DBA7C5818D8194BA0CA98&thid=OIP.CHyjXL8pjodlvDX8SU03sAHaI7&mediaurl=https%3A%2F%2Fd3d00swyhr67nd.cloudfront.net%2Fw1200h1200%2Fcollection%2FWYR%2FBPM%2FWYR_BPM_P25-001.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.087ca35cbf298e8765bc35fc494d37b0%3Frik%3DmMqgSxnYGFh8ug%26pid%3DImgRaw%26r%3D0&exph=1200&expw=996&q=Charlotte+Bront%c3%ab&simid=607990666220811425&form=IRPRST&ck=AC4400517E5800BC49B573EFD1D97442&selectedindex=2&itb=0&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_NNyF6mND*cp_1E0632823FC55FED6F6FD5893A39BF73*mid_2CA2572639DE8ACC6A23B5FF2BC62EC3632A5C64*simid_608021551305094902*thid_OIP.NNyF6mNDQDlId3GMPZfAlgHaJY&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0"
@@ -87,7 +97,9 @@ const data = [
       "yearOfBirth": "1890",
       "yearOfDeath": "1976",
       "birthPlace": "Torquay, Reino Unido",
-      "mainField": "Literatura"
+      "bcountry": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Asesinato en el Orient Express, Diez negritos, Asesinato en Mesopotamia, Asesinato en el campo de golf, El asesinato de Roger Ackroyd"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=Viv5M5VT&id=D77BB7A17DD837F580C491CDB28B6DB97BCD07A4&thid=OIP.Viv5M5VTWQFSt8Shw1VJ2QHaKL&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.562bf9339553590152b7c4a1c35549d9%3frik%3dpAfNe7lti7LNkQ%26riu%3dhttp%253a%252f%252f4.bp.blogspot.com%252f-5HZXq3byWus%252fUSYlOAEMdOI%252fAAAAAAAAADI%252fHS5o-Yxc97E%252fs1600%252fagatha-christie.jpg%26ehk%3dfObIS%252b7Lvj9fSETZCZeNV0%252bkUCwg6KQHX5JB7uL59Og%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1600&expw=1164&q=Agatha+Christie&simid=608036338881401166&FORM=IRPRST&ck=4EDD6E4F42EF0B381A36F5B2E7D06199&selectedIndex=2&itb=0&ajaxhist=0&ajaxserp=0"
@@ -103,7 +115,9 @@ const data = [
     "yearOfBirth": "1889",
     "yearOfDeath": "1957",
     "birthPlace": "Vicuña, Chile",
-    "mainField": "Poesía"
+    "country": "Chile",
+    "mainField": "Poesía",
+    "Books": "Desolación, Lagar, Lagar II, Ternura, Lagar III"
   },
   "extraInfo": {
     "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -119,7 +133,9 @@ const data = [
       "yearOfBirth": "1924",
       "yearOfDeath": "2018",
       "birthPlace": "Estelí, Nicaragua",
-      "mainField": "Poesía, Novela"
+      "country": "Nicaragua",
+      "mainField": "Poesía, Novela",
+      "Books": "Cenizas de Izalco, Caudal de ausencia, La mujer del rio Sumpul, Cantos de Cifar y del Mar Dulce, Saudade"
     },
     "extraInfo": {
       "imageSource": "https://www.buscabiografias.com/biografia/verDetalle/6461/Claribel%20Alegria"
@@ -134,7 +150,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1965",
       "birthPlace": "Yate, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Harry Potter y la piedra filosofal, Harry Potter y la cámara secreta, Harry Potter y el prisionero de Azkaban, Harry Potter y el cáliz de fuego, Harry Potter y la Orden del Fénix"
     },
     "extraInfo": {
       "imageSource": "https://www.thescottishsun.co.uk/fabulous/5489621/harry-potter-jk-rowling/"
@@ -150,7 +168,9 @@ const data = [
       "yearOfBirth": "1797",
       "yearOfDeath": "1851",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Frankenstein o el moderno Prometeo, El último hombre, Matilda, Valperga, Falkner"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/search?view=detailV2&ccid=2zyET30q&id=30EED5E2C8F21E7AE0F3D792494DFA7021345A94&thid=OIP.2zyET30qOhO5FWOojjpVdAAAAA&mediaurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F6%2F65%2FRothwellMaryShelley.jpg%2F1200px-RothwellMaryShelley.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.db3c844f7d2a3a13b91563a88e3a5574%3Frik%3DlFo0IXD6TUmS1w%26pid%3DImgRaw%26r%3D0&exph=577&expw=474&q=Mary+Shelley&simid=608038692494511836&form=IRPRST&ck=8AFF163AF26C9A19789A962F3DC7D714&selectedindex=1&itb=0&ajaxhist=0&ajaxserp=0&vt=0&sim=11"
@@ -166,7 +186,9 @@ const data = [
       "yearOfBirth": "1830",
       "yearOfDeath": "1886",
       "birthPlace": "Amherst, Massachusetts, EE. UU.",
-      "mainField": "Poesía"
+      "country": "EE. UU.",
+      "mainField": "Poesía", 
+      "Books": "Poesía completa de Emily Dickinson, Cartas de Emily Dickinson, Vida de Emily Dickinson, Viviendo con Emily Dickinson, Me llamo Emily Dickinson"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create/crea-una-imagen-de-la-escritora-mujer-emily-dickin/1-659eee6c9b2d4a44898e0d5f11eab3e5?darkschemeovr=0&FORM=GENCRE"
@@ -182,7 +204,9 @@ const data = [
       "yearOfBirth": "1932",
       "yearOfDeath": "1963",
       "birthPlace": "Boston, Massachusetts, EE. UU.",
-      "mainField": "Poesía, Novela"
+      "country": "EE. UU.",
+      "mainField": "Poesía, Novela", 
+      "Books": "La campana de cristal, Ariel, Tres mujeres, Invierno en Madrid, Johnny Panic y la Biblia de sueños"
     },
     "extraInfo": {
       "imageSource": "https://media.vogue.es/photos/5db83156eff8ad0008ae18e2/2:3/w_2240,c_limit/GettyImages-515404262.jpg"
@@ -198,7 +222,9 @@ const data = [
       "yearOfBirth": "1926",
       "yearOfDeath": "2016",
       "birthPlace": "Monroeville, Alabama, EE. UU.",
-      "mainField": "Literatura"
+      "country": "EE. UU.",
+      "mainField": "Literatura", 
+      "Books": "Matar a un ruiseñor, Ve y pon un centinela, El verano que murió Chica"
     },
     "extraInfo": {
       "imageSource": "https://es.babelio.com/users/AVT_Harper-Lee_6495.jpg"
@@ -213,7 +239,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1977",
       "birthPlace": "Enugu, Nigeria",
-      "mainField": "Literatura"
+      "country": "Nigeria",
+      "mainField": "Literatura", 
+      "Books": "La flor púrpura, Medio sol amarillo, El peligro de la historia única, Americanah, Querida Ijeawele"
     },
     "extraInfo": {
       "imageSource": "https://www3.gobiernodecanarias.org/medusa/proyecto/38015175-0003/wp-content/uploads/sites/322/2019/02/02-chimamanda-2-w512-h600-2x.jpg"
@@ -229,7 +257,9 @@ const data = [
       "yearOfBirth": "1928",
       "yearOfDeath": "2014",
       "birthPlace": "St. Louis, Missouri, EE. UU.",
-      "mainField": "Poesía, Autobiografía"
+      "country": "EE. UU.",
+      "mainField": "Poesía, Autobiografía", 
+      "Books": "Yo sé por qué canta el pájaro enjaulado, Reúne mis lágrimas con tus labios, Noches en la taberna del arco iris, La jaula de la memoria, Todavía me levanto"
     },
     "extraInfo": {
       "imageSource": "https://www.usatoday.com/gcdn/-mm-/a0666bbc7cf0321038277471f57c92bd680559c4/c=0-314-1370-1087/local/-/media/USATODAY/GenericImages/2014/05/28//1401284180000-XXX-ANGELOU-MOM-BOOKS-2370.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp"
@@ -245,7 +275,9 @@ const data = [
       "yearOfBirth": "1832",
       "yearOfDeath": "1888",
       "birthPlace": "Germantown, Pennsylvania, EE. UU.",
-      "mainField": "Literatura"
+      "country": "EE. UU.",
+      "mainField": "Literatura", 
+      "Books": "Mujercitas, Hombrecitos, Aquí comienzan mis consejos, Hombres buenos, Bajo las lilas"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -260,7 +292,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1967",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura",
+      "Books": "Intérprete de emociones, El intérprete del dolor, Unaccustomed Earth, La hondonada, La señora de los objetos perdidos"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -275,7 +309,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1975",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Literatura"
+      "country": "Reino Unido",
+      "mainField": "Literatura", 
+      "Books": "Dientes blancos, Sobre la belleza, NW, El guardián, Salvaje lauryn"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -290,7 +326,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1989",
       "birthPlace": "Mampong, Ghana",
-      "mainField": "Literatura"
+      "country": "Ghana",
+      "mainField": "Literatura", 
+      "Books": "Canciones de cuna, Trascender, Un lugar llamado Noche"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -305,7 +343,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1939",
       "birthPlace": "Ottawa, Ontario, Canadá",
-      "mainField": "Literatura"
+      "country": "Canadá",
+      "mainField": "Literatura", 
+      "Books": "El cuento de la criada, Alias Grace, Oryx y Crake, El año del diluvio, MaddAddam"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -321,7 +361,9 @@ const data = [
     "yearOfBirth": "1914",
     "yearOfDeath": "1953",
     "birthPlace": "Carolina, Puerto Rico",
-    "mainField": "Poesía"
+    "country": "Puerto Rico",
+    "mainField": "Poesía", 
+    "Books": "Poema en veinte surcos, Canción de la verdad sencilla, Poema heroico, Poema negrura, Poema en reloj de arena"
   },
   "extraInfo": {
     "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -336,7 +378,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1951",
       "birthPlace": "Amalfi, Antioquia, Colombia",
-      "mainField": "Poesía, Novela"
+      "country": "Colombia",
+      "mainField": "Poesía, Novela",
+      "Books": "Lo que no tiene nombre, Siempre en mi recuerdo, Nadie escucha mi hablar, Tretas del débil"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -351,7 +395,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1950",
       "birthPlace": "Ciudad de México, México",
-      "mainField": "Literatura"
+      "country": "México",
+      "mainField": "Literatura", 
+      "Books": "Como agua para chocolate, La ley del amor, Tan veloz como el deseo, La suma de los días"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
@@ -366,7 +412,9 @@ const data = [
     "facts": {
       "yearOfBirth": "1948",
       "birthPlace": "Managua, Nicaragua",
-      "mainField": "Poesía, Novela"
+      "country": "Nicaragua",
+      "mainField": "Poesía, Novela", 
+      "Books": "La mujer habitada, Sofía de los presagios, Waslala, El país de las mujeres, El pergamino de la seducción"
     },
     "extraInfo": {
       "imageSource": "URL_DE_LA_FUENTE_DE_LA_IMAGEN"
