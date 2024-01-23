@@ -10,3 +10,12 @@ export const elementDataFilter = (data, filterBy, value) => {
   return filterElement;
 }
 
+//sort asc
+export const sortData = (data,sortBy,sortOrder) =>{
+  if (sortOrder === "asc"){
+    return data.sort((a,b) => a[sortBy].localeCompare(b[sortBy]));
+  } if (sortOrder === "desc"){
+    return data.sort((a,b) => b[sortBy].localeCompare(a[sortBy]));
+  }
+}
+
