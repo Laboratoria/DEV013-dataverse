@@ -12,10 +12,11 @@ mainContainer.appendChild(cards);
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
 
 
+function refreshPage() {
+  window.location.reload()
+}
 
-
-
-
+window.refreshPage=refreshPage;
 
 
 
