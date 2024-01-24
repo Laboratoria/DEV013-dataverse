@@ -19,11 +19,6 @@ function refreshPage() {
 
 window.refreshPage=refreshPage;
 
-
-
-
-
-
 //usar onClick en cada boton descartado 
 //se agrego clase comun a los botones para agregarles el listener a todos de un solo
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida

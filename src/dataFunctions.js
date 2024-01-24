@@ -1,4 +1,4 @@
-// import data from './data/dataset.js';
+import data from './data/dataset.js';
 
 
 
@@ -37,62 +37,96 @@ esta función debe usar el método reduce.
 */
 
 
+export const orderData = (data, sortBy, sortOrder) => {
+  return;
+  // return data.filter(objeto => objeto[filterBy] === value);
+}
 
 
 
 
 
 
-
-
-
-
-// function alDerecho() {
-//   derecho = data.sort(function(a,b) {
-//     if (a.id > b.id) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   });
-//   return derecho;
-// }
-
-// function alReves() {
-//   reves = data.sort(function(a,b){
-//     if (a.id > b.id) {
-//       return false;
-//     } else {
-//       return true;
-//     }
-//   });
-//   return reves;
-// }
 
 let derecho = [];
 let reves = [];
 
-function sortOrder() {
+
+const ids = document.getElementById("id");
+const selection = document.getElementById("itemOrder");
+const i = selection.selectedIndex;
+// const sorted = sortOrder();
+
+
+ 
+// function sortData(data, sortBy, sortOrder) {
+
+//   if (i === 1) {
+//     console.log(derecho);
+//     // return derecho;
+//     return renderItems(derecho);
+//   } else if (i === 2) {
+//     console.log(reves);
+//     // return reves;
+//     return renderItems(reves);
+//   } else if (i === 3) {
+//     console.log("aleatorio"); //regresar a caregorías en desorden
+//   } else {
+//     refreshPage();
+//   }
+// }
+
+// window.sortData=sortData;
+
+
+
+
+
+function alDerecho() {
   derecho = data.sort(function(a,b) {
     if (a.id > b.id) {
-      true;
+      return true;
     } else {
-      false;
+      return false;
     }
-    return derecho;
   });
-
-  reves = data.sort(function(a,b){
-    if (a.id > b.id) {
-      false;
-    } else {
-      true;
-    }
-    return reves;
-  });
+  return derecho;
 }
 
-window.sortOrder=sortOrder;
+function alReves() {
+  reves = data.sort(function(a,b){
+    if (a.id > b.id) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+  return reves;
+}
+
+
+//intento de unificar funcion
+// function sortOrder() {
+//   derecho = data.sort(function(a,b) {
+//     if (a.id > b.id) {
+//       true;
+//     } else {
+//       false;
+//     }
+//     return derecho;
+//   });
+
+//   reves = data.sort(function(a,b){
+//     if (a.id > b.id) {
+//       false;
+//     } else {
+//       true;
+//     }
+//     return reves;
+//   });
+// }
+
+// window.sortOrder=sortOrder;
 
 
 

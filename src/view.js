@@ -117,17 +117,7 @@ window.turnCard=turnCard;
 window.returnCard=returnCard;
 
 
-//Ventanas Modales/Popup
 
-
-/*function popUpDescription(botton){
-  const popUpDescrip= botton.closest('.card-container');
-  const popUp= popUpDescrip.querySelector('popUpDescription');
-
-
-}
-
-window.popUpDescription=popUpDescription;*/
 
 
 
