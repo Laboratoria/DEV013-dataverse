@@ -45,6 +45,138 @@ function clearView(){
 
 
 
+//1 necesito darle evento a los botones onchange="writeInOrder()"
+// const ids = document.getElementById("id"); //trae los id del objeto
+
+
+//2Necesito saber qué botón se está seleccionando 
+function saberQueSeSelecciono() {
+
+  const selection = document.getElementById("itemOrder"); //trae el select del html
+  const i = selection.selectedIndex; //define cuál es el indice que se ha seleccionado
+
+  if (i === 1) {
+    console.log("derecho");
+    // return derecho;
+    //return renderItems(derecho);
+  } else if (i === 2) {
+    console.log("reves");
+    // return reves;
+    //return renderItems(reves);
+  } else if (i === 3) {
+    console.log("aleatorio"); //regresar a caregorías en desorden
+  } else if (i === 4) {
+    refreshPage();
+  }
+}
+
+window.saberQueSeSelecciono=saberQueSeSelecciono;
+
+// window.sortData=sortData;
+
+//si a-z derecho
+//si z-a revez
+//si aleatorio (regresar a categoría)
+//si ver todas (reiniciar página)
+
+
+
+
+
+
+
+
+// let derecho = [];
+// let reves = [];
+
+
+
+
+// function alDerecho() {
+//   derecho = data.sort(function(a,b) {
+//     if (a.id > b.id) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+//   return derecho;
+// }
+
+// function alReves() {
+//   reves = data.sort(function(a,b){
+//     if (a.id > b.id) {
+//       return false;
+//     } else {
+//       return true;
+//     }
+//   });
+//   return reves;
+// }
+
+
+//intento de unificar funcion
+// function sortOrder() {
+//   derecho = data.sort(function(a,b) {
+//     if (a.id > b.id) {
+//       true;
+//     } else {
+//       false;
+//     }
+//     return derecho;
+//   });
+
+//   reves = data.sort(function(a,b){
+//     if (a.id > b.id) {
+//       false;
+//     } else {
+//       true;
+//     }
+//     return reves;
+//   });
+// }
+
+// window.sortOrder=sortOrder;
+
+
+
+
+
+// import { refreshPage } from './main.js';
+// import { sortOrder } from './dataFunctions.js';
+// import data from './data/dataset.js';
+
+// const ids = document.getElementById("id");
+// const selection = document.getElementById("itemOrder");
+// const i = selection.selectedIndex;
+// const sorted = sortOrder();
+
+// function sortData(data, sortBy, sortOrder) {
+
+//   if (i === 1) {
+//     console.log(derecho);
+//     // return derecho;
+//     return renderItems(derecho);
+//   } else if (i === 2) {
+//     console.log(reves);
+//     // return reves;
+//     return renderItems(reves);
+//   } else if (i === 3) {
+//     console.log("aleatorio"); //regresar a caregorías en desorden
+//   } else {
+//     refreshPage();
+//   }
+// }
+
+// window.sortData=sortData;
+
+
+
+
+
+
+
+
 
 
 

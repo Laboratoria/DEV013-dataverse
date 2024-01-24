@@ -122,34 +122,6 @@ window.returnCard=returnCard;
 
 
 
-// import { refreshPage } from './main.js';
-// import { sortOrder } from './dataFunctions.js';
-// import data from './data/dataset.js';
-
-// const ids = document.getElementById("id");
-// const selection = document.getElementById("itemOrder");
-// const i = selection.selectedIndex;
-// const sorted = sortOrder();
-
-// function sortData(data, sortBy, sortOrder) {
-
-//   if (i === 1) {
-//     console.log(derecho);
-//     // return derecho;
-//     return renderItems(derecho);
-//   } else if (i === 2) {
-//     console.log(reves);
-//     // return reves;
-//     return renderItems(reves);
-//   } else if (i === 3) {
-//     console.log("aleatorio"); //regresar a caregorías en desorden
-//   } else {
-//     refreshPage();
-//   }
-// }
-
-// window.sortData=sortData;
-
 
 
 

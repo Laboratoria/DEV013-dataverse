@@ -1,4 +1,4 @@
-import data from './data/dataset.js';
+// import data from './data/dataset.js';
 
 
 
@@ -37,96 +37,23 @@ esta función debe usar el método reduce.
 */
 
 
-export const orderData = (data, sortBy, sortOrder) => {
-  return;
-  // return data.filter(objeto => objeto[filterBy] === value);
-}
 
-
-
-
-
-
-
-let derecho = [];
-let reves = [];
-
-
-const ids = document.getElementById("id");
-const selection = document.getElementById("itemOrder");
-const i = selection.selectedIndex;
-// const sorted = sortOrder();
-
-
- 
-// function sortData(data, sortBy, sortOrder) {
-
-//   if (i === 1) {
-//     console.log(derecho);
-//     // return derecho;
-//     return renderItems(derecho);
-//   } else if (i === 2) {
-//     console.log(reves);
-//     // return reves;
-//     return renderItems(reves);
-//   } else if (i === 3) {
-//     console.log("aleatorio"); //regresar a caregorías en desorden
-//   } else {
-//     refreshPage();
-//   }
-// }
-
-// window.sortData=sortData;
-
-
-
-
-
-function alDerecho() {
-  derecho = data.sort(function(a,b) {
-    if (a.id > b.id) {
-      return true;
+function sortData(data, sortBy, sortOrder) {
+  const dataOrdered = data.sort(function(a,b) {
+    if (a[sortBy] > b[sortBy]) {
+      if (sortOrder === 1) {
+        return true;
+      } else if (sortOrder === 2) {
+        return false;
+      }
     } else {
-      return false;
+      if (sortOrder === 1) {
+        return false;
+      } else if (sortOrder === 2) {
+        return true;
+      }
     }
   });
-  return derecho;
+  return dataOrdered;
 }
-
-function alReves() {
-  reves = data.sort(function(a,b){
-    if (a.id > b.id) {
-      return false;
-    } else {
-      return true;
-    }
-  });
-  return reves;
-}
-
-
-//intento de unificar funcion
-// function sortOrder() {
-//   derecho = data.sort(function(a,b) {
-//     if (a.id > b.id) {
-//       true;
-//     } else {
-//       false;
-//     }
-//     return derecho;
-//   });
-
-//   reves = data.sort(function(a,b){
-//     if (a.id > b.id) {
-//       false;
-//     } else {
-//       true;
-//     }
-//     return reves;
-//   });
-// }
-
-// window.sortOrder=sortOrder;
-
-
 
