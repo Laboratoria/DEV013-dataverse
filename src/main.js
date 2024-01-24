@@ -46,12 +46,9 @@ function clearView(){
 }
 
 
-
-
-function selected() {
-
-  const selection = document.getElementById("itemOrder"); //trae el select del html
-  const i = selection.selectedIndex; //define cuál es el indice que se ha seleccionado
+const dropdown = document.getElementById("itemOrder");
+dropdown.addEventListener("change", () => {
+  const i = dropdown.selectedIndex;
 
   if (i === 1) {
     const ascending = sortData(data, "id", 1);
@@ -70,9 +67,9 @@ function selected() {
   } else if (i === 4) {
     refreshPage();
   }
-}
+});
 
-window.selected=selected;
+
 
 
 

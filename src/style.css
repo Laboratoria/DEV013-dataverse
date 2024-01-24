@@ -120,10 +120,6 @@ select#itemOrder {
 }
 
 
-
-
-
-
 /*Este es el que me traje de w3s*/
 /*the container must be positioned relative:*/
 /* .dropdown {
@@ -180,10 +176,6 @@ select#itemOrder {
 
 
 
-
-
-
-
 /* Main styles */
 main {
     /* background-color: plum; */
@@ -218,7 +210,7 @@ ul {
 }
 
 .card-container {
-    background-color: #EBD0BF;
+    /* background-color: #EBD0BF; */
     padding: 5px;
     width: 276px;
     border-radius: 10px;
@@ -228,12 +220,32 @@ ul {
     /* float: left; */
 }
 
+li.card-container.ornamental {
+    background-color: #C4CBC5;
+}
+
+li.card-container.medicinal {
+    background-color: #D3DBC6;
+}
+
+li.card-container.desertica {
+    background-color: #F3F2D3;
+}
+
+li.card-container.arboles {
+    background-color: #F9EDD5;
+}
+
+li.card-container.aromatica {
+    background-color: #EBD0BF;
+}
+
 .hide {
     display: none;
 }
 
 #front-card {
-    background-color: #EBD0BF;
+    /* background-color: #EBD0BF; */
     padding: 5px;
     height: 458px;
     margin: auto;
@@ -370,8 +382,8 @@ ul {
     font-family: 'Marcellus', serif;
 }
 
-#back-card img {
-    /* background-color: #8A988C; */
+#back-card img.bachPlantImage {
+    background-color: #8A988C;
     width: 85px;
     height: 156px;
     margin: -20px 0 0 0;
@@ -428,14 +440,33 @@ ul {
     width: 278px;
     display: flex;
     margin: 15px 0 0 -10px;
+    /* align-items: center; */
+    /*justify-content: center; */
     /* padding: 0 5px 0 10px; */
-    
+}
+
+div.stats {
+    width: 80px;
+    height: 35px;
+    margin-left: 13px;
+}
+
+div.back {
+    /* background-color: aqua; */
+    width: 35px;
+    height: 35px;
+    margin: -39px 0 0 217px;
 }
 
 #back-card #icons img {
+    /* background-color: aqua; */
     width: 35px;
     height: 35px;
-    margin: 0 5px 0 13px;
+    /* margin: 0 5px 0 8px; */
+}
+
+img.stats1 {
+    margin-right: 5px;
 }
 
 /* #back-card #icons .stats {
@@ -450,8 +481,10 @@ ul {
     /* background-color: gray; */
     width: 35px;
     height: 35px;
-    margin: 0 0 0 120px;
+    /* margin: -39px -156 30px 0; */
 }
+
+
 
 /* Footer styles */
 footer{

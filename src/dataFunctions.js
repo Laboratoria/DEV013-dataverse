@@ -31,8 +31,6 @@ para ser mostrados de acuerdo a la data proporcionada,
 esta función debe usar el método reduce.
 */
 
-
-
 export const sortData = (data, sortBy, sortOrder) => {
   const dataOrdered = data.sort(function(a,b) {
     if (a[sortBy] > b[sortBy]) {
