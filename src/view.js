@@ -13,22 +13,25 @@ export const renderItems = (data) => {
       </dd>
         <dd class="cardName" itemprop="name">${cartas.name} </dd>
         <dd class="cardDescription" itemprop="shortdescription">${cartas.shortDescription}</dd>
-        <button class="card-button" onclick="togglePopup(this)" >Ver mas</button>
-      </div>
+        <button class="card-button">Ver mas</button>
+    </div>
       <div class="popup-box">
         <div class="popup-content">
           <div class="pop-header">
-            <dd class="cardName" itemprop="name">${cartas.name} </dd>
-            <dt></dt><dd class="inactiva" itemprop="shortdescription">${cartas.shortDescription}</dd>
+            <dd class="cardNameUp" itemprop="name">${cartas.name} </dd>
+            <dt></dt><dd class="popupShortDescription" itemprop="shortdescription">${cartas.shortDescription}</dd>
           </div>
+          <dd class="img-ContentBody" itemprop="imagenUrl">
+          <img class="imgBody" src=${cartas.imageUrl} alt=${cartas.name}>
+          </dd>
           <div class="popup-body">
-            <dt></dt><dd class="inactiva" itemprop="description">${cartas.description}</dd> 
-            <dt></dt><dd class="inactiva" itemprop="elemnt">${cartas.elementEsencial}</dd>
-            <dt></dt><dd class="inactiva" itemprop="power">${cartas.facts.powerFul}</dd>
-            <dt></dt><dd class="inactiva" itemprop="danger">${cartas.extraInfo.isDangerous}</dd>
+            <dt>Descripción</dt><dd class="inactiva" itemprop="description">${cartas.description}</dd> 
+            <dt>Elemento:</dt><dd class="inactiva" itemprop="elemnt">${cartas.facts.elementEsencial}</dd>
+            <dt>Poder:</dt><dd class="inactiva" itemprop="power">${cartas.facts.powerFul}</dd>
+            <dt>Peligro:</dt><dd class="inactiva" itemprop="danger">${cartas.extraInfo.isDangerous}</dd>
           </div>
           <div class="popup-footer">
-            <button onclick="closePopup()" class="popup-close-btn inactiva"   >X</button>
+            <button  class="popup-close-btn">Close</button>
           </div>
         </div>
       </div>

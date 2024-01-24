@@ -7,13 +7,18 @@ export const example = () => {
 //funcion de filtrar por elemento
 export const elementDataFilter = (data, filterBy, value) => {
   const filterElement = data.filter(
-    (elemento) => elemento.facts[filterBy] === value
-  );
+    (elemento) => elemento.facts[filterBy] === value);
+    return filterElement;
+  }
 
-  console.log("value: ", value);
-  console.log("data despues del filtro: ", filterElement);
-  return filterElement;
-};
+//sort asc
+export const sortData = (data,sortBy,sortOrder) =>{
+  if (sortOrder === "asc"){
+    return data.sort((a,b) => a[sortBy].localeCompare(b[sortBy]));
+  } if (sortOrder === "desc"){
+    return data.sort((a,b) => b[sortBy].localeCompare(a[sortBy]));
+  }
+}
 
 //funcion de filtrar por carta peligrosa o inofensiva
 
