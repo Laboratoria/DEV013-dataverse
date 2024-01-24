@@ -1,8 +1,3 @@
-// import data from './data/dataset.js';
-
-
-
-
 /*
 `filterData(data, filterBy, value)`: esta función recibe tres parámetros. 
 El primer parámetro,`data`, nos entrega los datos. 
@@ -38,7 +33,7 @@ esta función debe usar el método reduce.
 
 
 
-function sortData(data, sortBy, sortOrder) {
+export const sortData = (data, sortBy, sortOrder) => {
   const dataOrdered = data.sort(function(a,b) {
     if (a[sortBy] > b[sortBy]) {
       if (sortOrder === 1) {
