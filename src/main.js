@@ -2,44 +2,38 @@
 import { renderItems } from "./view.js";
 
 import data from "./data/dataset.js";
-import { elementDataFilter } from "./dataFunctions.js";
+import { dangerousDataFilter, elementDataFilter } from "./dataFunctions.js";
 
 //------------ funcion para renderizar la data--------------------------------
 function renderData(data) {
   const body = document.getElementById("root");
-  if(body){
+  if (body) {
     const render = renderItems(data);
     body.innerHTML = render;
   }
 }
 
-renderData(data) // Total de la Data
+renderData(data); // Total de la Data
+
+//--------- filtrado elementos-------
 
 let filtro = [];
 
-//--------- filtrado elementos
 const selectElement = document.querySelector('[data-testid="select-filter"]');
 selectElement.addEventListener("change", (event) => {
-  filtro = elementDataFilter(data,'elementEsencial', event.target.value); //datos que se imprime
-  renderData(filtro)
-//console.log(filtro);
-//console.log (filtro = (data,event.target.value));
+  filtro = elementDataFilter(data, "elementEsencial", event.target.value); //datos que se imprime
+  renderData(filtro);
+
+  console.log(filtro);
+  //console.log(filtro);
+  //console.log (filtro = (data,event.target.value));
 });
 //console.log(elementDataFilter(data,"elementEsencial","Climáticos"));// data + campo que filtro y el valor que quiero filtrar
-
-
- 
-
-
-
-
-
 
 // function togglePopup(btn) {
 //   console.log('adjsksjad');
 // }
 // const boton = document.getElementsByClassName('card-button');
-
 
 // let popup = document.getElementById("popup-box");
 // function togglePopup(){
@@ -51,3 +45,19 @@ selectElement.addEventListener("change", (event) => {
 //  popup.classList.remove("popup-box .hidden");
 
 // }
+
+//----------------- filtrado por carta inofensiva o peligrosa-----------------
+
+let filterDangerous = [];
+
+const selectDangerous = document.querySelector(
+  '[data-testid="select-filter2"]'
+);
+selectDangerous.addEventListener("change", () => {
+  const selected = selectDangerous.options[selectDangerous.selectedIndex].value;
+  filterDangerous = dangerousDataFilter(data, "isDangerous", selected);
+
+  console.log(filterDangerous);
+
+  renderData(filterDangerous);
+});
