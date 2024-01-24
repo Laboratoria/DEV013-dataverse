@@ -50,7 +50,7 @@ export const renderItems = (data) => {
       </div>
       <p>${element.shortDescription}</p>
       <div class="button-container">
-        <button id="detalles" onclick="turnCard(this)" >Detalles</button>
+        <button id="detalles" class="detalles">Detalles</button>
       </div>
     </article>
     <article id="back-card" class="hide" class="back-card">
@@ -69,12 +69,25 @@ export const renderItems = (data) => {
         <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
         <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
         </dl>
+
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
+
+          <div>
+            <img class="openModalBtn" id="openModalBtn" alt="Descripcion" src="resources/Icons/descripcion.png">
+            <div id="myModal" class="modal"> 
+              <div class="modal-content">
+                <header>
+                  <h3>${element.name}</h3>
+                </header>
+                <p>${element.description}</p>
+             </div>
+            </div>
+          </div>
+
           <div class="back">
-          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+          <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
         </div>
       </div>
@@ -88,11 +101,11 @@ export const renderItems = (data) => {
   return cardList;
 };
 
+//funcion que debe hacer girar la tarjeta 
+//usando onclick como atributo en el html
 
-//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
-
-function turnCard(botton) {
-  const cardContainer=  botton.closest('.card-container');
+/*function turnCard(button) {
+  const cardContainer=  button.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card");
 
@@ -102,9 +115,9 @@ function turnCard(botton) {
   frontCard.classList.toggle('hide');
 }
  
-function returnCard (botton) {
+function returnCard (button) {
   //lo mismo, pero al reves xd 
-  const cardContainer=  botton.closest('.card-container');
+  const cardContainer=  button.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card")
 
@@ -114,18 +127,21 @@ function returnCard (botton) {
 
 //hacer las variable globales 
 window.turnCard=turnCard;
-window.returnCard=returnCard;
+window.returnCard=returnCard;*/
 
 
-//Ventanas Modales/Popup
+/*             <div>
+            <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
+            <div id="myModal" class="modal"> 
+              <div class="modal-content">
+                  <h3>Estadisticas</h3>
+                  <p></p>
+             </div>
+            </div>
+          </div>*/
 
-
-/*function popUpDescription(botton){
-  const popUpDescrip= botton.closest('.card-container');
-  const popUp= popUpDescrip.querySelector('popUpDescription');
-
-
-}
-
-window.popUpDescription=popUpDescription;*/
-
+/*const btnOpenModal = cardItem.querySelector('.openModalBtn')
+    btnOpenModal.addEventListener("click", () => {
+      const MiModal = cardItem.querySelector('.modal')
+      console.log({MiModal})
+    })*/
