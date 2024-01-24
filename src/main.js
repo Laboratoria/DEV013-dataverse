@@ -1,6 +1,8 @@
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
+import { sortData } from './dataFunctions.js';
+
 
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
@@ -12,6 +14,12 @@ const mainContainer=document.querySelector("#root");
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
 mainContainer.appendChild(cards);
 
+
+function refreshPage() {
+  window.location.reload()
+}
+
+window.refreshPage=refreshPage;
 
 //usar onClick en cada boton descartado 
 //se agrego clase comun a los botones para agregarles el listener a todos de un solo
@@ -36,6 +44,38 @@ function clearView(){
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
 }
+
+
+const dropdown = document.getElementById("itemOrder");
+dropdown.addEventListener("change", () => {
+  const i = dropdown.selectedIndex;
+
+  if (i === 1) {
+    const ascending = sortData(data, "id", 1);
+    // console.log("derecho");
+    // console.log(ascending);
+    clearView()
+    renderItems(ascending)
+  } else if (i === 2) {
+    const descending = sortData(data, "id", 2);
+    // console.log("reves");
+    // console.log(descending);
+    clearView()
+    renderItems(descending);
+  } else if (i === 3) {
+    console.log("aleatorio"); //regresar a caregorías en desorden
+  } else if (i === 4) {
+    refreshPage();
+  }
+});
+
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,8 @@ export const renderItems = (data) => {
   //crear el contenedor y guardarlo en una variable 
   const cardList = document.getElementById("ulCards");
 
+  
+
   //iterar en el arreglo (usar for each)
   // por cada elemento se debe crear un li 
   //cada li debe tener la estructura html predefinida 
@@ -14,9 +16,10 @@ export const renderItems = (data) => {
 
   
   data.forEach(element => {
+    // const newClass = element.categoryPlant;
     const cardItem = document.createElement('li');
 
-    cardItem.innerHTML += `<li class="card-container" itemscope itemtype="https://schema.org">
+    cardItem.innerHTML += `<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
     <article id="front-card" class="front-card">
       <h2>${element.name}</h2>
       <div class="top-card">
@@ -56,7 +59,7 @@ export const renderItems = (data) => {
     <article id="back-card" class="hide" class="back-card">
       <h2>${element.name}</h2>
       <div class="top-card">
-        <img alt="Plant Name" src="${element.imageUrl}">
+        <img alt="Plant Name" class="bachPlantImage" src="${element.imageUrl}">
         <dl itemscope itemtype="https://schema.org">
           <dt class="scientific">${element.scientificName}</dt>
           <dt class="detail">Familia botánica</dt><dd>${element.botanicalFamily}</dd>
@@ -117,15 +120,11 @@ window.turnCard=turnCard;
 window.returnCard=returnCard;
 
 
-//Ventanas Modales/Popup
 
 
-/*function popUpDescription(botton){
-  const popUpDescrip= botton.closest('.card-container');
-  const popUp= popUpDescrip.querySelector('popUpDescription');
 
 
-}
 
-window.popUpDescription=popUpDescription;*/
+
+
 
