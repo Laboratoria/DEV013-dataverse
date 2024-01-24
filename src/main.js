@@ -2,8 +2,7 @@
 import { renderItems } from "./view.js";
 
 import data from "./data/dataset.js";
-import { elementDataFilter, sortData } from "./dataFunctions.js";
-
+import { dangerousDataFilter, elementDataFilter, sortData } from "./dataFunctions.js";
 //------------ funcion para renderizar la data--------------------------------
 function renderData(data) {
   const body = document.getElementById("root");
@@ -12,7 +11,6 @@ function renderData(data) {
     body.innerHTML = render;
   }
 }
-
 
 let cardsData = data // variable de la data original - variable global
 renderData(data) // Total de la Data renderizada
@@ -30,6 +28,23 @@ selectElement.addEventListener("change", (event) => {
 //console.log(elementDataFilter(data,"elementEsencial","Climáticos"));// data + campo que filtro y el valor que quiero filtrar
 
 
+//----------------- filtrado por carta inofensiva o peligrosa-----------------
+
+let filterDangerous = [];
+
+const selectDangerous = document.querySelector(
+  '[data-testid="select-filter2"]'
+);
+selectDangerous.addEventListener("change", () => {
+  const selected = selectDangerous.options[selectDangerous.selectedIndex].value;
+  filterDangerous = dangerousDataFilter(data, "isDangerous", selected);
+
+  console.log(filterDangerous);
+
+  renderData(filterDangerous);
+});
+
+
 //--------- ordenar------- 
 const sortOrden = document.querySelector('[data-testid="select-sort"]')
 sortOrden.addEventListener("change", (e) => {
@@ -40,12 +55,7 @@ sortOrden.addEventListener("change", (e) => {
 })
 
 
-
-
-
-
-
-// botones --------------
+//--------------------- botones --------------
 
 const popup = document.querySelectorAll(".popup-box")
 const btn = document.querySelectorAll(".card-button")
@@ -57,7 +67,6 @@ btn.forEach(function (button, index) {
 });
 
 //agregar fuera de la ventana cerrar
-
 
 window.onclick = function (event) {
   popup.forEach(function (popup) {
