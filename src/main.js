@@ -1,6 +1,8 @@
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
+import { sortData } from './dataFunctions.js';
+
 
 //------------------------------------------------------------------------------------------------------------
 //Para mostrar las tarjetas
@@ -14,7 +16,13 @@ const mainContainer=document.querySelector("#root");
 mainContainer.appendChild(cards);
 
 //--------------------------------------------------------------------------------------------------------------
-//se agrego clase comun a los botones para agregarles el listener a todos de un solo
+function refreshPage() {
+  window.location.reload()
+}
+
+window.refreshPage=refreshPage;
+//--------------------------------------------------------------------------------------------------------------
+//se agrega clase comun a los botones para agregarle el listener a todos de un solo
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida
 // identificar a que boton se le dio click
 //llamar a la funcion de filtrado para que cree el nuevo array con la categoria que fue identificada
@@ -39,6 +47,64 @@ function clearView()
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
 }
+
+//------------------------------------------------------------------------------------------------------------
+//Filtrar por nombre 
+
+//crear una funcion que
+//reciba el nombre que proporciona el usuario
+//llame a filterdata para buscarlo 
+//limpie la interfaz
+// y se lo pase a render items para que solo muestre esa tarjeta 
+//donde debo llamarla? cuando el usuario de enter o click en boton submit?
+function filterByName()
+{
+  const inputName = document.getElementById('inputName');
+  const inputReceive = inputName.value;
+  const filteredName = filterData(data, 'name', inputReceive);
+  //console.log(inputName.value);
+  clearView();
+  renderItems(filteredName);
+}
+
+//Recordatorio: tener en cuenta los comportamientos por default ( Cuando presionas la tecla Enter en un formulario, se activa el evento de envío del formulario (submit). Si no se previene este comportamiento predeterminado, la página se recargará y tu script de JavaScript se reiniciará.)
+//decirle que en vez de su comportamiento por default ejecute filterByName
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  filterByName();
+});
+
+const inputName = document.getElementById('inputName');
+inputName.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    filterByName();
+  }
+});
+
+//-----------------------------------------------------------------------------------------------------------
+//llamar a la funcion para ordenar
+const dropdown = document.getElementById("itemOrder");
+dropdown.addEventListener("change", () => {
+  const i = dropdown.selectedIndex;
+
+  if (i === 1) {
+    const ascending = sortData(data, "id", 1);
+    // console.log("derecho");
+    // console.log(ascending);
+    clearView()
+    renderItems(ascending)
+  } else if (i === 2) {
+    const descending = sortData(data, "id", 2);
+    // console.log("reves");
+    // console.log(descending);
+    clearView()
+    renderItems(descending);
+  } else if (i === 3) {
+    //console.log("aleatorio"); //regresar a caregorías en desorden
+  } else if (i === 4) {
+    refreshPage();
+  }
+});
 
 //------------------------------------------------------------------------------------------------------------
 //Delegacion de eventos (intento xd)
@@ -77,7 +143,8 @@ function returnCard (cardContainer)
 }
 
 //-----------------------------------------------------------------------------------------------------------------
-//Ventanas Modales 
+/*Ventanas Modales  
+//Codigo en view.js
 const principal= document.getElementById("ulCards");
 principal.addEventListener("click", (event)=>
 {
@@ -89,29 +156,14 @@ principal.addEventListener("click", (event)=>
   }
 })
 
-// Cierra el modal si se hace clic fuera del contenido del modal
-window.onclick = function (event) 
+//Cierra el modal si se hace clic fuera del contenido del modal
+  window.onclick = function (event) 
 {
   const modal = document.getElementById("myModal");
   if (event.target === modal) 
   {
     modal.style.display = "none";
   }
-};
-
-/* Función para ocultar el modal
-function closeModal() {
-  const modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}*/
-
-/*const openModalBtn = document.getElementById("openModalBtn");
-openModalBtn.addEventListener("click", ()=>{
-  // Función para mostrar el modal
-  const modal = document.getElementById("myModal");
-  modal.style.display = "block";
-});*/
-
-
+};*/
 
 //---------------------------------------------------------------------------------------------------------------

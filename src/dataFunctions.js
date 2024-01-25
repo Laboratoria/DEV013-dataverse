@@ -31,3 +31,23 @@ export const filterData = (data, filterBy, value) =>
 para ser mostrados de acuerdo a la data proporcionada, 
 esta función debe usar el método reduce.
 */
+
+export const sortData = (data, sortBy, sortOrder) => {
+  const dataOrdered = data.sort(function(a,b) {
+    if (a[sortBy] > b[sortBy]) {
+      if (sortOrder === 1) {
+        return true;
+      } else if (sortOrder === 2) {
+        return false;
+      }
+    } else {
+      if (sortOrder === 1) {
+        return false;
+      } else if (sortOrder === 2) {
+        return true;
+      }
+    }
+  });
+  return dataOrdered;
+}
+
