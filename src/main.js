@@ -3,8 +3,9 @@ import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 
-const originalData = structuredClone(data); //clonar el arreglo de objetos
+const clonedData = structuredClone(data); //clonar el arreglo de objetos
 let currentData = data;
+let activeSorting = 0;
 
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
@@ -34,6 +35,11 @@ categoryButtons.forEach(button => {
     currentData = filterData(data, 'categoryPlant', category);
     //console.log(filteredData)
     //console.log(e.target)
+    if (activeSorting === 1) {
+      sortData(currentData, "id", 1);
+    } else if (activeSorting === 2) {
+      sortData(currentData, "id", 2);
+    }
     clearView();
     renderItems(currentData);
   });
@@ -51,22 +57,23 @@ dropdown.addEventListener("change", () => {
   const i = dropdown.selectedIndex;
 
   if (i === 1) {
+    activeSorting = 1;
     sortData(currentData, "id", 1);
     // console.log("derecho");
     // console.log(ascending);
     clearView();
     renderItems(currentData);
   } else if (i === 2) {
+    activeSorting = 2;
     sortData(currentData, "id", 2);
     // console.log("reves");
     // console.log(descending);
     clearView();
     renderItems(currentData);
   } else if (i === 3) {
-    // console.log("aleatorio"); //regresar a caregorías en desorden
-  } else if (i === 4) {
+    activeSorting = 0;
     clearView();
-    currentData = originalData;
+    currentData = clonedData;
     renderItems(currentData);
   }
 });
