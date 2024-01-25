@@ -3,8 +3,6 @@ export const renderItems = (data) => {
   //crear el contenedor y guardarlo en una variable 
   const cardList = document.getElementById("ulCards");
 
-  
-
   //iterar en el arreglo (usar for each)
   // por cada elemento se debe crear un li 
   //cada li debe tener la estructura html predefinida 
@@ -13,10 +11,20 @@ export const renderItems = (data) => {
 
   /** Template string **/ 
   // container.innerHTML += `<p>${element.name}</p>`
-
   
   data.forEach(element => {
-    // const newClass = element.categoryPlant;
+    // const waterAmount = element.waterAmount;
+    // const sunLigth = element.sunLigth;
+    // const careDifficulty = element.careDifficulty;
+    // const gotaActiva = '<img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true">';
+    // const gotaInactiva = '<img alt="Gota" class="inactiva" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true">';
+    // if (waterAmount == 1) {
+    //    GotaActiva + 2inactiva(con class)
+    // } else if (waterAmount == 2) {
+    //    2GotaActiva + inactiva
+    // } else {
+    //    3GotaActiva
+    // }
     const cardItem = document.createElement('li');
 
     cardItem.innerHTML += `<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
@@ -91,9 +99,7 @@ export const renderItems = (data) => {
   return cardList;
 };
 
-
 //al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
-
 function turnCard(botton) {
   const cardContainer=  botton.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");
@@ -101,11 +107,14 @@ function turnCard(botton) {
 
   //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
   // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
+  // The toggle() method of the DOMTokenList interface removes an existing
+  //token from the list and returns false. If the token doesn't exist it's
+  //added and the function returns true.
   backCard.classList.toggle('hide');
   frontCard.classList.toggle('hide');
 }
- 
-function returnCard (botton) {
+//Y si en vez de repetir la función le aplicas turnCard(this) a Regresar?
+function returnCard(botton) {
   //lo mismo, pero al reves xd 
   const cardContainer=  botton.closest('.card-container');
   const frontCard=cardContainer.querySelector("#front-card");

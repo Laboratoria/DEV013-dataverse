@@ -3,17 +3,18 @@ import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 
+const originalData = structuredClone(data); //clonar el arreglo de objetos
+let currentData = data;
 
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
-const cards=renderItems(data);
+const cards=renderItems(currentData);
 //seleccionar el lugar donde se va a imprimir la data ("main")
 //document.body.appendChild(cards) 
 // lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
 const mainContainer=document.querySelector("#root");
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
 mainContainer.appendChild(cards);
-
 
 function refreshPage() {
   window.location.reload()
@@ -30,42 +31,43 @@ const categoryButtons=document.querySelectorAll('.category');
 categoryButtons.forEach(button => {
   button.addEventListener('click',(e)=> {
     const category = e.target.getAttribute('data-category');
-    const filteredData = filterData(data, 'categoryPlant', category);
+    currentData = filterData(data, 'categoryPlant', category);
     //console.log(filteredData)
     //console.log(e.target)
     clearView();
-    renderItems(filteredData);
+    renderItems(currentData);
   });
 });
 //hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
 //antes habria que limpiar/eliminar todas las tarjetas 
 //creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
-function clearView(){
+export function clearView(){
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
 }
-
 
 const dropdown = document.getElementById("itemOrder");
 dropdown.addEventListener("change", () => {
   const i = dropdown.selectedIndex;
 
   if (i === 1) {
-    const ascending = sortData(data, "id", 1);
+    sortData(currentData, "id", 1);
     // console.log("derecho");
     // console.log(ascending);
-    clearView()
-    renderItems(ascending)
+    clearView();
+    renderItems(currentData);
   } else if (i === 2) {
-    const descending = sortData(data, "id", 2);
+    sortData(currentData, "id", 2);
     // console.log("reves");
     // console.log(descending);
-    clearView()
-    renderItems(descending);
+    clearView();
+    renderItems(currentData);
   } else if (i === 3) {
-    console.log("aleatorio"); //regresar a caregorías en desorden
+    // console.log("aleatorio"); //regresar a caregorías en desorden
   } else if (i === 4) {
-    refreshPage();
+    clearView();
+    currentData = originalData;
+    renderItems(currentData);
   }
 });
 
