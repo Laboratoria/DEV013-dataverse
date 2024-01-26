@@ -20,7 +20,7 @@
       <aside>
         <div class="search-container">
           <form action="data/dataset.js">
-            <input type="text" placeholder="Buscar.." name="search">
+            <input type="text" id="inputName" placeholder="Buscar..." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
@@ -218,7 +218,7 @@
                       <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
                     </div>
                     <div class="back">
-                    <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
+                    <input type="image" class="return" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
                     </div>
                   </div>
                 </div>
@@ -233,6 +233,5 @@
     <p class="footer">Bootcamp Laboratoria</p>
   </footer>
   <script src="main.js" type="module"></script>
-  <script src="dataFunctions.js" type="module"></script>
   </body> 
 </html>
