@@ -144,15 +144,10 @@ p {
 
 h3 {
   text-align: end;
-  text-decoration: underline;
-  width: 50%;
-  padding-right: 50px;
-  margin: 0 auto;
-  font-size: 3rem;
-  max-width: 1200px;
-  width: 90%;
-  height: 100px;
+  font-size: 3.5rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 /* filtros */
@@ -181,6 +176,11 @@ select[data-testid="select-filter"] {
 
 .container-ordenar {
   text-align: end;
+}
+select[data-testid="select-filter2"]{
+  height: 40px;
+  width: 160px;
+  padding: 0 10px;
 }
 
 .reset-btn {

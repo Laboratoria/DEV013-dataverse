@@ -21,9 +21,8 @@ const selectElement = document.querySelector('[data-testid="select-filter"]');
 selectElement.addEventListener("change", (event) => {
   const filteredData = elementDataFilter(data, 'elementEsencial', event.target.value); //datos que se imprime
   cardsData = filteredData; // asigno nuevo valor de data filtrada
-  renderData(filteredData) //vuelves a renderizar la data filtrada en el elemento con id "root". Esto actualizará la vista para mostrar solo los elementos que cumplen con el criterio de filtrado seleccionado por el usuario.
+  renderData(cardsData) //vuelves a renderizar la data filtrada en el elemento con id "root". Esto actualizará la vista para mostrar solo los elementos que cumplen con el criterio de filtrado seleccionado por el usuario.
   //console.log(filteredData);
-  //console.log (filteredData = (data,event.target.value));
 });
 //console.log(elementDataFilter(data,"elementEsencial","Climáticos"));// data + campo que filtro y el valor que quiero filtrar
 
@@ -32,16 +31,13 @@ selectElement.addEventListener("change", (event) => {
 
 let filterDangerous = [];
 
-const selectDangerous = document.querySelector(
-  '[data-testid="select-filter2"]'
-);
+const selectDangerous = document.querySelector('[data-testid="select-filter2"]');
 selectDangerous.addEventListener("change", () => {
   const selected = selectDangerous.options[selectDangerous.selectedIndex].value;
-  filterDangerous = dangerousDataFilter(data, "isDangerous", selected);
-
-  console.log(filterDangerous);
-
-  renderData(filterDangerous);
+  filterDangerous = dangerousDataFilter(cardsData, "isDangerous", selected);
+  cardsData = filterDangerous;
+  //console.log(filterDangerous);
+  renderData(cardsData);
 });
 
 
@@ -49,13 +45,24 @@ selectDangerous.addEventListener("change", () => {
 const sortOrden = document.querySelector('[data-testid="select-sort"]')
 sortOrden.addEventListener("change", (e) => {
   const sortedData = sortData(cardsData, 'name', e.target.value);
-  console.log(sortedData);
+  //console.log(sortedData);
   cardsData = sortedData;
-  renderData(sortedData);
+  renderData(cardsData);
 })
 
+// ------ boton de reseteo --- 
 
-//--------------------- botones --------------
+const resetBtn = document.querySelector('[data-testid="button-clear"]')
+resetBtn.addEventListener('click', () => {
+  //console.log(resetBtn);
+  cardsData = data;
+  renderData(cardsData);
+  selectElement[0].selected = true;
+  selectDangerous[0].selected = true;
+  sortOrden[0].selected = true;
+});
+
+//--------------------- botones  de las cards --------------
 
 const popup = document.querySelectorAll(".popup-box")
 const btn = document.querySelectorAll(".card-button")
