@@ -117,8 +117,8 @@ dropdown.addEventListener("change", () => {
 //------------------------------------------------------------------------------------------------------------
 //Delegacion de eventos (intento xd)
 //Funcion para hacer girar las tarjetas
-const princContainer = document.getElementById("ulCards");
-princContainer.addEventListener("click",(event) => 
+const principalContainer = document.getElementById("ulCards");
+principalContainer.addEventListener("click",(event) => 
 {
   const cardContainer= event.target.closest('.card-container');
   if(event.target.matches('.detalles')) 
