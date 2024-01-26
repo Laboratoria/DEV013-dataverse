@@ -3,8 +3,6 @@ export const renderItems = (data) => {
   //crear el contenedor y guardarlo en una variable 
   const cardList = document.getElementById("ulCards");
 
-  
-
   //iterar en el arreglo (usar for each)
   // por cada elemento se debe crear un li 
   //cada li debe tener la estructura html predefinida 
@@ -13,10 +11,20 @@ export const renderItems = (data) => {
 
   /** Template string **/ 
   // container.innerHTML += `<p>${element.name}</p>`
-
   
   data.forEach(element => {
-    // const newClass = element.categoryPlant;
+    // const waterAmount = element.waterAmount;
+    // const sunLigth = element.sunLigth;
+    // const careDifficulty = element.careDifficulty;
+    // const gotaActiva = '<img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true">';
+    // const gotaInactiva = '<img alt="Gota" class="inactiva" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true">';
+    // if (waterAmount == 1) {
+    //    GotaActiva + 2inactiva(con class)
+    // } else if (waterAmount == 2) {
+    //    2GotaActiva + inactiva
+    // } else {
+    //    3GotaActiva
+    // }
     const cardItem = document.createElement('li');
 
     cardItem.innerHTML += `<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
@@ -68,29 +76,23 @@ export const renderItems = (data) => {
       </div>
       <div class="bottom-card">
         <dl id="description">
-        <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
-        <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
-        <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
+          <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
+          <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
+          <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
         </dl>
 
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-
-          <div>
             <img class="openModalBtn" id="openModalBtn" alt="Descripcion" src="resources/Icons/descripcion.png">
-            <div id="myModal" class="modal"> 
-              <div class="modal-content">
-                <header>
-                  <h3>${element.name}</h3>
-                </header>
-                <p>${element.description}</p>
-             </div>
-            </div>
+            <div class="back">
+            <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
-
-          <div class="back">
-          <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+          <div id="myModal" class="modal"> 
+            <div class="modal-content">
+                <h3>${element.name}</h3>
+                <p>${element.description}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -117,34 +119,35 @@ export const renderItems = (data) => {
   return cardList;
 };
 
+//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
 
-//funcion que debe hacer girar la tarjeta 
-//usando onclick como atributo en el html
+// function turnCard(botton) {
+//   const cardContainer=  botton.closest('.card-container');
+//   const frontCard=cardContainer.querySelector("#front-card");
+//   const backCard=cardContainer.querySelector("#back-card");
 
-/*function turnCard(button) {
-  const cardContainer=  button.closest('.card-container');
-  const frontCard=cardContainer.querySelector("#front-card");
-  const backCard=cardContainer.querySelector("#back-card");
-
-  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
-  // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
-  backCard.classList.toggle('hide');
-  frontCard.classList.toggle('hide');
-}
+//   //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
+//   // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
+//   // The toggle() method of the DOMTokenList interface removes an existing
+//   //token from the list and returns false. If the token doesn't exist it's
+//   //added and the function returns true.
+//   backCard.classList.toggle('hide');
+//   frontCard.classList.toggle('hide');
+// }
  
-function returnCard (button) {
-  //lo mismo, pero al reves xd 
-  const cardContainer=  button.closest('.card-container');
-  const frontCard=cardContainer.querySelector("#front-card");
-  const backCard=cardContainer.querySelector("#back-card")
+// function returnCard (botton) {
+//   //lo mismo, pero al reves xd 
+//   const cardContainer = button.closest('.card-container');
+//   const frontCard = cardContainer.querySelector("#front-card");
+//   const backCard = cardContainer.querySelector("#back-card")
 
-  backCard.classList.toggle('hide');
-  frontCard.classList.toggle('hide');
-}
+//   backCard.classList.toggle('hide');
+//   frontCard.classList.toggle('hide');
+// }
 
-//hacer las variable globales 
-window.turnCard=turnCard;
-window.returnCard=returnCard;*/
+// //hacer las variable globales 
+// window.turnCard=turnCard;
+// window.returnCard=returnCard;
 
 
 /*             <div>
