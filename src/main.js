@@ -7,6 +7,7 @@ const clonedData = structuredClone(data); //clonar el arreglo de objetos
 let currentData = data;
 let activeSorting = 0;
 
+//------------------------------------------------------------------------------------------------------------
 //Para mostrar las tarjetas
 //guardar la ul con los items en una variable
 const cards=renderItems(currentData);
@@ -17,20 +18,22 @@ const mainContainer=document.querySelector("#root");
 //se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
 mainContainer.appendChild(cards);
 
+
 function refreshPage() {
   window.location.reload()
 }
 
 window.refreshPage=refreshPage;
-
-//usar onClick en cada boton descartado 
-//se agrego clase comun a los botones para agregarles el listener a todos de un solo
+//--------------------------------------------------------------------------------------------------------------
+//se agrega clase comun a los botones para agregarle el listener a todos de un solo
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida
 // identificar a que boton se le dio click
 //llamar a la funcion de filtrado para que cree el nuevo array con la categoria que fue identificada
 const categoryButtons=document.querySelectorAll('.category');
-categoryButtons.forEach(button => {
-  button.addEventListener('click',(e)=> {
+categoryButtons.forEach(button => 
+{
+  button.addEventListener('click',(e)=> 
+  {
     const category = e.target.getAttribute('data-category');
     currentData = filterData(data, 'categoryPlant', category);
     //console.log(filteredData)
@@ -47,11 +50,46 @@ categoryButtons.forEach(button => {
 //hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
 //antes habria que limpiar/eliminar todas las tarjetas 
 //creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
-export function clearView(){
+function clearView(){
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
 }
 
+//------------------------------------------------------------------------------------------------------------
+//Filtrar por nombre 
+
+//crear una funcion que
+//reciba el nombre que proporciona el usuario
+//llame a filterdata para buscarlo 
+//limpie la interfaz
+// y se lo pase a render items para que solo muestre esa tarjeta 
+//donde debo llamarla? cuando el usuario de enter o click en boton submit?
+function filterByName()
+{
+  const inputName = document.getElementById('inputName');
+  const inputReceive = inputName.value;
+  const filteredName = filterData(clonedData, 'name', inputReceive); //revisar este data
+  //console.log(inputName.value);
+  clearView();
+  renderItems(filteredName);
+}
+
+//Recordatorio: tener en cuenta los comportamientos por default ( Cuando presionas la tecla Enter en un formulario, se activa el evento de envío del formulario (submit). Si no se previene este comportamiento predeterminado, la página se recargará y tu script de JavaScript se reiniciará.)
+//decirle que en vez de su comportamiento por default ejecute filterByName
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  filterByName();
+});
+
+const inputName = document.getElementById('inputName');
+inputName.addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    filterByName();
+  }
+});
+
+//-----------------------------------------------------------------------------------------------------------
+//llamar a la funcion para ordenar
 const dropdown = document.getElementById("itemOrder");
 dropdown.addEventListener("change", () => {
   const i = dropdown.selectedIndex;
@@ -71,104 +109,69 @@ dropdown.addEventListener("change", () => {
     clearView();
     renderItems(currentData);
   } else if (i === 3) {
-    activeSorting = 0;
     clearView();
-    currentData = clonedData;
-    renderItems(currentData);
+    renderItems(clonedData);
   }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-----------------------------------------------------------------------------------------------------------------
-//Esta solo nos funcionaba en la plantilla
-
-/*//Funcionalidad al boton "Detalles" para mostrar el resto de la informacion
-//seleccionar el boton (hay que encontrar otra forma :')
-const seeDetailsButton = document.getElementById("front-card").getElementsByClassName("button-container");
-const returnBotton= document.getElementById("back");
-
-//agregar un event listener al los botones 
-// el evento a escuchar seria un click 
-seeDetailsButton[0].addEventListener('click',turnCard);
-returnBotton.addEventListener('click',returnCard);
-// 'isFlipped' va a ser una variable que controla el estado de la tarjeta
-let isFlipped = false;
-const frontCard=document.getElementById("front-card");
-const backCard=document.getElementById("back-card");
-
-//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
-function turnCard() {
-  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
-  if (isFlipped) {
-    // Alternar la clase 'hide' en la parte posterior de la tarjeta.
-    backCard.classList.toggle('hide');
-    frontCard.classList.toggle('hide');
+//------------------------------------------------------------------------------------------------------------
+//Delegacion de eventos (intento xd)
+//Funcion para hacer girar las tarjetas
+const princContainer = document.getElementById("ulCards");
+princContainer.addEventListener("click",(event) => 
+{
+  const cardContainer= event.target.closest('.card-container');
+  if(event.target.matches('.detalles')) 
+  {
+    turnCard(cardContainer);
   }
-  isFlipped = !isFlipped
+  else if (event.target.matches('.regresar')) 
+  {
+    returnCard(cardContainer); 
+  }
+});
+
+function turnCard(cardContainer) 
+{
+  const frontCard=cardContainer.querySelector("#front-card");
+  const backCard=cardContainer.querySelector("#back-card");
+  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
+  // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
+  backCard.classList.remove('hide');
+  frontCard.classList.add('hide');
 }
 
-function returnCard (){
-  if(!isFlipped){
-    backCard.classList.toggle('hide');
-    frontCard.classList.toggle('hide');
-    isFlipped = !isFlipped
-  }
-}*/
- 
+function returnCard (cardContainer)
+{
+  //lo mismo, pero al reves xd 
+  const frontCard=cardContainer.querySelector("#front-card");
+  const backCard=cardContainer.querySelector("#back-card")
+  backCard.classList.add('hide');
+  frontCard.classList.remove('hide');
+}
+
 //-----------------------------------------------------------------------------------------------------------------
-//Intento de usar delegacion de eventos 
-
-//Intentando aplicar las funciones a todas las tarjetas 
-//Delegacion de eventos
-
-/*const mainContainer = document.getElementById("root");
-mainContainer.addEventListener('click', function(e){
-  if(e.target.matches('.button-container')) {
-    const card=e.target.closest('.card-container');
-    turnCard(card);
-    if (e.target.matches('.back')) {
-      const card=e.target.closest('.card-container');
-      returnCard(card); 
-    }
+/*Ventanas Modales  
+//Codigo en view.js
+const principal= document.getElementById("ulCards");
+principal.addEventListener("click", (event)=>
+{
+  //const cardContainer= event.target.closest('.card-container');
+  if (event.target.matches('.openModalBtn')) 
+  {
+    const modal = document.querySelector('.modal');
+    modal.style.display ="block";
   }
 })
-function turnCard(card) {
-  const frontCard=card.querySelector(".front-card");
-  const backCard=card.querySelector(".back-card");
-  let isCardFlipped = card.dataset.isFlipped === 'true';
 
-  if (!isCardFlipped) {
-    backCard.classList.toggle('hide');
-    frontCard.classList.toggle('hide');
-    card.dataset.isFlipped = 'true';
+//Cierra el modal si se hace clic fuera del contenido del modal
+  window.onclick = function (event) 
+{
+  const modal = document.getElementById("myModal");
+  if (event.target === modal) 
+  {
+    modal.style.display = "none";
   }
-} 
-function returnCard (card){
-  const frontCard=card .querySelector(".front-card");
-  const backCard=card.querySelector(".back-card");
-  let isCardFlipped = card.dataset.isFlipped === 'true';
+};*/
 
-  if(isCardFlipped){
-    backCard.classList.toggle('hide');
-    frontCard.classList.toggle('hide');
-    card.dataset.isFlipped = 'false';
-  }
-}*/
+//---------------------------------------------------------------------------------------------------------------

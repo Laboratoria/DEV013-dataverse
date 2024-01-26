@@ -23,8 +23,9 @@ export const filterData = (data, filterBy, value) => {
  El segundo parámetro,`sortBy`, nos dice con respecto a cuál de los campos de la data se quiere ordenar.
   El tercer parámetro,`sortOrder`, indica si se quiere ordenar de manera ascendente o descendente.*/
 
-/*export const sortData = () => {
-  
+/*export const sortData = (data, sortBy, sortOrder) => {
+  return data.sort()
+
 };
 */
 

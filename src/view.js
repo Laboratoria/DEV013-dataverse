@@ -61,7 +61,7 @@ export const renderItems = (data) => {
       </div>
       <p>${element.shortDescription}</p>
       <div class="button-container">
-        <button id="detalles" onclick="turnCard(this)" >Detalles</button>
+        <button id="detalles" class="detalles">Detalles</button>
       </div>
     </article>
     <article id="back-card" class="hide" class="back-card">
@@ -76,64 +76,87 @@ export const renderItems = (data) => {
       </div>
       <div class="bottom-card">
         <dl id="description">
-        <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
-        <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
-        <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
+          <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
+          <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
+          <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
         </dl>
+
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
-          <div class="back">
-          <input type="image" onclick="returnCard(this)" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+            <img class="openModalBtn" id="openModalBtn" alt="Descripcion" src="resources/Icons/descripcion.png">
+            <div class="back">
+            <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+          </div>
+          <div id="myModal" class="modal"> 
+            <div class="modal-content">
+                <h3>${element.name}</h3>
+                <p>${element.description}</p>
+            </div>
           </div>
         </div>
       </div>
     </article>
   </li>`
 
-    cardList.appendChild(cardItem);
+    const btnOpenModal = cardItem.querySelector('.openModalBtn');
+    const myModal = cardItem.querySelector('.modal')
 
+    btnOpenModal.addEventListener("click", () => 
+    {
+      myModal.style.display ="block";
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target === myModal) {
+        myModal.style.display = "none";
+      }
+    });
+
+    cardList.appendChild(cardItem);
   });
   
   return cardList;
 };
 
 //al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
-function turnCard(botton) {
-  const cardContainer=  botton.closest('.card-container');
-  const frontCard=cardContainer.querySelector("#front-card");
-  const backCard=cardContainer.querySelector("#back-card");
 
-  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
-  // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
-  // The toggle() method of the DOMTokenList interface removes an existing
-  //token from the list and returns false. If the token doesn't exist it's
-  //added and the function returns true.
-  backCard.classList.toggle('hide');
-  frontCard.classList.toggle('hide');
-}
-//Y si en vez de repetir la función le aplicas turnCard(this) a Regresar?
-function returnCard(botton) {
-  //lo mismo, pero al reves xd 
-  const cardContainer=  botton.closest('.card-container');
-  const frontCard=cardContainer.querySelector("#front-card");
-  const backCard=cardContainer.querySelector("#back-card")
+// function turnCard(botton) {
+//   const cardContainer=  botton.closest('.card-container');
+//   const frontCard=cardContainer.querySelector("#front-card");
+//   const backCard=cardContainer.querySelector("#back-card");
 
-  backCard.classList.toggle('hide');
-  frontCard.classList.toggle('hide');
-}
+//   //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
+//   // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
+//   // The toggle() method of the DOMTokenList interface removes an existing
+//   //token from the list and returns false. If the token doesn't exist it's
+//   //added and the function returns true.
+//   backCard.classList.toggle('hide');
+//   frontCard.classList.toggle('hide');
+// }
+ 
+// function returnCard (botton) {
+//   //lo mismo, pero al reves xd 
+//   const cardContainer = button.closest('.card-container');
+//   const frontCard = cardContainer.querySelector("#front-card");
+//   const backCard = cardContainer.querySelector("#back-card")
 
-//hacer las variable globales 
-window.turnCard=turnCard;
-window.returnCard=returnCard;
+//   backCard.classList.toggle('hide');
+//   frontCard.classList.toggle('hide');
+// }
 
-
-
+// //hacer las variable globales 
+// window.turnCard=turnCard;
+// window.returnCard=returnCard;
 
 
-
-
-
-
+/*             <div>
+            <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
+            <div id="myModal" class="modal"> 
+              <div class="modal-content">
+                  <h3>Estadisticas</h3>
+                  <p></p>
+             </div>
+            </div>
+          </div>*/
 
