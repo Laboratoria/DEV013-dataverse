@@ -4,23 +4,22 @@
     --white: #FFFFFF;
     --soft-grey: #F9F8F8;
     --black: #000000;
-};
+}
 
 * {
     background-color: var(--sky-blue);
-    
 }
+
 body {
-    font-family: "Average Sans", "Cabin Condensed"
+    font-family: "Average Sans", "Cabin Condensed";
 }
+
 img {
-    width: 560%;
-    height: 370%;
+    width: 15%;
+    height: 10%;
 }
 h1 {
     color: var(--black);
     background-color: var(--soft-blue);
     font-family: Average Sans;
-    
-
 }
