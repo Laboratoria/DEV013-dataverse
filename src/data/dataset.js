@@ -156,7 +156,7 @@ export default [
     "facts": {
       "waterAmount":2,
       "sunLigth": 3,
-      "careDifficulty":2,
+      "careDifficulty":3,
     },
   },
   {
@@ -316,7 +316,7 @@ export default [
     "facts": {
       "waterAmount":2,
       "sunLigth": 2,
-      "careDifficulty":2,
+      "careDifficulty":1,
     },
   },
   {
@@ -416,7 +416,7 @@ export default [
     "facts": {
       "waterAmount":2,
       "sunLigth": 3,
-      "careDifficulty":2,
+      "careDifficulty":3,
     },
   },
   {
