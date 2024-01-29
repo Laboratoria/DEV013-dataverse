@@ -16,7 +16,7 @@
     <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1><br>
   </header>
 
-  <div class="form">
+  <div class="form-container">
     <label for="type-select">Género literario:</label>
     <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opción</option>
@@ -45,12 +45,13 @@
       <option value="asc">A-Z</option>
       <option value="desc">Z-A</option>
     </select>
+
+    <button data-testid="button-clear" id="button-clear">LIMPIAR</button>
   </div>
 
   <div id="root">
     <ul id="cardList"></ul>
-  </div> <br><br><br><br><br><br><br>
-
+  </div>
   <script src="view.js" type="module"></script>
   <script src="main.js" type="module"></script>
   <script src="dataFunctions.js" type="module"></script>
