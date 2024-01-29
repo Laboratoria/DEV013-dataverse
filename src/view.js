@@ -89,7 +89,13 @@ export const renderItems = (data) => {
             <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
           <div id="myModal" class="modal"> 
-            <div class="modal-content">
+            <div class="modal-content-description">
+                <h3>${element.name}</h3>
+                <p>${element.description}</p>
+            </div>
+          </div>
+          <div class="modal"> 
+            <div class="modal-content-stats">
                 <h3>${element.name}</h3>
                 <p>${element.description}</p>
             </div>
