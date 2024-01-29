@@ -16,9 +16,9 @@
     <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1><br>
   </header>
 
-  <div class="form">
+  <div class="form-container">
     <label for="type-select">Género literario:</label>
-    <select name="type" id="type-select" data-testid="filter-type">
+    <select name="type" id="genero-select" data-testid="filter-type">
       <option value="">Elegir una opción</option>
       <option value="">Literatura</option>
       <option value=""> Poesía</option>
@@ -26,7 +26,7 @@
     </select>
 
     <label for="type-select">País de Nacimiento</label>
-    <select name="type" id="type-select" data-testid="filter-data">
+    <select name="type" id="country-select" data-testid="filter-data">
       <option value="">Elige una opción</option>
       <option value="">Reino Unido</option>
       <option value="">Chile</option>
@@ -44,12 +44,14 @@
       <option value="none">Elige una opción</option>
       <option value="asc">A-Z</option>
       <option value="desc">Z-A</option>
-    </select>
+    </select> 
+
+    <button data-testid="button-clear" id="button-clear">LIMPIAR</button>
   </div>
 
   <div id="root">
     <ul id="cardList"></ul>
-  </div> <br><br><br><br><br><br><br>
+  </div> <br>
 
   <script src="view.js" type="module"></script>
   <script src="main.js" type="module"></script>
