@@ -28,5 +28,26 @@ export const dangerousDataFilter = (data, filterBy, value) => {
   );
   /* console.log("value: ", value); */
   /* console.log("data despues del filtro: ", filterDangerous); */
+  //const porcentaje = (filterDangerous.length/data.length)*100; --- porcentaje
   return filterDangerous;
 };
+
+export const computeStats = (data) => {
+  //console.log(data);
+  const result = data.reduce((acumulador, carta) => {
+    acumulador[carta.extraInfo.isDangerous ? 'peligrosas' : 'inofensivas'] += 1;
+    //console.log(acumulador);
+    return acumulador;
+  },
+  { peligrosas: 0, inofensivas: 0 }
+  );
+  const promPeligrosas = Math.round((result.peligrosas / data.length) * 100); // Math.round() redondear
+  const promInocentes = Math.round((result.inofensivas / data.length) * 100);
+  //console.log('El porcentaje de cartas peligrosas son', promPeligrosas);
+  //console.log('El porcentaje de cartas inocentes son', promInocentes);
+  return { promPeligrosas, promInocentes }
+
+}
+
+
+//return `El porcentaje de cartas peligrosas son  &{percent}`;

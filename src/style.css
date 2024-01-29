@@ -177,10 +177,19 @@ select[data-testid="select-filter"] {
 .container-ordenar {
   text-align: end;
 }
-select[data-testid="select-filter2"]{
+
+select[data-testid="select-filter2"] {
   height: 40px;
   width: 160px;
   padding: 0 10px;
+}
+
+#text {
+  width: 95%;
+  text-align: center;
+  margin: auto;
+  padding: 20px 0px;
+  margin-left: 50px;
 }
 
 .reset-btn {
@@ -197,6 +206,14 @@ select[data-testid="select-filter2"]{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #5321389f;
+  font-weight: 600;
+  color: snow;
+  border: none;
+  box-shadow: rgb(206, 206, 206) (0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 

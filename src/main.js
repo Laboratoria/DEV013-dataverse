@@ -2,7 +2,7 @@
 import { renderItems } from "./view.js";
 
 import data from "./data/dataset.js";
-import { dangerousDataFilter, elementDataFilter, sortData } from "./dataFunctions.js";
+import { computeStats, dangerousDataFilter, elementDataFilter, sortData } from "./dataFunctions.js";
 //------------ funcion para renderizar la data--------------------------------
 function renderData(data) {
   const body = document.getElementById("root");
@@ -14,8 +14,6 @@ function renderData(data) {
 
 let cardsData = data // variable de la data original - variable global
 renderData(data) // Total de la Data renderizada
-
-
 //--------- filtrado elementos-------
 const selectElement = document.querySelector('[data-testid="select-filter"]');
 selectElement.addEventListener("change", (event) => {
@@ -32,13 +30,23 @@ selectElement.addEventListener("change", (event) => {
 let filterDangerous = [];
 
 const selectDangerous = document.querySelector('[data-testid="select-filter2"]');
+let text = document.getElementById('text') // para mostrar estadisticas
+
 selectDangerous.addEventListener("change", () => {
   const selected = selectDangerous.options[selectDangerous.selectedIndex].value;
   filterDangerous = dangerousDataFilter(cardsData, "isDangerous", selected);
   cardsData = filterDangerous;
-  //console.log(filterDangerous);
+  //console.log(selectDangerous.options[selectDangerous.selectedIndex].textContent);
   renderData(cardsData);
+  const selectedContent = selectDangerous.options[selectDangerous.selectedIndex].textContent;
+  if (selectedContent === 'Inofensiva') {
+  text.textContent = `El  ${computeStats(data).promInocentes}% de cartas son inofensivas` // ${} insertar valores de variables o expresiones dentro de una cadena de texto.
+  //console.log(`promedio de : ${computeStats(data).promInocentes}`);
+  } else {
+    text.textContent = `El ${computeStats(data).promPeligrosas}% de cartas son peligrosas`
+  }
 });
+
 
 
 //--------- ordenar------- 
@@ -60,6 +68,7 @@ resetBtn.addEventListener('click', () => {
   selectElement[0].selected = true;
   selectDangerous[0].selected = true;
   sortOrden[0].selected = true;
+  text.textContent =""
 });
 
 //--------------------- botones  de las cards --------------
