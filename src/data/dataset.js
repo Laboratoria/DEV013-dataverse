@@ -14,9 +14,9 @@ export default [
     "botanicalFamily": "Begoniaceae",
     "birthPlace": "Ambientes tropicales y subtropicales",
     "facts": {
-      "waterAmount":2,
+      "waterAmount":1,
       "sunLigth": 2,
-      "careDifficulty":2,
+      "careDifficulty":3,
     },
   },
   {

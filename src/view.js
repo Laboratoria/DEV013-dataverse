@@ -33,28 +33,28 @@ export const renderItems = (data) => {
       <div class="top-card">
         <img alt="Plant Name" src="${element.imageUrl}">
         <dl itemscope itemtype="https://schema.org" class="facts">
-          <div class="amounts">
+          <div class="amounts" id="agua">
             <dt itemprop="water-amount" class="amount">Agua</dt>
               <dd>
-                <img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
-                <img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
-                <img alt="Gota" class="inactiva" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true" >
+                <img alt="Gota" id="minimo-agua" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
+                <img alt="Gota" id="medio-agua" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
+                <img alt="Gota" id="alto-agua" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true" >
               </dd>
           </div>
-          <div class="amounts">
+          <div class="amounts" id="luz">
             <dt itemprop="light-amount" class="amount">Luz</dt>
               <dd>
-                <img alt="Sol" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-activa.png?raw=true" >
-                <img alt="Sol" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true" >
-                <img alt="Sol" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true">
+                <img alt="Sol" id="minimo-luz" class="minimo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-activa.png?raw=true" >
+                <img alt="Sol" id="medio-luz"  class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true" >
+                <img alt="Sol" id="alto-luz" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true">
               </dd>
           </div>
-          <div class="amounts">
+          <div class="amounts" id="cuidado">
             <dt itemprop="care-amount" class="amount">Cuidado</dt>
               <dd>
-                <img alt="Semaforo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-activa.png?raw=true" >
-                <img alt="Semaforo" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
-                <img alt="Semaforo" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
+                <img alt="Semaforo" id="minimo-cuidado" class="minimo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-activa.png?raw=true" >
+                <img alt="Semaforo" id="medio-cuidado" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
+                <img alt="Semaforo" id="alto-cuidado" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
               </dd>
           </div>
         </dl>
@@ -114,8 +114,87 @@ export const renderItems = (data) => {
     });
 
     cardList.appendChild(cardItem);
-  });
+
+    //---------------------------------------------------------------------------------------------------------------
+
+    const water = element.facts.waterAmount;
+    //console.log(water);
+    const ligth = element.facts.sunLigth;
+    //console.log(ligth);
+    const care = element.facts.careDifficulty;
+    //console.log(care);
   
+  
+    function determinarImagen(id) {
+      let activo;
+      let inactivo;
+  
+      if (id==="agua") {
+        activo = "resources/Icons/agua-activa.png";
+        inactivo = "resources/Icons/agua-inactiva.png";
+      } else if (id==="luz") {
+        activo = "resources/Icons/luz-activa.png";
+        inactivo = "resources/Icons/luz-inactiva.png";
+      } else if (id==="cuidado") {
+        activo = "resources/Icons/cuidado-activa.png";
+        inactivo = "resources/Icons/cuidado-inactiva.png";
+      }
+      return { activo, inactivo };
+    }
+  
+  
+    function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
+      const { activo, inactivo } = determinarImagen(id);
+  
+      if (fact === 1) {
+        firstImage.src = activo;
+        secondImage.src = inactivo;
+        thirdImage.src = inactivo;
+      } else if (fact === 2) {
+        firstImage.src = activo;
+        secondImage.src = activo;
+        thirdImage.src = inactivo;
+      } else if (fact === 3) {
+        firstImage.src = activo;
+        secondImage.src = activo;
+        thirdImage.src = activo;
+      }
+      //console.log(actualizarImagenes);
+  
+    }
+  
+    // Imagenes.agua
+    const firstImageWater = cardItem.querySelector("#minimo-agua");
+    //console.log(firstImageWater);
+    const secondImageWater = cardItem.querySelector("#medio-agua");
+    //console.log(secondImageWater);
+    const thirdImageWater = cardItem.querySelector("#alto-agua");
+    //console.log(thirdImageWater);
+  
+    actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
+  
+    // Imagenes.luz
+    const firstImageLigth = cardItem.querySelector("#minimo-luz");
+    //console.log(firstImageLigth);
+    const secondImageLigth = cardItem.querySelector("#medio-luz");
+    //console.log(secondImageLigth);
+    const thirdImageLigth = cardItem.querySelector("#alto-luz");
+    //console.log(thirdImageLigth);
+  
+    actualizarImagenes(ligth, firstImageLigth, secondImageLigth, thirdImageLigth, "luz");
+  
+    // Imagenes.cuidado
+    const firstImageCare = cardItem.querySelector("#minimo-cuidado");
+    //console.log(firstImageCare);
+    const secondImageCare = cardItem.querySelector("#medio-cuidado");
+    //console.log(secondImageCare);
+    const thirdImageCare = cardItem.querySelector("#alto-cuidado");
+    //console.log(thirdImageCare);
+  
+    actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
+    //------------------------------------------------------------------------------------------------------------
+
+  });
   return cardList;
 };
 

@@ -2,6 +2,7 @@ import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
+import { computeStats } from './dataFunctions.js';
 
 const clonedData = structuredClone(data); //clonar el arreglo de objetos
 let currentData = data;
@@ -24,6 +25,47 @@ function refreshPage() {
 }
 
 window.refreshPage=refreshPage;
+
+//-------------------------------------------------------------------------------------------------------------
+//seleccionar donde se va a mostrar la estadistica 
+//llamar a funcion computeStats para hacer el calculo 
+//insertar el calculo usando innerHTML o textContent
+
+//en vez de el numero entero que se muestre (poca, medio,mucha)
+//funcion para determinar la palabra 
+//recibir el promedio y dependiendo de este me retorna la palabra
+const mostrarPalabra = function (promedio){
+  if (promedio===1){
+    return "Poca"
+  }
+  else if(promedio===2){
+    return "Regular"
+  }
+  else if(promedio===3){
+    return "Mucha"
+  }
+  return mostrarPalabra;
+}
+
+const promedioAguaGeneral= computeStats(data, "waterAmount");
+const palabraAgua= mostrarPalabra(promedioAguaGeneral);
+console.log(promedioAguaGeneral);
+console.log(palabraAgua);
+
+const promedioLuzGeneral= computeStats(data, "sunLigth");
+const palabraLuz = mostrarPalabra(promedioLuzGeneral);
+console.log(promedioLuzGeneral);
+console.log(palabraLuz);
+
+const promedioCuidadoGeneral= computeStats(data, "careDifficulty");
+const palabracuidado= mostrarPalabra(promedioCuidadoGeneral);
+console.log(promedioCuidadoGeneral);
+console.log(palabracuidado);
+
+document.querySelector("#promedioAgua").textContent=`Promedio de agua: ${palabraAgua}`;
+document.querySelector("#promedioLuz").textContent=`Promedio de Luz: ${palabraLuz}`;
+document.querySelector("#promedioCuidado").textContent=`Promedio de Cuidado: ${palabracuidado}`;
+
 //--------------------------------------------------------------------------------------------------------------
 //se agrega clase comun a los botones para agregarle el listener a todos de un solo
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida
@@ -43,8 +85,26 @@ categoryButtons.forEach(button =>
     } else if (activeSorting === 2) {
       sortData(currentData, "id", 2);
     }
+
+    console.log(currentData);
+
+    const promedioAguaCategory= computeStats(currentData, "waterAmount");
+    const palabraAgua= mostrarPalabra(promedioAguaCategory);
+    console.log(promedioAguaGeneral);
+
+    const promedioLuzCategory= computeStats(currentData, "sunLigth");
+    const palabraLuz = mostrarPalabra(promedioLuzCategory);
+    console.log(promedioLuzGeneral);
+
+    const promedioCuidadoCategory= computeStats(currentData, "careDifficulty");
+    const palabracuidado= mostrarPalabra(promedioCuidadoCategory);
+    console.log(promedioCuidadoGeneral);
+    document.querySelector("#promedioAgua").textContent=`Promedio de agua: ${palabraAgua}`;
+    document.querySelector("#promedioLuz").textContent=`Promedio de Luz: ${palabraLuz}`;
+    document.querySelector("#promedioCuidado").textContent=`Promedio de Cuidado: ${palabracuidado}`;
+
     clearView();
-    renderItems(currentData);
+    renderItems(currentData); 
   });
 });
 //hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
@@ -68,7 +128,17 @@ function filterByName()
 {
   const inputName = document.getElementById('inputName');
   const inputReceive = inputName.value;
-  const filteredName = filterData(clonedData, 'name', inputReceive); //revisar este data
+  //usar toUpperCase por si el usuario introduce la primera letra en minuscula
+  //seleccionar la primera letra 
+  //usar el metodo y guardar el nombre corregido en otra variable
+  //pasarle esa ultima variable a la funcion 
+
+  const firstLetter = inputReceive[0].toUpperCase();
+  //console.log(firstLetter);
+  const inputCorrected= firstLetter + inputReceive.slice(1)
+  //console.log(inputCorrected);
+
+  const filteredName = filterData(clonedData, 'name', inputCorrected); //revisar este data
   //console.log(inputName.value);
   clearView();
   renderItems(filteredName);
@@ -93,18 +163,20 @@ inputName.addEventListener('keyup', (event) => {
 const dropdown = document.getElementById("itemOrder");
 dropdown.addEventListener("change", () => {
   const i = dropdown.selectedIndex;
-
+  //console.log(currentData);
   if (i === 1) {
     activeSorting = 1;
     sortData(currentData, "id", 1);
-    // console.log("derecho");
+    //console.log(currentData);
+    //console.log("derecho");
     // console.log(ascending);
     clearView();
     renderItems(currentData);
   } else if (i === 2) {
     activeSorting = 2;
     sortData(currentData, "id", 2);
-    // console.log("reves");
+    //console.log(currentData)
+    //console.log("reves");
     // console.log(descending);
     clearView();
     renderItems(currentData);
@@ -115,10 +187,11 @@ dropdown.addEventListener("change", () => {
 });
 
 //------------------------------------------------------------------------------------------------------------
-//Delegacion de eventos (intento xd)
+
+//Delegacion de eventos
 //Funcion para hacer girar las tarjetas
-const princContainer = document.getElementById("ulCards");
-princContainer.addEventListener("click",(event) => 
+const principalContainer = document.getElementById("ulCards");
+principalContainer.addEventListener("click",(event) => 
 {
   const cardContainer= event.target.closest('.card-container');
   if(event.target.matches('.detalles')) 
@@ -127,7 +200,7 @@ princContainer.addEventListener("click",(event) =>
   }
   else if (event.target.matches('.regresar')) 
   {
-    returnCard(cardContainer); 
+    turnCard(cardContainer); 
   }
 });
 
@@ -137,20 +210,116 @@ function turnCard(cardContainer)
   const backCard=cardContainer.querySelector("#back-card");
   //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
   // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
-  backCard.classList.remove('hide');
-  frontCard.classList.add('hide');
+  backCard.classList.toggle('hide');
+  frontCard.classList.toggle('hide');
 }
 
-function returnCard (cardContainer)
+/*function returnCard (cardContainer)
 {
   //lo mismo, pero al reves xd 
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card")
   backCard.classList.add('hide');
   frontCard.classList.remove('hide');
-}
+}*/
 
 //-----------------------------------------------------------------------------------------------------------------
+
+/*
+
+//necesitas que se aplique a todas las tarjetas 
+//seleccionarlas (clase comun?) 
+//se devuelve un objeto
+const containers =document.getElementsByClassName('card-container');
+console.log(containers);
+//se convierte en un array y se itera con forEach
+Array.from(containers).forEach(container => {
+
+  const index = Array.from(containers).indexOf(container);
+  // ccceder a la información de la tarjeta actual en currentData
+  const currentDataItem = currentData[index];
+  const facts = currentDataItem.facts;
+
+  const water = facts.waterAmount;
+  console.log(water);
+  const ligth = facts.sunLigth;
+  console.log(ligth);
+  const care = facts.careDifficulty;
+  console.log(care);
+
+
+  function determinarImagen(id) {
+    let activo;
+    let inactivo;
+
+    if (id==="agua") {
+      activo = "resources/Icons/agua-activa.png";
+      inactivo = "resources/Icons/agua-inactiva.png";
+    } else if (id==="luz") {
+      activo = "resources/Icons/luz-activa.png";
+      inactivo = "resources/Icons/luz-inactiva.png";
+    } else if (id==="cuidado") {
+      activo = "resources/Icons/cuidado-activa.png";
+      inactivo = "resources/Icons/cuidado-inactiva.png";
+    }
+    return { activo, inactivo };
+  }
+
+
+  function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
+    const { activo, inactivo } = determinarImagen(id);
+
+    if (fact === 1) {
+      firstImage.src = activo;
+      secondImage.src = inactivo;
+      thirdImage.src = inactivo;
+    } else if (fact === 2) {
+      firstImage.src = activo;
+      secondImage.src = activo;
+      thirdImage.src = inactivo;
+    } else if (fact === 3) {
+      firstImage.src = activo;
+      secondImage.src = activo;
+      thirdImage.src = activo;
+    }
+    console.log(actualizarImagenes);
+
+  }
+
+  // Imagenes.agua
+  const firstImageWater = container.querySelector("#minimo-agua");
+  console.log(firstImageWater);
+  const secondImageWater = container.querySelector("#medio-agua");
+  console.log(secondImageWater);
+  const thirdImageWater = container.querySelector("#alto-agua");
+  console.log(thirdImageWater);
+
+  actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
+
+  // Imagenes.luz
+  const firstImageLigth = container.querySelector("#minimo-luz");
+  console.log(firstImageLigth);
+  const secondImageLigth = container.querySelector("#medio-luz");
+  console.log(secondImageLigth);
+  const thirdImageLigth = container.querySelector("#alto-luz");
+  console.log(thirdImageLigth);
+
+  actualizarImagenes(ligth, firstImageLigth, secondImageLigth, thirdImageLigth, "luz");
+
+  // Imagenes.cuidado
+  const firstImageCare = container.querySelector("#minimo-cuidado");
+  console.log(firstImageCare);
+  const secondImageCare = container.querySelector("#medio-cuidado");
+  console.log(secondImageCare);
+  const thirdImageCare = container.querySelector("#alto-cuidado");
+  console.log(thirdImageCare);
+
+  actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
+
+});
+
+*/
+//---------------------------------------------------------------------------------------------------------------
 /*Ventanas Modales  
 //Codigo en view.js
 const principal= document.getElementById("ulCards");
