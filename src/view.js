@@ -27,7 +27,7 @@ export const renderItems = (data) => {
     // }
     const cardItem = document.createElement('li');
 
-    cardItem.innerHTML += `<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
+    cardItem.innerHTML +=`<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
     <article id="front-card" class="front-card">
       <h2>${element.name}</h2>
       <div class="top-card">
@@ -94,11 +94,32 @@ export const renderItems = (data) => {
                 <p>${element.description}</p>
             </div>
           </div>
-          <div class="modal"> 
-            <div class="modal-content-stats">
-                <h3>${element.name}</h3>
-                <p>${element.description}</p>
-            </div>
+          <div id="myStatsModal" class="statsModal"> 
+            <article class="modal-content-stats">
+              <h3>${element.categoryPlant}</h3>
+              <div class="factLabels">
+                <div class="squares">
+                  <div class="area">
+                    <div class="square agua"></div>
+                    <p>Agua</p>
+                  </div>
+                  <div class="area">
+                    <div class="square luz"></div>
+                    <p>Luz</p>
+                  </div>
+                  <div class="area">
+                    <div class="square cuidado"></div>
+                    <p>Cuidado</p>
+                  </div>
+                </div>
+                <div class="statsTotals">
+                  <h5 class="agua">Mucha</h5>
+                  <h5 class="luz">Regular</h5>
+                  <h5 class="cuidado">Poca</h5>
+                </div>
+              </div>
+              <h4>Qué cuidados necesita este tipo de plantas?</h4>
+            </article>
           </div>
         </div>
       </div>
@@ -107,6 +128,20 @@ export const renderItems = (data) => {
 
     const btnOpenModal = cardItem.querySelector('.openModalBtn');
     const myModal = cardItem.querySelector('.modal')
+    
+    // const btnOpenStatsModal = cardItem.querySelector('.openStatsModalBtn');
+    // const myStatsModal = cardItem.querySelector('.statsModal')
+    // btnOpenStatsModal.addEventListener("click", () => 
+    // {
+    //   myStatsModal.style.display ="block";
+    // });
+    // document.addEventListener("click", (event) => {
+    //   if (event.target === myStatsModal) {
+    //     myStatsModal.style.display = "none";
+    //   }
+    // });
+
+
 
     btnOpenModal.addEventListener("click", () => 
     {
