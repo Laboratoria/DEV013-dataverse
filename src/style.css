@@ -304,9 +304,9 @@ li.card-container.aromatica {
     margin: 4px 0;
 }
 
-#front-card .amounts img.inactiva {
+/*#front-card .amounts img.inactiva {
     opacity: .5;
-}
+}*/
 
 #front-card p {
     /* background-color: aliceblue; */
@@ -586,3 +586,20 @@ footer h3 {
     text-decoration: none;
     cursor: pointer;
   }*/
+
+  .card-container{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor:default;
+    transition: all 400ms ease;
+  }
+
+  .card-container:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translate(-5%);
+  }
+  
+  .back-card{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor:default;
+    transition: all 400ms ease;
+  }
