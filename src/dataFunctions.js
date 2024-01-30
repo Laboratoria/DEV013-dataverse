@@ -182,3 +182,18 @@ const terceraImagenCuidado = document.querySelector(".alto-cuidado");
 
 actualizarImagenes(cuidado, primeraImagenCuidado, segundaImagenCuidado, terceraImagenCuidado);
 */
+// let planta = [1,2,3];
+// let personalidad = [3,2,1];
+
+// function match(planta, personalidad) {
+//   let resultado = [];
+//   for (i) {
+//     if(planta[i] === personalidad[i])
+//     resultado = resultado.push(4);
+//   } else if (si es mayor por un numero) {
+//     push x
+//   } else if (si es menor por un numero) {
+//     push x
+//   } 
+  
+// }
