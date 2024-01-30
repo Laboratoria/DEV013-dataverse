@@ -4,22 +4,24 @@ import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { computeStats } from './dataFunctions.js';
 
-const clonedData = structuredClone(data); //clonar el arreglo de objetos
+const clonedData = structuredClone(data); //clona el arreglo de objetos
 let currentData = data;
+//Esta variable almacena el valor de la seleccion del boton orderBy
+//para que no sea descartado al cambiar de categoría
 let activeSorting = 0;
 
 //------------------------------------------------------------------------------------------------------------
-//Para mostrar las tarjetas
-//guardar la ul con los items en una variable
+//Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
 const cards=renderItems(currentData);
-//seleccionar el lugar donde se va a imprimir la data ("main")
-//document.body.appendChild(cards) 
-// lo anterior hacerlo con query selector o getElementbyId** (recomendacion de coach)
+
+//Se declara una variable que trae el valor de root
 const mainContainer=document.querySelector("#root");
-//se puede usar appenChild nuevamente y agregar la ul como hijo del elemento de id root
+
+//Se declara cards como hijo de mainContainer
 mainContainer.appendChild(cards);
 
 
+//Esta función refresca la página completa. Se le aplica a los elementos de la sección brand
 function refreshPage() {
   window.location.reload()
 }
@@ -86,30 +88,31 @@ categoryButtons.forEach(button =>
       sortData(currentData, "id", 2);
     }
 
-    console.log(currentData);
+    //console.log(currentData);
 
     const promedioAguaCategory= computeStats(currentData, "waterAmount");
     const palabraAgua= mostrarPalabra(promedioAguaCategory);
-    console.log(promedioAguaGeneral);
+    //console.log(promedioAguaGeneral);
 
     const promedioLuzCategory= computeStats(currentData, "sunLigth");
     const palabraLuz = mostrarPalabra(promedioLuzCategory);
-    console.log(promedioLuzGeneral);
+    //console.log(promedioLuzGeneral);
 
     const promedioCuidadoCategory= computeStats(currentData, "careDifficulty");
     const palabracuidado= mostrarPalabra(promedioCuidadoCategory);
-    console.log(promedioCuidadoGeneral);
+    //console.log(promedioCuidadoGeneral);
     document.querySelector("#promedioAgua").textContent=`Promedio de agua: ${palabraAgua}`;
     document.querySelector("#promedioLuz").textContent=`Promedio de Luz: ${palabraLuz}`;
     document.querySelector("#promedioCuidado").textContent=`Promedio de Cuidado: ${palabracuidado}`;
 
     clearView();
-    renderItems(currentData); 
+    renderItems(currentData);
   });
 });
-//hay que pasarle la data filtarada a renderItems para que renderice solo esas tarjetas 
-//antes habria que limpiar/eliminar todas las tarjetas 
-//creo que faltaria un boton para regresar a la vista inicial y que se rendericen todas las tarjetas 
+
+//Esta función limpia la pantalla
+//Se debe llamar antes de cambiar el valor de currentData
+//para que no se sobreescriban los elementos del objeto
 function clearView(){
   const cardsContainer=document.getElementById("ulCards");
   cardsContainer.innerHTML="";
@@ -123,7 +126,7 @@ function clearView(){
 //llame a filterdata para buscarlo 
 //limpie la interfaz
 // y se lo pase a render items para que solo muestre esa tarjeta 
-//donde debo llamarla? cuando el usuario de enter o click en boton submit?
+//cuando el usuario de enter
 function filterByName()
 {
   const inputName = document.getElementById('inputName');
@@ -144,7 +147,10 @@ function filterByName()
   renderItems(filteredName);
 }
 
-//Recordatorio: tener en cuenta los comportamientos por default ( Cuando presionas la tecla Enter en un formulario, se activa el evento de envío del formulario (submit). Si no se previene este comportamiento predeterminado, la página se recargará y tu script de JavaScript se reiniciará.)
+//Recordatorio: tener en cuenta los comportamientos por default
+//(Cuando presionas la tecla Enter en un formulario, se activa el evento
+//de envío del formulario (submit). Si no se previene este comportamiento predeterminado,
+//la página se recargará y tu script de JavaScript se reiniciará.)
 //decirle que en vez de su comportamiento por default ejecute filterByName
 document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -159,27 +165,31 @@ inputName.addEventListener('keyup', (event) => {
 });
 
 //-----------------------------------------------------------------------------------------------------------
-//llamar a la funcion para ordenar
+//Se declara una variable que llama al botón de ordenar
 const dropdown = document.getElementById("itemOrder");
+//A esa variable se le agrega el evento change
 dropdown.addEventListener("change", () => {
+  //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
+  //el cual indica cuál de las opciones se han seleccionado
   const i = dropdown.selectedIndex;
-  //console.log(currentData);
+  //si se selecciona el indice 1
   if (i === 1) {
+    //Actualiza el valor de active sorting a 1
     activeSorting = 1;
+    //Y se ejecuta la funcion sortData a currentData, usando los ids y con el orden 1 (al derecho a-z) 
     sortData(currentData, "id", 1);
-    //console.log(currentData);
-    //console.log("derecho");
-    // console.log(ascending);
+    //Se limpia la página
     clearView();
+    //Y se ejecula la funcion renderItems con current data actualizado
     renderItems(currentData);
+    //Si se selecciona el indice 2 se ejecuta lo mismo pero con el orden 2 (al reves z-a)
   } else if (i === 2) {
     activeSorting = 2;
     sortData(currentData, "id", 2);
-    //console.log(currentData)
-    //console.log("reves");
+    // console.log("reves");
     // console.log(descending);
-    clearView();
-    renderItems(currentData);
+    // clearView()
+    // renderItems(descending);
   } else if (i === 3) {
     clearView();
     renderItems(clonedData);
@@ -190,8 +200,8 @@ dropdown.addEventListener("change", () => {
 
 //Delegacion de eventos
 //Funcion para hacer girar las tarjetas
-const principalContainer = document.getElementById("ulCards");
-principalContainer.addEventListener("click",(event) => 
+const princContainer = document.getElementById("ulCards");
+princContainer.addEventListener("click",(event) => 
 {
   const cardContainer= event.target.closest('.card-container');
   if(event.target.matches('.detalles')) 
