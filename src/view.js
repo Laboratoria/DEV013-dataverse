@@ -7,26 +7,13 @@ export const renderItems = (data) => {
   // por cada elemento se debe crear un li 
   //cada li debe tener la estructura html predefinida 
   //cada li se debe agregar a la ul 
-  //insertar el ul completa al dom 
-
-  /** Template string **/ 
-  // container.innerHTML += `<p>${element.name}</p>`
+  //insertar el ul completo al dom 
   
   data.forEach(element => {
-    // const waterAmount = element.waterAmount;
-    // const sunLigth = element.sunLigth;
-    // const careDifficulty = element.careDifficulty;
-    // const gotaActiva = '<img alt="Gota" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true">';
-    // const gotaInactiva = '<img alt="Gota" class="inactiva" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true">';
-    // if (waterAmount == 1) {
-    //    GotaActiva + 2inactiva(con class)
-    // } else if (waterAmount == 2) {
-    //    2GotaActiva + inactiva
-    // } else {
-    //    3GotaActiva
-    // }
+    //Se crea el elemento li
     const cardItem = document.createElement('li');
 
+    //El elemento li se escribe en el DOM
     cardItem.innerHTML +=`<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
     <article id="front-card" class="front-card">
       <h2>${element.name}</h2>
@@ -126,23 +113,14 @@ export const renderItems = (data) => {
     </article>
   </li>`
 
-    const btnOpenModal = cardItem.querySelector('.openModalBtn');
-    const myModal = cardItem.querySelector('.modal')
     
-    // const btnOpenStatsModal = cardItem.querySelector('.openStatsModalBtn');
-    // const myStatsModal = cardItem.querySelector('.statsModal')
-    // btnOpenStatsModal.addEventListener("click", () => 
-    // {
-    //   myStatsModal.style.display ="block";
-    // });
-    // document.addEventListener("click", (event) => {
-    //   if (event.target === myStatsModal) {
-    //     myStatsModal.style.display = "none";
-    //   }
-    // });
+    //Calling the elements to give them an onclick event listener
+    const btnOpenModal = cardItem.querySelector('.openModalBtn');
+    const btnOpenStatsModal = cardItem.querySelector('.stats1');
+    const myModal = cardItem.querySelector('.modal')
+    const myStatsModal = cardItem.querySelector('.statsModal')
 
-
-
+    //This function activates the buttons to open the popups
     btnOpenModal.addEventListener("click", () => 
     {
       myModal.style.display ="block";
@@ -154,50 +132,28 @@ export const renderItems = (data) => {
       }
     });
 
+    btnOpenStatsModal.addEventListener("click", () => 
+    {
+      myStatsModal.style.display ="block";
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target === myStatsModal) {
+        myStatsModal.style.display = "none";
+      }
+    });
+
+
+
+
+
+
+
+
+
+    //cardItem is created as a child of cardList
     cardList.appendChild(cardItem);
   });
-  
+
   return cardList;
 };
-
-//al hacer click se ejecuta la funcion que debe hacer girar la tarjeta 
-
-// function turnCard(botton) {
-//   const cardContainer=  botton.closest('.card-container');
-//   const frontCard=cardContainer.querySelector("#front-card");
-//   const backCard=cardContainer.querySelector("#back-card");
-
-//   //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
-//   // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
-//   // The toggle() method of the DOMTokenList interface removes an existing
-//   //token from the list and returns false. If the token doesn't exist it's
-//   //added and the function returns true.
-//   backCard.classList.toggle('hide');
-//   frontCard.classList.toggle('hide');
-// }
- 
-// function returnCard (botton) {
-//   //lo mismo, pero al reves xd 
-//   const cardContainer = button.closest('.card-container');
-//   const frontCard = cardContainer.querySelector("#front-card");
-//   const backCard = cardContainer.querySelector("#back-card")
-
-//   backCard.classList.toggle('hide');
-//   frontCard.classList.toggle('hide');
-// }
-
-// //hacer las variable globales 
-// window.turnCard=turnCard;
-// window.returnCard=returnCard;
-
-
-/*             <div>
-            <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <div id="myModal" class="modal"> 
-              <div class="modal-content">
-                  <h3>Estadisticas</h3>
-                  <p></p>
-             </div>
-            </div>
-          </div>*/
-

@@ -17,7 +17,6 @@ export const filterData = (data, filterBy, value) => {
 //luego hay que actuaizar la interfaz y que solo se rendericen las tarjetas del nuevo array
 //se podria agregar un onclick al boton y que al hacer click se ejecute la funcion pero con los parametros correspondientes
 
-
 /*`sortData(data, sortBy, sortOrder)`: esta función`sort`u ordenar recibe tres parámetros.
  El primer parámetro,`data`, nos entrega los datos. 
  El segundo parámetro,`sortBy`, nos dice con respecto a cuál de los campos de la data se quiere ordenar.
@@ -29,11 +28,6 @@ export const filterData = (data, filterBy, value) => {
 };
 */
 
-/*`computeStats(data)`: la función`compute`o calcular, nos permitirá hacer cálculos estadísticos básicos 
-para ser mostrados de acuerdo a la data proporcionada, 
-esta función debe usar el método reduce.
-*/
-
 export const sortData = (data, sortBy, sortOrder) => {
   // let forData = data.slice();
   // if ((sortOrder === 4)) {
@@ -42,17 +36,21 @@ export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function(a,b) {
     if (a[sortBy] > b[sortBy]) {
       if (sortOrder === 1) {
-        return true;
+        return 1;
       } else if (sortOrder === 2) {
-        return false;
+        return -1;
       }
     } else {
       if (sortOrder === 1) {
-        return false;
+        return -1;
       } else if (sortOrder === 2) {
-        return true;
+        return 1;
       }
     }
   });
 }
 
+/*`computeStats(data)`: la función`compute`o calcular, nos permitirá hacer cálculos estadísticos básicos 
+para ser mostrados de acuerdo a la data proporcionada, 
+esta función debe usar el método reduce.
+*/

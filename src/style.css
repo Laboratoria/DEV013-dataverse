@@ -1,4 +1,5 @@
 /* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +13,15 @@ body {
 }
 
 /* Header styles */
+
 header {
     /* background-color: aquamarine; */
     margin: auto;
     max-width: 80%;
 }
 
-/* Brand Styles */
+/* Brand section styles */
+
 header #brand {
     /* background-color: green; */
     display: flex;
@@ -40,6 +43,7 @@ header #brand h1 {
 }
 
 /* Aside styles */
+
  aside {
     /* background-color: blue; */
     display: flex;
@@ -49,6 +53,8 @@ header #brand h1 {
     font-size: 14px;
     font-weight: 500;
 }
+
+/* Search by name styles */
 
 .search-container input{
     width: 150px;
@@ -60,7 +66,9 @@ header #brand h1 {
     border: #8A988C solid .5px;
     box-shadow: 1px 1px 5px gray;
 }
-   
+
+/* Categories menu styles */
+
 .itemAside {
     /* background-color: antiquewhite; */
     display: flex;
@@ -83,7 +91,8 @@ div.itemAside label {
     font-family: 'Marcellus', serif;
 }
 
-/* Order by, styles */
+/* Order by drop button styles */
+
 .dropdown label {
     background-color: #C4CBC5;
     border-radius: 5px;
@@ -120,6 +129,7 @@ select#itemOrder {
 }
 
 /* Main styles */
+
 main {
     /* background-color: plum; */
     padding: 10px;
@@ -151,6 +161,8 @@ ul {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* Card styles */
 
 .card-container {
     /* background-color: #EBD0BF; */
@@ -185,6 +197,8 @@ li.card-container.aromatica {
 .hide {
     display: none;
 }
+
+/* Front card styles */
 
 #front-card {
     /* background-color: #EBD0BF; */
@@ -273,8 +287,9 @@ li.card-container.aromatica {
     box-shadow: 2px 2px 5px grey;
 }
 
-/* Back card style */
- #back-card {
+/* Back card styles */
+
+#back-card {
     /* background-color: white; */
     padding: 5px 5px;
     text-align: right;
@@ -372,8 +387,8 @@ img.stats1 {
     height: 35px;
 }
 
+/* Modal popups styles */
 
-/* Modal areas styles */
 .modal, .statsModal {
     display: none;
     position: fixed;
@@ -382,9 +397,9 @@ img.stats1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-  }
+}
 
-  .modal-content-stats {
+.modal-content-stats {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -397,74 +412,74 @@ img.stats1 {
     justify-content: center;
     text-align: start;
     padding: 20px;
-  }
+}
 
 .modal-content-stats h3:first-letter {
     text-transform: uppercase;
 }
 
-  .modal-content-stats h3 {
+.modal-content-stats h3 {
     font-family: 'Marcellus SC', serif;
     color: #4F6F1D;
     font-size: 30px;
     text-align: center;
     font-weight: lighter;
     margin-bottom: 20px;
-  }
+}
 
-  div.factLabels {
+div.factLabels {
     /* background-color: blueviolet;
     padding: 10px; */
     display: flex;
-  }
+}
 
-  div.statsTotals h5 {
+div.statsTotals h5 {
     /* background-color: #E5B655; */
     font-family: 'Marcellus SC', serif;
     font-size: 25px;
     text-align: center;
     margin: 0 0 25px 80px;
     text-shadow: .5px .5px .5px gray;
-  }
+}
 
-  div.factLabels .area {
+div.factLabels .area {
     /* background-color: #555; */
     margin-top: 5px;
     display: flex;
-  }
+}
 
-  div.factLabels .square {
+div.factLabels .square {
     height: 20px;
     width: 30px;
     margin: 0 10px 35px 0;
     border-radius: 5px;
-  }
+}
 
-  div.factLabels .square.agua {
+div.factLabels .square.agua {
     background-color: #D7A180;
-  }
+}
 
-  div.factLabels .square.luz {
+div.factLabels .square.luz {
     background-color: #F2DBAA;
-  }
+}
 
-  div.factLabels .square.cuidado {
+div.factLabels .square.cuidado {
     background-color: #E7E4A7;
-  }
+}
 
-  h5.agua {
+h5.agua {
     color: #D7A180;
-  }
+}
 
-  h5.luz {
+h5.luz {
     color: #E5B655;
-  }
+}
 
-  h5.cuidado {
+h5.cuidado {
     color: #D0C950;
-  }
+}
 
-  .modal-content-stats h4 {
+.modal-content-stats h4 {
     /* background-color: #4F6F1D; */
     font-family: 'Marcellus SC', serif;
     font-size: 21px;
@@ -472,9 +487,9 @@ img.stats1 {
     font-weight: lighter;
     /* margin-bottom: 20px; */
     color: #4F6F1D;
-  }
+}
   
-  .modal-content-description {
+.modal-content-description {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -488,17 +503,18 @@ img.stats1 {
     text-align: start;
     padding: 20px;
     /* background-color: rgba(0, 0, 0, 0.7); */
-  }
+}
 
-  .modal-content-description h3 {
+.modal-content-description h3 {
     font-family: 'Marcellus', serif;
     margin-bottom: 15px;
     color: #AF4401;
     font-size: 23px;
     text-align: center;
-  }
+}
 
 /* Footer styles */
+
 footer {
     display: inline-flex;
     flex-direction: column;
@@ -521,8 +537,6 @@ footer h3 {
     margin-bottom: 8px;
 
 }
-
-
 
 
 

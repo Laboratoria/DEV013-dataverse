@@ -17,13 +17,16 @@
         <img src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Logo.png?raw=true" alt="Logo" onclick="refreshPage()">
         <h1 onclick="refreshPage()">My Beauty Plants</h1>
       </section>
+      <!-- Menu section -->
       <aside>
+        <!-- Search by name text box -->
         <div class="search-container">
           <form action="data/dataset.js">
             <input type="text" id="inputName" placeholder="Buscar..." name="search">
             <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
           </form>
         </div>
+        <!-- Categories section -->
         <div class="itemAside">
           <input type="image" data-category="ornamental" id="Ornamentales" name="Ornamentales" alt="Ornamentales" class="category" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Ornamentales.png?raw=true">
           <label for="Ornamentales">Ornamentales </label>
@@ -43,6 +46,7 @@
           <input type="image" data-category="aromatica" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/aromaticas.png?raw=true">
           <label for="Aromáticas">Aromáticas </label>
         </div>
+        <!-- Order by dropdown button -->
         <div class="dropdown"> 
           <label for="itemOrder" id="order" class="dropbtn">Orden</label>
           <select name="order" id="itemOrder">
@@ -59,7 +63,7 @@
       <div id="root">
           <ul class="cards" id="ulCards">
             <li class="unnecessary" itemscope itemtype="https://schema.org">Plant</li>
-            <!-- Plantilla de tarjeta -->
+            <!-- Card base template -->
             <!-- <li class="card-container" itemscope itemtype="https://schema.org">
               <article id="front-card">
                 <h2>Agave Azul</h2>
