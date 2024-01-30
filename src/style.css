@@ -183,6 +183,11 @@ select[data-testid="select-filter2"] {
   width: 160px;
   padding: 0 10px;
 }
+select[data-testid="select-estadistic"] {
+  height: 40px;
+  width: 250px;
+  padding: 0 10px;
+}
 
 #text {
   width: 95%;

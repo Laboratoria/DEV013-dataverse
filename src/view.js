@@ -2,7 +2,8 @@ export const renderItems = (data) => {
   // Aquí comienza tu código y puedes retornar lo que tu necesites
 
   let html = ""; //contenedor
-  data.forEach((cartas) => { // iterar datos, recorrer los datos  dl = define lista  dd = descripcion
+  data.forEach((cartas) => {
+    // iterar datos, recorrer los datos  dl = define lista  dd = descripcion
     html += `                 
     <ul>
     <li class="card" itemscope itemtype="Cards">
@@ -28,6 +29,7 @@ export const renderItems = (data) => {
             <dt>Descripción</dt><dd class="inactiva" itemprop="description">${cartas.description}</dd> 
             <dt>Elemento:</dt><dd class="inactiva" itemprop="elemnt">${cartas.facts.elementEsencial}</dd>
             <dt>Poder:</dt><dd class="inactiva" itemprop="power">${cartas.facts.powerFul}</dd>
+            <dt>Capturada:</dt><dd class="inactiva" itemprop="captured">${cartas.extraInfo.capturedBySyaoran}</dd>
             <dt>Peligro:</dt><dd class="inactiva" itemprop="danger">${cartas.extraInfo.isDangerous}</dd>
           </div>
           <div class="popup-footer">
@@ -37,13 +39,8 @@ export const renderItems = (data) => {
       </div>
       </dl> 
     </li>
-    </ul>`
-    
+    </ul>`;
   });
 
-  return html
+  return html;
 };
-
-
-
-

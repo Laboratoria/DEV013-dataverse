@@ -78,6 +78,14 @@
             <option value="false">Inofensiva</option>
           </select>
         </div>
+        <div class="container-estadistic">
+          <label for="estadisticDanger">Ver % de estadística:</label>
+          <select data-testid="select-estadistic" name="estadistic" id="estadisticSelect">
+            <option value="">Escoge una opción</option>
+            <option value="true">% Cartas capturadas por Sakura</option>
+            <option value="false">% Cartas capturadas por Syaoran</option>
+          </select>
+        </div>
         <div class="container-ordenar">
           <label for="ordenarFilter">Ordenar de:</label>
           <select data-testid="select-sort" name="name" id="ordenarFilter">
@@ -87,8 +95,8 @@
           </select>
         </div>
       </div>
-      <p id = "text"></p>
-       <button data-testid="button-clear" class="reset-btn">Reset</button>
+      <p id="text"></p>
+      <button data-testid="button-clear" class="reset-btn">Reset</button>
       <!-- cartas -->
       <div class="container-cards" id="root"></div>
     </section>
@@ -97,6 +105,7 @@
   <footer class="footer-section">
     Realizado por: Elisa y Julia -Laboratoria-2024
   </footer>
+
 
   <script src="main.js" type="module"></script>
 </body>

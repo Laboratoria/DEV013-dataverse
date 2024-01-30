@@ -1,9 +1,3 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
-
-// export const example = () => {
-//   return "example";
-// };
-
 //funcion de filtrar por elemento
 export const elementDataFilter = (data, filterBy, value) => {
   const filterElement = data.filter(
@@ -15,10 +9,11 @@ export const elementDataFilter = (data, filterBy, value) => {
 export const sortData = (data, sortBy, sortOrder) => {
   if (sortOrder === "asc") {
     return data.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
-  } if (sortOrder === "desc") {
+  }
+  if (sortOrder === "desc") {
     return data.sort((a, b) => b[sortBy].localeCompare(a[sortBy]));
   }
-}
+};
 
 //funcion de filtrar por carta peligrosa o inofensiva
 
@@ -28,9 +23,10 @@ export const dangerousDataFilter = (data, filterBy, value) => {
   );
   /* console.log("value: ", value); */
   /* console.log("data despues del filtro: ", filterDangerous); */
-  //const porcentaje = (filterDangerous.length/data.length)*100; --- porcentaje
   return filterDangerous;
 };
+
+//Estadistica de las cartas por peligro o inofensivas 
 
 export const computeStats = (data) => {
   //console.log(data);
@@ -49,5 +45,21 @@ export const computeStats = (data) => {
 
 }
 
+//Estadistica por captura de carta
 
-//return `El porcentaje de cartas peligrosas son  &{percent}`;
+export const percent = (data, filterBy) => {
+  const filterCaptured = data.filter(
+    (captured) => captured.extraInfo[filterBy] === true
+  );
+
+  const percentSyaoran = Math.round(
+    (filterCaptured.length / data.length) * 100
+  );
+
+  const percentSakura = 100 - percentSyaoran;
+
+  return {
+    percentSakura,
+    percentSyaoran,
+  };
+};
