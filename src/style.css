@@ -1,31 +1,27 @@
 /* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
- 
-/* html {
-    background-color: olive;
-    padding: 5px;
-} */
 
 body {
     /* background-color: olivedrab;  */
     padding: 0 50px;
     font-family: 'Lato', sans-serif;
-    /* font-family: 'Marcellus', serif; */
-    /* font-family: 'Marcellus SC', serif; */
 }
 
 /* Header styles */
+
 header {
     /* background-color: aquamarine; */
     margin: auto;
-    max-width: 800px;
+    max-width: 80%;
 }
 
-/* Brand Styles */
+/* Brand section styles */
+
 header #brand {
     /* background-color: green; */
     display: flex;
@@ -47,17 +43,32 @@ header #brand h1 {
 }
 
 /* Aside styles */
+
  aside {
     /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
-    /* font-family: 'Lato', sans-serif; */
     font-size: 14px;
     font-weight: 500;
 }
-   
+
+/* Search by name styles */
+
+.search-container input{
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    font-size: small;
+    font-weight: bold;
+    border-radius: 5px;
+    border: #8A988C solid .5px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+/* Categories menu styles */
+
 .itemAside {
     /* background-color: antiquewhite; */
     display: flex;
@@ -68,7 +79,6 @@ header #brand h1 {
 input[type=image] {
     width: 50px;
     height: 50px;
-    /* margin: 2px 0 0 2px; */
 }
     
 label {
@@ -77,14 +87,18 @@ label {
     margin-top: 5px;
 }
 
-/* Order by, styles */
+div.itemAside label {
+    font-family: 'Marcellus', serif;
+}
+
+/* Order by drop button styles */
+
 .dropdown label {
     background-color: #C4CBC5;
     border-radius: 5px;
     border: #8A988C solid 1px;
     box-shadow: 1px 1px 5px gray;
     text-transform: uppercase;
-    /* font-family: 'Lato', sans-serif; */
     font-weight: bold;
     display: flex;
     padding: 0 20px;
@@ -93,9 +107,6 @@ label {
 }
 
 select {
-    /* appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;*/
     width: 80px;
     height: 20px;
     border: #8A988C solid 1px;
@@ -104,12 +115,10 @@ select {
     text-transform: uppercase;
     font-size: small;
     font-weight: bold;
-    /* font-family: 'Lato', sans-serif; */
     margin: 0 0 0 10px;
 }
 
 select#itemOrder {
-    /* display: none; */
     opacity: 0;
     margin: 5px 0 0 -80px;
 }
@@ -119,62 +128,8 @@ select#itemOrder {
     display: flex;
 }
 
-
-/*Este es el que me traje de w3s*/
-/*the container must be positioned relative:*/
-/* .dropdown {
-    position: relative;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    font-size: smaller;
-  } */
-  
-  /* .dropdown select {
-     display: none; hide original SELECT element:
-  } */
-  
-  /* .select-selected {
-    background-color: #C4CBC5;
-    border-radius: 5px;
-    border: #8A988C solid 1px;
-    box-shadow: 1px 1px 5px gray;
-    width: 110px;
-    height: 20px;
-  } */
-  
-  /*style the items (options), including the selected item:*/
-  /* .select-items div,.select-selected {
-    padding: 2px 20px;
-    cursor: pointer;
-    user-select: none;
-  } */
-   
-  /*style items (options):*/
-  /* .select-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px gray;
-    border: #8A988C solid 1px;
-    width: 110px;
-    height: 20px;
-  } */
-  
-  /*hide the items when the select box is closed:*/
-  /* .select-hide {
-    display: none;
-  } */
-  
-  /* .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  } */
-
 /* Main styles */
+
 main {
     /* background-color: plum; */
     padding: 10px;
@@ -207,6 +162,8 @@ ul {
     flex-wrap: wrap;
 }
 
+/* Card styles */
+
 .card-container {
     /* background-color: #EBD0BF; */
     padding: 5px;
@@ -215,7 +172,6 @@ ul {
     height: 481px;
     margin: 30px 40px;
     box-shadow: 2px 2px 5px gray;
-    /* float: left; */
 }
 
 li.card-container.ornamental {
@@ -242,12 +198,13 @@ li.card-container.aromatica {
     display: none;
 }
 
+/* Front card styles */
+
 #front-card {
     /* background-color: #EBD0BF; */
     padding: 5px;
     height: 458px;
     margin: auto;
-    /* display: none; */
 }
 
 #front-card h2 {
@@ -278,15 +235,9 @@ li.card-container.aromatica {
 
 #front-card .top-card dt {
     /* background-color: #AF4401; */
-    /* font-family: 'Lato', sans-serif; */
     font-size: small;
     margin: 10px 0 5px 0;
 }
-
-/* #front-card .top-card .amounts {
-    background-color: palevioletred;
-    padding: 0 0 5px 0;
-} */
 
 #front-card .top-card .amounts dd {
     padding: 5px;
@@ -312,7 +263,6 @@ li.card-container.aromatica {
     /* background-color: aliceblue; */
     padding: 5px;
     margin: 10px 0;
-    /* font-family: 'Lato', sans-serif; */
     font-size: 15px;
     height: 80px;
 }
@@ -328,7 +278,6 @@ li.card-container.aromatica {
     width: 137px;
     height: 32px;
     text-transform: uppercase;
-    /* font-family: 'Lato', sans-serif; */
     font-weight: bold;
     font-size: 20px;
     color: white;
@@ -338,13 +287,13 @@ li.card-container.aromatica {
     box-shadow: 2px 2px 5px grey;
 }
 
-/* Back card style */
- #back-card {
+/* Back card styles */
+
+#back-card {
     /* background-color: white; */
     padding: 5px 5px;
     text-align: right;
     height: 471px;
-    /*display: none;*/
 }
 
 #back-card h2 {
@@ -363,13 +312,6 @@ li.card-container.aromatica {
     text-align: right;
 }
 
-/* #back-card .top-card {
-    display: flex;
-    padding: 5px;
-    margin: 5px 0 10px 0;
-    text-align: right;
-} */
-
 #back-card dt.scientific {
     /* background-color: aquamarine; */
     font-size: 16px;
@@ -385,45 +327,21 @@ li.card-container.aromatica {
     width: 85px;
     height: 156px;
     margin: -20px 0 0 0;
-    /* margin-right: 5px; */
-    /* margin-left: -5px; */
 }
-
-/*#back-card .top-card dl {
-    /* background-color: beige; */
-    /* margin: 0 -5px 0 0; */
-    /* width: 350px;
-}*/
 
 #back-card dt {
     /* background-color: #AF4401; */
     width: 160px;
-    /* margin-right: -5px; */
-    /* font-family: 'Lato', sans-serif; */
     font-weight: bold;
     font-size: 14px;
     margin-top: 10px;
 }
 
-/* #back-card h4 {
-    background-color: aquamarine;
-    font-size: 16px;
-    margin-top: 10px;
-    font-family: 'Lato', sans-serif;
-    font-weight: bolder;
-} */
-
 #back-card dd {
     /* background-color: #FFFFFF; */
-    /* font-family: 'Lato', sans-serif; */
     font-size: 14px;
     width: 160px;
 }
-
-/* #back-card .bottom-card {
-    background-color: blue;
-    height: 170px;
-} */
 
 #back-card #description {
     /* background-color: aqua; */
@@ -438,9 +356,6 @@ li.card-container.aromatica {
     width: 278px;
     display: flex;
     margin: 15px 0 0 -10px;
-    /* align-items: center; */
-    /*justify-content: center; */
-    /* padding: 0 5px 0 10px; */
 }
 
 div.stats {
@@ -460,31 +375,146 @@ div.back {
     /* background-color: aqua; */
     width: 35px;
     height: 35px;
-    /* margin: 0 5px 0 8px; */
 }
 
 img.stats1 {
     margin-right: 5px;
 }
 
-/* #back-card #icons .stats {
-    background-color: black;
-    margin: 0 0 0 15px;
-    display: flex;
-    padding-right: 10px;
-    height: 40px;
-} */
-
 #back-card #icons .back #Regresar {
     /* background-color: gray; */
     width: 35px;
     height: 35px;
-    /* margin: -39px -156 30px 0; */
 }
 
+/* Modal popups styles */
 
+.modal, .statsModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-stats {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border: 3px solid #E5B655;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    text-align: start;
+    padding: 20px;
+}
+
+.modal-content-stats h3:first-letter {
+    text-transform: uppercase;
+}
+
+.modal-content-stats h3 {
+    font-family: 'Marcellus SC', serif;
+    color: #4F6F1D;
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+div.factLabels {
+    /* background-color: blueviolet;
+    padding: 10px; */
+    display: flex;
+}
+
+div.statsTotals h5 {
+    /* background-color: #E5B655; */
+    font-family: 'Marcellus SC', serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 25px 80px;
+    text-shadow: .5px .5px .5px gray;
+}
+
+div.factLabels .area {
+    /* background-color: #555; */
+    margin-top: 5px;
+    display: flex;
+}
+
+div.factLabels .square {
+    height: 20px;
+    width: 30px;
+    margin: 0 10px 35px 0;
+    border-radius: 5px;
+}
+
+div.factLabels .square.agua {
+    background-color: #D7A180;
+}
+
+div.factLabels .square.luz {
+    background-color: #F2DBAA;
+}
+
+div.factLabels .square.cuidado {
+    background-color: #E7E4A7;
+}
+
+h5.agua {
+    color: #D7A180;
+}
+
+h5.luz {
+    color: #E5B655;
+}
+
+h5.cuidado {
+    color: #D0C950;
+}
+
+.modal-content-stats h4 {
+    /* background-color: #4F6F1D; */
+    font-family: 'Marcellus SC', serif;
+    font-size: 21px;
+    text-align: center;
+    font-weight: lighter;
+    /* margin-bottom: 20px; */
+    color: #4F6F1D;
+}
+  
+.modal-content-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    border: 3px solid #D0C950;
+    border-radius: 10px;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    text-align: start;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+.modal-content-description h3 {
+    font-family: 'Marcellus', serif;
+    margin-bottom: 15px;
+    color: #AF4401;
+    font-size: 23px;
+    text-align: center;
+}
 
 /* Footer styles */
+
 footer {
     display: inline-flex;
     flex-direction: column;
@@ -499,7 +529,6 @@ footer {
     color:#FFFFFF;
     font-weight: bold;
     font-size: large;
-    /* padding: 5px; */
 }
 
 footer h3 {
@@ -509,81 +538,38 @@ footer h3 {
 
 }
 
-/* .footer{
-    color:#FFFFFF;
-    margin:2px;
-    font-weight: bold;
-    font-size: larger;
-} */
 
-/*
-.dropdown{
-    position:relative;
-    display:inline-block;
-}
 
-.dropbtn{
-    background: #C4CBC5;
-    border: #8A988C solid 1px;
-    border-radius: 5px;
-    padding: 5px;
-}
 
-.itemOrder{
-    position:absolute;
-    display:none;
-    list-style: none;
-    width: 100px;
-    background-color: rgb(218, 210, 200);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.dropdown:hover .itemOrder{
-    display:block;
+
+
+
+/*Este es el que me traje de w3s*/
+/*the container must be positioned relative:*/
+/* .dropdown {
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
     text-align: center;
-    background-color:#FFFFFF;
-    border: #8A988C;
-    border-radius: 3px;
-    padding: 5px 5px 5px 5px;
-    text-decoration:none;
-    font-weight: bold;
-}*/
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+    font-size: smaller;
+  } */
   
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fefefe;
-    border: 3px solid #D0C950;
-    border-radius: 10px;
-    width: 500px;
-    height: 300px;
-    justify-content: center;
-    text-align: start;
-    padding: 20px;
-  }
+  /* .dropdown select {
+     display: none; hide original SELECT element:
+  } */
   
-  /*.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+  /* .select-selected {
+    background-color: #C4CBC5;
+    border-radius: 5px;
+    border: #8A988C solid 1px;
+    box-shadow: 1px 1px 5px gray;
+    width: 110px;
+    height: 20px;
+  } */
   
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+  /*style the items (options), including the selected item:*/
+  /* .select-items div,.select-selected {
+    padding: 2px 20px;
     cursor: pointer;
   }*/
 

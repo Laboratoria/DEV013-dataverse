@@ -17,16 +17,19 @@
         <img src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Logo.png?raw=true" alt="Logo" onclick="refreshPage()">
         <h1 onclick="refreshPage()">My Beauty Plants</h1>
       </section>
+      <!-- Menu section -->
       <aside>
+        <!-- Search by name text box -->
         <div class="search-container">
           <form action="data/dataset.js">
             <input type="text" id="inputName" placeholder="Buscar..." name="search">
+            <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
             <p id="promedioAgua">Promedio de Agua: </p>
             <p id="promedioLuz">Promedio de Luz: </p>
             <p id="promedioCuidado">Promedio de cuidado: </p>
           </form>
         </div>
-
+        <!-- Categories section -->
         <div class="itemAside">
           <input type="image" data-category="ornamental" id="Ornamentales" name="Ornamentales" alt="Ornamentales" class="category" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Ornamentales.png?raw=true">
           <label for="Ornamentales">Ornamentales </label>
@@ -46,18 +49,142 @@
           <input type="image" data-category="aromatica" id="Aromáticas" name="Aromáticas" alt="Aromáticas" class="category" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/aromaticas.png?raw=true">
           <label for="Aromáticas">Aromáticas </label>
         </div>
-      
+        <!-- Order by dropdown button -->
         <div class="dropdown"> 
           <label for="itemOrder" id="order" class="dropbtn">Orden</label>
           <select name="order" id="itemOrder">
-              <option value="order">Ordenar</option>
-              <option value="a-z">A - Z</option>
-              <option value="z-a">Z - A</option>
-              <option value="seeAll">Reset all</option>
+            <option value="order">Orden</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+            <option value="seeAll">Reset all</option>
           </select>
         </div>
+      </aside>
+    </header>
+    <main>
+      <h2 class="unnecessary">Plantas</h2>
+      <div id="root">
+          <ul class="cards" id="ulCards">
+            <li class="unnecessary" itemscope itemtype="https://schema.org">Plant</li>
+            <!-- Card base template -->
+            <!-- <li class="card-container" itemscope itemtype="https://schema.org">
+              <article id="front-card">
+                <h2>Agave Azul</h2>
+                <div class="top-card">
+                  <img alt="Agave Azul" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org" class="facts">
+                    <div class="amounts">
+                      <dt itemprop="water-amount" class="amount">Agua</dt>
+                      <dd>
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
+                        <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="light-amount" class="amount">Luz</dt>
+                      <dd>
+                        <img alt="Sol" src="resources/Icons/luz-activa.png" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
+                      </dd>
+                    </div>
+                    <div class="amounts">
+                      <dt itemprop="care-amount" class="amount">Cuidado</dt>
+                      <dd>
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
+                        <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" >
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <p>Planta suculenta usada en la producción de tequila.</p>
+                <div class="button-container">
+                  <button id="detalles" onclick="turnCard(this)">Detalles</button>
+                </div>
+              </article>
+              <article id="back-card" class="hide">
+                <h2>Agave Azul</h2>
+                <div class="top-card">
+                  <img alt="Plant Name" src="resources/Images/agave-azul.png">
+                  <dl itemscope itemtype="https://schema.org">
+                    <dt class="scientific">Agave tequilana</dt>
+                    <dt class="detail">Familia botánica</dt><dd>Asparagaceae</dd>
+                    <dt>Lugar de origen</dt><dd>México</dd>
+                  </dl>
+                </div>
+                <div class="bottom-card">
+                  <dl id="description">
+                    <dt class="detail">Usos</dt><dd>Producción de tequila, jardinería ornamental.</dd>
+                    <dt>Datos climáticos</dt><dd>Prefiere climas secos y suelos bien drenados.</dd>
+                    <dt>Mantenimiento</dt><dd>Riego limitado, resistente a la sequía y al calor.</dd>
+                  </dl>
+                  <div id="icons">
+                    <div class="stats">
+                      <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
+                      <img class="openModalBtn" id="openModalBtn" alt="Descripcion" src="resources/Icons/descripcion.png">
+                      <div class="back">
+                      <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
+                    </div>
+                    <div id="myModal" class="modal"> 
+                      <div class="modal-content-description">
+                          <h3>Plant Name</h3>
+                          <p>Description</p>
+                      </div>
+                    </div>
+                    <div id="myStatsModal" class="statsModal"> 
+                      <article class="modal-content-stats">
+                        <h3>Category</h3>
+                        <div class="factLabels">
+                          <div class="squares">
+                            <div class="area">
+                              <div class="square agua"></div>
+                              <p>Agua</p>
+                            </div>
+                            <div class="area">
+                              <div class="square luz"></div>
+                              <p>Luz</p>
+                            </div>
+                            <div class="area">
+                              <div class="square cuidado"></div>
+                              <p>Cuidado</p>
+                            </div>
+                          </div>
+                          <div class="statsTotals">
+                            <h5 class="agua">Mucha</h5>
+                            <h5 class="luz">Regular</h5>
+                            <h5 class="cuidado">Poca</h5>
+                          </div>
+                        </div>
+                        <h4>Qué cuidados necesita este tipo de plantas?</h4>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>-->
+          </ul>
+      </div>
+    </main>
+  <footer>
+    <h3 class="footer">MY BEAUTY PLANTS</h3>
+    <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
+    <p class="footer">Bootcamp Laboratoria</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+  </body> 
+</html>
 
-        <!-- este es el que traje de W3S
+
+
+
+
+
+
+
+
+<!-- este es el que traje de W3S
         <div class="dropdown">
           <select id="itemOrder" onchange="sortData(data, ids, sorted())">
             <option value="order">Ordenar</option>
@@ -147,92 +274,3 @@
           then close all select boxes:*/
           document.addEventListener("click", closeAllSelect);
           </script> -->
-        
-
-
-
-
-      </aside>
-    </header>
-    <main>
-      <h2 class="unnecessary">Plantas</h2>
-      <div id="root">
-        <!-- <div class="container"> -->
-          <ul class="cards" id="ulCards">
-            <li class="unnecessary" itemscope itemtype="https://schema.org">Plant</li>
-          <!-- <li class="card-container" itemscope itemtype="https://schema.org">
-           <article id="front-card">
-                <h2>Agave Azul</h2>
-                <div class="top-card">
-                  <img alt="Agave Azul" src="resources/Images/agave-azul.png">
-                  <dl itemscope itemtype="https://schema.org" class="facts">
-                    <div class="amounts">
-                      <dt itemprop="water-amount" class="amount">Agua</dt>
-                      <dd>
-                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
-                        <img alt="Gota" src="resources/Icons/agua-activa.png" >
-                        <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactiva" >
-                      </dd>
-                    </div>
-                    <div class="amounts">
-                      <dt itemprop="light-amount" class="amount">Luz</dt>
-                      <dd>
-                        <img alt="Sol" src="resources/Icons/luz-activa.png" >
-                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
-                        <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactiva" >
-                      </dd>
-                    </div>
-                    <div class="amounts">
-                      <dt itemprop="care-amount" class="amount">Cuidado</dt>
-                      <dd>
-                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
-                        <img alt="Semaforo" src="resources/Icons/cuidado-activa.png" >
-                        <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" >
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <p>Planta suculenta usada en la producción de tequila.</p>
-                <div class="button-container">
-                  <button id="detalles" onclick="turnCard(this)">Detalles</button>
-                </div>
-              </article>
-              <article id="back-card" class="hide">
-                <h2>Agave Azul</h2>
-                <div class="top-card">
-                  <img alt="Plant Name" src="resources/Images/agave-azul.png">
-                  <dl itemscope itemtype="https://schema.org">
-                    <dt class="scientific">Agave tequilana</dt>
-                    <dt class="detail">Familia botánica</dt><dd>Asparagaceae</dd>
-                    <dt>Lugar de origen</dt><dd>México</dd>
-                  </dl>
-                </div>
-                <div class="bottom-card">
-                  <dl id="description">
-                    <dt class="detail">Usos</dt><dd>Producción de tequila, jardinería ornamental.</dd>
-                    <dt>Datos climáticos</dt><dd>Prefiere climas secos y suelos bien drenados.</dd>
-                    <dt>Mantenimiento</dt><dd>Riego limitado, resistente a la sequía y al calor.</dd>
-                  </dl>
-                  <div id="icons">
-                    <div class="stats">
-                      <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-                      <img class="stats2" alt="Descripcion" src="resources/Icons/descripcion.png">
-                    </div>
-                    <div class="back">
-                    <input type="image" class="return" id="Regresar" name="Regresar" alt="Regresar"  src="resources/Icons/regresar.png">
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </li>-->
-          </ul>
-      </div>
-    </main>
-  <footer>
-    <h3 class="footer">MY BEAUTY PLANTS</h3>
-    <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
-    <p class="footer">Bootcamp Laboratoria</p>
-  </footer>
-  <script src="main.js" type="module"></script>
-  </body> 
-</html>
