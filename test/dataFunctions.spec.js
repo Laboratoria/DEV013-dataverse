@@ -37,7 +37,7 @@ describe("funcion descendente 'sortData' ", () => {
 });
 
 describe ("estadistica", () => {
-  it ("esto deberia devolverme el porcentaje de 'Inofensivas' y 'Peligrosas'", ()=>{
-    expect(computeStats(fakeData)).toStrictEqual({"promInocentes": 80, "promPeligrosas": 20})
+  it ("esto deberia devolverme el porcentaje de cuantas cartas son 'Inofensivas' y 'Peligrosas'", ()=>{
+    expect(computeStats(fakeData)).toStrictEqual({"promInofensivas": 80, "promPeligrosas": 20})
   })
 })

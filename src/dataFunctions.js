@@ -42,10 +42,10 @@ export const computeStats = (data) => {
   { peligrosas: 0, inofensivas: 0 }
   );
   const promPeligrosas = Math.round((result.peligrosas / data.length) * 100); // Math.round() redondear
-  const promInocentes = Math.round((result.inofensivas / data.length) * 100);
+  const promInofensivas = Math.round((result.inofensivas / data.length) * 100);
   //console.log('El porcentaje de cartas peligrosas son', promPeligrosas);
-  //console.log('El porcentaje de cartas inocentes son', promInocentes);
-  return { promPeligrosas, promInocentes }
+  //console.log('El porcentaje de cartas inocentes son', promInofensivas);
+  return { promPeligrosas, promInofensivas }
 
 }
 

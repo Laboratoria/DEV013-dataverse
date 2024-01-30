@@ -30,18 +30,19 @@ selectElement.addEventListener("change", (event) => {
 let filterDangerous = [];
 
 const selectDangerous = document.querySelector('[data-testid="select-filter2"]');
-let text = document.getElementById('text') // para mostrar estadisticas
+
 
 selectDangerous.addEventListener("change", () => {
   const selected = selectDangerous.options[selectDangerous.selectedIndex].value;
-  filterDangerous = dangerousDataFilter(cardsData, "isDangerous", selected);
+  filterDangerous = dangerousDataFilter(data, "isDangerous", selected);
   cardsData = filterDangerous;
-  //console.log(selectDangerous.options[selectDangerous.selectedIndex].textContent);
+ console.log(selectDangerous.options[selectDangerous.selectedIndex].textContent);
   renderData(cardsData);
   const selectedContent = selectDangerous.options[selectDangerous.selectedIndex].textContent;
+  const text = document.getElementById('text') // para mostrar estadisticas
   if (selectedContent === 'Inofensiva') {
-  text.textContent = `El  ${computeStats(data).promInocentes}% de cartas son inofensivas` // ${} insertar valores de variables o expresiones dentro de una cadena de texto.
-  //console.log(`promedio de : ${computeStats(data).promInocentes}`);
+    text.textContent = `El  ${computeStats(data).promInofensivas}% de cartas son inofensivas` // ${} insertar valores de variables o expresiones dentro de una cadena de texto.
+    //console.log(`promedio de : ${computeStats(data).promInofensivas}`);
   } else {
     text.textContent = `El ${computeStats(data).promPeligrosas}% de cartas son peligrosas`
   }
@@ -68,7 +69,7 @@ resetBtn.addEventListener('click', () => {
   selectElement[0].selected = true;
   selectDangerous[0].selected = true;
   sortOrden[0].selected = true;
-  text.textContent =""
+  text.textContent = ""
 });
 
 //--------------------- botones  de las cards --------------
