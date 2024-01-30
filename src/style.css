@@ -255,9 +255,9 @@ li.card-container.aromatica {
     margin: 4px 0;
 }
 
-#front-card .amounts img.inactiva {
+/*#front-card .amounts img.inactiva {
     opacity: .5;
-}
+}*/
 
 #front-card p {
     /* background-color: aliceblue; */
@@ -571,29 +571,21 @@ footer h3 {
   /* .select-items div,.select-selected {
     padding: 2px 20px;
     cursor: pointer;
-    user-select: none;
-  } */
-   
-  /*style items (options):*/
-  /* .select-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px gray;
-    border: #8A988C solid 1px;
-    width: 110px;
-    height: 20px;
-  } */
+  }*/
+
+  .card-container{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor:default;
+    transition: all 400ms ease;
+  }
+
+  .card-container:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translate(-5%);
+  }
   
-  /*hide the items when the select box is closed:*/
-  /* .select-hide {
-    display: none;
-  } */
-  
-  /* .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  } */
+  .back-card{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor:default;
+    transition: all 400ms ease;
+  }
