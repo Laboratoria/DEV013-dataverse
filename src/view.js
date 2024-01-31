@@ -7,7 +7,7 @@ export const renderItems = (data) => {
     card.innerHTML+=`
     <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
     <ul itemscope itemtype="nausicaa-del-valle-del-viento"></ul>
-    <li>Nombre: </li><li itemprop="name">${film.name}</li>
+    <li>Nombre: </li><li itemprop="movieName">${film.name}</li>
     <li>Sinopsis: </li><li itemprop="shortDescription">${film.shortDescription}</li>
     <li>Descripción: </li><li itemprop="description">${film.description}</li>
     <li>Duración: </li><li itemprop="duration">${film.facts["duration"]}</li>

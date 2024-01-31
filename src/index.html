@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap" rel="stylesheet">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
+      rel="stylesheet">
+    <title>Ghibli Lovers</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header>
-      <!--<img src="Imagenes/Totoro-png.png" alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli">-->
-      <h1>スタジオジブリ<br>STUDIO GHIBLI</h1>
+      <img src="Imagenes/Totoro-png.png"
+      alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli" />
+      <h1>スタジオジブリ<br/>STUDIO GHIBLI</h1>
     </header>
-<main>
-  <input type="text" class="movieSearch" placeholder="Buscar">
-  <h2>Peliculas de Studio Ghibli</h2>
-</main>
+    <main>
+      <input type="text" class="movie-search" placeholder="Buscar" />
+      <h2>Peliculas de Studio Ghibli</h2>
+    </main>
 
 <label for="filter">Filtrar por: </label>
   <select data-testid="select-filter" name="genres" id="filter"> 
@@ -39,11 +44,11 @@
     <option value="desc">Z-A</option>
 </select>
 
-<button class="cleanerButton" type="button">Limpiar</button>
+    <button class="cleanerButton" type="button">Limpiar</button>
 
 <div id = "root"></div>
     
-<footer>Desarrolladoras Cataline Alarcon y Addis Pérez Castro</footer>
+<footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
 <script src="main.js" type="module"></script>
 </body>
 </html>
