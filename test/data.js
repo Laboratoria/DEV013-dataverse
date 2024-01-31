@@ -1,49 +1,55 @@
 // Aqui puedes agregar los datos que necesites para tus pruebas
 // al menos debe tener uno que se llame "data"
 
-export const data = [{
-  "name": "Fly",
-  "facts": {
-    "elementEsencial": "Versatil"
+export const data = [
+  {
+    name: "Fly",
+    facts: {
+      elementEsencial: "Versatil",
+    },
+    extraInfo: {
+      isDangerous: false,
+      capturedBySyaoran: true,
+    },
   },
-  "extraInfo": {
-    "isDangerous": false
-  }
-},
-{
-  "name": "Watery",
-  "facts": {
-    "elementEsencial": "Naturaleza"
+  {
+    name: "Watery",
+    facts: {
+      elementEsencial: "Naturaleza",
+    },
+    extraInfo: {
+      isDangerous: false,
+      capturedBySyaoran: true,
+    },
   },
-  "extraInfo": {
-    "isDangerous": false
-  }
-},
-{
-  "name": "Firey",
-  "facts": {
-    "elementEsencial": "Naturaleza"
+  {
+    name: "Firey",
+    facts: {
+      elementEsencial: "Naturaleza",
+    },
+    extraInfo: {
+      isDangerous: false,
+      capturedBySyaoran: false,
+    },
   },
-  "extraInfo": {
-    "isDangerous": false
-  }
-},
-{
-  "name": "Libra",
-  "facts": {
-    "elementEsencial": "Dualidad"
+  {
+    name: "Libra",
+    facts: {
+      elementEsencial: "Dualidad",
+    },
+    extraInfo: {
+      isDangerous: false,
+      capturedBySyaoran: false,
+    },
   },
-  "extraInfo": {
-    "isDangerous": false
-  }
-},
-{
-  "name": "Storm",
-  "facts": {
-    "elementEsencial": "Climáticos"
+  {
+    name: "Storm",
+    facts: {
+      elementEsencial: "Climáticos",
+    },
+    extraInfo: {
+      isDangerous: true,
+      capturedBySyaoran: false,
+    },
   },
-  "extraInfo": {
-    "isDangerous": true
-  }
-}];
-
+];
