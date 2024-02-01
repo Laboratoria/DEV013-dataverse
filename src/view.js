@@ -1,3 +1,6 @@
+import { computeStats } from "./dataFunctions.js";
+import { wordSelection } from "./dataFunctions.js";
+import { determinarImagen } from "./dataFunctions.js";
 export const renderItems = (data) => {
   
   //crear el contenedor y guardarlo en una variable 
@@ -10,6 +13,7 @@ export const renderItems = (data) => {
   //insertar el ul completo al dom 
   
   data.forEach(element => {
+
     //Se crea el elemento li
     const cardItem = document.createElement('li');
 
@@ -67,7 +71,6 @@ export const renderItems = (data) => {
           <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
           <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
         </dl>
-
         <div id="icons">
           <div class="stats">
             <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
@@ -75,112 +78,138 @@ export const renderItems = (data) => {
             <div class="back">
             <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
           </div>
-          <div id="myModal" class="modal"> 
-            <div class="modal-content-description">
-                <h3>${element.name}</h3>
-                <p>${element.description}</p>
-            </div>
-          </div>
-          <div id="myStatsModal" class="statsModal"> 
-            <article class="modal-content-stats">
-              <h3>${element.categoryPlant}</h3>
-              <div class="factLabels">
-                <div class="squares">
-                  <div class="area">
-                    <div class="square agua"></div>
-                    <p>Agua</p>
-                  </div>
-                  <div class="area">
-                    <div class="square luz"></div>
-                    <p>Luz</p>
-                  </div>
-                  <div class="area">
-                    <div class="square cuidado"></div>
-                    <p>Cuidado</p>
-                  </div>
-                </div>
-                <div class="statsTotals">
-                  <h5 class="agua">Mucha</h5>
-                  <h5 class="luz">Regular</h5>
-                  <h5 class="cuidado">Poca</h5>
-                </div>
-              </div>
-              <h4>Qué cuidados necesita este tipo de plantas?</h4>
-            </article>
-          </div>
         </div>
       </div>
     </article>
   </li>`
 
-    
-    //Calling the elements to give them an onclick event listener
-    const btnOpenModal = cardItem.querySelector('.openModalBtn');
-    const btnOpenStatsModal = cardItem.querySelector('.stats1');
-    const myModal = cardItem.querySelector('.modal')
-    const myStatsModal = cardItem.querySelector('.statsModal')
+    //---------------------------------------------------------------------------------------------------------
 
-    //This function activates the buttons to open the popups
-    btnOpenModal.addEventListener("click", () => 
-    {
-      myModal.style.display ="block";
-    });
+    const descriptionModal = document.createElement('div');
+    //console.log(descriptionModal);
 
-    document.addEventListener("click", (event) => {
-      if (event.target === myModal) {
-        myModal.style.display = "none";
-      }
-    });
+    descriptionModal.innerHTML+= `<div id="myModal" class="modal"> 
+    <div class="modal-content-description">
+        <h3>${element.name}</h3>
+        <p>${element.description}</p>
+    </div>
+  </div>`
 
-    btnOpenStatsModal.addEventListener("click", () => 
-    {
-      myStatsModal.style.display ="block";
-    });
+    //--------------------------------------------------------------------------------------------------------
 
-    document.addEventListener("click", (event) => {
-      if (event.target === myStatsModal) {
-        myStatsModal.style.display = "none";
-      }
-    });
+    const statsModal= document.createElement('div');
+    //console.log(statsModal);
 
+    statsModal.innerHTML+= `<div id="myStatsModal" class="statsModal"> 
+    <article class="modal-content-stats">
+      <h3>${element.categoryPlant}</h3>
+      <div class="factLabels">
+        <div class="squares">
+          <div class="area">
+            <div class="square agua"></div>
+            <p>Agua</p>
+          </div>
+          <div class="area">
+            <div class="square luz"></div>
+            <p>Luz</p>
+          </div>
+          <div class="area">
+            <div class="square cuidado"></div>
+            <p>Cuidado</p>
+          </div>
+        </div>
+        <div class="statsTotals">
+          <h5 class="agua" id="waterFact"></h5>
+          <h5 class="luz" id="ligthFact"></h5>
+          <h5 class="cuidado" id="careFact"></h5>
+        </div>
+      </div>
+      <h4>Qué cuidados necesita este tipo de plantas?</h4>
+    </article>
+  </div> `
 
-
-
-
-
-
-
+    //-------------------------------------------------------------------------------------------------------
 
     //cardItem is created as a child of cardList
     cardList.appendChild(cardItem);
+    cardList.appendChild(descriptionModal);
+    cardList.appendChild(statsModal);
 
-    //---------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------
 
+    const btnOpenModal = document.querySelectorAll('.openModalBtn');
+    //console.log(btnOpenModal);
+    const btnOpenStatsModal = document.querySelectorAll('.stats1');
+    //console.log(btnOpenStatsModal);
+    const myModals = document.querySelectorAll('.modal');
+    //console.log(myModals);
+    const myStatsModals = document.querySelectorAll('.statsModal');
+    //console.log(myStatsModals);
+    
+    btnOpenModal.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        myModals[index].style.display = "block";
+      });
+    
+      document.addEventListener("click", (event) => {
+        if (event.target === myModals[index]) {
+          myModals[index].style.display = "none";
+        }
+      });
+    });
+    
+    btnOpenStatsModal.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        myStatsModals[index].style.display = "block";
+      });
+    
+      document.addEventListener("click", (event) => {
+        if (event.target === myStatsModals[index]) {
+          myStatsModals[index].style.display = "none";
+        }
+      });
+    });
+
+    //------------------------------------------------------------------------------------------------------------
+    //llamar a funcion computeStats para hacer el calculo y wordSelection
+    //seleccionar donde se va a mostrar la estadistica 
+    //insertar el calculo usando innerHTML o textContent
+
+    myStatsModals.forEach((modal) =>{
+    
+      const averageWater= computeStats(data, "waterAmount");
+      const wordWater= wordSelection(averageWater);
+      //console.log(averageWater);
+      //console.log(wordWater);
+  
+      const averageLigth= computeStats(data, "sunLigth");
+      const wordLigth = wordSelection(averageLigth);
+      //console.log(averageLigth);
+      //console.log(wordLigth);
+  
+      const averageCare= computeStats(data, "careDifficulty");
+      const wordCare= wordSelection(averageCare);
+      //console.log(averageCare);
+      //console.log(wordCare);
+  
+      const agua=modal.querySelector("#waterFact");
+      agua.textContent=`${wordWater}`;
+      //console.log(agua);
+      const luz= modal.querySelector("#ligthFact");
+      luz.textContent=`${wordLigth}`;
+      //console.log(luz);
+      const cuidado= modal.querySelector("#careFact"); 
+      cuidado.textContent=`${wordCare}`;
+      //console.log(cuidado);
+    })
+
+    //-----------------------------------------------------------------------------------------------------
     const water = element.facts.waterAmount;
     //console.log(water);
     const ligth = element.facts.sunLigth;
     //console.log(ligth);
     const care = element.facts.careDifficulty;
     //console.log(care);
-  
-  
-    function determinarImagen(id) {
-      let activo;
-      let inactivo;
-  
-      if (id==="agua") {
-        activo = "resources/Icons/agua-activa.png";
-        inactivo = "resources/Icons/agua-inactiva.png";
-      } else if (id==="luz") {
-        activo = "resources/Icons/luz-activa.png";
-        inactivo = "resources/Icons/luz-inactiva.png";
-      } else if (id==="cuidado") {
-        activo = "resources/Icons/cuidado-activa.png";
-        inactivo = "resources/Icons/cuidado-inactiva.png";
-      }
-      return { activo, inactivo };
-    }
-  
   
     function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
       const { activo, inactivo } = determinarImagen(id);
@@ -231,6 +260,7 @@ export const renderItems = (data) => {
     //console.log(thirdImageCare);
   
     actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
+
     //------------------------------------------------------------------------------------------------------------
 
   });
