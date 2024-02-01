@@ -18,26 +18,28 @@
 
   <div class="form-container">
     <label for="type-select">Género literario:</label>
-    <select name="type" id="genero-select" data-testid="filter-type">
+    <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opción</option>
-      <option value="">Literatura</option>
-      <option value=""> Poesía</option>
-      <option value="">Poesía, Novela</option>
+      <option value="Literatura">Literatura</option>
+      <option value="Poesía">Poesía</option>
+      <option value="Poesía, Novela">Poesía, Novela</option>
     </select>
 
-    <label for="type-select">País de Nacimiento</label>
-    <select name="type" id="country-select" data-testid="filter-data">
+    <label for="country-select">País de Nacimiento</label>
+    <select name="country" id="country-select" data-testid="filter-data">
       <option value="">Elige una opción</option>
-      <option value="">Reino Unido</option>
-      <option value="">Chile</option>
-      <option value="">Nicaragua</option>
-      <option value="">Colombia</option>
-      <option value="">Nigeria</option>
-      <option value="">Ghana</option>
-      <option value="">Canadá</option>
-      <option value="">México</option>
-      <option value="">Puerto Rico</option>
+      <option value="Reino Unido">Reino Unido</option>
+      <option value="Chile">Chile</option>
+      <option value="Nicaragua">Nicaragua</option>
+      <option value="Colombia">Colombia</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Ghana">Ghana</option>
+      <option value="Canadá">Canadá</option>
+      <option value="México">México</option>
+      <option value="Puerto Rico">Puerto Rico</option>
+      <option value="EE. UU.">EE. UU.</option>
     </select>
+
 
     <label for="sort-select">Ordenar por</label>
     <select name="ordenar" id="sort-select" data-testid="select-sort">
@@ -51,7 +53,7 @@
 
   <div id="root">
     <ul id="cardList"></ul>
-  </div> <br>
+  </div>
 
   <script src="view.js" type="module"></script>
   <script src="main.js" type="module"></script>
