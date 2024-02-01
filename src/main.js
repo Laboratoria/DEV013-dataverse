@@ -2,7 +2,6 @@ import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
-import { computeStats } from './dataFunctions.js';
 
 const clonedData = structuredClone(data); //clona el arreglo de objetos
 let currentData = data;
@@ -28,46 +27,6 @@ function refreshPage() {
 
 window.refreshPage=refreshPage;
 
-//-------------------------------------------------------------------------------------------------------------
-//seleccionar donde se va a mostrar la estadistica 
-//llamar a funcion computeStats para hacer el calculo 
-//insertar el calculo usando innerHTML o textContent
-
-//en vez de el numero entero que se muestre (poca, medio,mucha)
-//funcion para determinar la palabra 
-//recibir el promedio y dependiendo de este me retorna la palabra
-const mostrarPalabra = function (promedio){
-  if (promedio===1){
-    return "Poca"
-  }
-  else if(promedio===2){
-    return "Regular"
-  }
-  else if(promedio===3){
-    return "Mucha"
-  }
-  return mostrarPalabra;
-}
-
-const promedioAguaGeneral= computeStats(data, "waterAmount");
-const palabraAgua= mostrarPalabra(promedioAguaGeneral);
-console.log(promedioAguaGeneral);
-console.log(palabraAgua);
-
-const promedioLuzGeneral= computeStats(data, "sunLigth");
-const palabraLuz = mostrarPalabra(promedioLuzGeneral);
-console.log(promedioLuzGeneral);
-console.log(palabraLuz);
-
-const promedioCuidadoGeneral= computeStats(data, "careDifficulty");
-const palabracuidado= mostrarPalabra(promedioCuidadoGeneral);
-console.log(promedioCuidadoGeneral);
-console.log(palabracuidado);
-
-document.querySelector("#promedioAgua").textContent=`Promedio de agua: ${palabraAgua}`;
-document.querySelector("#promedioLuz").textContent=`Promedio de Luz: ${palabraLuz}`;
-document.querySelector("#promedioCuidado").textContent=`Promedio de Cuidado: ${palabracuidado}`;
-
 //--------------------------------------------------------------------------------------------------------------
 //se agrega clase comun a los botones para agregarle el listener a todos de un solo
 //al hacer click en alguno de ellos se va a ejecutar la funcion definida
@@ -88,12 +47,12 @@ categoryButtons.forEach(button =>
       sortData(currentData, "id", 2);
     }
 
-    
     clearView();
     renderItems(currentData);
+    return currentData;
   });
 });
-
+//------------------------------------------------------------------------------------------------
 //Esta función limpia la pantalla
 //Se debe llamar antes de cambiar el valor de currentData
 //para que no se sobreescriban los elementos del objeto
@@ -102,7 +61,7 @@ function clearView(){
   cardsContainer.innerHTML="";
 }
 
-//------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
 //Filtrar por nombre 
 
 //crear una funcion que
@@ -130,6 +89,7 @@ function filterByName()
   clearView();
   renderItems(filteredName);
 }
+//--------------------------------------------------------------------------------------------------------
 
 //Recordatorio: tener en cuenta los comportamientos por default
 //(Cuando presionas la tecla Enter en un formulario, se activa el evento
@@ -156,7 +116,25 @@ dropdown.addEventListener("change", () => {
   //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
   //el cual indica cuál de las opciones se han seleccionado
   const i = dropdown.selectedIndex;
-  if (i === 3) {
+  //si se selecciona el indice 1
+  if (i === 1) {
+    //Actualiza el valor de active sorting a 1
+    activeSorting = 1;
+    //Y se ejecuta la funcion sortData a currentData, usando los ids y con el orden 1 (al derecho a-z) 
+    sortData(currentData, "id", 1);
+    //Se limpia la página
+    clearView();
+    //Y se ejecula la funcion renderItems con current data actualizado
+    renderItems(currentData);
+    //Si se selecciona el indice 2 se ejecuta lo mismo pero con el orden 2 (al reves z-a)
+  } else if (i === 2) {
+    activeSorting = 2;
+    sortData(currentData, "id", 2);
+    // console.log("reves");
+    // console.log(descending);
+    // clearView()
+    // renderItems(descending);
+  } else if (i === 3) {
     clearView();
     renderItems(clonedData);
   } else {
@@ -219,133 +197,4 @@ function turnCard(cardContainer)
   frontCard.classList.toggle('hide');
 }
 
-/*function returnCard (cardContainer)
-{
-  //lo mismo, pero al reves xd 
-  const frontCard=cardContainer.querySelector("#front-card");
-  const backCard=cardContainer.querySelector("#back-card")
-  backCard.classList.add('hide');
-  frontCard.classList.remove('hide');
-}*/
-
 //-----------------------------------------------------------------------------------------------------------------
-
-/*
-
-//necesitas que se aplique a todas las tarjetas 
-//seleccionarlas (clase comun?) 
-//se devuelve un objeto
-const containers =document.getElementsByClassName('card-container');
-console.log(containers);
-//se convierte en un array y se itera con forEach
-Array.from(containers).forEach(container => {
-
-  const index = Array.from(containers).indexOf(container);
-  // ccceder a la información de la tarjeta actual en currentData
-  const currentDataItem = currentData[index];
-  const facts = currentDataItem.facts;
-
-  const water = facts.waterAmount;
-  console.log(water);
-  const ligth = facts.sunLigth;
-  console.log(ligth);
-  const care = facts.careDifficulty;
-  console.log(care);
-
-
-  function determinarImagen(id) {
-    let activo;
-    let inactivo;
-
-    if (id==="agua") {
-      activo = "resources/Icons/agua-activa.png";
-      inactivo = "resources/Icons/agua-inactiva.png";
-    } else if (id==="luz") {
-      activo = "resources/Icons/luz-activa.png";
-      inactivo = "resources/Icons/luz-inactiva.png";
-    } else if (id==="cuidado") {
-      activo = "resources/Icons/cuidado-activa.png";
-      inactivo = "resources/Icons/cuidado-inactiva.png";
-    }
-    return { activo, inactivo };
-  }
-
-
-  function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
-    const { activo, inactivo } = determinarImagen(id);
-
-    if (fact === 1) {
-      firstImage.src = activo;
-      secondImage.src = inactivo;
-      thirdImage.src = inactivo;
-    } else if (fact === 2) {
-      firstImage.src = activo;
-      secondImage.src = activo;
-      thirdImage.src = inactivo;
-    } else if (fact === 3) {
-      firstImage.src = activo;
-      secondImage.src = activo;
-      thirdImage.src = activo;
-    }
-    console.log(actualizarImagenes);
-
-  }
-
-  // Imagenes.agua
-  const firstImageWater = container.querySelector("#minimo-agua");
-  console.log(firstImageWater);
-  const secondImageWater = container.querySelector("#medio-agua");
-  console.log(secondImageWater);
-  const thirdImageWater = container.querySelector("#alto-agua");
-  console.log(thirdImageWater);
-
-  actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
-
-  // Imagenes.luz
-  const firstImageLigth = container.querySelector("#minimo-luz");
-  console.log(firstImageLigth);
-  const secondImageLigth = container.querySelector("#medio-luz");
-  console.log(secondImageLigth);
-  const thirdImageLigth = container.querySelector("#alto-luz");
-  console.log(thirdImageLigth);
-
-  actualizarImagenes(ligth, firstImageLigth, secondImageLigth, thirdImageLigth, "luz");
-
-  // Imagenes.cuidado
-  const firstImageCare = container.querySelector("#minimo-cuidado");
-  console.log(firstImageCare);
-  const secondImageCare = container.querySelector("#medio-cuidado");
-  console.log(secondImageCare);
-  const thirdImageCare = container.querySelector("#alto-cuidado");
-  console.log(thirdImageCare);
-
-  actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
-
-});
-
-*/
-//---------------------------------------------------------------------------------------------------------------
-/*Ventanas Modales  
-//Codigo en view.js
-const principal= document.getElementById("ulCards");
-principal.addEventListener("click", (event)=>
-{
-  //const cardContainer= event.target.closest('.card-container');
-  if (event.target.matches('.openModalBtn')) 
-  {
-    const modal = document.querySelector('.modal');
-    modal.style.display ="block";
-  }
-})
-
-//Cierra el modal si se hace clic fuera del contenido del modal
-  window.onclick = function (event) 
-{
-  const modal = document.getElementById("myModal");
-  if (event.target === modal) 
-  {
-    modal.style.display = "none";
-  }
-};*/
-
-//---------------------------------------------------------------------------------------------------------------
