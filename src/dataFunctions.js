@@ -34,6 +34,12 @@ export const filterData = (data, filterBy, value) => {
   });
 };*/
 
+/*export const sortData = (data, sortBy, sortOrder) => {
+  return data.sort()
+
+};
+*/
+
 export const sortData = (data, sortBy, sortOrder) => {
   return data.sort(function(a,b){
     if (sortOrder === 1){
@@ -45,6 +51,11 @@ export const sortData = (data, sortBy, sortOrder) => {
   })
 }
 //------------------------------------------------------------------------------------------------------------------
+
+/*`computeStats(data)`: la función`compute`o calcular, nos permitirá hacer cálculos estadísticos básicos 
+para ser mostrados de acuerdo a la data proporcionada, 
+esta función debe usar el método reduce.
+*/
 
 //Acceder a los valores de los facts 
 //crear variable con un array vacio 

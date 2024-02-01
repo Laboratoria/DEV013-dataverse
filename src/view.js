@@ -13,7 +13,6 @@ export const renderItems = (data) => {
   //insertar el ul completo al dom 
   
   data.forEach(element => {
-
     //Se crea el elemento li
     const cardItem = document.createElement('li');
 

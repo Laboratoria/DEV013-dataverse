@@ -116,7 +116,25 @@ dropdown.addEventListener("change", () => {
   //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
   //el cual indica cuál de las opciones se han seleccionado
   const i = dropdown.selectedIndex;
-  if (i === 3) {
+  //si se selecciona el indice 1
+  if (i === 1) {
+    //Actualiza el valor de active sorting a 1
+    activeSorting = 1;
+    //Y se ejecuta la funcion sortData a currentData, usando los ids y con el orden 1 (al derecho a-z) 
+    sortData(currentData, "id", 1);
+    //Se limpia la página
+    clearView();
+    //Y se ejecula la funcion renderItems con current data actualizado
+    renderItems(currentData);
+    //Si se selecciona el indice 2 se ejecuta lo mismo pero con el orden 2 (al reves z-a)
+  } else if (i === 2) {
+    activeSorting = 2;
+    sortData(currentData, "id", 2);
+    // console.log("reves");
+    // console.log(descending);
+    // clearView()
+    // renderItems(descending);
+  } else if (i === 3) {
     clearView();
     renderItems(clonedData);
   } else {
