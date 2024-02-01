@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
       rel="stylesheet">
     <title>Ghibli Lovers</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -17,38 +17,41 @@
       alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli" />
       <h1>スタジオジブリ<br/>STUDIO GHIBLI</h1>
     </header>
-    <main>
+
+    <label for="input">
       <input type="text" class="movie-search" placeholder="Buscar" />
-      <h2>Peliculas de Studio Ghibli</h2>
-    </main>
+    </label>
+      
+    <label for="filter">Filtrar por: </label>
+    <select data-testid="select-filter" name="genres" id="filter">
+      <option value="genres">Géneros</option>
+      <option value="romance">Romance</option>
+      <option value="fantasía">Fantasía</option>
+      <option value="cienciaFicción">Ciencia Ficción</option>
+      <option value="terror">Terror</option>
+      <option value="bélico">Bélico</option>
+      <option value="suspenso">Suspenso</option>
+      <option value="infantil">Infantil</option>
+      <option value="familiar">Familiar</option>
+      <option value="comedia">Comedia</option>
+      <option value="drama">Drama</option>
+      <option value="aventura">Aventura</option>
+    </select>
 
-<label for="filter">Filtrar por: </label>
-  <select data-testid="select-filter" name="genres" id="filter"> 
-    <option value="genres">Géneros</option>
-    <option value="romance">Romance</option>
-    <option value="fantasía">Fantasía</option>
-    <option value="cienciaFicción">Ciencia Ficción</option>
-    <option value="terror">Terror</option>
-    <option value="bélico">Bélico</option>
-    <option value="suspenso">Suspenso</option>
-    <option value="infantil">Infantil</option>
-    <option value="familiar">Familiar</option>
-    <option value="comedia">Comedia</option>
-    <option value="drama">Drama</option>
-    <option value="aventura">Aventura</option>
-</select>
+    <label for="order">Ordenar: </label>
+    <select data-testid="select-filter" name="sortOrder" id="order">
+      <option value="asc">A-Z</option>
+      <option value="desc">Z-A</option>
+    </select>
 
-<label for="order">Ordenar: </label>
-  <select data-testid="select-filter" name="sortOrder" id="order">
-    <option value="asc">A-Z</option>
-    <option value="desc">Z-A</option>
-</select>
-
-    <button class="cleanerButton" type="button">Limpiar</button>
-
-<div id = "root"></div>
+    <label for="button">
+      <button class="cleanerButton" type="button">Limpiar</button>
+    </label>
     
-<footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
-<script src="main.js" type="module"></script>
-</body>
+
+    <div id="root"></div>
+
+    <footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
