@@ -12,19 +12,25 @@ export const filterData = (data, filterBy, value) => {
 
 /*export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function(a,b) {
-    if (a[sortBy] > b[sortBy]) {
-      if (sortOrder === 1) {
-        return 1;
-      } else if (sortOrder === 2) {
-        return -1;
-      }
-    } else {
-      if (sortOrder === 1) {
-        return -1;
-      } else if (sortOrder === 2) {
-        return 1;
-      }
+
+    if (sortOrder === 1) {
+      return a[sortBy] > b[sortBy] ? 1 : -1;
+    } else if (sortOrder === 2) {
+      return 1;
     }
+    // if (a[sortBy] > b[sortBy]) {
+    //   if (sortOrder === 1) {
+    //     return true;
+    //   } else if (sortOrder === 2) {
+    //     return false;
+    //   }
+    // } else {
+    //   if (sortOrder === 1) {
+    //     return false;
+    //   } else if (sortOrder === 2) {
+    //     return true;
+    //   }
+    // }
   });
 };*/
 
