@@ -88,23 +88,7 @@ categoryButtons.forEach(button =>
       sortData(currentData, "id", 2);
     }
 
-    //console.log(currentData);
-
-    const promedioAguaCategory= computeStats(currentData, "waterAmount");
-    const palabraAgua= mostrarPalabra(promedioAguaCategory);
-    //console.log(promedioAguaGeneral);
-
-    const promedioLuzCategory= computeStats(currentData, "sunLigth");
-    const palabraLuz = mostrarPalabra(promedioLuzCategory);
-    //console.log(promedioLuzGeneral);
-
-    const promedioCuidadoCategory= computeStats(currentData, "careDifficulty");
-    const palabracuidado= mostrarPalabra(promedioCuidadoCategory);
-    //console.log(promedioCuidadoGeneral);
-    document.querySelector("#promedioAgua").textContent=`Promedio de agua: ${palabraAgua}`;
-    document.querySelector("#promedioLuz").textContent=`Promedio de Luz: ${palabraLuz}`;
-    document.querySelector("#promedioCuidado").textContent=`Promedio de Cuidado: ${palabracuidado}`;
-
+    
     clearView();
     renderItems(currentData);
   });

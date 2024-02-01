@@ -46,21 +46,8 @@ export const sortData = (data, sortBy, sortOrder) => { // renderizar con ternari
     if (sortOrder === 1) {
       return a[sortBy] > b[sortBy] ? 1 : -1;
     } else if (sortOrder === 2) {
-      return 1;
+      return a[sortBy] < b[sortBy] ? 1 : -1;
     }
-    // if (a[sortBy] > b[sortBy]) {
-    //   if (sortOrder === 1) {
-    //     return true;
-    //   } else if (sortOrder === 2) {
-    //     return false;
-    //   }
-    // } else {
-    //   if (sortOrder === 1) {
-    //     return false;
-    //   } else if (sortOrder === 2) {
-    //     return true;
-    //   }
-    // }
   });
 }
 
