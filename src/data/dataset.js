@@ -15,7 +15,7 @@ export default [
     "birthPlace": "Ambientes tropicales y subtropicales",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":3,
     },
   },
@@ -35,7 +35,7 @@ export default [
     "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":1,
     },
   },
@@ -55,7 +55,7 @@ export default [
     "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -75,7 +75,7 @@ export default [
     "climaticData": "Resistente a la sequía, prefiere climas cálidos y secos.",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":1,
     },
   },
@@ -95,7 +95,7 @@ export default [
     "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -115,7 +115,7 @@ export default [
     "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":2,
     },
   },
@@ -135,7 +135,7 @@ export default [
     "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":2,
     },
   },
@@ -155,7 +155,7 @@ export default [
     "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":3,
     },
   },
@@ -175,7 +175,7 @@ export default [
     "climaticData": "Adaptable a condiciones áridas, prefiere suelo bien drenado.",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -195,7 +195,7 @@ export default [
     "climaticData": "Prefiere suelos húmedos, cercanos a cuerpos de agua.",
     "facts": {
       "waterAmount":3,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":3,
     },
   },
@@ -215,7 +215,7 @@ export default [
     "climaticData": "Se adapta a una variedad de climas, prefiere suelo húmedo.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":2,
     },
   },
@@ -235,7 +235,7 @@ export default [
     "climaticData": "Resistente a climas variados, prefiere suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -255,7 +255,7 @@ export default [
     "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":1,
     },
   },
@@ -275,7 +275,7 @@ export default [
     "climaticData": "Prefiere climas secos y suelos bien drenados.",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -295,7 +295,7 @@ export default [
     "climaticData": "Prefiere climas húmedos y neblinosos.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":3,
     },
   },
@@ -315,7 +315,7 @@ export default [
     "climaticData": "Prefiere sombra parcial y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":1,
     },
   },
@@ -335,7 +335,7 @@ export default [
     "climaticData": "Prefiere suelos húmedos y lugares sombreados.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 2,
+      "sunLight": 2,
       "careDifficulty":2,
     },
   },
@@ -355,7 +355,7 @@ export default [
     "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -375,7 +375,7 @@ export default [
     "climaticData": "Resistente a la sequía, prefiere suelos bien drenados.",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -395,7 +395,7 @@ export default [
     "climaticData": "Prefiere climas templados y suelos fértiles.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -415,7 +415,7 @@ export default [
     "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":3,
     },
   },
@@ -435,7 +435,7 @@ export default [
     "climaticData": "Adaptable a varios climas, prefiere suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -455,7 +455,7 @@ export default [
     "climaticData": "Resistente a la sequía, prefiere suelos arenosos.",
     "facts": {
       "waterAmount":1,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   },
@@ -475,7 +475,7 @@ export default [
     "climaticData": "Adaptado a regiones áridas y semiáridas.",
     "facts": {
       "waterAmount":2,
-      "sunLigth": 3,
+      "sunLight": 3,
       "careDifficulty":2,
     },
   }

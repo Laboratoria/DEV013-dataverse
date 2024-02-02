@@ -1,7 +1,7 @@
-import { renderItems } from './view.js';
+import { renderItems } from './view cleaning.js';
 import data from './data/dataset.js';
-import { filterData } from './dataFunctions.js';
-import { sortData } from './dataFunctions.js';
+import { filterData } from './data functions Cleaning.js';
+import { sortData } from './data functions Cleaning.js';
 
 const clonedData = structuredClone(data); //clona el arreglo de objetos
 let currentData = data;
@@ -57,7 +57,7 @@ categoryButtons.forEach(button =>
 //Se debe llamar antes de cambiar el valor de currentData
 //para que no se sobreescriban los elementos del objeto
 function clearView(){
-  const cardsContainer=document.getElementById("ulCards");
+  const cardsContainer=document.getElementById("ul-cards");
   cardsContainer.innerHTML="";
 }
 
@@ -72,7 +72,7 @@ function clearView(){
 //cuando el usuario de enter
 function filterByName()
 {
-  const inputName = document.getElementById('inputName');
+  const inputName = document.getElementById('input-name');
   const inputReceive = inputName.value;
   //usar toUpperCase por si el usuario introduce la primera letra en minuscula
   //seleccionar la primera letra 
@@ -101,7 +101,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
   filterByName();
 });
 
-const inputName = document.getElementById('inputName');
+const inputName = document.getElementById('input-name');
 inputName.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     filterByName();
@@ -110,7 +110,7 @@ inputName.addEventListener('keyup', (event) => {
 
 //-----------------------------------------------------------------------------------------------------------
 //Se declara una variable que llama al botón de ordenar
-const dropdown = document.getElementById("itemOrder");
+const dropdown = document.getElementById("item-order");
 //A esa variable se le agrega el evento change
 dropdown.addEventListener("change", () => {
   //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
@@ -156,15 +156,15 @@ dropdown.addEventListener("change", () => {
 
 //Delegacion de eventos
 //Funcion para hacer girar las tarjetas
-const princContainer = document.getElementById("ulCards");
+const princContainer = document.getElementById("ul-cards");
 princContainer.addEventListener("click",(event) => 
 {
   const cardContainer= event.target.closest('.card-container');
-  if(event.target.matches('.detalles')) 
+  if(event.target.matches('.details-button')) 
   {
     turnCard(cardContainer);
   }
-  else if (event.target.matches('.regresar')) 
+  else if (event.target.matches('.flip-button')) 
   {
     turnCard(cardContainer); 
   }

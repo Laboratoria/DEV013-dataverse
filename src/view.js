@@ -119,7 +119,7 @@ export const renderItems = (data) => {
         </div>
         <div class="statsTotals">
           <h5 class="agua" id="waterFact"></h5>
-          <h5 class="luz" id="ligthFact"></h5>
+          <h5 class="luz" id="lightFact"></h5>
           <h5 class="cuidado" id="careFact"></h5>
         </div>
       </div>
@@ -181,10 +181,10 @@ export const renderItems = (data) => {
       //console.log(averageWater);
       //console.log(wordWater);
   
-      const averageLigth= computeStats(data, "sunLigth");
-      const wordLigth = wordSelection(averageLigth);
-      //console.log(averageLigth);
-      //console.log(wordLigth);
+      const averageLight= computeStats(data, "sunLight");
+      const wordLight = wordSelection(averageLight);
+      //console.log(averageLight);
+      //console.log(wordLight);
   
       const averageCare= computeStats(data, "careDifficulty");
       const wordCare= wordSelection(averageCare);
@@ -194,8 +194,8 @@ export const renderItems = (data) => {
       const agua=modal.querySelector("#waterFact");
       agua.textContent=`${wordWater}`;
       //console.log(agua);
-      const luz= modal.querySelector("#ligthFact");
-      luz.textContent=`${wordLigth}`;
+      const luz= modal.querySelector("#lightFact");
+      luz.textContent=`${wordLight}`;
       //console.log(luz);
       const cuidado= modal.querySelector("#careFact"); 
       cuidado.textContent=`${wordCare}`;
@@ -205,8 +205,8 @@ export const renderItems = (data) => {
     //-----------------------------------------------------------------------------------------------------
     const water = element.facts.waterAmount;
     //console.log(water);
-    const ligth = element.facts.sunLigth;
-    //console.log(ligth);
+    const light = element.facts.sunLight;
+    //console.log(light);
     const care = element.facts.careDifficulty;
     //console.log(care);
   
@@ -241,14 +241,14 @@ export const renderItems = (data) => {
     actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
   
     // Imagenes.luz
-    const firstImageLigth = cardItem.querySelector("#minimo-luz");
-    //console.log(firstImageLigth);
-    const secondImageLigth = cardItem.querySelector("#medio-luz");
-    //console.log(secondImageLigth);
-    const thirdImageLigth = cardItem.querySelector("#alto-luz");
-    //console.log(thirdImageLigth);
+    const firstImageLight = cardItem.querySelector("#minimo-luz");
+    //console.log(firstImageLight);
+    const secondImageLight = cardItem.querySelector("#medio-luz");
+    //console.log(secondImageLight);
+    const thirdImageLight = cardItem.querySelector("#alto-luz");
+    //console.log(thirdImageLight);
   
-    actualizarImagenes(ligth, firstImageLigth, secondImageLigth, thirdImageLigth, "luz");
+    actualizarImagenes(light, firstImageLight, secondImageLight, thirdImageLight, "luz");
   
     // Imagenes.cuidado
     const firstImageCare = cardItem.querySelector("#minimo-cuidado");
