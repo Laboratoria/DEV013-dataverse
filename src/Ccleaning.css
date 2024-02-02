@@ -4,43 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
   }
 
 body {
     background-color: olivedrab; 
-    /* padding: 0 10px; */
     font-family: 'Lato', sans-serif;
 }
-/* .container {
-    background-color: black;
-    padding: 5px;
-    display: none;
-    position: relative;
-} */
-
-/* aside.category-menu {
-    background-color: blue;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    font-size: 14px;
-    font-weight: 500;
-} */
 
 /* Header styles */
 
 header {
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
     padding: 5px;
     margin: auto;
     max-width: 90%;
 }
 
 .brand {
-    /* background-color: green; */
+    background-color: green;
     display: flex;
     justify-content: center;
     font-family: 'Marcellus', serif;
@@ -123,7 +105,6 @@ header h1 {
     /* margin-left: 1000px; */
     position: relative;
     /* margin: auto; */
-    
 }
 
 .order-by label {
@@ -133,8 +114,9 @@ header h1 {
     box-shadow: 1px 1px 5px gray;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: small;
     /* display: flex; */
-    padding: 0 20px;
+    padding: 2px 20px;
     width: 90px;
     height: 20px;
 }
@@ -143,8 +125,6 @@ header h1 {
     width: 80px;
     height: 20px;
     border: #8A988C solid 1px;
-    padding: 0px 0 0 32px;
-    /* background-color: #C4CBC5; */
     text-transform: uppercase;
     font-size: small;
     font-weight: bold;
@@ -190,6 +170,10 @@ ul {
     flex-wrap: wrap;
 }
 
+ul li {
+    background-color: #EBD0BF;
+}
+
 /* Card styles */
 
 .card-container {
@@ -221,23 +205,23 @@ li.card-container.arboles {
 li.card-container.aromatica {
     background-color: #EBD0BF;
 }
-
+*/
 .hide {
     display: none;
-} */
+} 
 
 /* Front card styles */
 
 .front-card {
-    background-color: #EBD0BF;
-    padding: 5px;
+    /* background-color: #EBD0BF; */
+    padding: 10px;
     height: 458px;
     margin: auto;
+    text-align: center;
 }
 
 .front-card h2 {
-    background-color: aqua;
-    text-align: center;
+    /* background-color: aqua; */
     font-family: 'Marcellus', serif;
     color: #AF4401;
     padding: 10px;
@@ -248,33 +232,33 @@ li.card-container.aromatica {
 }
 
 .front-card .top-card {
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     margin: 5px 0 10px 1px;
 }
 
-.front-card img {
+/* .front-card img {
     margin: 0;
     background-color: #AF4401;
-}
+} */
 
 .front-card .top-card dl {
-    background-color: aqua;
+    /* background-color: aqua; */
     text-align: center;
-    margin-left: 37px;
-    /* margin: 10px 0 0 25px; */
+    margin-left: 25px;
     height: 234px;
 }
 
 .front-card .top-card dt {
-    background-color: #AF4401;
+    /* background-color: #AF4401; */
     font-size: small;
     margin: 10px 0 5px 0;
+    font-weight: bold;
 }
 
 .front-card .top-card .amounts dd {
     padding: 5px;
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 5px;
     border: #8A988C .5px solid;
     box-shadow: 1px 1px 5px grey;
@@ -282,7 +266,7 @@ li.card-container.aromatica {
 }
 
 .front-card .top-card .amounts img {
-    background-color: white;
+    /* background-color: white; */
     width: 20px;
     height: 20px;
     margin: 4px 0;
@@ -292,32 +276,22 @@ li.card-container.aromatica {
     opacity: .5;
 }
 
-#front-card p {
-    background-color: aliceblue;
+.front-card .bottom-card {
+    display: flex;
+    text-align: center;
+}
+.front-card p {
+    /* background-color: aliceblue; */
     padding: 5px;
     margin: 10px 0;
     font-size: 15px;
-    height: 80px;
+    height: 90px;
+    text-align: left;
 }
 
 .details-button {
     /* background-color: black; */
-    display: flex;
-    /* justify-content: center; */
-    background-color: #D7A180;
-    width: 137px;
-    height: 32px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-    color: white;
-    /* text-align: center; */
-    border-radius: 10px;
-    border: none;
-    box-shadow: 2px 2px 5px grey;
-}
-/*
-#front-card button {
+    justify-content: center;
     background-color: #D7A180;
     width: 137px;
     height: 32px;
@@ -329,4 +303,77 @@ li.card-container.aromatica {
     border-radius: 10px;
     border: none;
     box-shadow: 2px 2px 5px grey;
-} */
+}
+
+/* Back card styles */
+
+ #back-card {
+    /* background-color: white; */
+    padding: 5px 5px;
+    text-align: right;
+    height: 471px;
+}
+
+#back-card h2 {
+    /* background-color: aquamarine; */
+    font-size: 26px;
+    color: #AF4401;
+    font-family: 'Marcellus', serif;
+    margin-right: 5px;
+}
+
+#back-card .top-card {
+    /* background-color: #D7A180; */
+    height: 136px;
+    display: flex;
+}
+
+#back-card dt.scientific-name {
+    /* background-color: aquamarine; */
+    font-size: 16px;
+    color: #AF4401; 
+    margin: 0 0 9px -6px;
+    width: 167px;
+    font-family: 'Marcellus', serif;
+}
+
+#back-card .top-card img {
+    /* background-color: #8A988C; */
+    width: 85px;
+    height: 156px;
+    margin: -20px 0 0 5px;
+}
+ 
+#back-card dt {
+    /* background-color: #AF4401; */
+    width: 160px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 6px 10px 0 0;
+} 
+
+#back-card dd {
+    /* background-color: #FFFFFF; */
+    font-size: 14px;
+    width: 160px;
+}
+
+#back-card #description {
+    /* background-color: aqua; */
+    text-align: left;
+    margin: 10px 0 0 5px;
+    height: 235px;
+}
+
+#back-card #icons {
+    /* background-color: #AF4401; */
+    height: 35px;
+    width: 250px;
+    display: flex;
+    margin: 10px 0 0 5px;
+    justify-content: center;
+}
+
+.modal-description-button {
+    margin-right: 150px;
+}

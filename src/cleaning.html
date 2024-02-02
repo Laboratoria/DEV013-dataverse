@@ -8,11 +8,11 @@
     <link rel="icon" href="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Logo.png?raw=true">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,100;1,300&family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Marcellus&family=Marcellus+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Ccleaning.css">
   </head>
   <body>
-    <!-- Header limpio funciona -->
+    <!-- Header -->
     <header>
       <section class="brand" id="brand">
         <img class="logo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/Logo.png?raw=true" alt="Logo" onclick="refreshPage()">
@@ -84,31 +84,33 @@
                   <div class="amounts">
                     <dt class="amount">Agua</dt>
                     <dd>
-                      <img alt="Gota" src="resources/Icons/agua-activa.png">
-                      <img alt="Gota" src="resources/Icons/agua-activa.png">
-                      <img alt="Gota" src="resources/Icons/agua-inactiva.png" class="inactive">
+                      <img alt="Gota" id="minimum-water" src="resources/Icons/agua-activa.png">
+                      <img alt="Gota" id="medium-water" src="resources/Icons/agua-activa.png">
+                      <img alt="Gota" id="maximum-water" src="resources/Icons/agua-inactiva.png" class="inactive">
                     </dd>
                   </div>
                   <div class="amounts">
                     <dt class="amount">Luz</dt>
                     <dd>
-                      <img alt="Sol" src="resources/Icons/luz-activa.png">
-                      <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactive">
-                      <img alt="Sol" src="resources/Icons/luz-inactiva.png" class="inactive">
+                      <img alt="Sol" id="minimum-light" src="resources/Icons/luz-activa.png">
+                      <img alt="Sol" id="medium-light" src="resources/Icons/luz-inactiva.png" class="inactive">
+                      <img alt="Sol" id="maximum-light" src="resources/Icons/luz-inactiva.png" class="inactive">
                     </dd>
                   </div>
                   <div class="amounts">
                     <dt class="amount">Cuidado</dt>
                     <dd>
-                      <img alt="Semaforo" src="resources/Icons/cuidado-activa.png">
-                      <img alt="Semaforo" src="resources/Icons/cuidado-activa.png">
-                      <img alt="Semaforo" src="resources/Icons/cuidado-inactiva.png" class="inactive">
+                      <img alt="Semaforo" id="minimum-care" src="resources/Icons/cuidado-activa.png">
+                      <img alt="Semaforo" id="medium-care" src="resources/Icons/cuidado-activa.png">
+                      <img alt="Semaforo" id="maximum-care" src="resources/Icons/cuidado-inactiva.png" class="inactive">
                     </dd>
                   </div>
                 </dl>
               </div>
-              <p>Planta suculenta usada en la producción de tequila.</p>
-              <button class="details-button" id="details-button">Detalles</button>
+              <div class="botom-card">
+                <p>Planta suculenta usada en la producción de tequila.</p>
+                <button class="details-button" id="details-button">Detalles</button>
+              </div>
             </article>
             <!-- Back card, top funciona, icons y botom card-->
             <article id="back-card" class="hide">
@@ -136,7 +138,7 @@
             </article>
           </li>
         </ul>
-        <!-- Modals funciona -->
+        <!-- Modals -->
         <dialog class="modal-boxes">
           <article id="description-modal" class="description-modal"> 
             <h3>Plant Name</h3>
@@ -170,12 +172,12 @@
         </dialog> 
       </div>
     </main>
-  <!-- Footer limpio funciona -->
-  <footer>
-    <h3 class="footer">My Beauty Plants</h3>
-    <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
-    <p class="footer">Bootcamp Laboratoria</p>
-  </footer>
-  <!-- <script src="main.js" type="module"></script> -->
+    <!-- Footer limpio -->
+    <footer>
+      <h3 class="footer">My Beauty Plants</h3>
+      <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
+      <p class="footer">Bootcamp Laboratoria</p>
+    </footer>
+    <script src="main cleaning.js" type="module"></script>
   </body> 
 </html>

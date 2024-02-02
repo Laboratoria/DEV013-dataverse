@@ -88,13 +88,13 @@ export function determinarImagen(id) {
   let activo;
   let inactivo;
 
-  if (id==="agua") {
+  if (id==="water") {
     activo = "resources/Icons/agua-activa.png";
     inactivo = "resources/Icons/agua-inactiva.png";
-  } else if (id==="luz") {
+  } else if (id==="light") {
     activo = "resources/Icons/luz-activa.png";
     inactivo = "resources/Icons/luz-inactiva.png";
-  } else if (id==="cuidado") {
+  } else if (id==="care") {
     activo = "resources/Icons/cuidado-activa.png";
     inactivo = "resources/Icons/cuidado-inactiva.png";
   }
