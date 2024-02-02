@@ -1,7 +1,7 @@
 /* Estilo para HEAD header */
 HEAD header {
   background-color: white;
-  padding: 2% 4%; 
+  padding: 2% 4%;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -12,26 +12,31 @@ HEAD header {
 
 #root {
   max-width: 100%;
+  margin: 2% auto;
   display: flex;
-  margin-bottom: 5%;
-  padding: 5px;
-}
+  
+  padding-bottom: 50px;
+ }
 
-body{
+body {
   font-family: 'Marcellus', serif;
   margin:0;
+  background-color: #f7f5f3;
 }
 
 h1 {
   text-align: center;
-  font-family:'Marcellus', serif;
+  font-family: 'Marcellus', serif;
+  color:#332D40;
 }
 
 .form-container {
   max-width: 100%;
-  margin: 0 auto;
-  background-color: #f2d290;
-  margin-top: 10px;
+  height: 10%;
+  margin: auto;
+  background-color: #f1e3c9;
+  margin-bottom: 1%;
+  padding: 20px;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -41,58 +46,57 @@ label {
   font-weight: bold;
   display: inline-block;
   margin-left: 3%;
+  margin-top: 2%;
 }
-
 
 select {
   width: 15%;
   padding: 1%;
-  margin-top: 1%;
-  margin-bottom: 1.5%; 
-  border: 1% solid #ccc; 
-  border-radius: 3%;
+  margin-bottom: 1%;
+  border: 1% #ccc;
+  border-radius: 10%;
   font-family: 'Marcellus', serif;
 }
 
 #button-clear {
   font-family: 'Marcellus', serif;
   margin-left: 3%;
-  background-color:  #D36D25;
-  cursor: pointer;
-  border-radius: 3px;
-  padding: 0.5%;
-
-}
+  font-weight: bold;  
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  background-color: #332D40;
+  color:#f8edda;
+  }
 
 .card img {
-  width: 70%; 
+  width: 70%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 10px 10px;
   display: flex;
   margin: 0 auto;
-  margin-bottom: 1.5%; 
+  margin-bottom: 1.5%;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 ul {
   list-style: none;
-  padding: 1%; 
+  padding: 1%;
   display: grid;
-  gap: 2%; 
+  gap: 2%;
   grid-template-columns: repeat(4, 1fr);
   text-align: justify;
   font-size: small;
-  margin-bottom: 15%;
-}
+  margin-bottom: 18%;
+ }
 
 li {
   width: 85%;
   height: auto;
-  border: 1% solid #ede2e2; 
-  border-radius: 10px;
-  margin: 1%; 
-  padding: 2%; 
-  background-color: #edcd925e;
-  font-family: 'Marcellus', serif;;
+  border-radius: 20px;
+  margin: 2%;
+  padding: 2%;
+  background-color:  #f1e3c9;
+  font-family: 'Marcellus', serif;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 dd[itemprop="name"] {
@@ -100,7 +104,7 @@ dd[itemprop="name"] {
   font-weight: bold;
   text-align: center;
   font-size: medium;
-}
+ }
 
 dd[itemprop="shortDescription"] {
   text-align: justify;
@@ -111,7 +115,7 @@ dd[itemprop="fechaMuerte"],
 dd[itemprop="LugarNacimiento"],
 dd[itemprop="género"] {
   text-align: justify;
-  display: flex; 
+  display: flex;
 }
 
 dt[itemprop="fechaNacimiento"],
@@ -132,6 +136,7 @@ img {
   height: auto;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   background-color: #f1cd885e;
+  margin-bottom: 2%;
 }
 
 dd {
@@ -139,9 +144,11 @@ dd {
 }
 
 footer {
-  background-color: #f2d290;
-  font-family: 'Marcellus', serif;;
+  background-color:#f1e3c9 ;
+  font-family: 'Marcellus', serif;
   color: black;
   text-align: center;
-  padding: 2%; 
-}94eb2e
+  padding: 3%;
+  margin-top: 1%;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+}
