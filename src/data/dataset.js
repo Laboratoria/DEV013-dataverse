@@ -1,378 +1,365 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
-    "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+    id: "beaDog",
+    name: "Bea",
+    species: "Perro",
+    personality: "Dulce",
+    gender: "Femenino",
+    shortDescription: "Perro deportista y enérgico, amante del ejercicio y las competiciones.",
+    description: "Bea es un perro orgulloso y elegante que se considera a sí misma una autoridad en moda y alta sociedad en Animal Crossing. Siempre está al tanto de las últimas tendencias y eventos de la alta sociedad. Bea se enorgullece de su elegancia y buen gusto, y a menudo ofrece consejos de moda a los demás habitantes. Aunque puede parecer algo distante al principio, aprecia la amistad genuina y siempre está dispuesta a ayudar a sus amigos. ¡Celebra su cumpleaños el 15 de octubre!",
+    imageUrl: "https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png",
+    facts: {
+      zodiacSign: "Leo",
+      catchPhrase: "¡A darlo todo!",
+      birthDate: "15/10",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
-    }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
-    "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+    id: "biskitDog",
+    name: "Biskit",
+    species: "Perro",
+    personality: "Perezoso",
+    gender: "Masculino",
+    shortDescription: "Perro despreocupado y amante de las galletas, siempre con un hambre insaciable.",
+    description: "Biskit es un perro despistado con una personalidad relajada y amigable en Animal Crossing. Siempre parece estar en su propio mundo y es conocido por su actitud despreocupada. A menudo se le encuentra tarareando melodías alegres y disfrutando de la vida sin preocupaciones. Biskit es fácil de llevar y se lleva bien con otros habitantes del pueblo. Su catchphrase es '¡bork!', reflejando su naturaleza canina. Aunque su cabeza pueda estar en las nubes, su corazón está siempre en el lugar correcto, y es un amigo leal para todos en el pueblo. Biskit celebra su cumpleaños el 13 de mayo.",
+    imageUrl: "https://dodo.ac/np/images/thumb/7/78/Biskit_NH.png/150px-Biskit_NH.png",
+    facts: {
+      zodiacSign: "Piscis",
+      catchPhrase: "¡Guau galleta!",
+      birthDate: "13/05",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
-    }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
-    "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+    id: "bonesDog",
+    name: "Bones",
+    species: "Perro",
+    personality: "Perezoso",
+    gender: "Masculino",
+    shortDescription: "Perro amigable y entusiasta, siempre lleno de energía y buen humor.",
+    description: "Bones es un perro amable y relajado en Animal Crossing, conocido por su disposición para hacer nuevos amigos y su actitud positiva. Siempre está sonriendo y tratando de ver el lado bueno de la vida. Bones es un compañero leal para los habitantes del pueblo y disfruta pasar tiempo conversando y compartiendo historias. Aunque su personalidad sea un poco ingenua, su corazón es puro y su amabilidad no conoce límites. Su catchphrase es '¡Yip yip!', una expresión de su entusiasmo. Bones celebra su cumpleaños el 4 de agosto.",
+    imageUrl: "https://dodo.ac/np/images/thumb/2/2b/Bones_NH.png/150px-Bones_NH.png",
+    facts: {
+      zodiacSign: "Geminis",
+      catchPhrase: "¡Amigo!",
+      birthDate: "04/08",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
-    }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
-    "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+    id: "gooseChicken",
+    name: "Goose",
+    species: "Gallo",
+    personality: "Deportista",
+    gender: "Masculino",
+    shortDescription: "Gallo deportista y competitivo, siempre listo para un desafío atlético.",
+    description: "Goose es una gallina jock con una gran pasión por el ejercicio y el deporte en Animal Crossing. Siempre está lleno de energía y entusiasmo, listo para animar a los habitantes del pueblo a mantenerse activos. Goose es conocido por su actitud competitiva y su amor por la competición deportiva. Siempre está entrenando para mejorar su rendimiento y es un modelo a seguir para aquellos que quieren mantenerse en forma. Su catchphrase es '¡Buh-kay!', reflejando su espíritu deportivo. Goose celebra su cumpleaños el 4 de octubre.",
+    imageUrl: "https://dodo.ac/np/images/9/91/Goose_NH.png",
+    facts: {
+      zodiacSign: "Aries",
+      catchPhrase: "¡Ánimo!",
+      birthDate: "04/10",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
-    }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
-    "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+    id: "kenChicken",
+    name: "Ken",
+    species: "Gallo",
+    personality: "Esnob",
+    gender: "Masculino",
+    shortDescription: "Gallo gentil y aficionado a la jardinería, siempre cuidando de las flores y plantas del pueblo.",
+    description: "Ken es una gallina amigable y alegre en Animal Crossing, siempre dispuesta a hacer nuevos amigos y compartir sonrisas. Su actitud positiva y su disposición para ayudar a los demás lo convierten en un vecino querido en el pueblo. Ken disfruta de la música y toca el shamisen con pasión. Siempre está en busca de una buena melodía para alegrar el día de todos. Su catchphrase es '¡Cluckaroo!', reflejando su entusiasmo por la vida. Ken celebra su cumpleaños el 23 de diciembre.",
+    imageUrl: "https://dodo.ac/np/images/e/e0/Ken_NH.png",
+    facts: {
+      zodiacSign: "Libra",
+      catchPhrase: "¡Buen día!",
+      birthDate: "23/12",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
-    "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+    id: "rizzoMouse",
+    name: "Rizzo",
+    species: "Raton",
+    personality: "Gruñon",
+    gender: "Masculino",
+    shortDescription: "Ratón cascarrabias con un toque de sarcasmo en su actitud.",
+    description: "Rizzo es un ratón cascarrabias con un toque de sarcasmo en su actitud en Animal Crossing. A pesar de su actitud a veces brusca, Rizzo tiene un corazón de oro y se preocupa por sus amigos. Siempre está dispuesto a ayudar en tiempos de necesidad, aunque lo haga con un toque de sarcasmo. Es conocido por sus comentarios mordaces y su sentido del humor peculiar. Su catchphrase es '¡Squee!', una expresión que a menudo usa para expresar su sorpresa o emoción. Rizzo celebra su cumpleaños el 17 de enero.",
+    imageUrl: "https://dodo.ac/np/images/6/69/Rizzo_NH.png",
+    facts: {
+      zodiacSign: "Leo",
+      catchPhrase: "¡Cheese!",
+      birthDate: "17/01",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
-    "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+    id: "sallySquirrel",
+    name: "Sally",
+    species: "Ardilla",
+    personality: "Dulce",
+    gender: "Femenino",
+    shortDescription: "Ardilla amable y soñadora, siempre en busca de la belleza y la tranquilidad.",
+    description: "Sally es una ardilla dulce y amable que siempre está dispuesta a ayudar a los demás en Animal Crossing. Su personalidad es amigable y cariñosa, lo que la convierte en una de las habitantes más queridas del pueblo. Sally disfruta mucho de la jardinería y pasa mucho tiempo cuidando de las flores y los árboles. Siempre tiene una sonrisa en el rostro y su catchphrase es '¡Chispea!', reflejando su actitud optimista. Además, Sally celebra su cumpleaños el 19 de junio.",
+    imageUrl: "https://i.postimg.cc/ZRxC84gJ/501px-Sally-NH.png",
+    facts: {
+      zodiacSign: "Acuario",
+      catchPhrase: "¡Bellissima!",
+      birthDate: "19/06",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
-    }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
-    "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+    id: "rodMouse",
+    name: "Rod",
+    species: "Raton",
+    personality: "Deportista",
+    gender: "Masculino",
+    shortDescription: "Ratón deportista y competitivo, siempre en busca de desafíos atléticos.",
+    description: "Rod es un ratón jock en Animal Crossing, siempre en busca de aventuras y desafíos físicos. Su energía y entusiasmo son contagiosos, y anima a los demás a mantenerse en forma y activos. Rod es conocido por su amor por el deporte y el ejercicio, y a menudo se le encuentra corriendo por el pueblo o haciendo pesas. A pesar de su naturaleza competitiva, es amigable y se preocupa profundamente por sus amigos. Su catchphrase es '¡Ratón de hierro!', reflejando su determinación. Rod celebra su cumpleaños el 14 de agosto.",
+    imageUrl: "https://dodo.ac/np/images/e/ea/Rod_NH.png",
+    shortDescription: "Ratón deportista y competitivo, siempre en busca de desafíos atléticos.",
+    description: "Rod es un ratón jock en Animal Crossing, siempre en busca de aventuras y desafíos físicos. Su energía y entusiasmo son contagiosos, y anima a los demás a mantenerse en forma y activos. Rod es conocido por su amor por el deporte y el ejercicio, y a menudo se le encuentra corriendo por el pueblo o haciendo pesas. A pesar de su naturaleza competitiva, es amigable y se preocupa profundamente por sus amigos. Su catchphrase es '¡Ratón de hierro!', reflejando su determinación. Rod celebra su cumpleaños el 14 de agosto.",
+    imageUrl: "https://i.postimg.cc/mDfH3dgy/Rod-NH.png",
+    facts: {
+      zodiacSign: "Leo",
+      catchPhrase: "¡Sudor y gloria!",
+      birthDate: "14/08",
     },
-    "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
-    }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
-    "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+    id: "breeMouse",
+    name: "Bree",
+    species: "Raton",
+    personality: "Altanera",
+    gender: "Femenino",
+    shortDescription: "Ratón amable y tranquilo, aficionado a la lectura y la cultura.",
+    description: "Bree es una ratón snooty que lleva un aire de elegancia y sofisticación en Animal Crossing. Tiene un gusto por el lujo y la moda, y a menudo se comporta con una actitud refinada. Aunque puede parecer distante al principio, Bree puede ser amigable una vez que la conoces mejor. Le gusta hablar sobre arte y cultura, y su casa está decorada con muebles elegantes. Su catchphrase es '¡Lujoso!', reflejando su amor por las cosas finas. Bree celebra su cumpleaños el 7 de julio.",
+    imageUrl: "https://dodo.ac/np/images/thumb/1/12/Bree_NH.png/398px-Bree_NH.png",
+    facts: {
+      zodiacSign: "Virgo",
+      catchPhrase: "¡Que interesante!",
+      birthDate: "07/07",
     },
-    "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
-    }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
-    "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "claudiaTiger",
+    name: "Claudia",
+    species: "Tigre",
+    personality: "Altanera",
+    gender: "Femenino",
+    shortDescription: "Tigre deportista y competitivo, siempre en busca de desafíos atléticos.",
+    description: "Claudia es una tigre deportista con una actitud competitiva y enérgica en Animal Crossing. Siempre está lista para un desafío y se enorgullece de mantenerse en forma y activa. Claudia es apasionada por los deportes y disfruta de la compañía de otros habitantes que comparten su entusiasmo por el ejercicio. Aunque ella puede ser competitiva, también es amigable y leal con sus amigos. Su catchphrase es '¡A rugir!', reflejando su espíritu competitivo. Claudia celebra su cumpleaños el 22 de noviembre.",
+    imageUrl: "https://dodo.ac/np/images/thumb/d/d6/Claudia_NH.png/320px-Claudia_NH.png",
+    facts: {
+      zodiacSign: "Capricornio",
+      catchPhrase: "¡A rugir!",
+      birthDate: "22/11",
     },
-    "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
-    }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
-    "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "leonardoTiger",
+    name: "Leo",
+    species: "Tigre",
+    personality: "Deportista",
+    gender: "Masculino",
+    shortDescription: "Tigre deportista y enérgico, siempre listo para una competencia.",
+    description: "Leonardo es un tigre jock apasionado por el fitness y el entrenamiento físico en Animal Crossing. Siempre está en busca de la siguiente rutina de ejercicios y disfruta de competencias de levantamiento de pesas. Leonardo es un firme creyente en mantener un cuerpo sano, una mente sana, y a menudo da consejos de salud y bienestar a los habitantes del pueblo. A pesar de su enfoque en el fitness, es amigable y se preocupa por el bienestar de los demás. Su catchphrase es '¡No pain, no gain!', reflejando su dedicación al ejercicio. Leonardo celebra su cumpleaños el 26 de mayo.",
+    imageUrl: "https://dodo.ac/np/images/thumb/0/0a/Leonardo_NH.png/800px-Leonardo_NH.png",
+    facts: {
+      zodiacSign: "Leo",
+      catchPhrase: "¡Rugido victorioso!",
+      birthDate: "26/05",
     },
-    "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
-    }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
-    "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "rolf_tiger",
+    name: "Rolf",
+    species: "Tigre",
+    personality: "Gruñon",
+    gender: "Masculino",
+    shortDescription: "Tigre gruñón y fuerte, siempre busca ser el más fuerte del pueblo.",
+    description: "Rolf es un tigre gruñón y fuerte que siempre busca ser el más fuerte del pueblo en Animal Crossing. A pesar de su apariencia intimidante, tiene un buen corazón y a menudo se preocupa por los demás habitantes. Rolf se dedica a entrenar constantemente para mantener su fuerza y resistencia, y disfruta de competir en desafíos de fuerza con otros. A veces puede ser serio, pero su determinación es admirable. Si necesitas consejos sobre cómo mantenerte en forma, Rolf es el tigre al que debes acudir. ¡Celebra su cumpleaños el 22 de agosto!",
+    imageUrl: "https://dodo.ac/np/images/thumb/9/93/Rolf_NH.png/150px-Rolf_NH.png",
+    facts: {
+      zodiacSign: "Leo",
+      catchPhrase: "¡Grrrr!",
+      birthDate: "22/08",
     },
-    "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
-    }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
-    "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "wol02",
+    name: "Wolfi",
+    species: "Lobo",
+    personality: "Gruñon",
+    gender: "Masculino",
+    imageUrl: "https://static.wikia.nocookie.net/animalcrossing/images/a/aa/Wolfgang_NH.png",
+    shortDescription: "Wolfgang es un aldeano lobo gruñon en la serie Animal Crossing que aparece en todos los juegos hasta la fecha.",
+    description: "Wolfi tiene la personalidad gruñona, Por lo general parecerá estar agitado y de mal humor y es más difícil hacerse amigo de él que otros tipos de vecinos. Cuando habla con el Jugador, tiende a enojarse si el jugador no está de acuerdo con él o se niega a hacerle un favor. Al igual que todos los vecinos gruñones, Wolfi tiene una edad avanzada e invertirá su tiempo en su hobby, con frecuencia desafiará al jugador a varias competiciones. Él se entenderá fácilmente con vecinos atléticos, presumidas y otros vecinos gruñones, y en ocasiones también con vecinos perezosos y normales.",
+    facts: {
+      zodiacSign: "Sagitario",
+      birthDate: "25/11",
+      catchPhrase: "grauuuh!",
     },
-    "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
-    }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
-    "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "der11",
+    name: "Yuki",
+    species: "Ciervo",
+    personality: "Vivaracha",
+    gender: "Femenino",
+    imageUrl: "https://dodo.ac/np/images/2/26/Shino_amiibo.png",
+    shortDescription: "Yuki es una aldeana ciervo animada en la serie Animal Crossing",
+    description: "Yuki en una cierva de color blanco amarillento con un hocico de color blanco y pesuñas de color dorado. Yuki tiene unos ojos alargados de color amarillo con una sombra de ojos de color rojo del estilo Hikimayu, además de unos pequeños colmillos que sobresalen de su boca y podrían indicar que pertenece a la especie del ciervo de copete. El diseño de Shino parece estar inspirado por máscaras del teatro Noh japonés, más concretamente a la mascara de los Hannya, demonios de mujeres consumidas por los celos.",
+    facts: {
+      zodiacSign: "Libra",
+      birthDate: "31/10",
+      catchPhrase: "oni",
     },
-    "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
-    }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
-    "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+    id: "duk16",
+    name: "Deira",
+    species: "Pato",
+    personality: "Dulce",
+    gender: "Femenino",
+    imageUrl: "https://dodo.ac/np/images/thumb/2/29/Molly_NH.png/150px-Molly_NH.png",
+    shortDescription: "Deira es una aldeana pato normal en la serie Animal Crossing",
+    description: "Deira, al ser de personalidad normal, será tímida y cariñosa con el jugador y los vecinos. Al igual que otras vecinas de la misma personalidad, será obsesiva con la limpieza e higiene. Se llevará bien con vecinos de personalidad esnob, perezosa e incluso también con vecinos de su misma personalidad. Puede llevarse mal con vecinos de personalidad gruñona debido a su naturaleza grosera y arrogante. Por lo general, hablará de otros vecinos en lugar de hablar sobre ella misma y sus problemas. También parece disfrutar de la cocina y con frecuencia le preguntará al jugador sobre comida.",
+    facts: {
+      zodiacSign: "Piscis",
+      birthDate: "07/03",
+      catchPhrase: "deverdá",
     },
-    "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
-    }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
-    "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+    id: "squ21",
+    name: "Auri",
+    species: "Ardilla",
+    personality: "Dulce",
+    gender: "Femenino",
+    imageUrl: "https://dodo.ac/np/images/4/40/Ione_amiibo.png",
+    shortDescription: "Auri es una aldeana ardilla normal en la serie Animal Crossing",
+    description: "Auri tiene personalidad normal, por lo que actuará con timidez al principio, pero se preocupará por el Jugador. Tendrá preocupaciones de higiene, representadas cuando el jugador visite su casa, y expresará su vergüenza por la apariencia supuestamente sucia de su hogar. Por otra parte, Ella disfrutará de los pasatiempos comunes, tales como la pesca y atrapar bichos, generalmente para mantenerse activa. Mencionará su interés por la lectura y los diversos libros que lee. Ella también disfrutará escribiendo y recibiendo cartas.",
+    facts: {
+      zodiacSign: "Virgo",
+      birthDate: "11/09",
+      catchPhrase: "blinguiblín",
     },
-    "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
-    }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
-    "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+    id: "der00",
+    name: "Fauna",
+    species: "Ciervo",
+    personality: "Dulce",
+    gender: "Femenino",
+    imageUrl: "https://dodo.ac/np/images/thumb/9/91/Fauna_NH.png/150px-Fauna_NH.png",
+    shortDescription: "Fauna es una aldeana ciervo normal en la serie Animal Crossing",
+    description: "Fauna tiene personalidad normal, por lo que tendrá un carácter amable, cariñoso y tranquilo. Fauna disfruta de los pasatiempos comunes, tales como la pesca y atrapar bichos, generalmente para mantenerse activa. Fauna frecuentemente invitará al Jugador a su casa, donde denotará sus preocupaciones por la higiene y la limpieza. Fauna se sentirá decepcionada u ofendida fácilmente por otros vecinos, en particular con los vecinos vagos que se despistan fácilmente en sus conversaciones y los vecinos picajosos que tienen una naturaleza grosera e irritable.",
+    facts: {
+      zodiacSign: "Aries",
+      birthDate: "26/03",
+      catchPhrase: "puchu",
     },
-    "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
-    }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
-    "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+    id: "cat23",
+    name: "Narciso",
+    species: "Gato",
+    personality: "Esnob",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/2/2a/Raymond_NH.png",
+    shortDescription: "Narciso es un aldeano gato Esnob en la serie Animal Crossing",
+    description: "Narciso es un gato con pelaje de color gris con un mechón de pelo rubio en la frente y puntas de sus orejas, patas y cola son de color negro. Narciso tiene heterocromía, por lo que sus ojos son de colores diferentes, su ojo izquierdo es de color verde mientras que su ojo derecho es de color marrón, tiene una boca triangular de la cual sobresalen un par de colmillos que solo pueden verse cuando abre la boca. Lleva un par de gafas de pasta gruesa de color negro.",
+    facts: {
+      zodiacSign: "Libra",
+      birthDate: "01/10",
+      catchPhrase: "atilda",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
-    }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
-    "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+    id: "squ17",
+    name: "Munchi",
+    species: "Ardilla",
+    personality: "Esnob",
+    gender: "Masculino",
+    imageUrl: "https://i.postimg.cc/cH0J4PJ2/150px-Marshal-NH.png",
+    shortDescription: "Munchi es un aldeano ardilla Esnob en la serie Animal Crossing",
+    description: "Es una ardilla blanca con un fleco entrecortado de color bronce. También tiene marcas rosadas en sus mejillas y un color de lavanda en el dentro del oído. Sus patas y los remolinos a cada lado de su cola también son de color bronce. Los ojos de Munchi son negros y arqueados con un ojo lateral fijo, y su boca está vuelta hacia abajo. Esto lo hace parecer molesto, lo que hace que muchos lo confundan con un vecino gruñón. El sonrojo también lo hace ver femenino, lo que significa que a menudo también se lo confunde con un vecina.",
+    facts: {
+      zodiacSign: "Libra",
+      birthDate: "29/09",
+      catchPhrase: "tecúen",
     },
-    "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
-    }
   },
   {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
-    "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
+    id: "goa09",
+    name: "Morfeo",
+    species: "Cabra",
+    personality: "Perezoso",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/thumb/1/18/Sherb_NH.png/150px-Sherb_NH.png",
+    shortDescription: "Morfeo es un aldeano cabra perezoso en la serie Animal Crossing",
+    description: "Morfeo tiene la personalidad vaga, por lo que será amigable y fácil de tratar debido a su estilo de vida relajado. Como a todos los vecinos vagos, a Morfeo le encanta comer y el descansar, disfrutará de participar en sus pasatiempos comunes, que generalmente tienen que ver con relajarse o comer, como la pesca. Morfeo se llevará bien con los otros vecinos, pero puede ofender o confundir a los vecinos deportistas, que tienen un estilo de vida de lleno de ejercicio y de buen estado físico, en comparación con el estilo de vida perezoso de Morfeo.",
+    facts: {
+      zodiacSign: "Capricornio",
+      birthDate: "18/01",
+      catchPhrase: "bostezzz",
     },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
-    }
   },
   {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
-    "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
+    id: "cbr05",
+    name: "Parches",
+    species: "Oso",
+    personality: "Perezoso",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/thumb/5/56/Stitches_NH.png/150px-Stitches_NH.png",
+    shortDescription: "Parches es un aldeano oso Peresozo en la serie Animal Crossing.",
+    description: "Parches tiene la personalidad perezosa, por lo que será amigable y de trato fácil debido a su estilo de vida relajado. Como a todos los vecinos perezosos, a Parches le encanta la comida y el descanso. Parches disfrutará de participar en los pasatiempos comunes, generalmente por razones que involucran relajarse o comer, como la pesca. Parches se llevará bien con los otros vecinos, pero puede ofender o confundir a los vecinos atléticos, que tienen un estilo de vida de ejercicio y de buen estado físico, en comparación con el estilo de vida perezoso de Parches.",
+    facts: {
+      zodiacSign: "Acuario",
+      birthDate: "10/02",
+      catchPhrase: "paguahhh",
     },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
-    }
   },
   {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
-    "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
+    id: "pbr00",
+    name: "Apolo",
+    species: "Águila",
+    personality: "Gruñon",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/thumb/0/0e/Apollo_NH_Transparent.png/150px-Apollo_NH_Transparent.png",
+    shortDescription: "Apolo tiene la personalidad gruñona, por lo general él parecerá estar agitado y de mal humor.",
+    description: "Apolo es un águila calva con un cuerpo de color gris oscuro y una cabeza de color blanca, un aspecto típico de la águila calva, tiene un pico y pies de color amarillo con garras blancas al final de ellos. Las alas de Apolo se degradan lentamente en un color blanco y sus ojos son semicírculos blancos bordados con un contorno negro y pupilas totalmente negras. En Animal Crossing: Población: ¡en aumento! hasta New Leaf su atuendo inicial un jersey cremallera, pero a partir de New Horizons usa una chaqueta de aviación negra.",
+    facts: {
+      zodiacSign: "Cancer",
+      birthDate: "04/07",
+      catchPhrase: "rapahhh",
     },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
-    }
   },
   {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
-    "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
+    id: "dog14",
+    name: "Pit",
+    species: "Perro",
+    personality: "Deportista",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/thumb/a/ab/Mac_NH.png/150px-Mac_NH.png",
+    shortDescription: "Pit es un aldeano perro atlético en la serie Animal Crossing",
+    description: "Tiene la personalidad deportista, por lo que tendrá un gran interés en la aptitud física y los deportes. Esto lo hará parecer muy competitivo y desafiante, Pit tendrá una actitud hiperactiva y motivada, pero a menudo actuará de forma egoísta y pesada, pero a pesar de esto, sera amigable y amable con el Jugador. Como todo vecino deportista, Pit está muy interesado en su hobby, y puede competir contra el jugador por atrapar Bichos o Peces, Pit se lleva bien con los vecinos esnobs, alegres y dulces, pero tendrá problemas con el estilo de vida relajado de los vecinos perezosos.",
+    facts: {
+      zodiacSign: "Escorpio",
+      birthDate: "11/11",
+      catchPhrase: "frusky",
     },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
   },
   {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
-    "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
+    id: "hrs04",
+    name: "Jereza",
+    species: "Caballo",
+    personality: "Gruñon",
+    gender: "Masculino",
+    imageUrl: "https://dodo.ac/np/images/thumb/8/8e/Roscoe_NH.png/150px-Roscoe_NH.png",
+    shortDescription: "Jereza es un aldeano caballo gruñon en la serie Animal Crossing.",
+    description: "Tiene la personalidad picajosa y por lo general parecerá estar agitado y de mal humor y es más difícil hacerse amigo de él que otros tipos de vecinos. Cuando habla con el Jugador, tiende a enojarse si el jugador no está de acuerdo con él o se niega a hacerle un favor. Al igual que todos los vecinos picajosos, Jereza tiene una edad avanzada e invertirá su tiempo en su hobby, con frecuencia desafiará al jugador a varias competiciones. Él se entenderá fácilmente con vecinos deportistas, altaneras y otros vecinos picajosos, y en ocasiones también con vecinos vagos y dulces.",
+    facts: {
+      zodiacSign: "Geminis",
+      birthDate: "16/06",
+      catchPhrase: "Ñiii",
     },
-    "extraInfo": {
-      "imageSource": ""
-    }
-  }
+  },
 ];

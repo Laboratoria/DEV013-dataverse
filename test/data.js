@@ -1,52 +1,61 @@
-// Aqui puedes agregar los datos que necesites para tus pruebas
-// al menos debe tener uno que se llame "data"
-
 export const data = [{
-  "id": "ada-lovelace",
-  "name": "Ada Lovelace",
-  "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-  "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-  "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
-  "facts": {
-    "yearOfBirth": "1815",
-    "yearOfDeath": "1852",
-    "birthPlace": "Londres, Reino Unido",
-    "mainField": "Ciencia de la Computación"
+  id: "beaDog",
+  name: "Bea",
+  species: "Perro",
+  personality: "Dulce",
+  gender: "Femenino",
+  shortDescription: "Perro deportista y enérgico, amante del ejercicio y las competiciones.",
+  description: "Bea es un perro orgulloso y elegante que se considera a sí misma una autoridad en moda y alta sociedad en Animal Crossing. Siempre está al tanto de las últimas tendencias y eventos de la alta sociedad. Bea se enorgullece de su elegancia y buen gusto, y a menudo ofrece consejos de moda a los demás habitantes. Aunque puede parecer algo distante al principio, aprecia la amistad genuina y siempre está dispuesta a ayudar a sus amigos. ¡Celebra su cumpleaños el 15 de octubre!",
+  imageUrl:"https://dodo.ac/np/images/thumb/c/c2/Bea_NH.png/150px-Bea_NH.png",
+  facts: {
+    zodiacSign: "Leo",
+    catchPhrase: "¡A darlo todo!",
+    birthDate: "15 de octubre",
   },
-  "extraInfo": {
-    "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
-  }
 },
 {
-  "id": "emmy-noether",
-  "name": "Emmy Noether",
-  "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-  "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-  "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
-  "facts": {
-    "yearOfBirth": "1882",
-    "yearOfDeath": "1935",
-    "birthPlace": "Erlangen, Alemania",
-    "mainField": "Matemáticas"
+  id: "biskitDog",
+  name: "Biskit",
+  species: "Perro",
+  personality: "Perezoso",
+  gender: "Masculino",
+  shortDescription: "Perro despreocupado y amante de las galletas, siempre con un hambre insaciable.",
+  description: "Biskit es un perro despistado con una personalidad relajada y amigable en Animal Crossing. Siempre parece estar en su propio mundo y es conocido por su actitud despreocupada. A menudo se le encuentra tarareando melodías alegres y disfrutando de la vida sin preocupaciones. Biskit es fácil de llevar y se lleva bien con otros habitantes del pueblo. Su catchphrase es '¡bork!', reflejando su naturaleza canina. Aunque su cabeza pueda estar en las nubes, su corazón está siempre en el lugar correcto, y es un amigo leal para todos en el pueblo. Biskit celebra su cumpleaños el 13 de mayo.",
+  imageUrl: "https://dodo.ac/np/images/thumb/7/78/Biskit_NH.png/150px-Biskit_NH.png",
+  facts: {
+    zodiacSign: "Piscis",
+    catchPhrase: "¡Guau galleta!",
+    birthDate: "13 de mayo",
   },
-  "extraInfo": {
-    "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
-  }
 },
 {
-  "id": "hypatia-de-alejandria",
-  "name": "Hypatia de Alejandría",
-  "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-  "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-  "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
-  "facts": {
-    "yearOfBirth": "circa 360",
-    "yearOfDeath": "415",
-    "birthPlace": "Alejandría, Egipto",
-    "mainField": "Matemáticas, Filosofía"
+  id: "der11",
+  name: "Yuki",
+  species: "Ciervo",
+  personality: "Vivaracha",
+  gender: "Femenino",
+  imageUrl: "https://dodo.ac/np/images/2/26/Shino_amiibo.png",
+  shortDescription: "Yuki es una aldeana ciervo animada en la serie Animal Crossing",
+  description: "Yuki en una cierva de color blanco amarillento con un hocico de color blanco y pesuñas de color dorado. Yuki tiene unos ojos alargados de color amarillo con una sombra de ojos de color rojo del estilo Hikimayu, además de unos pequeños colmillos que sobresalen de su boca y podrían indicar que pertenece a la especie del ciervo de copete. El diseño de Shino parece estar inspirado por máscaras del teatro Noh japonés, más concretamente a la mascara de los Hannya, demonios de mujeres consumidas por los celos.",
+  facts: {
+    zodiacSign: "Libra",
+    birthDate: "31/10",
+    catchPhrase: "oni"
   },
-  "extraInfo": {
-    "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
-  }
-},];
-
+},
+{
+  id: "goa09",
+  name: "Morfeo",
+  species: "Cabra",
+  personality: "Perezoso",
+  gender: "Masculino",
+  imageUrl: "https://dodo.ac/np/images/thumb/1/18/Sherb_NH.png/150px-Sherb_NH.png",
+  shortDescription: "Morfeo es un aldeano cabra perezoso en la serie Animal Crossing",
+  description: "Morfeo tiene la personalidad vaga, por lo que será amigable y fácil de tratar debido a su estilo de vida relajado. Como a todos los vecinos vagos, a Morfeo le encanta comer y el descansar, disfrutará de participar en sus pasatiempos comunes, que generalmente tienen que ver con relajarse o comer, como la pesca. Morfeo se llevará bien con los otros vecinos, pero puede ofender o confundir a los vecinos deportistas, que tienen un estilo de vida de lleno de ejercicio y de buen estado físico, en comparación con el estilo de vida perezoso de Morfeo.",
+  facts: {
+    zodiacSign: "Capricornio",
+    birthDate: "18/1",
+    catchPhrase: "bostezzz",
+  },
+},
+];
