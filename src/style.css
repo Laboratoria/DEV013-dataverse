@@ -104,6 +104,7 @@ dd[itemprop="name"] {
   font-weight: bold;
   text-align: center;
   font-size: medium;
+  display:flex;
  }
 
 dd[itemprop="shortDescription"] {
@@ -124,6 +125,7 @@ dt[itemprop="LugarNacimiento"],
 dt[itemprop="género"] {
   text-align: justify;
   margin: 0;
+  display:flex;
 }
 
 dt {
