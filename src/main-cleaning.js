@@ -191,6 +191,7 @@ dropdown.addEventListener("change", () => {
   if (i === 3) {
     clearView();
     renderItems(clonedData, statiscis);
+    dropdown.selectedIndex = 0;
   } else {
     activeSorting = i;
     clearView();
