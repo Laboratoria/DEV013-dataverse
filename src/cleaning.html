@@ -23,11 +23,7 @@
     <!-- Search by name -->
     <aside class="search-by-name container">
       <form class="search-container" action="data/dataset.js">
-        <input type="text" id="input-name" placeholder="Buscar..." name="search"> <!--cambie id-->
-        <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
-        <!-- <p id="promedioAgua">Promedio de Agua: </p> 
-        <p id="promedioLuz">Promedio de Luz: </p> 
-        <p id="promedioCuidado">Promedio de cuidado: </p>  -->
+        <input type="text" id="input-name" placeholder="Buscar..." name="search">
       </form>
     </aside>
     <!-- Category menu -->
@@ -65,6 +61,7 @@
         <option value="reset">Resetear</option>
       </select>
     </aside>
+    <button data-testid="button-clear" type="reset" class="unnecessary">Reset</button>
     <!-- Mmain -->
     <main>
       <h2 class="unnecessary">Plantas</h2>
@@ -72,11 +69,24 @@
       <div id="root">
         <!-- Ul cards -->
         <ul class="cards" id="ul-cards">
-          <li class="unnecessary" itemscope itemtype="https://schema.org" itemprop="unnecesary">Plant</li>
+          <li class="unnecessary" itemscope itemtype="https://schema.org">Plant</li>
+        </ul>
+      </div>
+    </main>
+    <!-- Footer limpio -->
+    <footer>
+      <h3 class="footer">My Beauty Plants</h3>
+      <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
+      <p class="footer">Bootcamp Laboratoria</p>
+    </footer>
+    <script src="main-cleaning.js" type="module"></script>
+  </body> 
+</html>
+
           <!-- Card base template -->
-          <li class="card-container" itemscope itemtype="https://schema.org" itemprop="pant">
+          <!-- <li class="card-container" itemscope itemtype="https://schema.org" itemprop="pant">-->
             <!-- Front card funciona -->
-            <article class="front-card" id="front-card">
+            <!-- <article class="front-card" id="front-card">
               <h2>Agave Azul</h2>
               <div class="top-card">
                 <img alt="Agave Azul" src="resources/Images/agave-azul.png">
@@ -111,9 +121,9 @@
                 <p>Planta suculenta usada en la producción de tequila.</p>
                 <button class="details-button" id="details-button">Detalles</button>
               </div>
-            </article>
+            </article> -->
             <!-- Back card, top funciona, icons y botom card-->
-            <article id="back-card" class="hide">
+            <!-- <article id="back-card" class="hide">
               <h2>Agave Azul</h2>
               <div class="top-card">
                 <img alt="Plant Name" src="resources/Images/agave-azul.png">
@@ -136,48 +146,36 @@
                 <input type="image" id="flip-button" class="flip-button" alt="Regresar" src="resources/Icons/Regresar.png">
               </div>
             </article>
-          </li>
-        </ul>
-        <!-- Modals -->
-        <dialog class="modal-boxes">
-          <article id="description-modal" class="description-modal"> 
-            <h3>Plant Name</h3>
-            <p>Description</p>
-          </article>
-          <article id="statistics-modal" class="statistics-modal"> 
-            <h3>Category</h3>
-            <div class="statistics">
-              <div class="graph-legend">
-                <div class="legend">
-                  <div class="water-square"></div>
-                  <p>Agua</p>
+          </li> -->
+          <!-- Modals -->
+          <!-- <dialog class="modal-boxes">
+            <article id="description-modal" class="description-modal"> 
+              <h3>Plant Name</h3>
+              <p>Description</p>
+            </article>
+            <article id="statistics-modal" class="statistics-modal"> 
+              <h3>Category</h3>
+              <div class="statistics">
+                <div class="graph-legend">
+                  <div class="legend">
+                    <div class="water-square"></div>
+                    <p>Agua</p>
+                  </div>
+                  <div class="legend">
+                    <div class="light-square"></div>
+                    <p>Luz</p>
+                  </div>
+                  <div class="legend">
+                    <div class="care-square"></div>
+                    <p>Cuidado</p>
+                  </div>
                 </div>
-                <div class="legend">
-                  <div class="light-square"></div>
-                  <p>Luz</p>
-                </div>
-                <div class="legend">
-                  <div class="care-square"></div>
-                  <p>Cuidado</p>
+                <div class="statistics-totals">
+                  <h5 class="water">Mucha</h5>
+                  <h5 class="light">Regular</h5>
+                  <h5 class="care">Poca</h5>
                 </div>
               </div>
-              <div class="statistics-totals">
-                <h5 class="water">Mucha</h5>
-                <h5 class="light">Regular</h5>
-                <h5 class="care">Poca</h5>
-              </div>
-            </div>
-            <h4>Qué cuidados necesita este tipo de plantas?</h4>
-          </article> 
-        </dialog> 
-      </div>
-    </main>
-    <!-- Footer limpio -->
-    <footer>
-      <h3 class="footer">My Beauty Plants</h3>
-      <p class="footer">Etelbina Cañedo &amp; Joseline García</p>
-      <p class="footer">Bootcamp Laboratoria</p>
-    </footer>
-    <script src="main cleaning.js" type="module"></script>
-  </body> 
-</html>
+              <h4>Qué cuidados necesita este tipo de plantas?</h4>
+            </article> 
+          </dialog>  -->

@@ -12,6 +12,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.unnecessary {
+    display: none;
+}
+
 /* Header styles */
 
 header {
@@ -139,10 +143,6 @@ main {
     justify-content: center;
     margin-bottom: 100px;
 }
- 
-main .unnecessary {
-    display: none;
-}
 
 #root {
     /* background-color: #AF4401; */
@@ -255,9 +255,9 @@ li.card-container.aromatica {
     margin: 4px 0;
 }
 
-/*#front-card .amounts img.inactiva {
+#front-card .amounts img.inactiva {
     opacity: .5;
-}*/
+}
 
 #front-card p {
     /* background-color: aliceblue; */
@@ -428,13 +428,13 @@ img.stats1 {
 }
 
 div.factLabels {
-    /* background-color: blueviolet;
-    padding: 10px; */
+    background-color: blueviolet;
+    /* padding: 10px; */
     display: flex;
 }
 
 div.statsTotals h5 {
-    /* background-color: #E5B655; */
+    background-color: #E5B655;
     font-family: 'Marcellus SC', serif;
     font-size: 25px;
     text-align: center;
