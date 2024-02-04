@@ -3,15 +3,111 @@ import data from './data/dataset.js';
 import { filterData } from './data-functions-Cleaning.js';
 import { sortData } from './data-functions-Cleaning.js';
 
+
 const clonedData = structuredClone(data); //clona el arreglo de objetos
 let currentData = data;
 //Esta variable almacena el valor de la seleccion del boton orderBy
 //para que no sea descartado al cambiar de categoría
 let activeSorting = 0;
 
+export const createStatistics = (data) => {
+  //1 - Create empty structure to host categories in arrays
+  const statsByCategory = {
+    "ornamental":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "medicinal":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "aromatic":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "desert":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "trees":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+  };
+  //2 - Iterate in data
+  data.forEach(plant => {
+    //3 - Identify category
+    const category = plant.categoryPlant;
+    //4 - Extracts facts
+    //5 - Store facts in corresponding category
+    statsByCategory[category].factsByPlants.push(plant.facts);
+    //anadiendo la suma de water average de 
+    statsByCategory[category].sum.waterSum+=plant.facts.waterAmount;
+    //calculando promedio
+    statsByCategory[category].average.waterAverage=Math.round(statsByCategory[category].sum.waterSum/statsByCategory[category].factsByPlants.length);
+
+    statsByCategory[category].sum.lightSum+=plant.facts.sunLight;
+    //calculando promedio
+    statsByCategory[category].average.lightAverage=Math.round(statsByCategory[category].sum.lightSum/statsByCategory[category].factsByPlants.length);
+
+    statsByCategory[category].sum.careSum+=plant.facts.careDifficulty;
+    //calculando promedio
+    statsByCategory[category].average.careAverage=Math.round(statsByCategory[category].sum.careSum/statsByCategory[category].factsByPlants.length);
+  });
+  
+  return statsByCategory;
+  //6 - Calculate average by category for every fact
+  //6.1 - Save total facts by category in dedicated structure
+}
 //------------------------------------------------------------------------------------------------------------
 //Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
-const cards=renderItems(currentData);
+const statiscis = createStatistics(clonedData);
+const cards=renderItems(currentData, statiscis);
 
 //Se declara una variable que trae el valor de root
 const mainContainer=document.querySelector("#root");
@@ -41,7 +137,7 @@ categoryButtons.forEach(button =>
     }
 
     clearView();
-    renderItems(currentData);
+    renderItems(currentData, statiscis);
     return currentData;
   });
 });
@@ -67,7 +163,7 @@ function filterByName(){
 
   const filteredName = filterData(clonedData, 'name', inputCorrected);
   clearView();
-  renderItems(filteredName);
+  renderItems(filteredName, statiscis);
 }
 //--------------------------------------------------------------------------------------------------------
 
@@ -94,12 +190,12 @@ dropdown.addEventListener("change", () => {
   //si se selecciona el indice 1
   if (i === 3) {
     clearView();
-    renderItems(clonedData);
+    renderItems(clonedData, statiscis);
   } else {
     activeSorting = i;
     clearView();
     sortData(currentData, "id", i);
-    renderItems(currentData);
+    renderItems(currentData, statiscis);
   }
 });
 
@@ -126,3 +222,6 @@ function turnCard(cardContainer){
 }
 
 //-----------------------------------------------------------------------------------------------------------------
+
+
+

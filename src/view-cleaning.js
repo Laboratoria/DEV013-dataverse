@@ -2,28 +2,6 @@
 // import { wordSelection } from "./data functions-Cleaning.js";
 // import { determinarImagen } from "./data functions-Cleaning.js";
 
-
-//---- Fact by category
-//---- No UI dependendant
-//---- No need to compute at render stage.
-//iterar en cada elemento del objeto
-//contar cuantas son por categorria
-//dentro del elemento acceder a facts
-//obtener el valor de cada fact
-//dependiendo de ese valor poner las imagenes
-
-export const foo2 = (data) => {
-  //1 - Create empty arraty to host categories
-
-  //1.1 - Create structure to store total facts by category
-  //2 - Iterate in data
-  //3 - Identify category
-  //4 - Extracts facts
-  //5 - Store facts in corresponding category
-  //6 - Calculate average by category for every fact
-  //6.1 - Save total facts by category in dedicated structure
-}
-
 // Render fact for passed model image inside the UI card Item
 // ----
 // This function receives a plant model and extract the fact information
@@ -148,8 +126,31 @@ export const renderFactImages = (plant, cardItem) => {
   }
 }
 
-export const renderItems = (data) => {
-  
+export const renderStatisticsWords = (plant, statsModal, statsByCategory) => {
+
+  //   <div class="statistics-totals">
+  //   <h5 class="water">Mucha</h5>
+  //   <h5 class="light">Regular</h5>
+  //   <h5 class="care">Poca</h5>
+  // </div>
+
+  const waterAverageWord = document.createElement("h5");
+  waterAverageWord.className="water";
+
+  const statisticsContainer = statsModal.querySelector(".statistics-totals");
+  statisticsContainer.appendChild(waterAverageWord);
+
+  if(statsByCategory[plant.categoryPlant].average.waterAverage === 1) {
+    waterAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[plant.categoryPlant].average.waterAverage === 2) {
+    waterAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[plant.categoryPlant].average.waterAverage === 3) {
+    waterAverageWord.innerHTML+="Mucha";
+  }
+
+}
+
+export const renderItems = (data, statsByCategory) => {
   // Creating container to host all the cards AKA "list"
   const cardList = document.getElementById("ul-cards");
   
@@ -266,9 +267,6 @@ export const renderItems = (data) => {
                   </div>
                 </div>
                 <div class="statistics-totals">
-                  <h5 class="water">Mucha</h5>
-                  <h5 class="light">Regular</h5>
-                  <h5 class="care">Poca</h5>
                 </div>
               </div>
               <h4>Qué cuidados necesita este tipo de plantas?</h4>
@@ -277,14 +275,16 @@ export const renderItems = (data) => {
     //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
     renderFactImages(element, cardItem);
-
+    
     //Adding the modals to the card
     modalsContainer.appendChild(descriptionModal);
     modalsContainer.appendChild(statsModal);
-
+    
     //Modals are added outside the UI card representation
     cardItem.insertAdjacentElement("afterend", modalsContainer);
-
+    
+    renderStatisticsWords(element, statsModal, statsByCategory);
+    
     //Add footer to the reverse card that contains the buttons for 
     //stats, description and reverse
     const icons = cardItem.querySelector("#icons");
