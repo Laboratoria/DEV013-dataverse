@@ -17,6 +17,7 @@ const statiscis = createStatistics(clonedData);
 //------------------------------------------------------------------------------------------------------------
 //Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
 const cards=renderItems(currentData);
+setListeners();
 
 //Se declara una variable que trae el valor de root
 const mainContainer=document.querySelector("#root");
@@ -46,6 +47,7 @@ categoryButtons.forEach(button =>
 
     clearView();
     renderItems(currentData);
+    setListeners();
     return currentData;
   });
 });
@@ -72,6 +74,7 @@ function filterByName(){
   const filteredName = filterData(clonedData, 'name', inputCorrected);
   clearView();
   renderItems(filteredName);
+  setListeners();
 }
 //--------------------------------------------------------------------------------------------------------
 
@@ -99,12 +102,14 @@ dropdown.addEventListener("change", () => {
   if (i === 3) {
     clearView();
     renderItems(clonedData);
+    setListeners();
     dropdown.selectedIndex = 0;
   } else {
     activeSorting = i;
     clearView();
     sortData(currentData, "id", i);
     renderItems(currentData);
+    setListeners();
   }
 });
 
@@ -180,20 +185,6 @@ function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
     careAverageWord.innerHTML+="Mucha";
   }
 }
-//-----------------------------------------------------------------------------------------------------------------
-
-//TODO: - Why sometimes getElementsByClassName is not working?
-const statisticsButtons=document.querySelectorAll('.modal-statistics-button');
-statisticsButtons.forEach(button => 
-{
-  button.addEventListener('click',()=> 
-  {
-    const categoryPlant = button.id;
-    const statsModal = document.getElementById("statistics-modal");
-    renderStatisticsWords(categoryPlant, statsModal, statiscis);
-    statsModal.showModal();
-  });
-});
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -207,32 +198,45 @@ function renderDescriptions(namePlant, descriptionModal, description) {
 
 //-----------------------------------------------------------------------------------------------------------------
 
-const descriptionButtons = document.querySelectorAll(".modal-description-button");
-descriptionButtons.forEach(descriptionButton => {
-  descriptionButton.addEventListener("click", () =>{
-  
-    const idPlant = descriptionButton.id;
-
-    data.forEach(plant => {
-      if(plant.id === idPlant){
-        const descriptionModal = document.getElementById("description-modal");
-        renderDescriptions(plant.name, descriptionModal, plant.description);
-        descriptionModal.showModal();
-      }
+function setListeners(){
+  //TODO: - Why sometimes getElementsByClassName is not working?
+  const statisticsButtons=document.querySelectorAll('.modal-statistics-button');
+  statisticsButtons.forEach(button => 
+  {
+    button.addEventListener('click',()=> 
+    {
+      const categoryPlant = button.id;
+      const statsModal = document.getElementById("statistics-modal");
+      renderStatisticsWords(categoryPlant, statsModal, statiscis);
+      statsModal.showModal();
     });
   });
-});
 
-const closeButtonDescription=document.querySelector(".close-button");
-closeButtonDescription.addEventListener("click", () => {
-  const descriptionModal = document.getElementById("description-modal");
-  descriptionModal.close();
-});
+  const descriptionButtons = document.querySelectorAll(".modal-description-button");
+  descriptionButtons.forEach(descriptionButton => {
+    descriptionButton.addEventListener("click", () =>{
+    
+      const idPlant = descriptionButton.id;
 
+      data.forEach(plant => {
+        if(plant.id === idPlant){
+          const descriptionModal = document.getElementById("description-modal");
+          renderDescriptions(plant.name, descriptionModal, plant.description);
+          descriptionModal.showModal();
+        }
+      });
+    });
+  });
 
-const closeButtonStats = document.querySelector(".close-button-stats");
-closeButtonStats.addEventListener("click", () =>{
-  const statsModal = document.getElementById("statistics-modal");
-  statsModal.close();
-});
+  const closeButtonDescription=document.querySelector(".close-button");
+  closeButtonDescription.addEventListener("click", () => {
+    const descriptionModal = document.getElementById("description-modal");
+    descriptionModal.close();
+  });
 
+  const closeButtonStats = document.querySelector(".close-button-stats");
+  closeButtonStats.addEventListener("click", () =>{
+    const statsModal = document.getElementById("statistics-modal");
+    statsModal.close();
+  });
+}
