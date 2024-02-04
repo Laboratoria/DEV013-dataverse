@@ -12,8 +12,6 @@
 //obtener el valor de cada fact
 //dependiendo de ese valor poner las imagenes
 
-
-
 export const foo2 = (data) => {
   //1 - Create empty arraty to host categories
 
@@ -32,7 +30,7 @@ export const foo2 = (data) => {
 // rendering depending of the value found in the model
 // @param plan: The plant model that contains the info
 // @parm cardItem: The card that represents UI the element inside the DOM 
-export const factImages = (plant, cardItem) => {
+export const renderFactImages = (plant, cardItem) => {
   // Create static elements
   const waterActiveImage = document.createElement("img");
   waterActiveImage.alt="Gota";
@@ -152,11 +150,10 @@ export const factImages = (plant, cardItem) => {
 
 export const renderItems = (data) => {
   
-  //crear el contenedor y guardarlo en una variable 
+  // Creating container to host all the cards AKA "list"
   const cardList = document.getElementById("ul-cards");
   
   data.forEach(element => {
-
     const statisticsButton = document.createElement('img');
     statisticsButton.className="modal-statistics-button";
     statisticsButton.alt="Estadísticas";
@@ -173,10 +170,10 @@ export const renderItems = (data) => {
     backButton.alt = "Regresar";
     backButton.src = "resources/Icons/Regresar.png";
 
-    //Se crea el elemento li
+    //Creting the li element to represent the plant as UI card
     const cardItem = document.createElement('li');
 
-    //El elemento li se escribe en el DOM
+    //Card item creation, every card represents a plant from the data. 
     cardItem.className="card-container " + element.categoryPlant;
     cardItem.setAttribute("itemscope", "");
     cardItem.setAttribute("itemtype", "https://schema.org");
@@ -234,11 +231,11 @@ export const renderItems = (data) => {
               </div>
             </article>`
 
-    //---------------------------------------------------------------------------------------------------------    //<!-- Modals -->
-
+    // Modal containers creation
     const modalsContainer = document.createElement('div');
     modalsContainer.className="modal-boxes";
 
+    // Description Modal Creation Flow
     const descriptionModal = document.createElement('dialog');
     descriptionModal.id="description-modal";
     descriptionModal.className="description-modal";
@@ -247,8 +244,7 @@ export const renderItems = (data) => {
               <p>${element.description}</p>
               <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
 
-    //--------------------------------------------------------------------------------------------------------
-
+    // Stats Modal Creation Flow
     const statsModal= document.createElement('dialog');
     statsModal.id="statistics-modal";
     statsModal.className="statistics-modal";
@@ -278,22 +274,29 @@ export const renderItems = (data) => {
               <h4>Qué cuidados necesita este tipo de plantas?</h4>
               <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
 
-    //-------------------------------------------------------------------------------------------------------
-    
+    //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
-    factImages(element, cardItem);
+    renderFactImages(element, cardItem);
 
+    //Adding the modals to the card
     modalsContainer.appendChild(descriptionModal);
     modalsContainer.appendChild(statsModal);
-    
+
+    //Modals are added outside the UI card representation
     cardItem.insertAdjacentElement("afterend", modalsContainer);
 
+    //Add footer to the reverse card that contains the buttons for 
+    //stats, description and reverse
     const icons = cardItem.querySelector("#icons");
     document.getElementById('icons');
     icons.appendChild(statisticsButton);
     icons.appendChild(descriptionButton);
     icons.appendChild(backButton);
 
+    //Add listeners to the buttons for the reverse inside the card
+    //this listener nees to be added for every card, then those are executed
+    //inside the forEach.
+    //TODO: - Move this to a outside function.
     const closeButtonDescription = descriptionModal.querySelector(".close-button");
     closeButtonDescription.addEventListener("click", () =>{
       descriptionModal.close();
@@ -311,85 +314,6 @@ export const renderItems = (data) => {
     descriptionButton.addEventListener("click", () =>{
       descriptionModal.showModal();
     });
-
-    //------------------------------------------------------------------------------------------------------------
-    // -- Facts in card
-    //acceder a la data
-    //iterar por cada elemento
-    //ver de que categoria pertenece
-    //llamar a funcion computeStats para hacer el calculo y wordSelection
-    //seleccionar donde se va a mostrar la estadistica 
-    //insertar el calculo usando innerHTML o textContent
-
-    // statsModal.forEach((modal) =>{
-    
-    //   const averageWater= computeStats(data, "waterAmount");
-    //   const wordWater= wordSelection(averageWater);
-  
-    //   const averageLight= computeStats(data, "sunLight");
-    //   const wordLight = wordSelection(averageLight);
-  
-    //   const averageCare= computeStats(data, "careDifficulty");
-    //   const wordCare= wordSelection(averageCare);
-  
-    //   const agua=modal.computeStats(".water");
-    //   agua.textContent=`${wordWater}`;
-
-    //   const luz= modal.computeStats(".light");
-    //   luz.textContent=`${wordLight}`;
-
-    //   const cuidado= modal.computeStats(".care"); 
-    //   cuidado.textContent=`${wordCare}`;
-    // })
-
-    //-----------------------------------------------------------------------------------------------------
-    
-    // const water = element.facts.waterAmount;
-    // const light = element.facts.sunLight;
-    // const care = element.facts.careDifficulty;
-    
-    // function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
-    //   const { activo, inactivo } = determinarImagen(id);
-  
-    //   if (fact === 1) {
-    //     firstImage.src = activo;
-    //     secondImage.src = inactivo;
-    //     thirdImage.src = inactivo;
-    //   } else if (fact === 2) {
-    //     firstImage.src = activo;
-    //     secondImage.src = activo;
-    //     thirdImage.src = inactivo;
-    //   } else if (fact === 3) {
-    //     firstImage.src = activo;
-    //     secondImage.src = activo;
-    //     thirdImage.src = activo;
-    //   }
-    // }
-    
-  
-    // Imagenes.agua
-    // const firstImageWater = cardItem.querySelector("#minimum-water");
-    // const secondImageWater = cardItem.querySelector("#medium-water");
-    // const thirdImageWater = cardItem.querySelector("#maximum-water");
-  
-    // actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
-  
-    // Imagenes.luz
-    // const firstImageLight = cardItem.querySelector("#minimum-light");
-    // const secondImageLight = cardItem.querySelector("#medium-light");
-    // const thirdImageLight = cardItem.querySelector("#maximum-light");
-  
-    // actualizarImagenes(light, firstImageLight, secondImageLight, thirdImageLight, "luz");
-  
-    //Imagenes.cuidado
-    // const firstImageCare = cardItem.querySelector("#minimum-care");
-    // const secondImageCare = cardItem.querySelector("#medium-care");
-    // const thirdImageCare = cardItem.querySelector("#maximum-care");
-  
-    // actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
-
-    //------------------------------------------------------------------------------------------------------------
-
   });
   return cardList;
 }
