@@ -136,6 +136,9 @@ function turnCard(cardContainer){
 
 function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
 
+  const plantCategory = statsModal.querySelector("#plant-category-modal");
+  plantCategory.innerHTML = categoryPlant;
+
   const waterAverageWord = document.createElement("h5");
   waterAverageWord.className="water";
 
@@ -194,6 +197,32 @@ statisticsButtons.forEach(button =>
 
 //-----------------------------------------------------------------------------------------------------------------
 
+function renderDescriptions(namePlant, descriptionModal, description) {
+  const plantName = descriptionModal.querySelector("#plant-name-modal");
+  plantName.innerHTML = namePlant;
+
+  const plantDescription = descriptionModal.querySelector("#plant-description-modal");
+  plantDescription.innerHTML = description;
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+
+const descriptionButtons = document.querySelectorAll(".modal-description-button");
+descriptionButtons.forEach(descriptionButton => {
+  descriptionButton.addEventListener("click", () =>{
+  
+    const idPlant = descriptionButton.id;
+
+    data.forEach(plant => {
+      if(plant.id === idPlant){
+        const descriptionModal = document.getElementById("description-modal");
+        renderDescriptions(plant.name, descriptionModal, plant.description);
+        descriptionModal.showModal();
+      }
+    });
+  });
+});
+
 const closeButtonDescription=document.querySelector(".close-button");
 closeButtonDescription.addEventListener("click", () => {
   const descriptionModal = document.getElementById("description-modal");
@@ -206,11 +235,4 @@ closeButtonStats.addEventListener("click", () =>{
   const statsModal = document.getElementById("statistics-modal");
   statsModal.close();
 });
-
-const descriptionButton = document.querySelector(".modal-description-button");
-descriptionButton.addEventListener("click", () =>{
-  const descriptionModal = document.getElementById("description-modal");
-  descriptionModal.showModal();
-});
-
 

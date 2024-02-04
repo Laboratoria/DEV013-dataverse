@@ -137,6 +137,7 @@ export const renderItems = (data) => {
     descriptionButton.className="modal-description-button";
     descriptionButton.alt="Descripcion";
     descriptionButton.src="resources/Icons/descripcion.png";
+    descriptionButton.id=element.id;
 
     const backButton = document.createElement("img");
     backButton.id = "flip-button";
@@ -205,57 +206,11 @@ export const renderItems = (data) => {
               </div>
             </article>`
 
-    // Modal containers creation
-    const modalsContainer = document.createElement('div');
-    modalsContainer.className="modal-boxes";
-
-    // Description Modal Creation Flow
-    const descriptionModal = document.createElement('dialog');
-    descriptionModal.id="description-modal";
-    descriptionModal.className="description-modal";
-    descriptionModal.innerHTML+= ` 
-              <h3>${element.name}</h3>
-              <p>${element.description}</p>
-              <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
-
-    // Stats Modal Creation Flow
-    const statsModal= document.createElement('dialog');
-    statsModal.id="statistics-modal";
-    statsModal.className="statistics-modal";
-    statsModal.innerHTML+=`
-              <h3>${element.categoryPlant}</h3>
-              <div class="statistics">
-                <div class="graph-legend">
-                  <div class="legend">
-                    <div class="square water"></div>
-                    <p>Agua</p>
-                  </div>
-                  <div class="legend">
-                    <div class="square light"></div>
-                    <p>Luz</p>
-                  </div>
-                  <div class="legend">
-                    <div class="square care"></div>
-                    <p>Cuidado</p>
-                  </div>
-                </div>
-                <div class="statistics-totals">
-                </div>
-              </div>
-              <h4>Qué cuidados necesita este tipo de plantas?</h4>
-              <img class="close-button-stats" alt="Cerrar" src="resources/Icons/Close.png">`
+    
 
     //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
     renderFactImages(element, cardItem);
-    
-    //Adding the modals to the card
-    modalsContainer.appendChild(descriptionModal);
-    modalsContainer.appendChild(statsModal);
-    
-    //Modals are added outside the UI card representation
-    cardItem.insertAdjacentElement("afterend", modalsContainer);
-
     
     //Add footer to the reverse card that contains the buttons for 
     //stats, description and reverse
@@ -265,5 +220,53 @@ export const renderItems = (data) => {
     icons.appendChild(descriptionButton);
     icons.appendChild(backButton);
   });
+
+  // Modal containers creation
+  const modalsContainer = document.createElement('div');
+  modalsContainer.className="modal-boxes";
+
+  // Description Modal Creation Flow
+  const descriptionModal = document.createElement('dialog');
+  descriptionModal.id="description-modal";
+  descriptionModal.className="description-modal";
+  descriptionModal.innerHTML+= ` 
+            <h3 id="plant-name-modal">Plant Name</h3>
+            <p id="plant-description-modal">Plant Description</p>
+            <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
+
+  // Stats Modal Creation Flow
+  const statsModal= document.createElement('dialog');
+  statsModal.id="statistics-modal";
+  statsModal.className="statistics-modal";
+  statsModal.innerHTML+=`
+            <h3 id="plant-category-modal">Plant Category</h3>
+            <div class="statistics">
+              <div class="graph-legend">
+                <div class="legend">
+                  <div class="square water"></div>
+                  <p>Agua</p>
+                </div>
+                <div class="legend">
+                  <div class="square light"></div>
+                  <p>Luz</p>
+                </div>
+                <div class="legend">
+                  <div class="square care"></div>
+                  <p>Cuidado</p>
+                </div>
+              </div>
+              <div class="statistics-totals">
+              </div>
+            </div>
+            <h4>Qué cuidados necesita este tipo de plantas?</h4>
+            <img class="close-button-stats" alt="Cerrar" src="resources/Icons/Close.png">`
+
+  //Adding the modals to the card
+  modalsContainer.appendChild(descriptionModal);
+  modalsContainer.appendChild(statsModal);
+  
+  //Modals are added outside the UI card representation
+  cardList.insertAdjacentElement("afterend", modalsContainer);
+
   return cardList;
 }
