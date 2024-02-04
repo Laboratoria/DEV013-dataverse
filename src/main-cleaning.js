@@ -2,7 +2,7 @@ import { renderItems } from './view-cleaning.js';
 import data from './data/dataset.js';
 import { filterData } from './data-functions-Cleaning.js';
 import { sortData } from './data-functions-Cleaning.js';
-
+import { createStatistics } from './data-functions-Cleaning.js';
 
 const clonedData = structuredClone(data); //clona el arreglo de objetos
 let currentData = data;
@@ -10,108 +10,16 @@ let currentData = data;
 //para que no sea descartado al cambiar de categoría
 let activeSorting = 0;
 
-export const createStatistics = (data) => {
-  //1 - Create empty structure to host categories in arrays
-  const statsByCategory = {
-    "ornamental":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
-      average:{
-        waterAverage:0,
-        lightAverage:0,
-        careAverage:0
-      },
-      factsByPlants:[]
-    },
-    "medicinal":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
-      average:{
-        waterAverage:0,
-        lightAverage:0,
-        careAverage:0
-      },
-      factsByPlants:[]
-    },
-    "aromatic":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
-      average:{
-        waterAverage:0,
-        lightAverage:0,
-        careAverage:0
-      },
-      factsByPlants:[]
-    },
-    "desert":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
-      average:{
-        waterAverage:0,
-        lightAverage:0,
-        careAverage:0
-      },
-      factsByPlants:[]
-    },
-    "trees":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
-      average:{
-        waterAverage:0,
-        lightAverage:0,
-        careAverage:0
-      },
-      factsByPlants:[]
-    },
-  };
-  //2 - Iterate in data
-  data.forEach(plant => {
-    //3 - Identify category
-    const category = plant.categoryPlant;
-    //4 - Extracts facts
-    //5 - Store facts in corresponding category
-    statsByCategory[category].factsByPlants.push(plant.facts);
-    //anadiendo la suma de water average de 
-    statsByCategory[category].sum.waterSum+=plant.facts.waterAmount;
-    //calculando promedio
-    statsByCategory[category].average.waterAverage=Math.round(statsByCategory[category].sum.waterSum/statsByCategory[category].factsByPlants.length);
+//------------------------------------------------------------------------------------------------------------
+//Calculate statistics
+const statiscis = createStatistics(clonedData);
 
-    statsByCategory[category].sum.lightSum+=plant.facts.sunLight;
-    //calculando promedio
-    statsByCategory[category].average.lightAverage=Math.round(statsByCategory[category].sum.lightSum/statsByCategory[category].factsByPlants.length);
-
-    statsByCategory[category].sum.careSum+=plant.facts.careDifficulty;
-    //calculando promedio
-    statsByCategory[category].average.careAverage=Math.round(statsByCategory[category].sum.careSum/statsByCategory[category].factsByPlants.length);
-  });
-  
-  return statsByCategory;
-  //6 - Calculate average by category for every fact
-  //6.1 - Save total facts by category in dedicated structure
-}
 //------------------------------------------------------------------------------------------------------------
 //Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
-const statiscis = createStatistics(clonedData);
-const cards=renderItems(currentData, statiscis);
+const cards=renderItems(currentData);
 
 //Se declara una variable que trae el valor de root
 const mainContainer=document.querySelector("#root");
-
 //Se declara cards como hijo de mainContainer
 mainContainer.appendChild(cards);
 
@@ -137,7 +45,7 @@ categoryButtons.forEach(button =>
     }
 
     clearView();
-    renderItems(currentData, statiscis);
+    renderItems(currentData);
     return currentData;
   });
 });
@@ -163,7 +71,7 @@ function filterByName(){
 
   const filteredName = filterData(clonedData, 'name', inputCorrected);
   clearView();
-  renderItems(filteredName, statiscis);
+  renderItems(filteredName);
 }
 //--------------------------------------------------------------------------------------------------------
 
@@ -190,20 +98,22 @@ dropdown.addEventListener("change", () => {
   //si se selecciona el indice 1
   if (i === 3) {
     clearView();
-    renderItems(clonedData, statiscis);
+    renderItems(clonedData);
     dropdown.selectedIndex = 0;
   } else {
     activeSorting = i;
     clearView();
     sortData(currentData, "id", i);
-    renderItems(currentData, statiscis);
+    renderItems(currentData);
   }
 });
 
 //------------------------------------------------------------------------------------------------------------
 
-const princContainer = document.getElementById("ul-cards");
-princContainer.addEventListener("click",(event) => {
+const cardList = document.getElementById("ul-cards");
+cardList.addEventListener("click",(event) => {
+  //TODO - Fix event delegated inside the list, this is executed every time the list receives a click.
+  //console.log("se esta ejecutando todas las veces")
   const cardContainer= event.target.closest('.card-container');
   if(event.target.matches('.details-button')) 
   {
@@ -224,5 +134,62 @@ function turnCard(cardContainer){
 
 //-----------------------------------------------------------------------------------------------------------------
 
+function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
+
+  const waterAverageWord = document.createElement("h5");
+  waterAverageWord.className="water";
+
+  const statisticsContainer = statsModal.querySelector(".statistics-totals");
+  statisticsContainer.innerHTML = "";
+  statisticsContainer.appendChild(waterAverageWord);
+
+  if(statsByCategory[categoryPlant].average.waterAverage === 1) {
+    waterAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.waterAverage === 2) {
+    waterAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.waterAverage === 3) {
+    waterAverageWord.innerHTML+="Mucha";
+  }
+
+  const lightAverageWord = document.createElement("h5");
+  lightAverageWord.className="light";
+
+  statisticsContainer.appendChild(lightAverageWord);
+
+  if(statsByCategory[categoryPlant].average.lightAverage === 1) {
+    lightAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.lightAverage === 2) {
+    lightAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.lightAverage === 3) {
+    lightAverageWord.innerHTML+="Mucha";
+  }
+
+  const careAverageWord = document.createElement("h5");
+  careAverageWord.className="care";
+
+  statisticsContainer.appendChild(careAverageWord);
+
+  if(statsByCategory[categoryPlant].average.careAverage === 1) {
+    careAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.careAverage === 2) {
+    careAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.careAverage === 3) {
+    careAverageWord.innerHTML+="Mucha";
+  }
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+//TODO: - Why sometimes getElementsByClassName is not working?
+const statisticsButtons=document.querySelectorAll('.modal-statistics-button');
+statisticsButtons.forEach(button => 
+{
+  button.addEventListener('click',()=> 
+  {
+    const categoryPlant = button.id;
+    const statsModal = document.getElementById("statistics-modal");
+    renderStatisticsWords(categoryPlant, statsModal, statiscis);
+    statsModal.showModal();
+  });
+});
 
 

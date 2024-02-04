@@ -1,7 +1,3 @@
-// import { computeStats } from "./data functions-Cleaning.js";
-// import { wordSelection } from "./data functions-Cleaning.js";
-// import { determinarImagen } from "./data functions-Cleaning.js";
-
 // Render fact for passed model image inside the UI card Item
 // ----
 // This function receives a plant model and extract the fact information
@@ -126,56 +122,7 @@ export const renderFactImages = (plant, cardItem) => {
   }
 }
 
-export const renderStatisticsWords = (plant, statsModal, statsByCategory) => {
-
-  //   <div class="statistics-totals">
-  //   <h5 class="water">Mucha</h5>
-  //   <h5 class="light">Regular</h5>
-  //   <h5 class="care">Poca</h5>
-  // </div>
-
-  const waterAverageWord = document.createElement("h5");
-  waterAverageWord.className="water";
-
-  const statisticsContainer = statsModal.querySelector(".statistics-totals");
-  statisticsContainer.appendChild(waterAverageWord);
-
-  if(statsByCategory[plant.categoryPlant].average.waterAverage === 1) {
-    waterAverageWord.innerHTML+="Poca";
-  } else if(statsByCategory[plant.categoryPlant].average.waterAverage === 2) {
-    waterAverageWord.innerHTML+="Regular";
-  } else if(statsByCategory[plant.categoryPlant].average.waterAverage === 3) {
-    waterAverageWord.innerHTML+="Mucha";
-  }
-
-  const lightAverageWord = document.createElement("h5");
-  lightAverageWord.className="light";
-
-  statisticsContainer.appendChild(lightAverageWord);
-
-  if(statsByCategory[plant.categoryPlant].average.lightAverage === 1) {
-    lightAverageWord.innerHTML+="Poca";
-  } else if(statsByCategory[plant.categoryPlant].average.lightAverage === 2) {
-    lightAverageWord.innerHTML+="Regular";
-  } else if(statsByCategory[plant.categoryPlant].average.lightAverage === 3) {
-    lightAverageWord.innerHTML+="Mucha";
-  }
-
-  const careAverageWord = document.createElement("h5");
-  careAverageWord.className="care";
-
-  statisticsContainer.appendChild(careAverageWord);
-
-  if(statsByCategory[plant.categoryPlant].average.careAverage === 1) {
-    careAverageWord.innerHTML+="Poca";
-  } else if(statsByCategory[plant.categoryPlant].average.careAverage === 2) {
-    careAverageWord.innerHTML+="Regular";
-  } else if(statsByCategory[plant.categoryPlant].average.careAverage === 3) {
-    careAverageWord.innerHTML+="Mucha";
-  }
-}
-
-export const renderItems = (data, statsByCategory) => {
+export const renderItems = (data) => {
   // Creating container to host all the cards AKA "list"
   const cardList = document.getElementById("ul-cards");
   
@@ -184,6 +131,7 @@ export const renderItems = (data, statsByCategory) => {
     statisticsButton.className="modal-statistics-button";
     statisticsButton.alt="Estadísticas";
     statisticsButton.src="resources/Icons/estadisticas.png";
+    statisticsButton.id=element.categoryPlant;
 
     const descriptionButton = document.createElement('img');
     descriptionButton.className="modal-description-button";
@@ -307,8 +255,7 @@ export const renderItems = (data, statsByCategory) => {
     
     //Modals are added outside the UI card representation
     cardItem.insertAdjacentElement("afterend", modalsContainer);
-    
-    renderStatisticsWords(element, statsModal, statsByCategory);
+
     
     //Add footer to the reverse card that contains the buttons for 
     //stats, description and reverse
@@ -321,7 +268,7 @@ export const renderItems = (data, statsByCategory) => {
     //Add listeners to the buttons for the reverse inside the card
     //this listener nees to be added for every card, then those are executed
     //inside the forEach.
-    //TODO: - Move this to a outside function.
+    //TODO: - Move this to main.
     const closeButtonDescription = descriptionModal.querySelector(".close-button");
     closeButtonDescription.addEventListener("click", () =>{
       descriptionModal.close();
@@ -330,10 +277,6 @@ export const renderItems = (data, statsByCategory) => {
     const closeButtonStats = statsModal.querySelector(".close-button");
     closeButtonStats.addEventListener("click", () =>{
       statsModal.close();
-    });
-
-    statisticsButton.addEventListener("click", () =>{
-      statsModal.showModal();
     });
 
     descriptionButton.addEventListener("click", () =>{

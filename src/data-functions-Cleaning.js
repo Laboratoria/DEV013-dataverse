@@ -13,142 +13,97 @@ export const sortData = (data, sortBy, sortOrder) => {
   });
 };
 
-//---------------------------------------------------------------------------------------------------------------------------
+export const createStatistics = (data) => {
+  //1 - Create empty structure to host categories in arrays
+  const statsByCategory = {
+    "ornamental":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "medicinal":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "aromatic":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "desert":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+    "trees":{
+      sum: {
+        waterSum:0,
+        lightSum:0,
+        careSum:0
+      },
+      average:{
+        waterAverage:0,
+        lightAverage:0,
+        careAverage:0
+      },
+      factsByPlants:[]
+    },
+  };
+  //2 - Iterate in data
+  data.forEach(plant => {
+    //3 - Identify category
+    const category = plant.categoryPlant;
+    //4 - Extracts facts
+    //5 - Store facts in corresponding category
+    statsByCategory[category].factsByPlants.push(plant.facts);
+    //anadiendo la suma de water average de 
+    statsByCategory[category].sum.waterSum+=plant.facts.waterAmount;
+    //calculando promedio
+    statsByCategory[category].average.waterAverage=Math.round(statsByCategory[category].sum.waterSum/statsByCategory[category].factsByPlants.length);
 
-// export const computeStats =(data, propiedadDeseada) => {
-//   const propertyValues=[];
+    statsByCategory[category].sum.lightSum+=plant.facts.sunLight;
+    //calculando promedio
+    statsByCategory[category].average.lightAverage=Math.round(statsByCategory[category].sum.lightSum/statsByCategory[category].factsByPlants.length);
 
-//   data.forEach(object => {
-//     //acceder a la propiedad
-//     const factToExtract = object.facts[propiedadDeseada];
-//     //agregar el resultado al array
-//     propertyValues.push(factToExtract);
-//   });
-
-//   const suma = propertyValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-//   const promedio = suma/data.length;
+    statsByCategory[category].sum.careSum+=plant.facts.careDifficulty;
+    //calculando promedio
+    statsByCategory[category].average.careAverage=Math.round(statsByCategory[category].sum.careSum/statsByCategory[category].factsByPlants.length);
+  });
   
-//   return Math.round(promedio);
-// };
-
-//-------------------------------------------------------------------------------------------------------------
-
-//en vez de el numero entero que se muestre (poca, medio,mucha)
-//funcion para determinar la palabra que debe
-//recibir el promedio y dependiendo de este me retorna la palabra
-// export const wordSelection = function (promedio){
-//   if (promedio===1){
-//     return "Poca";
-//   }
-//   else if(promedio===2){
-//     return "Regular";
-//   }
-//   else if(promedio===3){
-//     return "Mucha";
-//   }
-//   return wordSelection;
-// }
-
-//--------------------------------------------------------------------
-// export function determinarImagen(id) {
-//   let activo;
-//   let inactivo;
-
-//   if (id==="water") {
-//     activo = "resources/Icons/agua-activa.png";
-//     inactivo = "resources/Icons/agua-inactiva.png";
-//   } else if (id==="light") {
-//     activo = "resources/Icons/luz-activa.png";
-//     inactivo = "resources/Icons/luz-inactiva.png";
-//   } else if (id==="care") {
-//     activo = "resources/Icons/cuidado-activa.png";
-//     inactivo = "resources/Icons/cuidado-inactiva.png";
-//   }
-//   return { activo, inactivo };
-// }
-
-//---------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//------------------------------------------------------------------------------------------------------------------
-
-//tengo que calcular el promedio
-//para eso tengo que seleccionar todas las tarjetas con la misma categoria
-//en cada tarjeta se debe acceder a facts
-//y sumar todos los valores de cada fact
-//luego sacar el promedio
-
-// export const getAverage =(data, fact) => { 
-//   let sum = "";
-//   let quantity = "";
-
-//   data.forEach(object.categoryPlant => {
-//     sum += object.facts[fact];
-//     quantity +=1;
-//   });
-
-//   const average = suma/quantity;
-  
-//   return Math.round(average);
-// };
-
-//-------------------------------------------------------------------------------------------------------------
-
-// export const chooseTag = function (average){
-//   if (average===1){
-//     return "Poca";
-//   }
-//   else if(average===2){
-//     return "Regular";
-//   }
-//   else if(average===3){
-//     return "Mucha";
-//   }
-//   return wordSelection;
-// }
-
-//--------------------------------------------------------------------
-// export function determinarImagen(id) {
-//   let activo;
-//   let inactivo;
-
-//   if (id==="water") {
-//     activo = "resources/Icons/agua-activa.png";
-//     inactivo = "resources/Icons/agua-inactiva.png";
-//   } else if (id==="light") {
-//     activo = "resources/Icons/luz-activa.png";
-//     inactivo = "resources/Icons/luz-inactiva.png";
-//   } else if (id==="care") {
-//     activo = "resources/Icons/cuidado-activa.png";
-//     inactivo = "resources/Icons/cuidado-inactiva.png";
-//   }
-//   return { activo, inactivo };
-// }
-
-//---------------------------------------------------------------------------------------------
+  return statsByCategory;
+  //6 - Calculate average by category for every fact
+  //6.1 - Save total facts by category in dedicated structure
+}
