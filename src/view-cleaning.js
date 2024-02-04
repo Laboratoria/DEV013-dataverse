@@ -26,6 +26,129 @@ export const foo2 = (data) => {
   //6.1 - Save total facts by category in dedicated structure
 }
 
+// Render fact for passed model image inside the UI card Item
+// ----
+// This function receives a plant model and extract the fact information
+// rendering depending of the value found in the model
+// @param plan: The plant model that contains the info
+// @parm cardItem: The card that represents UI the element inside the DOM 
+export const factImages = (plant, cardItem) => {
+  // Create static elements
+  const waterActiveImage = document.createElement("img");
+  waterActiveImage.alt="Gota";
+  waterActiveImage.src="resources/Icons/agua-activa.png";
+  
+  const waterActiveImage2 = document.createElement("img");
+  waterActiveImage2.alt="Gota";
+  waterActiveImage2.src="resources/Icons/agua-activa.png";
+
+  const waterActiveImage3 = document.createElement("img");
+  waterActiveImage3.alt="Gota";
+  waterActiveImage3.src="resources/Icons/agua-activa.png";
+
+  const lightActiveImage = document.createElement("img");
+  lightActiveImage.alt="Luz";
+  lightActiveImage.src="resources/Icons/luz-activa.png";
+  
+  const lightActiveImage2 = document.createElement("img");
+  lightActiveImage2.alt="Luz";
+  lightActiveImage2.src="resources/Icons/luz-activa.png";
+
+  const lightActiveImage3 = document.createElement("img");
+  lightActiveImage3.alt="Luz";
+  lightActiveImage3.src="resources/Icons/luz-activa.png";
+
+  const careActiveImage = document.createElement("img");
+  careActiveImage.alt="Semaforo";
+  careActiveImage.src="resources/Icons/cuidado-activa.png";
+
+  const careActiveImage2 = document.createElement("img");
+  careActiveImage2.alt="Semaforo";
+  careActiveImage2.src="resources/Icons/cuidado-activa.png";
+
+  const careActiveImage3 = document.createElement("img");
+  careActiveImage3.alt="Semaforo";
+  careActiveImage3.src="resources/Icons/cuidado-activa.png";
+
+  // 1 - Iterar en data forEach
+  // 2 - Get facts by type
+  const waterAmount = plant.facts.waterAmount;
+  const sunLight = plant.facts.sunLight;
+  const careDifficulty = plant.facts.careDifficulty;
+
+  const waterArea = cardItem.querySelector(".water-icons");
+  document.getElementById('water');
+
+  // 3 - condicionales
+  // 3.1 repetir por fact
+  // 3.2 water facts
+  if (waterAmount === 1) {
+    //4 dibujar 1 activa 2 inactivas
+    waterArea.appendChild(waterActiveImage);
+    waterActiveImage2.className="inactive";
+    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterArea.appendChild(waterActiveImage3);
+    waterActiveImage3.className="inactive";
+  } else if (waterAmount === 2) {
+    //4 dibujar 2 activas 1 inactiva
+    waterArea.appendChild(waterActiveImage);
+    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterActiveImage3.className="inactive";
+    waterArea.appendChild(waterActiveImage3);
+  } else if (waterAmount === 3) {
+    //4 dibujar 3 activas
+    waterArea.appendChild(waterActiveImage);
+    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterArea.appendChild(waterActiveImage3);
+  }
+
+  const lightArea = cardItem.querySelector(".light-icons");
+  document.getElementById('light');
+
+  // 3.2 sun facts
+  if (sunLight === 1) {
+    //4 dibujar 1 activa 2 inactivas
+    lightArea.appendChild(lightActiveImage);
+    lightActiveImage2.className="inactive";
+    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightActiveImage3.className="inactive";
+    lightArea.appendChild(lightActiveImage3);
+  } else if (sunLight === 2) {
+    //4 dibujar 2 activas 1 inactiva
+    lightArea.appendChild(lightActiveImage);
+    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightActiveImage3.className="inactive";
+    lightArea.appendChild(lightActiveImage3);
+  } else if (sunLight === 3) {
+    //4 dibujar 3 activas
+    lightArea.appendChild(lightActiveImage);
+    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightArea.appendChild(lightActiveImage3);
+  }
+  const careArea = cardItem.querySelector(".care-icons");
+  document.getElementById('care');
+
+  // 3.3 care facts
+  if (careDifficulty === 1) {
+    //4 dibujar 1 activa 2 inactivas
+    careArea.appendChild(careActiveImage);
+    careActiveImage2.className="inactive";
+    careArea.appendChild(careActiveImage2); //anadir clase
+    careActiveImage3.className="inactive";
+    careArea.appendChild(careActiveImage3);
+  } else if (careDifficulty === 2) {
+    //4 dibujar 2 activas 1 inactiva
+    careArea.appendChild(careActiveImage);
+    careArea.appendChild(careActiveImage2); //anadir clase
+    careActiveImage3.className="inactive";
+    careArea.appendChild(careActiveImage3);
+  } else if (careDifficulty === 3) {
+    //4 dibujar 3 activas
+    careArea.appendChild(careActiveImage);
+    careArea.appendChild(careActiveImage2); //anadir clase
+    careArea.appendChild(careActiveImage3);
+  }
+}
 
 export const renderItems = (data) => {
   
@@ -49,42 +172,6 @@ export const renderItems = (data) => {
     backButton.className = "flip-button";
     backButton.alt = "Regresar";
     backButton.src = "resources/Icons/Regresar.png";
-
-    const waterActiveImage = document.createElement("img");
-    waterActiveImage.alt="Gota";
-    waterActiveImage.src="resources/Icons/agua-activa.png";
-    
-    const waterActiveImage2 = document.createElement("img");
-    waterActiveImage2.alt="Gota";
-    waterActiveImage2.src="resources/Icons/agua-activa.png";
-
-    const waterActiveImage3 = document.createElement("img");
-    waterActiveImage3.alt="Gota";
-    waterActiveImage3.src="resources/Icons/agua-activa.png";
- 
-    const lightActiveImage = document.createElement("img");
-    lightActiveImage.alt="Luz";
-    lightActiveImage.src="resources/Icons/luz-activa.png";
-    
-    const lightActiveImage2 = document.createElement("img");
-    lightActiveImage2.alt="Luz";
-    lightActiveImage2.src="resources/Icons/luz-activa.png";
-
-    const lightActiveImage3 = document.createElement("img");
-    lightActiveImage3.alt="Luz";
-    lightActiveImage3.src="resources/Icons/luz-activa.png";
-
-    const careActiveImage = document.createElement("img");
-    careActiveImage.alt="Semaforo";
-    careActiveImage.src="resources/Icons/cuidado-activa.png";
-
-    const careActiveImage2 = document.createElement("img");
-    careActiveImage2.alt="Semaforo";
-    careActiveImage2.src="resources/Icons/cuidado-activa.png";
-
-    const careActiveImage3 = document.createElement("img");
-    careActiveImage3.alt="Semaforo";
-    careActiveImage3.src="resources/Icons/cuidado-activa.png";
 
     //Se crea el elemento li
     const cardItem = document.createElement('li');
@@ -194,6 +281,7 @@ export const renderItems = (data) => {
     //-------------------------------------------------------------------------------------------------------
     
     cardList.appendChild(cardItem);
+    factImages(element, cardItem);
 
     modalsContainer.appendChild(descriptionModal);
     modalsContainer.appendChild(statsModal);
@@ -225,98 +313,10 @@ export const renderItems = (data) => {
     });
 
     //------------------------------------------------------------------------------------------------------------
-    
-    const factImages = (plant) => {
-      // 1 - Iterar en data forEach
-      // 2 - Get facts by type
-      const waterAmount = plant.facts.waterAmount;
-      const sunLight = plant.facts.sunLight;
-      const careDifficulty = plant.facts.careDifficulty;
-
-      const waterArea = cardItem.querySelector(".water-icons");
-      document.getElementById('water');
-
-      // 3 - condicionales
-      // 3.1 repetir por fact
-      // 3.2 water facts
-      if (waterAmount === 1) {
-        //4 dibujar 1 activa 2 inactivas
-        waterArea.appendChild(waterActiveImage);
-        waterActiveImage2.className="inactive";
-        waterArea.appendChild(waterActiveImage2); //anadir clase
-        waterArea.appendChild(waterActiveImage3);
-        waterActiveImage3.className="inactive";
-      } else if (waterAmount === 2) {
-        //4 dibujar 2 activas 1 inactiva
-        waterArea.appendChild(waterActiveImage);
-        waterArea.appendChild(waterActiveImage2); //anadir clase
-        waterActiveImage3.className="inactive";
-        waterArea.appendChild(waterActiveImage3);
-      } else if (waterAmount === 3) {
-        //4 dibujar 3 activas
-        waterArea.appendChild(waterActiveImage);
-        waterArea.appendChild(waterActiveImage2); //anadir clase
-        waterArea.appendChild(waterActiveImage3);
-      }
-
-      const lightArea = cardItem.querySelector(".light-icons");
-      document.getElementById('light');
-
-      // 3.2 sun facts
-      if (sunLight === 1) {
-        //4 dibujar 1 activa 2 inactivas
-        lightArea.appendChild(lightActiveImage);
-        lightActiveImage2.className="inactive";
-        lightArea.appendChild(lightActiveImage2); //anadir clase
-        lightActiveImage3.className="inactive";
-        lightArea.appendChild(lightActiveImage3);
-      } else if (sunLight === 2) {
-        //4 dibujar 2 activas 1 inactiva
-        lightArea.appendChild(lightActiveImage);
-        lightArea.appendChild(lightActiveImage2); //anadir clase
-        lightActiveImage3.className="inactive";
-        lightArea.appendChild(lightActiveImage3);
-      } else if (sunLight === 3) {
-        //4 dibujar 3 activas
-        lightArea.appendChild(lightActiveImage);
-        lightArea.appendChild(lightActiveImage2); //anadir clase
-        lightArea.appendChild(lightActiveImage3);
-      }
-      const careArea = cardItem.querySelector(".care-icons");
-      document.getElementById('care');
-
-      // 3.3 care facts
-      if (careDifficulty === 1) {
-        //4 dibujar 1 activa 2 inactivas
-        careArea.appendChild(careActiveImage);
-        careActiveImage2.className="inactive";
-        careArea.appendChild(careActiveImage2); //anadir clase
-        careActiveImage3.className="inactive";
-        careArea.appendChild(careActiveImage3);
-      } else if (careDifficulty === 2) {
-        //4 dibujar 2 activas 1 inactiva
-        careArea.appendChild(careActiveImage);
-        careArea.appendChild(careActiveImage2); //anadir clase
-        careActiveImage3.className="inactive";
-        careArea.appendChild(careActiveImage3);
-      } else if (careDifficulty === 3) {
-        //4 dibujar 3 activas
-        careArea.appendChild(careActiveImage);
-        careArea.appendChild(careActiveImage2); //anadir clase
-        careArea.appendChild(careActiveImage3);
-      }
-    }
-
-    factImages(element);  
     // -- Facts in card
     //acceder a la data
     //iterar por cada elemento
     //ver de que categoria pertenece
-    
-    
-
-
-
     //llamar a funcion computeStats para hacer el calculo y wordSelection
     //seleccionar donde se va a mostrar la estadistica 
     //insertar el calculo usando innerHTML o textContent
