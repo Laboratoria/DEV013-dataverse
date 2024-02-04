@@ -192,4 +192,25 @@ statisticsButtons.forEach(button =>
   });
 });
 
+//-----------------------------------------------------------------------------------------------------------------
+
+const closeButtonDescription=document.querySelector(".close-button");
+closeButtonDescription.addEventListener("click", () => {
+  const descriptionModal = document.getElementById("description-modal");
+  descriptionModal.close();
+});
+
+
+const closeButtonStats = document.querySelector(".close-button-stats");
+closeButtonStats.addEventListener("click", () =>{
+  const statsModal = document.getElementById("statistics-modal");
+  statsModal.close();
+});
+
+const descriptionButton = document.querySelector(".modal-description-button");
+descriptionButton.addEventListener("click", () =>{
+  const descriptionModal = document.getElementById("description-modal");
+  descriptionModal.showModal();
+});
+
 

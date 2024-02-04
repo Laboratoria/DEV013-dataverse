@@ -243,7 +243,7 @@ export const renderItems = (data) => {
                 </div>
               </div>
               <h4>Qué cuidados necesita este tipo de plantas?</h4>
-              <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
+              <img class="close-button-stats" alt="Cerrar" src="resources/Icons/Close.png">`
 
     //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
@@ -264,24 +264,6 @@ export const renderItems = (data) => {
     icons.appendChild(statisticsButton);
     icons.appendChild(descriptionButton);
     icons.appendChild(backButton);
-
-    //Add listeners to the buttons for the reverse inside the card
-    //this listener nees to be added for every card, then those are executed
-    //inside the forEach.
-    //TODO: - Move this to main.
-    const closeButtonDescription = descriptionModal.querySelector(".close-button");
-    closeButtonDescription.addEventListener("click", () =>{
-      descriptionModal.close();
-    });
-
-    const closeButtonStats = statsModal.querySelector(".close-button");
-    closeButtonStats.addEventListener("click", () =>{
-      statsModal.close();
-    });
-
-    descriptionButton.addEventListener("click", () =>{
-      descriptionModal.showModal();
-    });
   });
   return cardList;
 }

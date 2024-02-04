@@ -481,7 +481,7 @@ h5.care {
     
 }
 
- img.close-button {
+ img.close-button, img.close-button-stats {
     width: 30px;
     height: 30px;
     margin: -28px 0 25px 442px;
