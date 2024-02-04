@@ -148,6 +148,31 @@ export const renderStatisticsWords = (plant, statsModal, statsByCategory) => {
     waterAverageWord.innerHTML+="Mucha";
   }
 
+  const lightAverageWord = document.createElement("h5");
+  lightAverageWord.className="light";
+
+  statisticsContainer.appendChild(lightAverageWord);
+
+  if(statsByCategory[plant.categoryPlant].average.lightAverage === 1) {
+    lightAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[plant.categoryPlant].average.lightAverage === 2) {
+    lightAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[plant.categoryPlant].average.lightAverage === 3) {
+    lightAverageWord.innerHTML+="Mucha";
+  }
+
+  const careAverageWord = document.createElement("h5");
+  careAverageWord.className="care";
+
+  statisticsContainer.appendChild(careAverageWord);
+
+  if(statsByCategory[plant.categoryPlant].average.careAverage === 1) {
+    careAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[plant.categoryPlant].average.careAverage === 2) {
+    careAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[plant.categoryPlant].average.careAverage === 3) {
+    careAverageWord.innerHTML+="Mucha";
+  }
 }
 
 export const renderItems = (data, statsByCategory) => {
