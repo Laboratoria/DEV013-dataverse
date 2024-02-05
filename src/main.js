@@ -1,8 +1,9 @@
 import { renderItems } from './view.js';
-import { filterData } from './dataFunctions.js';
+import { filterData , sortData } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 const dataList = document.querySelector("#root");
+let result = data;
 dataList.appendChild(renderItems(data));
 
 /*const filteredLiteratura = filterData(data, 'mainField', 'Literatura');
@@ -62,4 +63,20 @@ function applyFilters() {
 
 	// Renderiza los datos filtrados
 	dataList.appendChild(renderItems(filteredData));
+}
+
+//Ordenamiento descendente y ascendente
+const sortName = document.querySelector('[data-testid="select-sort"]');
+
+sortName.addEventListener("change", (e) => {
+    e.preventDefault();
+    const sortOrder = sortName.value;
+    result = sortData(data, "name", sortOrder);
+    renderDataList();
+});
+
+function renderDataList() {
+    dataList.innerHTML = "";
+    const resultList = renderItems(result);
+    dataList.appendChild(resultList);
 }

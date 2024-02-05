@@ -16,17 +16,19 @@ export const filterData = (data, filterBy, value) => {
   
 };
 
-const unSort = Array.from(dataset);
 export const sortData = (data, sortBy, sortOrder) => {
-  if (sortBy === "name") {
-    if (sortOrder === "asc") {
-      // Ordena de la A a la Z
-      return data.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortOrder === "desc") {
-      // Ordena de la Z a la A 
-      return data.sort((a, b) => b.name.localeCompare(a.name));
-    } else {
-      return unSort; 
-    }
-  }
-};
+    const sortedData = data.slice().sort((a, b) => {
+      const valA = a[sortBy].toLowerCase();
+      const valB = b[sortBy].toLowerCase();
+  
+      if (sortOrder === "asc") {
+        return valA.localeCompare(valB);
+      } else if (sortOrder === "desc") {
+        return valB.localeCompare(valA);
+      } else {
+        return 0;
+      }
+    });
+  
+    return sortedData;
+  };
