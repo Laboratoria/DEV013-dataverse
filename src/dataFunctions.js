@@ -21,18 +21,4 @@ export const computeStats = (data, property, value) => {
   return percentage.toFixed(2);
 };
 
-/*const unSort = Array.from(dataset);
-export const sortData = (data, sortBy, sortOrder) => {
-  if (sortBy === "name") {
-    if (sortOrder === "asc") {
-      // Ordena de la A a la Z basándose en el nombre de la escritora
-      return data.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortOrder === "desc") {
-      // Ordena de la Z a la A basándose en el nombre de la escritora
-      return data.sort((a, b) => b.name.localeCompare(a.name));
-    } else {
-      return unSort; 
-    }
-  }
-};*/
 
