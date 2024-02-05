@@ -117,16 +117,22 @@ categoryButtons.forEach(button =>
 ### Pruebas con Jest
 ```javascript
 // Jest se utilizó para garantizar la calidad y confiabilidad del código.
-
-// Ejemplo de prueba para una función
-test('suma dos números correctamente', () => {
-  expect(sum(1, 2)).toBe(3);
-});
-
-// Ejemplo de prueba para una función asíncrona
-test('recuperar datos de manera asíncrona', async () => {
-  const data = await fetchData();
-  expect(data).toBe('Datos recuperados');
+//Ejemplo de filtrado por id
+describe('filterData', () => {
+it ('returns an array with filtered data by id', () => {
+    const result = filterData(fakeData, "id", "roble");
+    expect(result).toEqual([
+      {
+        "id": "roble",
+        "categoryPlant":"trees",
+        "name": "Roble",
+        "maintenanceNeeds": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
+        "scientificName": "Quercus",
+        "applicationsPlant": "Construcción, muebles, barriles para vino.",
+        "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
+      },
+    ])
+  })
 });
 ```
 
