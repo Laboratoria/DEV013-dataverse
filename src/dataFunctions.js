@@ -22,7 +22,8 @@ export const sortFilms = (data, sortBy, sortOrder) => {
 };
 
 export const renderItems = (data) => {
-  const cardContainer = document.getElementById("card-container");
+  console.log(data);
+  const cardContainer = document.querySelector("#card-container");
   cardContainer.innerHTML = "";
 
   films.forEach(film => {

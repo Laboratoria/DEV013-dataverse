@@ -6,6 +6,8 @@ import data from "./data/dataset.js";
 const movieCards = document.querySelector("#root");
 const cleanerButton = document.querySelector(".cleanerButton");
 const movieSearch = document.querySelector(".movie-search");
+const orderFilms = document.querySelector("#orderFilms");
+const cardContainer = document.querySelector("#card-container");
 // const cardContainer = document.querySelector("#card-container")
 
 movieCards.appendChild(renderItems(data));
@@ -43,5 +45,20 @@ orderFilms.addEventListener("change", function () {
 
 cleanerButton.addEventListener("click", function () {});
 
+const simulateApiCall= () => {
+  return new Promise (resolve => {
+    setTimeout (()=> {
+      resolve (localData);
+    }, 1000);
+  });
+};
+
+simulateApiCall()
+.then(data => {
+  const filteredData = filterBy (data, "someSortBy", "someValue");
+  const sortedData = sortFilms(filteredData, "someSortBy", "asc");
+  renderFilms(sortedData);
+})
+.catch(error=>console.error("Error simulando la carga de datos:", error));
 //console.log(example, renderItems(data), data);
 //renderItems(data);
