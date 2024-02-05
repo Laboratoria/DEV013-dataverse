@@ -25,7 +25,7 @@
       <option value="Poesía, Novela">Poesía, Novela</option>
     </select>
 
-    <label for="country-select">País de Nacimiento</label>
+    <label for="country-select">País de Nacimiento:</label>
     <select name="country" id="country-select" data-testid="filter-data">
       <option value="">Elige una opción</option>
       <option value="Reino Unido">Reino Unido</option>
@@ -41,17 +41,18 @@
     </select>
 
 
-    <label for="sort-select">Ordenar por</label>
+    <label for="sort-select">Ordenar por:</label>
     <select name="ordenar" id="sort-select" data-testid="select-sort">
       <option value="">Elige una opción</option>
       <option value="asc">A-Z</option>
       <option value="desc">Z-A</option>
-    </select> 
+    </select> <br>
 
+    <button data-testid="button-facts" id="button-facts" class="button">ESTADÍSTICAS</button>
     <button data-testid="button-clear" id="button-clear">LIMPIAR</button>
-  </div>
+    </div>
 
-  <div id="root">
+   <div id="root">
     <ul id="cardList"></ul>
   </div>
 

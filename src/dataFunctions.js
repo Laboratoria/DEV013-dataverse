@@ -13,6 +13,14 @@ export const filterData = (data, filterBy, value) => {
   });
 };
 
+//estadísticas
+export const computeStats = (data, property, value) => {
+  const newArray = data.map(element => element.facts[property] === value ? 1 : 0);
+  const reduceData = newArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const percentage = (reduceData / data.length) * 100;
+  return percentage.toFixed(2);
+};
+
 /*const unSort = Array.from(dataset);
 export const sortData = (data, sortBy, sortOrder) => {
   if (sortBy === "name") {

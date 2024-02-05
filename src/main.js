@@ -1,5 +1,5 @@
 import { renderItems } from './view.js';
-import { filterData } from './dataFunctions.js';
+import { filterData, computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 const dataList = document.querySelector("#root");
@@ -12,6 +12,7 @@ console.log(filteredPoesía);
 const filteredPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela');
 console.log(filteredPoesiaLiteratura);*/
 
+//filterData
 //selecciona los elementos select
 const filterSelectors = [
   { selector: '[data-testid="filter-type"]', property: "mainField" },
@@ -44,7 +45,7 @@ function resetFilters() {
 
 // Función para aplicar los filtros
 function applyFilters() {
-  // Obtén los valores seleccionados de los elementos select
+  // Obtiene los valores seleccionados de los elementos select
   const filters = filterSelectors.map(({ selector, property }) => ({
     property,
     value: document.querySelector(selector).value,
@@ -64,3 +65,20 @@ function applyFilters() {
   // Renderiza los datos filtrados
   dataList.appendChild(renderItems(filteredData));
 }
+
+//estadísticas
+
+const buttonFacts = document.getElementById("button-facts");
+
+// Agrega un event listener
+buttonFacts.addEventListener("click", (e) => {
+  e.preventDefault();
+  dataList.innerHTML = "";
+  filterSelectors.innerHTML = "Facts";
+  dataList.appendChild(renderItems());
+  const data = document.querySelector("#data");
+  data.textContent = "Sabías qué " + computeStats(data, "mainField") + "---------";
+  const result = document.querySelector()
+});
+
+
