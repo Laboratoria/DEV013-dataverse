@@ -39,7 +39,8 @@
     </select>
 
     <label for="order">Ordenar: </label>
-    <select data-testid="select-filter" name="sortOrder" id="order">
+    <select data-testid="select-filter" name="sortOrder" id="orderFilms">
+      <option value="todos">Defecto</option>
       <option value="asc">A-Z</option>
       <option value="desc">Z-A</option>
     </select>
@@ -47,9 +48,10 @@
     <label for="button">
       <button class="cleanerButton" type="button">Limpiar</button>
     </label>
-    
-
+  
     <div id="root"></div>
+
+    <div id = "card-container"></div>
 
     <footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
     <script src="main.js" type="module"></script>

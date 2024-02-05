@@ -1,29 +1,13 @@
 //import { filterGenres, sortFilms } from "./dataFunctions.js";
+import { sortFilms, filterBy } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
-
 import data from "./data/dataset.js";
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const movieCards = document.querySelector("#root");
-    movieCards.appendChild(renderItems(data));
-  
-    const cleanerButton = document.querySelector(".cleanerButton");
-    cleanerButton.addEventListener("click", function() {
-   
-      const filteredAndSortedData = dataFunction.sortBy(data, 'name', 'asc');
-      movieCards.innerHTML = '';
-      movieCards.appendChild(renderItems(filteredAndSortedData));
-    });
-  
-    const filter = document.getElementById("filter");
-    const order = document.getElementById("order");
-
-  });
 
 const movieCards = document.querySelector("#root");
 const cleanerButton = document.querySelector(".cleanerButton");
 const movieSearch = document.querySelector(".movie-search");
+// const cardContainer = document.querySelector("#card-container")
+
 movieCards.appendChild(renderItems(data));
 
 movieSearch.addEventListener("input", function () {
@@ -40,12 +24,21 @@ movieSearch.addEventListener("input", function () {
   }
 });
 
-orderFilms.addEventListener("click", function () {
+orderFilms.addEventListener("change", function () {
+  movieCards.innerHTML = "";
   const selectOrder = orderFilms.value;
+  let filmAsc;
 
   if (selectOrder === "asc"){
-    const filmAsc = sortData()
+    filmAsc = sortFilms(data, "name", "asc");
   }
+  else if (selectOrder === "desc") {
+    filmAsc = sortFilms(data, "name", "desc");
+  } else {
+    filmAsc = sortFilms(data, "name", "defecto");
+  }
+
+  movieCards.appendChild(renderItems(filmAsc));
 });
 
 cleanerButton.addEventListener("click", function () {});

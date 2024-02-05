@@ -6,14 +6,15 @@ export const renderItems = (data) => {
     const card = document.createElement("li");
     card.innerHTML+=`
     <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
-    <ul itemscope itemtype="nausicaa-del-valle-del-viento"></ul>
-    <li>Nombre: </li><li itemprop="movieName">${film.name}</li>
-    <li>Sinopsis: </li><li itemprop="shortDescription">${film.shortDescription}</li>
-    <li>Descripción: </li><li itemprop="description">${film.description}</li>
-    <li>Duración: </li><li itemprop="duration">${film.facts["duration"]}</li>
-    <li>Estreno: </li><li itemprop="releaseYear"li>${film.facts["releaseYear"]}</li>
-    <li>Género: </li><li itemprop="genres">${film.facts["genders"]}</li>
-    <li>Recaudación: </li><li itemprop="boxOfficeRevenue">${film.facts["boxOfficeRevenue"]}</li>
+    <ul itemscope itemtype="nausicaa-del-valle-del-viento">
+    <li itemtype >Nombre: </li><li itemtype itemprop="movieName">${film.name}</li>
+    <li itemtype >Sinopsis: </li><li itemtype itemprop="shortDescription">${film.shortDescription}</li>
+    <li itemtype >Descripción: </li><li itemtype itemprop="description">${film.description}</li>
+    <li itemtype >Duración: </li><li itemtype itemprop="duration">${film.facts["duration"]}</li>
+    <li itemtype >Estreno: </li><li itemtype itemprop="releaseYear"li>${film.facts["releaseYear"]}</li>
+    <li itemtype >Género: </li><li itemtype itemprop="genres">${film.facts["genders"]}</li>
+    <li itemtype >Recaudación: </li><li itemtype itemprop="boxOfficeRevenue">${film.facts["boxOfficeRevenue"]}</li>
+    </ul>
     `
     list.appendChild(card);
   });
