@@ -1,6 +1,6 @@
 export default [
   {
-    "id": "ada-lovelace",
+    "id": "Monopoly",
     "name": "Ada Lovelace",
     "shortDescription": "Pionera en la programación, primera programadora de la historia.",
     "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
