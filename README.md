@@ -45,7 +45,7 @@
 
 ## 3. Demostración 
 
-(aca incluir los gifts)
+![gif](C:\Users\Jkgar\Downloads\Diseño sin título.gif)
 
 
 ## 4. Tecnologías y Herramientas Utilizadas 
@@ -143,16 +143,16 @@ Se utilizó Figma para la creación de prototipos (tanto de baja, media y alta f
 
 ### Canva
 Canva se empleó para mejorar y detallar las imágenes generadas por IA, proporcionando herramientas visuales adicionales para perfeccionar el contenido, asi como para crear prototipos de baja fidelidad.
-![canva](src/resources/README/canva.png)
+![canva](src/resources/Readme-Images/canva.png)
 
 ### Organización
 La organización del proyecto se gestionó utilizando Notion y Trello, plataformas colaborativas que facilitaron la planificación, el seguimiento y la comunicación eficaz entre los miembros del equipo.
 
 ### Notion 
-![Alt text](src/resources/README/notion.png)
+![Alt text](src/resources/Readme-Images/notion.png)
 
 ### Trello 
-![alt text](src/resources/README/trello.png)
+![alt text](src/resources/Readme-Images/trello.png)
 
 
 ### Testeos de Usabilidad
@@ -171,13 +171,13 @@ Se llevaron a cabo testeos de usabilidad para evaluar la eficacia y la experienc
 
 ## 6. Prototipos
 ### Prototipos de Baja Fidelidad 
-![Alt text](src/resources/README/baja-fidelidad.png)
+![Alt text](src/resources/Readme-Images/baja-fidelidad.png)
 
 ### Prototipos de Media Fidelidad 
-![Alt text](src/resources/README/media-fidelidad.png)
+![Alt text](src/resources/Readme-Images/media-fidelidad.png)
 
 ### Prototipos de Alta Fidelidad 
-![alt text](src/resources/README/alta-fidelidad.png)
+![alt text](src/resources/Readme-Images/alta-fidelidad.png)
 
 ## 7. Desarrolladoras
 
