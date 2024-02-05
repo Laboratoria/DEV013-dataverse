@@ -24,4 +24,3 @@ export const renderItems = (data) => {
 
   return list;
 };
-
