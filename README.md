@@ -45,7 +45,7 @@
 
 ## 3. Demostración 
 
-![Diseño sin título](https://github.com/Joseline0609/dataverse/assets/151554917/13ec97b8-7a1b-4ed3-ba5b-911b7d1749a1)
+![gif](https://github.com/Joseline0609/dataverse/assets/151554917/13ec97b8-7a1b-4ed3-ba5b-911b7d1749a1)
 
 
 ## 4. Tecnologías y Herramientas Utilizadas 
