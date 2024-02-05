@@ -1,267 +1,283 @@
-import { computeStats } from "./dataFunctions.js";
-import { wordSelection } from "./dataFunctions.js";
-import { determinarImagen } from "./dataFunctions.js";
-export const renderItems = (data) => {
+//----------------------
+/**
+* This function receives a plant model and extract the fact information
+* rendering depending of the value found in the model
+*
+* @param { card } plant - The plant model that contains the info
+* @param { HTML element } cardItem - The card that represents UI the element inside the DOM 
+*/
+export const renderFactImages = (plant, cardItem) => {
+  // Create static elements
+  const waterActiveImage = document.createElement("img");
+  waterActiveImage.alt="Gota";
+  waterActiveImage.src="resources/Icons/agua-activa.png";
   
-  //crear el contenedor y guardarlo en una variable 
-  const cardList = document.getElementById("ulCards");
+  const waterActiveImage2 = document.createElement("img");
+  waterActiveImage2.alt="Gota";
+  waterActiveImage2.src="resources/Icons/agua-activa.png";
 
-  //iterar en el arreglo (usar for each)
-  // por cada elemento se debe crear un li 
-  //cada li debe tener la estructura html predefinida 
-  //cada li se debe agregar a la ul 
-  //insertar el ul completo al dom 
+  const waterActiveImage3 = document.createElement("img");
+  waterActiveImage3.alt="Gota";
+  waterActiveImage3.src="resources/Icons/agua-activa.png";
+
+  const lightActiveImage = document.createElement("img");
+  lightActiveImage.alt="Luz";
+  lightActiveImage.src="resources/Icons/luz-activa.png";
   
+  const lightActiveImage2 = document.createElement("img");
+  lightActiveImage2.alt="Luz";
+  lightActiveImage2.src="resources/Icons/luz-activa.png";
+
+  const lightActiveImage3 = document.createElement("img");
+  lightActiveImage3.alt="Luz";
+  lightActiveImage3.src="resources/Icons/luz-activa.png";
+
+  const careActiveImage = document.createElement("img");
+  careActiveImage.alt="Semaforo";
+  careActiveImage.src="resources/Icons/cuidado-activa.png";
+
+  const careActiveImage2 = document.createElement("img");
+  careActiveImage2.alt="Semaforo";
+  careActiveImage2.src="resources/Icons/cuidado-activa.png";
+
+  const careActiveImage3 = document.createElement("img");
+  careActiveImage3.alt="Semaforo";
+  careActiveImage3.src="resources/Icons/cuidado-activa.png";
+
+  // 1 - Iterar en data forEach
+  // 2 - Get facts by type
+  const waterAmount = plant.facts.waterAmount;
+  const sunLight = plant.facts.sunLight;
+  const careDifficulty = plant.facts.careDifficulty;
+
+  const waterArea = cardItem.querySelector(".water-icons");
+  document.getElementById('water');
+
+  // 3 - condicionales
+  // 3.1 repetir por fact
+  // 3.2 water facts
+  if (waterAmount === 1) {
+    //4 dibujar 1 activa 2 inactivas
+    waterArea.appendChild(waterActiveImage);
+    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterActiveImage2.className="inactive";
+    waterArea.appendChild(waterActiveImage3); //anadir clase
+    waterActiveImage3.className="inactive";
+  } else if (waterAmount === 2) {
+    //4 dibujar 2 activas 1 inactiva
+    waterArea.appendChild(waterActiveImage);
+    waterArea.appendChild(waterActiveImage2);
+    waterArea.appendChild(waterActiveImage3); //anadir clase
+    waterActiveImage3.className="inactive";
+  } else if (waterAmount === 3) {
+    //4 dibujar 3 activas
+    waterArea.appendChild(waterActiveImage);
+    waterArea.appendChild(waterActiveImage2); 
+    waterArea.appendChild(waterActiveImage3);
+  }
+
+  //Repeat for Light amount
+  const lightArea = cardItem.querySelector(".light-icons");
+  document.getElementById('light');
+
+  if (sunLight === 1) {
+    lightArea.appendChild(lightActiveImage);
+    lightActiveImage2.className="inactive";
+    lightArea.appendChild(lightActiveImage2);
+    lightActiveImage3.className="inactive";
+    lightArea.appendChild(lightActiveImage3);
+  } else if (sunLight === 2) {
+    lightArea.appendChild(lightActiveImage);
+    lightArea.appendChild(lightActiveImage2);
+    lightActiveImage3.className="inactive";
+    lightArea.appendChild(lightActiveImage3);
+  } else if (sunLight === 3) {
+    lightArea.appendChild(lightActiveImage);
+    lightArea.appendChild(lightActiveImage2);
+    lightArea.appendChild(lightActiveImage3);
+  }
+
+  //Repeat for Care amount
+  const careArea = cardItem.querySelector(".care-icons");
+  document.getElementById('care');
+
+  if (careDifficulty === 1) {
+    careArea.appendChild(careActiveImage);
+    careActiveImage2.className="inactive";
+    careArea.appendChild(careActiveImage2);
+    careActiveImage3.className="inactive";
+    careArea.appendChild(careActiveImage3);
+  } else if (careDifficulty === 2) {
+    careArea.appendChild(careActiveImage);
+    careArea.appendChild(careActiveImage2);
+    careActiveImage3.className="inactive";
+    careArea.appendChild(careActiveImage3);
+  } else if (careDifficulty === 3) {
+    careArea.appendChild(careActiveImage);
+    careArea.appendChild(careActiveImage2);
+    careArea.appendChild(careActiveImage3);
+  }
+}
+
+//----------------------
+/**
+ * This function creates card list that contains
+ * every card,
+ * icon butons area,
+ * and modals
+ * 
+ * @param { [every plant] } data - From dataset
+ * 
+ * @returns cardList
+ */
+export const renderItems = (data) => {
+  // Creating list, container to host all the cards
+  const cardList = document.getElementById("ul-cards");
+  
+  //Iterates for each element of the object from data
   data.forEach(element => {
-    //Se crea el elemento li
+
+    //Creating all buttons
+    const statisticsButton = document.createElement('img');
+    statisticsButton.className="modal-statistics-button";
+    statisticsButton.alt="Estadísticas";
+    statisticsButton.src="resources/Icons/estadisticas.png";
+    statisticsButton.id=element.categoryPlant;
+
+    const descriptionButton = document.createElement('img');
+    descriptionButton.className="modal-description-button";
+    descriptionButton.alt="Descripcion";
+    descriptionButton.src="resources/Icons/descripcion.png";
+    descriptionButton.id=element.id;
+
+    const backButton = document.createElement("img");
+    backButton.id = "flip-button";
+    backButton.className = "flip-button";
+    backButton.alt = "Regresar";
+    backButton.src = "resources/Icons/Regresar.png";
+
+    //Creting the li element to represent the plant as UI card
     const cardItem = document.createElement('li');
 
-    //El elemento li se escribe en el DOM
-    cardItem.innerHTML +=`<li class="card-container ${element.categoryPlant}" itemscope itemtype="https://schema.org">
-    <article id="front-card" class="front-card">
-      <h2>${element.name}</h2>
-      <div class="top-card">
-        <img alt="Plant Name" src="${element.imageUrl}">
-        <dl itemscope itemtype="https://schema.org" class="facts">
-          <div class="amounts" id="agua">
-            <dt itemprop="water-amount" class="amount">Agua</dt>
-              <dd>
-                <img alt="Gota" id="minimo-agua" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
-                <img alt="Gota" id="medio-agua" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-activa.png?raw=true" >
-                <img alt="Gota" id="alto-agua" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/agua-inactiva.png?raw=true" >
-              </dd>
-          </div>
-          <div class="amounts" id="luz">
-            <dt itemprop="light-amount" class="amount">Luz</dt>
-              <dd>
-                <img alt="Sol" id="minimo-luz" class="minimo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-activa.png?raw=true" >
-                <img alt="Sol" id="medio-luz"  class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true" >
-                <img alt="Sol" id="alto-luz" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/luz-inactiva.png?raw=true">
-              </dd>
-          </div>
-          <div class="amounts" id="cuidado">
-            <dt itemprop="care-amount" class="amount">Cuidado</dt>
-              <dd>
-                <img alt="Semaforo" id="minimo-cuidado" class="minimo" src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-activa.png?raw=true" >
-                <img alt="Semaforo" id="medio-cuidado" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
-                <img alt="Semaforo" id="alto-cuidado" class="inactiva"  src="https://github.com/Etelbina/dataverse/blob/main/src/resources/Icons/cuidado-inactiva.png?raw=true" >
-              </dd>
-          </div>
-        </dl>
-      </div>
-      <p>${element.shortDescription}</p>
-      <div class="button-container">
-        <button id="detalles" class="detalles">Detalles</button>
-      </div>
-    </article>
-    <article id="back-card" class="hide" class="back-card">
-      <h2>${element.name}</h2>
-      <div class="top-card">
-        <img alt="Plant Name" class="bachPlantImage" src="${element.imageUrl}">
-        <dl itemscope itemtype="https://schema.org">
-          <dt class="scientific">${element.scientificName}</dt>
-          <dt class="detail">Familia botánica</dt><dd>${element.botanicalFamily}</dd>
-          <dt>Lugar de origen</dt><dd>${element.birthPlace}</dd>
-        </dl>
-      </div>
-      <div class="bottom-card">
-        <dl id="description">
-          <dt class="detail">Usos</dt><dd>${element.applicationsPlant}</dd>
-          <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
-          <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
-        </dl>
-        <div id="icons">
-          <div class="stats">
-            <img class="stats1" alt="Estadisticas" src="resources/Icons/estadisticas.png">
-            <img class="openModalBtn" id="openModalBtn" alt="Descripcion" src="resources/Icons/descripcion.png">
-            <div class="back">
-            <input type="image" id="Regresar" class="regresar" alt="Regresar"  src="resources/Icons/Regresar.png">
-          </div>
-        </div>
-      </div>
-    </article>
-    </li>`
+    //Card item creation, every card represents a plant from the data. 
+    cardItem.className="card-container " + element.categoryPlant;
+    cardItem.setAttribute("itemscope", "");
+    cardItem.setAttribute("itemtype", "https://schema.org");
+    cardItem.innerHTML +=`
+            <!-- Front card funciona -->
+            <article class="front-card" id="front-card">
+              <h2>${element.name}</h2>
+              <div class="top-card">
+                <img alt="Plant Name" src="${element.imageUrl}">
+                <dl itemscope itemtype="https://schema.org" class="facts">
+                  <div class="amounts" id="water">
+                    <dt class="amount" id="water-amounts">Agua</dt>
+                    <dd class="water-icons">
+                      
+                    </dd>
+                  </div>
+                  <div class="amounts" id="light">
+                    <dt class="amount" id="water-amounts">Luz</dt>
+                    <dd class="light-icons">
+                      
+                    </dd>
+                  </div>
+                  <div class="amounts" id="care">
+                    <dt class="amount" id="water-amounts">Cuidado</dt>
+                    <dd class="care-icons">
+                      
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="botom-card">
+                <p>${element.shortDescription}</p>
+                <button class="details-button" id="details-button">Detalles</button>
+              </div>
+            </article>
+            <!-- Back card, top funciona, icons y botom card-->
+            <article id="back-card" class="hide">
+              <h2>${element.name}</h2>
+              <div class="top-card">
+                <img alt="Plant Name" src=${element.imageUrl}>
+                <dl itemscope itemtype="https://schema.org">
+                  <dt class="scientific-name">${element.scientificName}</dt>
+                  <dt>Familia botánica</dt><dd>${element.botanicalFamily}</dd>
+                  <dt>Lugar de origen</dt><dd>${element.birthPlace}</dd>
+                </dl>
+              </div>
+              <div class="bottom-card">
+                <dl id="description">
+                  <dt>Usos</dt><dd>${element.applicationsPlant}</dd>
+                  <dt>Datos climáticos</dt><dd>${element.climaticData}</dd>
+                  <dt>Mantenimiento</dt><dd>${element.maintenanceNeeds}</dd>
+                </dl>
+              </div>
+              <div id="icons">
+              </div>
+            </article>`
 
-    //---------------------------------------------------------------------------------------------------------
-
-    const descriptionModal = document.createElement('div');
-    //console.log(descriptionModal);
-
-    descriptionModal.innerHTML+= `<div id="myModal" class="modal"> 
-    <div class="modal-content-description">
-        <h3>${element.name}</h3>
-        <p>${element.description}</p>
-    </div>
-    </div>`
-
-    //--------------------------------------------------------------------------------------------------------
-
-    const statsModal= document.createElement('div');
-    //console.log(statsModal);
-
-    statsModal.innerHTML+= `<div id="myStatsModal" class="statsModal"> 
-    <article class="modal-content-stats">
-      <h3>${element.categoryPlant}</h3>
-      <div class="factLabels">
-        <div class="squares">
-          <div class="area">
-            <div class="square agua"></div>
-            <p>Agua</p>
-          </div>
-          <div class="area">
-            <div class="square luz"></div>
-            <p>Luz</p>
-          </div>
-          <div class="area">
-            <div class="square cuidado"></div>
-            <p>Cuidado</p>
-          </div>
-        </div>
-        <div class="statsTotals">
-          <h5 class="agua" id="waterFact"></h5>
-          <h5 class="luz" id="lightFact"></h5>
-          <h5 class="cuidado" id="careFact"></h5>
-        </div>
-      </div>
-      <h4>Qué cuidados necesita este tipo de plantas?</h4>
-    </article>
-    </div> `
-
-    //-------------------------------------------------------------------------------------------------------
-
-    //cardItem is created as a child of cardList
+    //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
-    cardList.appendChild(descriptionModal);
-    cardList.appendChild(statsModal);
-
-    //----------------------------------------------------------------------------------------------------------
-
-    const btnOpenModal = document.querySelectorAll('.openModalBtn');
-    //console.log(btnOpenModal);
-    const btnOpenStatsModal = document.querySelectorAll('.stats1');
-    //console.log(btnOpenStatsModal);
-    const myModals = document.querySelectorAll('.modal');
-    //console.log(myModals);
-    const myStatsModals = document.querySelectorAll('.statsModal');
-    //console.log(myStatsModals);
+    //Creates the images for facts representation
+    renderFactImages(element, cardItem);
     
-    btnOpenModal.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        myModals[index].style.display = "block";
-      });
-    
-      document.addEventListener("click", (event) => {
-        if (event.target === myModals[index]) {
-          myModals[index].style.display = "none";
-        }
-      });
-    });
-    
-    btnOpenStatsModal.forEach((btn, index) => {
-      btn.addEventListener("click", () => {
-        myStatsModals[index].style.display = "block";
-      });
-    
-      document.addEventListener("click", (event) => {
-        if (event.target === myStatsModals[index]) {
-          myStatsModals[index].style.display = "none";
-        }
-      });
-    });
-
-    //------------------------------------------------------------------------------------------------------------
-    //llamar a funcion computeStats para hacer el calculo y wordSelection
-    //seleccionar donde se va a mostrar la estadistica 
-    //insertar el calculo usando innerHTML o textContent
-
-    myStatsModals.forEach((modal) =>{
-    
-      const averageWater= computeStats(data, "waterAmount");
-      const wordWater= wordSelection(averageWater);
-      //console.log(averageWater);
-      //console.log(wordWater);
-  
-      const averageLight= computeStats(data, "sunLight");
-      const wordLight = wordSelection(averageLight);
-      //console.log(averageLight);
-      //console.log(wordLight);
-  
-      const averageCare= computeStats(data, "careDifficulty");
-      const wordCare= wordSelection(averageCare);
-      //console.log(averageCare);
-      //console.log(wordCare);
-  
-      const agua=modal.querySelector("#waterFact");
-      agua.textContent=`${wordWater}`;
-      //console.log(agua);
-      const luz= modal.querySelector("#lightFact");
-      luz.textContent=`${wordLight}`;
-      //console.log(luz);
-      const cuidado= modal.querySelector("#careFact"); 
-      cuidado.textContent=`${wordCare}`;
-      //console.log(cuidado);
-    })
-
-    //-----------------------------------------------------------------------------------------------------
-    const water = element.facts.waterAmount;
-    //console.log(water);
-    const light = element.facts.sunLight;
-    //console.log(light);
-    const care = element.facts.careDifficulty;
-    //console.log(care);
-  
-    function actualizarImagenes(fact, firstImage, secondImage, thirdImage, id) {
-      const { activo, inactivo } = determinarImagen(id);
-  
-      if (fact === 1) {
-        firstImage.src = activo;
-        secondImage.src = inactivo;
-        thirdImage.src = inactivo;
-      } else if (fact === 2) {
-        firstImage.src = activo;
-        secondImage.src = activo;
-        thirdImage.src = inactivo;
-      } else if (fact === 3) {
-        firstImage.src = activo;
-        secondImage.src = activo;
-        thirdImage.src = activo;
-      }
-      //console.log(actualizarImagenes);
-  
-    }
-  
-    // Imagenes.agua
-    const firstImageWater = cardItem.querySelector("#minimo-agua");
-    //console.log(firstImageWater);
-    const secondImageWater = cardItem.querySelector("#medio-agua");
-    //console.log(secondImageWater);
-    const thirdImageWater = cardItem.querySelector("#alto-agua");
-    //console.log(thirdImageWater);
-  
-    actualizarImagenes(water, firstImageWater, secondImageWater, thirdImageWater, "agua");
-  
-    // Imagenes.luz
-    const firstImageLight = cardItem.querySelector("#minimo-luz");
-    //console.log(firstImageLight);
-    const secondImageLight = cardItem.querySelector("#medio-luz");
-    //console.log(secondImageLight);
-    const thirdImageLight = cardItem.querySelector("#alto-luz");
-    //console.log(thirdImageLight);
-  
-    actualizarImagenes(light, firstImageLight, secondImageLight, thirdImageLight, "luz");
-  
-    // Imagenes.cuidado
-    const firstImageCare = cardItem.querySelector("#minimo-cuidado");
-    //console.log(firstImageCare);
-    const secondImageCare = cardItem.querySelector("#medio-cuidado");
-    //console.log(secondImageCare);
-    const thirdImageCare = cardItem.querySelector("#alto-cuidado");
-    //console.log(thirdImageCare);
-  
-    actualizarImagenes(care, firstImageCare, secondImageCare, thirdImageCare, "cuidado");
-
-    //------------------------------------------------------------------------------------------------------------
-
+    //Add icons area to the reverse card that contains
+    //stats, description and reverse buttons
+    const icons = cardItem.querySelector("#icons");
+    document.getElementById('icons');
+    icons.appendChild(statisticsButton);
+    icons.appendChild(descriptionButton);
+    icons.appendChild(backButton);
   });
+
+  // Modal containers creation
+  const modalsContainer = document.createElement('div');
+  modalsContainer.className="modal-boxes";
+
+  // Creating description modal
+  const descriptionModal = document.createElement('dialog');
+  descriptionModal.id="description-modal";
+  descriptionModal.className="description-modal";
+  descriptionModal.innerHTML+= ` 
+            <h3 id="plant-name-modal"></h3>
+            <p id="plant-description-modal"></p>
+            <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
+
+  // Creating stats Modal
+  const statsModal= document.createElement('dialog');
+  statsModal.id="statistics-modal";
+  statsModal.className="statistics-modal";
+  statsModal.innerHTML+=`
+            <h3 id="plant-category-modal">Plant Category</h3>
+            <div class="statistics">
+              <div class="graph-legend">
+                <div class="legend">
+                  <div class="square water"></div>
+                  <p>Agua</p>
+                </div>
+                <div class="legend">
+                  <div class="square light"></div>
+                  <p>Luz</p>
+                </div>
+                <div class="legend">
+                  <div class="square care"></div>
+                  <p>Cuidado</p>
+                </div>
+              </div>
+              <div class="statistics-totals">
+              </div>
+            </div>
+            <h4>Qué cuidados necesita este tipo de plantas?</h4>
+            <img class="close-button-stats" alt="Cerrar" src="resources/Icons/Close.png">`
+
+  //Adding the modals to the card
+  modalsContainer.appendChild(descriptionModal);
+  modalsContainer.appendChild(statsModal);
+  
+  //Modals are added outside the UI card representation
+  cardList.insertAdjacentElement("afterend", modalsContainer);
+
+  //Returns all created elements
   return cardList;
-};
+}

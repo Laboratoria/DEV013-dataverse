@@ -2,36 +2,64 @@ import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
+import { createStatistics } from './dataFunctions.js';
 
-const clonedData = structuredClone(data); //clona el arreglo de objetos
+//----------------------
+//Keeps an array object in the original state
+const clonedData = structuredClone(data);
+
+//----------------------
+//The data that is used and modified everywhere
 let currentData = data;
-//Esta variable almacena el valor de la seleccion del boton orderBy
-//para que no sea descartado al cambiar de categoría
+
+//----------------------
+//Stores the value of orderBy button selected
 let activeSorting = 0;
 
-//------------------------------------------------------------------------------------------------------------
-//Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
+//----------------------
+//Calls createStatistics function to create statistics and
+//keps it into a variable to be use by other functions
+const statiscis = createStatistics(clonedData);
+
+//----------------------
+//Calls renderItems function to render plants and
+//keps it into a variable to be use by other functions
 const cards=renderItems(currentData);
 
-//Se declara una variable que trae el valor de root
+//----------------------
+//Excecutes setListeners to activate buttons
+setListeners();
+
+//----------------------
+//Gets the root element
 const mainContainer=document.querySelector("#root");
 
-//Se declara cards como hijo de mainContainer
+//----------------------
+//Cards is declared as a child of mainContainer
 mainContainer.appendChild(cards);
 
-
-//Esta función refresca la página completa. Se le aplica a los elementos de la sección brand
+//----------------------
+//Refresh full page clicking logo and name
+//TODO add event listener
 function refreshPage() {
-  window.location.reload()
+  window.location.reload();
 }
-
 window.refreshPage=refreshPage;
 
-//--------------------------------------------------------------------------------------------------------------
-//se agrega clase comun a los botones para agregarle el listener a todos de un solo
-//al hacer click en alguno de ellos se va a ejecutar la funcion definida
-// identificar a que boton se le dio click
-//llamar a la funcion de filtrado para que cree el nuevo array con la categoria que fue identificada
+//----------------------
+//Clear page to don't overload the elements of the cardList
+//Must be call before changing curretData value
+function clearView(){
+  const cardsContainer=document.getElementById("ul-cards");
+  cardsContainer.innerHTML="";
+}
+
+// Filter by category flow ----------------------
+/**
+ * Gets the category buttons, iterates them to add listeners to excecutes filterData
+ * executes sort data if some option is active
+ * @returns: new currentData
+ */
 const categoryButtons=document.querySelectorAll('.category');
 categoryButtons.forEach(button => 
 {
@@ -39,8 +67,6 @@ categoryButtons.forEach(button =>
   {
     const category = e.target.getAttribute('data-category');
     currentData = filterData(data, 'categoryPlant', category);
-    //console.log(filteredData)
-    //console.log(e.target)
     if (activeSorting === 1) {
       sortData(currentData, "id", 1);
     } else if (activeSorting === 2) {
@@ -49,135 +75,210 @@ categoryButtons.forEach(button =>
 
     clearView();
     renderItems(currentData);
+    setListeners();
     return currentData;
   });
 });
-//------------------------------------------------------------------------------------------------
-//Esta función limpia la pantalla
-//Se debe llamar antes de cambiar el valor de currentData
-//para que no se sobreescriban los elementos del objeto
-function clearView(){
-  const cardsContainer=document.getElementById("ulCards");
-  cardsContainer.innerHTML="";
-}
 
-//------------------------------------------------------------------------------------------------------
-//Filtrar por nombre 
-
-//crear una funcion que
-//reciba el nombre que proporciona el usuario
-//llame a filterdata para buscarlo 
-//limpie la interfaz
-// y se lo pase a render items para que solo muestre esa tarjeta 
-//cuando el usuario de enter
-function filterByName()
-{
-  const inputName = document.getElementById('inputName');
+// Filter by name flow ----------------------
+/**
+ * Gets the text box, sets the writen value, turns the firsf caracter to upper case
+ * filteredName keeps filterData with the arguments to be use
+ */
+function filterByName(){
+  const inputName = document.getElementById('input-name');
   const inputReceive = inputName.value;
-  //usar toUpperCase por si el usuario introduce la primera letra en minuscula
-  //seleccionar la primera letra 
-  //usar el metodo y guardar el nombre corregido en otra variable
-  //pasarle esa ultima variable a la funcion 
 
   const firstLetter = inputReceive[0].toUpperCase();
-  //console.log(firstLetter);
   const inputCorrected= firstLetter + inputReceive.slice(1)
-  //console.log(inputCorrected);
 
-  const filteredName = filterData(clonedData, 'name', inputCorrected); //revisar este data
-  //console.log(inputName.value);
+  const filteredName = filterData(clonedData, 'name', inputCorrected);
   clearView();
   renderItems(filteredName);
+  setListeners();
 }
-//--------------------------------------------------------------------------------------------------------
 
-//Recordatorio: tener en cuenta los comportamientos por default
-//(Cuando presionas la tecla Enter en un formulario, se activa el evento
-//de envío del formulario (submit). Si no se previene este comportamiento predeterminado,
-//la página se recargará y tu script de JavaScript se reiniciará.)
-//decirle que en vez de su comportamiento por default ejecute filterByName
+//Gets form element, adds listener submit, excecutes preventDefault
+//and calls fiterByName() function
+//TODO why is needed prevent default?
 document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault();
   filterByName();
 });
 
-const inputName = document.getElementById('inputName');
+//Adds listener when enter is press and calls fiterByName() function
+const inputName = document.getElementById('input-name');
 inputName.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     filterByName();
   }
 });
 
-//-----------------------------------------------------------------------------------------------------------
-//Se declara una variable que llama al botón de ordenar
-const dropdown = document.getElementById("itemOrder");
-//A esa variable se le agrega el evento change
+// Order by flow ----------------------
+/**
+ * Gets the select element, adds the listener on change, gets the value of selection
+ * if 3 is selected render cloneData, else executes sortData with index guiven
+ */
+const dropdown = document.getElementById("item-order");
 dropdown.addEventListener("change", () => {
-  //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
-  //el cual indica cuál de las opciones se han seleccionado
   const i = dropdown.selectedIndex;
-  //si se selecciona el indice 1
   if (i === 3) {
     clearView();
     renderItems(clonedData);
+    setListeners();
+    dropdown.selectedIndex = 0;
   } else {
     activeSorting = i;
     clearView();
     sortData(currentData, "id", i);
     renderItems(currentData);
+    setListeners();
   }
 });
 
-//   //si se selecciona el indice 1
-//   if (i === 1) {
-//     //Actualiza el valor de active sorting a 1
-//     activeSorting = i;
-//     //Y se ejecuta la funcion sortData a curreantData, usando los ids y con el orden 1 (al derecho a-z) 
-//     sortData(currentData, "id", 1);
-//     //Se limpia la página
-//     clearView();
-//     //Y se ejecula la funcion renderItems con current data actualizado
-//     renderItems(currentData);
-//     //Si se selecciona el indice 2 se ejecuta lo mismo pero con el orden 2 (al reves z-a)
-//   } else if (i === 2) {
-//     activeSorting = i;
-//     sortData(currentData, "id", 2);
-//     // console.log("reves");
-//     // console.log(descending);
-//     clearView()
-//     renderItems(currentData);
-//   } else if (i === 3) {
-//     clearView();
-//     renderItems(clonedData);
-//   }
-// });
+// Turn cards ----------------------
+//Applies turnCard to buttons
 
-//------------------------------------------------------------------------------------------------------------
-
-//Delegacion de eventos
-//Funcion para hacer girar las tarjetas
-const princContainer = document.getElementById("ulCards");
-princContainer.addEventListener("click",(event) => 
-{
+const cardList = document.getElementById("ul-cards");
+cardList.addEventListener("click",(event) => {
+  //TODO - Fix event delegated inside the list, this is executed every time the list receives a click.
+  //console.log("se esta ejecutando todas las veces")
   const cardContainer= event.target.closest('.card-container');
-  if(event.target.matches('.detalles')) 
+  if(event.target.matches('.details-button')) 
   {
     turnCard(cardContainer);
   }
-  else if (event.target.matches('.regresar')) 
+  else if (event.target.matches('.flip-button')) 
   {
     turnCard(cardContainer); 
   }
 });
 
-function turnCard(cardContainer) 
-{
+//gets the cards elements to change the class to show front or back
+function turnCard(cardContainer){
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card");
-  //alterar la propiedad "display" para ocultar y mostrar diferentes partes de la tarjeta
-  // Alternar la clase 'hide' entre la parte posterior y frontal de la tarjeta
   backCard.classList.toggle('hide');
   frontCard.classList.toggle('hide');
 }
 
-//-----------------------------------------------------------------------------------------------------------------
+// Statistics ----------------------
+/**
+ * This function creates the words to be insert into the statistics modal
+ * 
+ * @param { property } categoryPlant - From object array
+ * @param { id argument } statsModal - Modal box from HTML
+ * @param { object } statsByCategory - Created new element
+ */
+function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
+
+  const plantCategory = statsModal.querySelector("#plant-category-modal");
+  plantCategory.innerHTML = categoryPlant;
+
+  const waterAverageWord = document.createElement("h5");
+  waterAverageWord.className="water";
+
+  const statisticsContainer = statsModal.querySelector(".statistics-totals");
+  statisticsContainer.innerHTML = "";
+  statisticsContainer.appendChild(waterAverageWord);
+
+  if(statsByCategory[categoryPlant].average.waterAverage === 1) {
+    waterAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.waterAverage === 2) {
+    waterAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.waterAverage === 3) {
+    waterAverageWord.innerHTML+="Mucha";
+  }
+
+  const lightAverageWord = document.createElement("h5");
+  lightAverageWord.className="light";
+
+  statisticsContainer.appendChild(lightAverageWord);
+
+  if(statsByCategory[categoryPlant].average.lightAverage === 1) {
+    lightAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.lightAverage === 2) {
+    lightAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.lightAverage === 3) {
+    lightAverageWord.innerHTML+="Mucha";
+  }
+
+  const careAverageWord = document.createElement("h5");
+  careAverageWord.className="care";
+
+  statisticsContainer.appendChild(careAverageWord);
+
+  if(statsByCategory[categoryPlant].average.careAverage === 1) {
+    careAverageWord.innerHTML+="Poca";
+  } else if(statsByCategory[categoryPlant].average.careAverage === 2) {
+    careAverageWord.innerHTML+="Regular";
+  } else if(statsByCategory[categoryPlant].average.careAverage === 3) {
+    careAverageWord.innerHTML+="Mucha";
+  }
+}
+
+// Description ----------------------
+/**
+ * This function inserts Name and description to description modal
+ * 
+ * @param { property } namePlant - From object array
+ * @param { name argument } descriptionModal - Modal box from HTML
+ * @param { property } description - From object array
+ */
+function renderDescriptions(namePlant, descriptionModal, description) {
+  const plantName = descriptionModal.querySelector("#plant-name-modal");
+  plantName.innerHTML = namePlant;
+
+  const plantDescription = descriptionModal.querySelector("#plant-description-modal");
+  plantDescription.innerHTML = description;
+}
+
+// Listeners -----------------------------------------------------------------------------------------------------------------
+/**
+ * This sets the listeners to execute the functions
+ * renderStatisticsWords
+ * renderDescriptions
+ * .show() and .close() methods to modasl
+ */
+function setListeners(){
+  //TODO: - Why sometimes getElementsByClassName is not working?
+  const statisticsButtons=document.querySelectorAll('.modal-statistics-button');
+  statisticsButtons.forEach(button => 
+  {
+    button.addEventListener('click',()=> 
+    {
+      const categoryPlant = button.id;
+      const statsModal = document.getElementById("statistics-modal");
+      renderStatisticsWords(categoryPlant, statsModal, statiscis);
+      statsModal.showModal();
+    });
+  });
+
+  const descriptionButtons = document.querySelectorAll(".modal-description-button");
+  descriptionButtons.forEach(descriptionButton => {
+    descriptionButton.addEventListener("click", () =>{
+    
+      const idPlant = descriptionButton.id;
+
+      data.forEach(plant => {
+        if(plant.id === idPlant){
+          const descriptionModal = document.getElementById("description-modal");
+          renderDescriptions(plant.name, descriptionModal, plant.description);
+          descriptionModal.showModal();
+        }
+      });
+    });
+  });
+
+  const closeButtonDescription=document.querySelector(".close-button");
+  closeButtonDescription.addEventListener("click", () => {
+    const descriptionModal = document.getElementById("description-modal");
+    descriptionModal.close();
+  });
+
+  const closeButtonStats = document.querySelector(".close-button-stats");
+  closeButtonStats.addEventListener("click", () =>{
+    const statsModal = document.getElementById("statistics-modal");
+    statsModal.close();
+  });
+}
