@@ -1,8 +1,32 @@
+//----------------------
+/**
+ * This function gets the category from the object
+ * and compares it with the value of the atribute in HTML element
+ * is call by categoryButtons function when a button is cliked
+ * 
+ * @param { every plant } data - From dataset
+ * @param { property } filterBy - Category of every element of the array object
+ * @param { atribute } value - Category of plant
+ * 
+ * @returns data filtered
+ */
 export const filterData = (data, filterBy, value) => {
   return data.filter(objeto => objeto[filterBy] === value);
 };
-//---------------------------------------------------------------------------------------------------------------------------
 
+//----------------------
+/**
+ * This function decides with a condition
+ * wich order needs to me used
+ * a-z / z-a
+ * is call by dropdown function when an option is clicked
+ * 
+ * @param { data } data - currentData
+ * @param { property } sortBy - id of every element of the array object
+ * @param { option } sortOrder - selectedIndex from dropdown
+ * 
+ * 
+ */
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function(a,b){
     if (sortOrder === 1) {
@@ -13,6 +37,19 @@ export const sortData = (data, sortBy, sortOrder) => {
   });
 };
 
+//----------------------
+/**
+ * This function creates the structure
+ * stores the numbers into an array
+ * calculate the sum of every type of fact
+ * calculates the average of every type of fact
+ * and stores them into the structure
+ * in call by statiscis variable to be use in ststisticsButton
+ * 
+ * @param { every plant } data - From clonedData
+ * 
+ * @returns the new populated object
+ */
 export const createStatistics = (data) => {
   //1 - Create empty structure to host categories in arrays
   const statsByCategory = {
@@ -87,23 +124,22 @@ export const createStatistics = (data) => {
     //3 - Identify category
     const category = plant.categoryPlant;
     //4 - Extracts facts
-    //5 - Store facts in corresponding category
+    //5 - Store facts in array corresponding category
     statsByCategory[category].factsByPlants.push(plant.facts);
-    //anadiendo la suma de water average de 
+    
+    //6 - Calculate average by category
     statsByCategory[category].sum.waterSum+=plant.facts.waterAmount;
-    //calculando promedio
+    //6.1 - Save total facts by category in dedicated structure
     statsByCategory[category].average.waterAverage=Math.round(statsByCategory[category].sum.waterSum/statsByCategory[category].factsByPlants.length);
 
+    //repeat for light
     statsByCategory[category].sum.lightSum+=plant.facts.sunLight;
-    //calculando promedio
     statsByCategory[category].average.lightAverage=Math.round(statsByCategory[category].sum.lightSum/statsByCategory[category].factsByPlants.length);
 
+    //repeat for care
     statsByCategory[category].sum.careSum+=plant.facts.careDifficulty;
-    //calculando promedio
     statsByCategory[category].average.careAverage=Math.round(statsByCategory[category].sum.careSum/statsByCategory[category].factsByPlants.length);
   });
   
   return statsByCategory;
-  //6 - Calculate average by category for every fact
-  //6.1 - Save total facts by category in dedicated structure
 }

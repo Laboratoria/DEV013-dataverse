@@ -4,34 +4,62 @@ import { filterData } from './data-functions-Cleaning.js';
 import { sortData } from './data-functions-Cleaning.js';
 import { createStatistics } from './data-functions-Cleaning.js';
 
-const clonedData = structuredClone(data); //clona el arreglo de objetos
+//----------------------
+//Keeps an array object in the original state
+const clonedData = structuredClone(data);
+
+//----------------------
+//The data that is used and modified everywhere
 let currentData = data;
-//Esta variable almacena el valor de la seleccion del boton orderBy
-//para que no sea descartado al cambiar de categoría
+
+//----------------------
+//Stores the value of orderBy button selected
 let activeSorting = 0;
 
-//------------------------------------------------------------------------------------------------------------
-//Calculate statistics
+//----------------------
+//Calls createStatistics function to create statistics and
+//keps it into a variable to be use by other functions
 const statiscis = createStatistics(clonedData);
 
-//------------------------------------------------------------------------------------------------------------
-//Se declara una variable cuyo valor es la funcion renderItems con el parámetro currentData
+//----------------------
+//Calls renderItems function to render plants and
+//keps it into a variable to be use by other functions
 const cards=renderItems(currentData);
+
+//----------------------
+//Excecutes setListeners to activate buttons
 setListeners();
 
-//Se declara una variable que trae el valor de root
+//----------------------
+//Gets the root element
 const mainContainer=document.querySelector("#root");
-//Se declara cards como hijo de mainContainer
+
+//----------------------
+//Cards is declared as a child of mainContainer
 mainContainer.appendChild(cards);
 
-//Esta función refresca la página completa. Se le aplica a los elementos de la sección brand
+//----------------------
+//Refresh full page clicking logo and name
+//TODO add event listener
 function refreshPage() {
   window.location.reload();
 }
 window.refreshPage=refreshPage;
 
-//--------------------------------------------------------------------------------------------------------------
+//----------------------
+//Clear page to don't overload the elements of the cardList
+//Must be call before changing curretData value
+function clearView(){
+  const cardsContainer=document.getElementById("ul-cards");
+  cardsContainer.innerHTML="";
+}
 
+// Filter by category flow ----------------------
+/**
+ * Gets the category buttons, iterates them to add listeners to excecutes filterData
+ * executes sort data if some option is active
+ * @returns: new currentData
+ */
 const categoryButtons=document.querySelectorAll('.category');
 categoryButtons.forEach(button => 
 {
@@ -52,18 +80,11 @@ categoryButtons.forEach(button =>
   });
 });
 
-//------------------------------------------------------------------------------------------------
-//Esta función limpia la pantalla
-//Se debe llamar antes de cambiar el valor de currentData
-//para que no se sobreescriban los elementos del objeto
-function clearView(){
-  const cardsContainer=document.getElementById("ul-cards");
-  cardsContainer.innerHTML="";
-}
-
-//------------------------------------------------------------------------------------------------------
-//Filtrar por nombre 
-
+// Filter by name flow ----------------------
+/**
+ * Gets the text box, sets the writen value, turns the firsf caracter to upper case
+ * filteredName keeps filterData with the arguments to be use
+ */
 function filterByName(){
   const inputName = document.getElementById('input-name');
   const inputReceive = inputName.value;
@@ -76,13 +97,16 @@ function filterByName(){
   renderItems(filteredName);
   setListeners();
 }
-//--------------------------------------------------------------------------------------------------------
 
+//Gets form element, adds listener submit, excecutes preventDefault
+//and calls fiterByName() function
+//TODO why is needed prevent default?
 document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault();
   filterByName();
 });
 
+//Adds listener when enter is press and calls fiterByName() function
 const inputName = document.getElementById('input-name');
 inputName.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
@@ -90,15 +114,14 @@ inputName.addEventListener('keyup', (event) => {
   }
 });
 
-//-----------------------------------------------------------------------------------------------------------
-//Se declara una variable que llama al botón de ordenar
+// Order by flow ----------------------
+/**
+ * Gets the select element, adds the listener on change, gets the value of selection
+ * if 3 is selected render cloneData, else executes sortData with index guiven
+ */
 const dropdown = document.getElementById("item-order");
-//A esa variable se le agrega el evento change
 dropdown.addEventListener("change", () => {
-  //Se declára una variable con el valor de dropdown aplicandole el metodo selectedIndex
-  //el cual indica cuál de las opciones se han seleccionado
   const i = dropdown.selectedIndex;
-  //si se selecciona el indice 1
   if (i === 3) {
     clearView();
     renderItems(clonedData);
@@ -113,7 +136,8 @@ dropdown.addEventListener("change", () => {
   }
 });
 
-//------------------------------------------------------------------------------------------------------------
+// Turn cards ----------------------
+//Applies turnCard to buttons
 
 const cardList = document.getElementById("ul-cards");
 cardList.addEventListener("click",(event) => {
@@ -130,6 +154,7 @@ cardList.addEventListener("click",(event) => {
   }
 });
 
+//gets the cards elements to change the class to show front or back
 function turnCard(cardContainer){
   const frontCard=cardContainer.querySelector("#front-card");
   const backCard=cardContainer.querySelector("#back-card");
@@ -137,8 +162,14 @@ function turnCard(cardContainer){
   frontCard.classList.toggle('hide');
 }
 
-//-----------------------------------------------------------------------------------------------------------------
-
+// Statistics ----------------------
+/**
+ * This function creates the words to be insert into the statistics modal
+ * 
+ * @param { property } categoryPlant - From object array
+ * @param { id argument } statsModal - Modal box from HTML
+ * @param { object } statsByCategory - Created new element
+ */
 function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
 
   const plantCategory = statsModal.querySelector("#plant-category-modal");
@@ -186,8 +217,14 @@ function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
   }
 }
 
-//-----------------------------------------------------------------------------------------------------------------
-
+// Description ----------------------
+/**
+ * This function inserts Name and description to description modal
+ * 
+ * @param { property } namePlant - From object array
+ * @param { name argument } descriptionModal - Modal box from HTML
+ * @param { property } description - From object array
+ */
 function renderDescriptions(namePlant, descriptionModal, description) {
   const plantName = descriptionModal.querySelector("#plant-name-modal");
   plantName.innerHTML = namePlant;
@@ -196,8 +233,13 @@ function renderDescriptions(namePlant, descriptionModal, description) {
   plantDescription.innerHTML = description;
 }
 
-//-----------------------------------------------------------------------------------------------------------------
-
+// Listeners -----------------------------------------------------------------------------------------------------------------
+/**
+ * This sets the listeners to execute the functions
+ * renderStatisticsWords
+ * renderDescriptions
+ * .show() and .close() methods to modasl
+ */
 function setListeners(){
   //TODO: - Why sometimes getElementsByClassName is not working?
   const statisticsButtons=document.querySelectorAll('.modal-statistics-button');

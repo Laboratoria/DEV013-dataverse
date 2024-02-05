@@ -15,7 +15,7 @@ export default [
     "birthPlace": "Ambientes tropicales y subtropicales",
     "facts": {
       "waterAmount":1,
-      "sunLight": 2,
+      "sunLight": 1,
       "careDifficulty":3,
     },
   },
@@ -35,7 +35,7 @@ export default [
     "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
     "facts": {
       "waterAmount":2,
-      "sunLight": 3,
+      "sunLight": 2,
       "careDifficulty":1,
     },
   },
@@ -55,7 +55,7 @@ export default [
     "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
     "facts": {
       "waterAmount":2,
-      "sunLight": 3,
+      "sunLight": 2,
       "careDifficulty":2,
     },
   },
@@ -115,7 +115,7 @@ export default [
     "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLight": 2,
+      "sunLight": 1,
       "careDifficulty":2,
     },
   },
@@ -136,7 +136,7 @@ export default [
     "facts": {
       "waterAmount":2,
       "sunLight": 2,
-      "careDifficulty":2,
+      "careDifficulty":3,
     },
   },
   {
@@ -154,8 +154,8 @@ export default [
     "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
     "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "waterAmount":2,
-      "sunLight": 3,
+      "waterAmount":3,
+      "sunLight": 2,
       "careDifficulty":3,
     },
   },
@@ -236,7 +236,7 @@ export default [
     "facts": {
       "waterAmount":2,
       "sunLight": 3,
-      "careDifficulty":2,
+      "careDifficulty":3,
     },
   },
   {
@@ -276,7 +276,7 @@ export default [
     "facts": {
       "waterAmount":1,
       "sunLight": 3,
-      "careDifficulty":2,
+      "careDifficulty":1,
     },
   },
   {
@@ -315,7 +315,7 @@ export default [
     "climaticData": "Prefiere sombra parcial y suelo bien drenado.",
     "facts": {
       "waterAmount":2,
-      "sunLight": 2,
+      "sunLight": 1,
       "careDifficulty":1,
     },
   },
@@ -335,8 +335,8 @@ export default [
     "climaticData": "Prefiere suelos húmedos y lugares sombreados.",
     "facts": {
       "waterAmount":2,
-      "sunLight": 2,
-      "careDifficulty":2,
+      "sunLight": 1,
+      "careDifficulty":3,
     },
   },
   {
@@ -354,7 +354,7 @@ export default [
     "applicationsPlant": "Cocina, aceites esenciales, productos de higiene.",
     "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "waterAmount":2,
+      "waterAmount":3,
       "sunLight": 3,
       "careDifficulty":2,
     },
@@ -376,7 +376,7 @@ export default [
     "facts": {
       "waterAmount":1,
       "sunLight": 3,
-      "careDifficulty":2,
+      "careDifficulty":1,
     },
   },
   {
@@ -434,7 +434,7 @@ export default [
     "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
     "climaticData": "Adaptable a varios climas, prefiere suelo bien drenado.",
     "facts": {
-      "waterAmount":2,
+      "waterAmount":3,
       "sunLight": 3,
       "careDifficulty":2,
     },

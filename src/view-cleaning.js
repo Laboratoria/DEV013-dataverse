@@ -1,9 +1,11 @@
-// Render fact for passed model image inside the UI card Item
-// ----
-// This function receives a plant model and extract the fact information
-// rendering depending of the value found in the model
-// @param plan: The plant model that contains the info
-// @parm cardItem: The card that represents UI the element inside the DOM 
+//----------------------
+/**
+* This function receives a plant model and extract the fact information
+* rendering depending of the value found in the model
+*
+* @param { card } plant - The plant model that contains the info
+* @param { HTML element } cardItem - The card that represents UI the element inside the DOM 
+*/
 export const renderFactImages = (plant, cardItem) => {
   // Create static elements
   const waterActiveImage = document.createElement("img");
@@ -57,76 +59,85 @@ export const renderFactImages = (plant, cardItem) => {
   if (waterAmount === 1) {
     //4 dibujar 1 activa 2 inactivas
     waterArea.appendChild(waterActiveImage);
-    waterActiveImage2.className="inactive";
     waterArea.appendChild(waterActiveImage2); //anadir clase
-    waterArea.appendChild(waterActiveImage3);
+    waterActiveImage2.className="inactive";
+    waterArea.appendChild(waterActiveImage3); //anadir clase
     waterActiveImage3.className="inactive";
   } else if (waterAmount === 2) {
     //4 dibujar 2 activas 1 inactiva
     waterArea.appendChild(waterActiveImage);
-    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterArea.appendChild(waterActiveImage2);
+    waterArea.appendChild(waterActiveImage3); //anadir clase
     waterActiveImage3.className="inactive";
-    waterArea.appendChild(waterActiveImage3);
   } else if (waterAmount === 3) {
     //4 dibujar 3 activas
     waterArea.appendChild(waterActiveImage);
-    waterArea.appendChild(waterActiveImage2); //anadir clase
+    waterArea.appendChild(waterActiveImage2); 
     waterArea.appendChild(waterActiveImage3);
   }
 
+  //Repeat for Light amount
   const lightArea = cardItem.querySelector(".light-icons");
   document.getElementById('light');
 
-  // 3.2 sun facts
   if (sunLight === 1) {
-    //4 dibujar 1 activa 2 inactivas
     lightArea.appendChild(lightActiveImage);
     lightActiveImage2.className="inactive";
-    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightArea.appendChild(lightActiveImage2);
     lightActiveImage3.className="inactive";
     lightArea.appendChild(lightActiveImage3);
   } else if (sunLight === 2) {
-    //4 dibujar 2 activas 1 inactiva
     lightArea.appendChild(lightActiveImage);
-    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightArea.appendChild(lightActiveImage2);
     lightActiveImage3.className="inactive";
     lightArea.appendChild(lightActiveImage3);
   } else if (sunLight === 3) {
-    //4 dibujar 3 activas
     lightArea.appendChild(lightActiveImage);
-    lightArea.appendChild(lightActiveImage2); //anadir clase
+    lightArea.appendChild(lightActiveImage2);
     lightArea.appendChild(lightActiveImage3);
   }
+
+  //Repeat for Care amount
   const careArea = cardItem.querySelector(".care-icons");
   document.getElementById('care');
 
-  // 3.3 care facts
   if (careDifficulty === 1) {
-    //4 dibujar 1 activa 2 inactivas
     careArea.appendChild(careActiveImage);
     careActiveImage2.className="inactive";
-    careArea.appendChild(careActiveImage2); //anadir clase
+    careArea.appendChild(careActiveImage2);
     careActiveImage3.className="inactive";
     careArea.appendChild(careActiveImage3);
   } else if (careDifficulty === 2) {
-    //4 dibujar 2 activas 1 inactiva
     careArea.appendChild(careActiveImage);
-    careArea.appendChild(careActiveImage2); //anadir clase
+    careArea.appendChild(careActiveImage2);
     careActiveImage3.className="inactive";
     careArea.appendChild(careActiveImage3);
   } else if (careDifficulty === 3) {
-    //4 dibujar 3 activas
     careArea.appendChild(careActiveImage);
-    careArea.appendChild(careActiveImage2); //anadir clase
+    careArea.appendChild(careActiveImage2);
     careArea.appendChild(careActiveImage3);
   }
 }
 
+//----------------------
+/**
+ * This function creates card list that contains
+ * every card,
+ * icon butons area,
+ * and modals
+ * 
+ * @param { [every plant] } data - From dataset
+ * 
+ * @returns cardList
+ */
 export const renderItems = (data) => {
-  // Creating container to host all the cards AKA "list"
+  // Creating list, container to host all the cards
   const cardList = document.getElementById("ul-cards");
   
+  //Iterates for each element of the object from data
   data.forEach(element => {
+
+    //Creating all buttons
     const statisticsButton = document.createElement('img');
     statisticsButton.className="modal-statistics-button";
     statisticsButton.alt="Estadísticas";
@@ -206,14 +217,13 @@ export const renderItems = (data) => {
               </div>
             </article>`
 
-    
-
     //Plant card UI respresentation is ready to add to the list
     cardList.appendChild(cardItem);
+    //Creates the images for facts representation
     renderFactImages(element, cardItem);
     
-    //Add footer to the reverse card that contains the buttons for 
-    //stats, description and reverse
+    //Add icons area to the reverse card that contains
+    //stats, description and reverse buttons
     const icons = cardItem.querySelector("#icons");
     document.getElementById('icons');
     icons.appendChild(statisticsButton);
@@ -225,16 +235,16 @@ export const renderItems = (data) => {
   const modalsContainer = document.createElement('div');
   modalsContainer.className="modal-boxes";
 
-  // Description Modal Creation Flow
+  // Creating description modal
   const descriptionModal = document.createElement('dialog');
   descriptionModal.id="description-modal";
   descriptionModal.className="description-modal";
   descriptionModal.innerHTML+= ` 
-            <h3 id="plant-name-modal">Plant Name</h3>
-            <p id="plant-description-modal">Plant Description</p>
+            <h3 id="plant-name-modal"></h3>
+            <p id="plant-description-modal"></p>
             <img class="close-button" alt="Cerrar" src="resources/Icons/Close.png">`
 
-  // Stats Modal Creation Flow
+  // Creating stats Modal
   const statsModal= document.createElement('dialog');
   statsModal.id="statistics-modal";
   statsModal.className="statistics-modal";
@@ -268,5 +278,6 @@ export const renderItems = (data) => {
   //Modals are added outside the UI card representation
   cardList.insertAdjacentElement("afterend", modalsContainer);
 
+  //Returns all created elements
   return cardList;
 }
