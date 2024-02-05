@@ -524,3 +524,164 @@ footer h3 {
     margin: 14px 0 7px 0;
     /* margin-bottom: 8px; */
 }
+
+@media (max-width: 600px) {
+
+    /* Header styles */
+
+    header {
+        background-color: #fcfdfc;
+        height: 150px;
+        border-radius: 10px;
+        max-width: 100%;
+        box-shadow: 1px 1px 5px lightgrey;
+    }
+
+    .brand {
+        font-size: 10px;
+        margin-top: 40px;
+    }
+    
+    header img {
+        height: 20px;
+        width: 20px;
+    }
+
+    /* Search by name styles */
+
+    aside.search-by-name.container {
+        width: 150px;
+        margin-top: -40px;
+        margin-left: 30px;
+        font-size: smaller;
+    }
+
+    .search-container input {
+        font-size: smaller;
+        height: 18px;
+    }
+
+    /* Order by drop button styles */
+
+    .order-by {
+        margin: auto;
+        width: 70px;
+        margin-top: -16px;
+        margin-left: 260px;
+        font-size: smaller;
+    }
+
+    .order-by label {
+        font-size: smaller;
+        width: 70px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    select {
+        font-size: smaller;
+    }
+
+    /* Modals */
+
+    .statistics-modal, .description-modal {
+        width: 400px;
+        height: 400px;
+    }
+
+    .statistics-modal h3 {
+        font-size: 25px;
+    }
+
+    .statistics {
+        display: flex;
+        margin: 28px 0 0 0;
+    }
+
+    div.statistics-totals h5 {
+        font-size: 20px;
+        width: 150px;
+        margin-left: 20px;
+    }
+
+    .legend p {
+        font-size: 13px;
+    }
+
+     div.statistics .legend {
+        margin-top: 5px;
+        display: flex;
+        height: 40px;
+    }
+    
+    div.statistics .square {
+        height: 15px;
+        width: 24px;
+    }
+
+    .statistics-modal h4 {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+
+    img.close-button, img.close-button-stats {
+        width: 25px;
+        height: 25px;
+        margin: 80px 0 0 310px;
+    }
+    
+    .description-modal {
+        padding: 15px;
+    }
+
+    .description-modal h3 {
+        margin: 5px 0 18px 0;
+    }
+
+    /* Categories menu styles */
+
+    .category-menu {
+        bottom:0px;
+        position: fixed;
+        height: 110px;
+        width:400px;
+        background-color: #f9faf9;
+        font-size: 10px;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 13px gray;;
+        left: 0;
+
+    }
+ 
+    .category-nav {
+        margin-top: 6px;
+        max-width: 100%;
+    }
+        
+    .item-aside input[type=image] {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Footer styles */
+
+    footer {
+        height: 30px;
+        font-size: 9px;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer h3 {
+        font-size: 10px;
+        margin: 0 5px 0 5px;
+    }
+
+    footer p {
+        margin: 0 5px 0 5px;
+    }
+}
