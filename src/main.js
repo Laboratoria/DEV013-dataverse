@@ -10,7 +10,7 @@ dataList.appendChild(renderItems(data));
 console.log(filteredLiteratura);
 const filteredPoesía = filterData(data, 'mainField', 'Poesía');
 console.log(filteredPoesía);
-const filteredPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela');
+const filternoedPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela');
 console.log(filteredPoesiaLiteratura);*/
 
 
@@ -38,18 +38,14 @@ btnClear.addEventListener("click", function () {
 });
 
 // Función para restablecer los filtros
-function resetFilters() {
-    // Recorre los selectores y establece sus valores en vacío
-    filterSelectors.forEach(({ selector }) => {
-      document.querySelector(selector).value = "";
-    });
-    sortName.value = "none";
-    result = sortData(data, "name", "asc");//agregado
-    renderDataList();
-
-    //dataList.innerHTML = "";
-    //dataList.appendChild(renderItems(data));
-  }
+function resetFilters() {// Recorre los selectores y establece sus valores en vacío
+  filterSelectors.forEach(({ selector }) => {
+    document.querySelector(selector).value = "";
+  });
+  sortName.value = "none"; 
+  result = sortData(data, "name", "asc");//agregado
+  renderDataList();
+}
 
 // Función para aplicar los filtros
 function applyFilters() {
