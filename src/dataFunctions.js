@@ -15,11 +15,13 @@ export const filterData = (data, filterBy, value) => {
   });
   
 };
-
-export const sortData = (data, sortBy, sortOrder) => {
+// Funcion para ordenar ASC y DESC
+  export const sortData = (data, sortConfig) => {
+    const { sortBy, sortOrder } = sortConfig;
+  
     const sortedData = data.slice().sort((a, b) => {
-      const valA = a[sortBy].toLowerCase();
-      const valB = b[sortBy].toLowerCase();
+      const valA = valorOrdenar(a, sortBy);
+      const valB = valorOrdenar(b, sortBy);
   
       if (sortOrder === "asc") {
         return valA.localeCompare(valB);
@@ -32,3 +34,17 @@ export const sortData = (data, sortBy, sortOrder) => {
   
     return sortedData;
   };
+  
+  // Funcion para ordenar asc y desc junto con los filtros de genero y paises
+  const valorOrdenar = (item, sortBy) => {
+    switch (sortBy) {
+      case "mainField":
+        return item.facts[sortBy];
+      case "countryNacimiento":
+        return item.facts[sortBy];
+      default:
+       
+        return String(item[sortBy]).toLowerCase();
+    }
+  };
+  

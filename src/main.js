@@ -1,5 +1,5 @@
 import { renderItems } from './view.js';
-import { filterData , sortData } from './dataFunctions.js';
+import { filterData, sortData } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 const dataList = document.querySelector("#root");
@@ -14,69 +14,99 @@ const filteredPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela'
 console.log(filteredPoesiaLiteratura);*/
 
 
+//filterData
 //selecciona los elementos select
 const filterSelectors = [
-	{ selector: '[data-testid="filter-type"]', property: "mainField" },
-	{ selector: '[data-testid="filter-data"]', property: "countryNacimiento" },
+  { selector: '[data-testid="filter-type"]', property: "mainField" },
+  { selector: '[data-testid="filter-data"]', property: "countryNacimiento" },
 ];
+
+let sortName;// Declaracion de sortName
 
 // Agregar EventListenerpara los select
 filterSelectors.forEach(({ selector }) => {
-	const selectElement = document.querySelector(selector);
-	selectElement.addEventListener("change", applyFilters);
+  const selectElement = document.querySelector(selector);
+  selectElement.addEventListener("change", applyFilters);
 });
 
-//  EventListener para el botón de limpiar
+// EventListener para el botón de limpiar
 const btnClear = document.getElementById("button-clear");
 btnClear.addEventListener("click", function () {
-	// Limpia los filtros y renderiza los datos originales
-	resetFilters();
-	renderItems(data);
+  // Limpia los filtros y renderiza los datos originales
+  resetFilters();
+  renderItems(data);
 });
 
 // Función para restablecer los filtros
 function resetFilters() {
-	// Recorre los selectores y establece sus valores en vacío
-	filterSelectors.forEach(({ selector }) => {
-		document.querySelector(selector).value = "";
-	});
-}
+    // Recorre los selectores y establece sus valores en vacío
+    filterSelectors.forEach(({ selector }) => {
+      document.querySelector(selector).value = "";
+    });
+    sortName.value = "none";
+    result = sortData(data, "name", "asc");//agregado
+    renderDataList();
+
+    //dataList.innerHTML = "";
+    //dataList.appendChild(renderItems(data));
+  }
 
 // Función para aplicar los filtros
 function applyFilters() {
-	// Obtén los valores seleccionados de los elementos select
-	const filters = filterSelectors.map(({ selector, property }) => ({
-		property,
-		value: document.querySelector(selector).value,
-	}));
+  // Obtén los valores seleccionados de los elementos select
+  const filters = filterSelectors.map(({ selector, property }) => ({
+    property,
+    value: document.querySelector(selector).value,
+  }));
 
-	// Realiza el filtrado de datos
-	let filteredData = [...data];
-	filters.forEach(({ property, value }) => {
-		if (value) {
-			filteredData = filterData(filteredData, property, value);
-		}
-	});
+  // Realiza el filtrado de datos
+  let filteredData = [...data];
+  filters.forEach(({ property, value }) => {
+    if (value) {
+      filteredData = filterData(filteredData, property, value);
+    }
+  });
 
-	// Limpia la lista antes de renderizar
-	dataList.innerHTML = "";
+  // Limpia la lista antes de renderizar
+  dataList.innerHTML = "";
 
-	// Renderiza los datos filtrados
-	dataList.appendChild(renderItems(filteredData));
+  // Renderiza los datos filtrados
+  dataList.appendChild(renderItems(filteredData));
+
+
+  // Realiza el ordenamiento de datos
+  sortName = document.querySelector('[data-testid="select-sort"]');
+  const sortOrder = sortName.value;
+  result = sortData(filteredData, { sortBy: "name", sortOrder });
+
+  // Renderiza los datos filtrados y ordenados
+  renderDataList();
 }
 
-//Ordenamiento descendente y ascendente
-const sortName = document.querySelector('[data-testid="select-sort"]');
-
+// Ordenamiento descendente y ascendente
+sortName = document.querySelector('[data-testid="select-sort"]');
 sortName.addEventListener("change", (e) => {
-    e.preventDefault();
-    const sortOrder = sortName.value;
-    result = sortData(data, "name", sortOrder);
-    renderDataList();
+  e.preventDefault();
+  applyFilters(); // Actualiza la lista al cambiar el ordenamiento
 });
 
-function renderDataList() {
-    dataList.innerHTML = "";
-    const resultList = renderItems(result);
-    dataList.appendChild(resultList);
+function renderDataList() { // Función para renderizar la lista con los datos actuales
+  dataList.innerHTML = "";
+  const resultList = renderItems(result);
+  dataList.appendChild(resultList);
 }
+
+//estadísticas
+
+const buttonFacts = document.getElementById("button-facts");
+
+// Agrega un event listener
+buttonFacts.addEventListener("click", (e) => {
+  e.preventDefault();
+  dataList.innerHTML = "";
+  filterSelectors.innerHTML = "Facts";
+  dataList.appendChild(renderItems());
+  const data = document.querySelector("#data");
+  data.textContent = "Sabías qué " + computeStats(data, "mainField") + "---------";
+  const result = document.querySelector()
+});
