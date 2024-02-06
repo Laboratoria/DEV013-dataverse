@@ -57,7 +57,7 @@ export const computeStats = (data) => {
       sum: {
         waterSum:0,
         lightSum:0,
-        careSum:0
+        careSum:0,
       },
       average:{
         waterAverage:0,
