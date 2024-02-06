@@ -50,7 +50,7 @@ export const sortData = (data, sortBy, sortOrder) => {
  * 
  * @returns the new populated object
  */
-export const createStatistics = (data) => {
+export const computeStats = (data) => {
   //1 - Create empty structure to host categories in arrays
   const statsByCategory = {
     "ornamental":{
@@ -79,7 +79,7 @@ export const createStatistics = (data) => {
       },
       factsByPlants:[]
     },
-    "aromatic":{
+    "aromatica":{
       sum: {
         waterSum:0,
         lightSum:0,
@@ -92,7 +92,7 @@ export const createStatistics = (data) => {
       },
       factsByPlants:[]
     },
-    "desert":{
+    "desertica":{
       sum: {
         waterSum:0,
         lightSum:0,
@@ -105,7 +105,7 @@ export const createStatistics = (data) => {
       },
       factsByPlants:[]
     },
-    "trees":{
+    "arbol":{
       sum: {
         waterSum:0,
         lightSum:0,
@@ -143,3 +143,19 @@ export const createStatistics = (data) => {
   
   return statsByCategory;
 }
+
+export const computeStats2 =(data, propiedadDeseada) => {
+  const propertyValues=[];
+
+  data.forEach(object => {
+    //acceder a la propiedad
+    const factToExtract = object.facts[propiedadDeseada];
+    //agregar el resultado al array
+    propertyValues.push(factToExtract);
+  });
+
+  const suma = propertyValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const promedio = suma/data.length;
+  
+  return Math.round(promedio);
+};

@@ -6,7 +6,7 @@
 * @param { card } plant - The plant model that contains the info
 * @param { HTML element } cardItem - The card that represents UI the element inside the DOM 
 */
-export const renderFactImages = (plant, cardItem) => {
+const renderFactImages = (plant, cardItem) => {
   // Create static elements
   const waterActiveImage = document.createElement("img");
   waterActiveImage.alt="Gota";

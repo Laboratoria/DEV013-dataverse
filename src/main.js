@@ -2,7 +2,7 @@ import { renderItems } from './view.js';
 import data from './data/dataset.js';
 import { filterData } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
-import { createStatistics } from './dataFunctions.js';
+import { computeStats } from './dataFunctions.js';
 
 //----------------------
 //Keeps an array object in the original state
@@ -17,9 +17,9 @@ let currentData = data;
 let activeSorting = 0;
 
 //----------------------
-//Calls createStatistics function to create statistics and
+//Calls computeStats function to create statistics and
 //keps it into a variable to be use by other functions
-const statiscis = createStatistics(clonedData);
+const statiscis = computeStats(clonedData);
 
 //----------------------
 //Calls renderItems function to render plants and
