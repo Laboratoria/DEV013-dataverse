@@ -1,8 +1,8 @@
-import { renderItems } from './view.js';
+import { renderItems } from './view-cleaning.js';
 import data from './data/dataset.js';
-import { filterData } from './dataFunctions.js';
-import { sortData } from './dataFunctions.js';
-import { computeStats } from './dataFunctions.js';
+import { filterData } from './data-functions-Cleaning.js';
+import { sortData } from './data-functions-Cleaning.js';
+import { createStatistics } from './data-functions-Cleaning.js';
 
 //----------------------
 //Keeps an array object in the original state
@@ -17,9 +17,9 @@ let currentData = data;
 let activeSorting = 0;
 
 //----------------------
-//Calls computeStats function to create statistics and
+//Calls createStatistics function to create statistics and
 //keps it into a variable to be use by other functions
-const statiscis = computeStats(clonedData);
+const statiscis = createStatistics(clonedData);
 
 //----------------------
 //Calls renderItems function to render plants and
@@ -38,26 +38,19 @@ const mainContainer=document.querySelector("#root");
 //Cards is declared as a child of mainContainer
 mainContainer.appendChild(cards);
 
-// ----------------------
-// Refresh full page clicking logo and name
-// function refreshPage() {
-//   window.location.reload();
-// }
-// window.refreshPage=refreshPage;
-
-const resetPage = document.querySelectorAll(".logo");
-Array.from(resetPage).forEach(element => {
-  element.addEventListener("click", () => {
-    clearView();
-    renderItems(clonedData);
-  });
-});
+//----------------------
+//Refresh full page clicking logo and name
+//TODO add event listener
+function refreshPage() {
+  window.location.reload();
+}
+window.refreshPage=refreshPage;
 
 //----------------------
 //Clear page to don't overload the elements of the cardList
 //Must be call before changing curretData value
 function clearView(){
-  const cardsContainer=document.querySelector("#ul-cards");
+  const cardsContainer=document.getElementById("ul-cards");
   cardsContainer.innerHTML="";
 }
 
@@ -87,13 +80,13 @@ categoryButtons.forEach(button =>
   });
 });
 
-// // Filter by name flow ----------------------
-// /**
-//  * Gets the text box, sets the writen value, turns the firsf caracter to upper case
-//  * filteredName keeps filterData with the arguments to be use
-//  */
+// Filter by name flow ----------------------
+/**
+ * Gets the text box, sets the writen value, turns the firsf caracter to upper case
+ * filteredName keeps filterData with the arguments to be use
+ */
 function filterByName(){
-  const inputName = document.querySelector('#input-name');
+  const inputName = document.getElementById('input-name');
   const inputReceive = inputName.value;
 
   const firstLetter = inputReceive[0].toUpperCase();
@@ -105,16 +98,16 @@ function filterByName(){
   setListeners();
 }
 
-//Gets form element, adds listener submit
-//excecutes preventDefault to prevent going to the data file
+//Gets form element, adds listener submit, excecutes preventDefault
 //and calls fiterByName() function
+//TODO why is needed prevent default?
 document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault();
   filterByName();
 });
 
 //Adds listener when enter is press and calls fiterByName() function
-const inputName = document.querySelector('#input-name');
+const inputName = document.getElementById('input-name');
 inputName.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     filterByName();
@@ -126,7 +119,7 @@ inputName.addEventListener('keyup', (event) => {
  * Gets the select element, adds the listener on change, gets the value of selection
  * if 3 is selected render cloneData, else executes sortData with index guiven
  */
-const dropdown = document.querySelector("#item-order");
+const dropdown = document.getElementById("item-order");
 dropdown.addEventListener("change", () => {
   const i = dropdown.selectedIndex;
   if (i === 3) {
@@ -145,9 +138,10 @@ dropdown.addEventListener("change", () => {
 
 // Turn cards ----------------------
 //Applies turnCard to buttons
+
 const cardList = document.getElementById("ul-cards");
 cardList.addEventListener("click",(event) => {
-  //TODO - Ask what about this good practice
+  //TODO - Fix event delegated inside the list, this is executed every time the list receives a click.
   //console.log("se esta ejecutando todas las veces")
   const cardContainer= event.target.closest('.card-container');
   if(event.target.matches('.details-button')) 
@@ -168,14 +162,14 @@ function turnCard(cardContainer){
   frontCard.classList.toggle('hide');
 }
 
-// // Statistics ----------------------
-// /**
-//  * This function creates the words to be insert into the statistics modal
-//  * 
-//  * @param { property } categoryPlant - From object array
-//  * @param { id argument } statsModal - Modal box from HTML
-//  * @param { object } statsByCategory - Created new element
-//  */
+// Statistics ----------------------
+/**
+ * This function creates the words to be insert into the statistics modal
+ * 
+ * @param { property } categoryPlant - From object array
+ * @param { id argument } statsModal - Modal box from HTML
+ * @param { object } statsByCategory - Created new element
+ */
 function renderStatisticsWords(categoryPlant, statsModal, statsByCategory) {
 
   const plantCategory = statsModal.querySelector("#plant-category-modal");
@@ -247,14 +241,14 @@ function renderDescriptions(namePlant, descriptionModal, description) {
  * .show() and .close() methods to modasl
  */
 function setListeners(){
-  //TODO: - Ask why sometimes getElementsByClassName is not working?
+  //TODO: - Why sometimes getElementsByClassName is not working?
   const statisticsButtons=document.querySelectorAll('.modal-statistics-button');
   statisticsButtons.forEach(button => 
   {
     button.addEventListener('click',()=> 
     {
       const categoryPlant = button.id;
-      const statsModal = document.querySelector("#statistics-modal");
+      const statsModal = document.getElementById("statistics-modal");
       renderStatisticsWords(categoryPlant, statsModal, statiscis);
       statsModal.showModal();
     });
@@ -268,7 +262,7 @@ function setListeners(){
 
       data.forEach(plant => {
         if(plant.id === idPlant){
-          const descriptionModal = document.querySelector("#description-modal");
+          const descriptionModal = document.getElementById("description-modal");
           renderDescriptions(plant.name, descriptionModal, plant.description);
           descriptionModal.showModal();
         }
@@ -278,13 +272,13 @@ function setListeners(){
 
   const closeButtonDescription=document.querySelector(".close-button");
   closeButtonDescription.addEventListener("click", () => {
-    const descriptionModal = document.querySelector("#description-modal");
+    const descriptionModal = document.getElementById("description-modal");
     descriptionModal.close();
   });
 
   const closeButtonStats = document.querySelector(".close-button-stats");
   closeButtonStats.addEventListener("click", () =>{
-    const statsModal = document.querySelector("#statistics-modal");
+    const statsModal = document.getElementById("statistics-modal");
     statsModal.close();
   });
 }

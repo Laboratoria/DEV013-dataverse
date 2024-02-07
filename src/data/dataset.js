@@ -1,378 +1,485 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
+    //1
+    "id": "begonia",
+    "categoryPlant":"ornamental",
+    "name": "Begonia",
+    "description": "La begonia es una planta ornamental apreciada por su hermosa follaje y flores delicadas. Sus hojas son de forma asimétrica y varían en tonos de verde, rojo y plateado, lo que agrega un toque de elegancia a cualquier jardín o espacio interior. Sus flores, en forma de racimos, pueden ser de colores vivos como el rosa, el blanco o el rojo. La begonia es fácil de cuidar y prospera en condiciones de sombra parcial y suelos bien drenados. Es una elección popular para añadir un toque de belleza natural a hogares y jardines.", 
+    "shortDescription": "Planta de flores vistosas, ideal para jardines y macetas interiores.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/begonia.png?raw=true",
+    "maintenanceNeeds": "Necesita riego regular y evitar la luz solar directa.",
+    "scientificName": "Begonia",
+    "applicationsPlant": "Jardinería decorativa, colecciones botánicas.",
+    "climaticData": "Prefiere ambientes húmedos y sombreados.",
+    "botanicalFamily": "Begoniaceae",
+    "birthPlace": "Ambientes tropicales y subtropicales",
     "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":1,
+      "sunLight": 1,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
-    }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
+    //1
+    "id": "aloe-vera",
+    "categoryPlant":"medicinal",
+    "name": "Aloe Vera",
+    "description": "El aloe vera es una planta suculenta reconocida por sus numerosos beneficios para la salud y la piel. Sus hojas gruesas y carnosas contienen un gel transparente que se utiliza comúnmente para aliviar quemaduras solares, cortes, irritaciones de la piel y quemaduras menores. Además de sus propiedades medicinales, el aloe vera es una planta atractiva con hojas verdes y dentadas que crecen en rosetas. Es fácil de cuidar y puede prosperar en condiciones de luz brillante indirecta y suelos bien drenados. Esta planta es una adición valiosa a jardines de hierbas o como planta de interior para la decoración.",
+    "shortDescription": "Planta suculenta conocida por sus propiedades medicinales.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/aloe-vera.png?raw=true",
+    "botanicalFamily": "Asphodelaceae",
+    "birthPlace": "Península Arábiga",
+    "maintenanceNeeds": "Riego escaso y exposición a pleno sol o sombra parcial.",
+    "scientificName": "Aloe barbadensis miller",
+    "applicationsPlant": "Productos medicinales y cosméticos, jardinería.",
+    "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
     "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+      "waterAmount":2,
+      "sunLight": 2,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
-    }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
+    //1
+    "id": "menta",
+    "categoryPlant":"aromatica",
+    "name": "Menta",
+    "description": "La menta es una planta aromática de hojas verdes y refrescantes, que es conocida por su sabor característico y versatilidad en la cocina y la medicina herbal. Sus hojas son ampliamente utilizadas para dar sabor a tés, postres y platos salados. La menta también se utiliza para hacer infusiones que ayudan a aliviar problemas digestivos y malestares estomacales. Esta planta perenne se extiende rápidamente y puede convertirse en una cobertura de suelo densa. Prefiere la luz solar parcial y suelos húmedos. La menta es una elección popular para jardines de hierbas, y su agradable aroma también repele insectos.",
+    "shortDescription": "Hierba aromática refrescante, usada en cocina y medicina.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/menta.png?raw=true",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Europa, Asia y África",
+    "maintenanceNeeds": "Controlar su crecimiento invasivo y proporcionar suficiente agua.",
+    "scientificName": "Mentha",
+    "applicationsPlant": "Cocina, bebidas, productos de higiene, remedios naturales.",
+    "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
     "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+      "waterAmount":2,
+      "sunLight": 2,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
-    }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
+    //1
+    "id": "cactus-saguaro",
+    "categoryPlant":"desertica",
+    "name": "Cactus Saguaro",
+    "description": "El cactus saguaro, o saguaro (Carnegiea gigantea), es una icónica especie de cactus que se encuentra en el desierto de Sonora y otras áreas desérticas del suroeste de Estados Unidos y el noroeste de México. Es conocido por su aspecto distintivo con brazos en forma de candelabro que pueden alcanzar alturas impresionantes, a menudo superando los 12 metros. Los saguaros pueden vivir durante siglos y son una parte fundamental del ecosistema del desierto, proporcionando refugio y alimento a la fauna del desierto. El cactus saguaro es un símbolo del suroeste de Estados Unidos y una característica icónica del paisaje desértico.",
+    "shortDescription": "Icono del desierto con forma de candelabro, vital para su ecosistema.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/cactus-saguaro.png?raw=true",
+    "botanicalFamily": "Cactaceae",
+    "birthPlace": "Desierto de Sonora",
+    "maintenanceNeeds": "Mínimo riego, evitar temperaturas bajo cero.",
+    "scientificName": "Carnegiea gigantea",
+    "applicationsPlant": "Jardinería desértica, simbolismo cultural.",
+    "climaticData": "Resistente a la sequía, prefiere climas cálidos y secos.",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+      "waterAmount":1,
+      "sunLight": 3,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
-    }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
+    //1
+    "id": "roble",
+    "categoryPlant":"arbol",
+    "name": "Roble",
+    "description": "El roble es un género de árboles que incluye muchas especies en todo el mundo. Los robles son conocidos por su tamaño majestuoso y su importancia ecológica. Sus hojas son generalmente lobuladas y caducas, lo que significa que caen en otoño. Los robles son árboles de hoja ancha que se encuentran en una variedad de hábitats, desde bosques hasta parques urbanos. Son apreciados por su madera resistente y duradera, así como por su importancia para la fauna, ya que proporcionan alimento y refugio para numerosas especies.",
+    "shortDescription": "Árbol duradero con madera fuerte, usado en carpintería.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/roble.png?raw=true",
+    "botanicalFamily": "Fagaceae",
+    "birthPlace": "Hemisferio Norte",
+    "maintenanceNeeds": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
+    "scientificName": "Quercus",
+    "applicationsPlant": "Construcción, muebles, barriles para vino.",
+    "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
     "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
+    //2
+    "id": "azalea",
+    "categoryPlant":"ornamental",
+    "name": "Azalea",
+    "description": "La azalea es una planta de floración que cautiva con su exuberante exhibición de colores. Sus flores en forma de embudo varían en tonos que van desde el blanco puro hasta el rosa intenso, el rojo brillante y el morado suave. Esta planta perenne es especialmente popular en jardines de estilo japonés debido a su elegancia y simbolismo. La azalea requiere un suelo ácido y bien drenado, así como una exposición parcial al sol o sombra. Con un cuidado adecuado, estas bellezas florales pueden florecer año tras año, brindando una explosión de color y vida a tu jardín.",
+    "shortDescription": "Arbusto con flores brillantes, común en jardines.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/azalea.png?raw=true",
+    "botanicalFamily": "Rhododendron",
+    "birthPlace": "Asia, Europa y América del Norte",
+    "maintenanceNeeds": "Requiere suelo ácido y poda después de la floración.",
+    "scientificName": "Rhododendron",
+    "applicationsPlant": "Jardinería ornamental, cultivo en macetas.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+      "waterAmount":2,
+      "sunLight": 1,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
+    //2
+    "id": "manzanilla",
+    "categoryPlant":"medicinal",
+    "name": "Manzanilla",
+    "description": "La manzanilla es una hierba aromática conocida por sus propiedades calmantes y medicinales. Sus flores pequeñas, parecidas a margaritas, emiten un aroma dulce y reconfortante. La manzanilla se utiliza comúnmente para hacer infusiones y tés que ayudan a aliviar el estrés, la ansiedad y problemas digestivos. Esta planta de crecimiento bajo tiene hojas finas y delicadas y flores blancas con un centro amarillo. La manzanilla prefiere la luz solar indirecta y suelos bien drenados. Además de sus beneficios para la salud, su encanto y fragancia la convierten en una opción popular para jardines de hierbas y parterres de flores.",
+    "shortDescription": "Hierba aromática con propiedades calmantes, usada en infusiones.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/manzanilla.png?raw=true",
+    "botanicalFamily": "Asteraceae",
+    "birthPlace": "Europa y Asia occidental",
+    "maintenanceNeeds": "Necesita sol pleno y suelo bien drenado.",
+    "scientificName": "Matricaria chamomilla",
+    "applicationsPlant": "Infusiones, remedios naturales, cosmética.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+      "waterAmount":2,
+      "sunLight": 2,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
-    }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
+    //2
+    "id": "albahaca",
+    "categoryPlant":"aromatica",
+    "name": "Albahaca",
+    "description": "La albahaca es una hierba aromática ampliamente utilizada en la cocina debido a su sabor y aroma distintivos. Sus hojas son de color verde brillante y tienen un sabor fresco y ligeramente dulce. La albahaca es un ingrediente esencial en muchas recetas, incluyendo platos italianos como la pasta y la pizza, así como ensaladas y salsas. Además de su uso culinario, la albahaca se aprecia por su valor medicinal y sus propiedades antiinflamatorias y antioxidantes. En el jardín, la albahaca prospera bajo el sol directo y en suelos bien drenados. Es una elección popular para jardines de hierbas.",
+    "shortDescription": "Hierba culinaria clave en la cocina italiana, de aroma y sabor distintivos.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/albahaca.png?raw=true",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "India, Asia Sudoriental",
+    "maintenanceNeeds": "Requiere sol pleno y riego regular, evitar exceso de humedad.",
+    "scientificName": "Ocimum basilicum",
+    "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+      "waterAmount":3,
+      "sunLight": 2,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
-    }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
+    //2
+    "id": "ocotillo",
+    "categoryPlant":"desertica",
+    "name": "Ocotillo",
+    "description": "El ocotillo es otro cactus del suroeste de Estados Unidos y el norte de México. A diferencia del cactus saguaro, el ocotillo no es un cactus gigante y no tiene brazos prominentes. En su lugar, se compone de tallos delgados y espinosos que pueden crecer hasta 6 metros de altura. Durante la temporada de lluvias, el ocotillo produce hojas pequeñas y verdes, pero en períodos secos, las hojas pueden caer para conservar la humedad. El ocotillo es conocido por sus llamativas flores rojas o anaranjadas que aparecen en la parte superior de sus tallos durante la primavera y el verano.",
+    "shortDescription": "Planta desértica con tallos espinosos y flores rojas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/ocotillo.png?raw=true",
+    "botanicalFamily": "Fouquieriaceae",
+    "birthPlace": "Suroeste de Estados Unidos y México",
+    "maintenanceNeeds": "Requiere poca agua y suelo bien drenado.",
+    "scientificName": "Fouquieria splendens",
+    "applicationsPlant": "Jardinería xerófila, ornamentación, cercas vivas.",
+    "climaticData": "Adaptable a condiciones áridas, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+      "waterAmount":1,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
-    }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
+    //2
+    "id": "sauce-lloron",
+    "categoryPlant":"arbol",
+    "name": "Sauce Llorón",
+    "description": "El sauce llorón, científicamente conocido como Salix babylonica, es un árbol ornamental conocido por su aspecto distintivo y su elegancia. Sus ramas colgantes y flexibles crean una apariencia que evoca la imagen de lágrimas cayendo, lo que le da su nombre. El sauce llorón es apreciado por su follaje verde claro y su capacidad para crear una sombra fresca y refrescante en áreas de jardín o junto al agua. Durante la primavera, produce pequeñas flores colgantes que atraen a abejas y mariposas. Es un árbol que prefiere la humedad del suelo y es ideal para zonas con acceso a agua.",
+    "shortDescription": "Árbol con ramas colgantes, común en paisajes y parques.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/sauce-lloron.png?raw=true",
+    "botanicalFamily": "Salicaceae",
+    "birthPlace": "China",
+    "maintenanceNeeds": "Prefiere suelos húmedos y pleno sol.",
+    "scientificName": "Salix babylonica",
+    "applicationsPlant": "Jardinería paisajista, estabilización de suelos.",
+    "climaticData": "Prefiere suelos húmedos, cercanos a cuerpos de agua.",
     "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":3,
+      "sunLight": 3,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
-    }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
+    //3
+    "id": "lirio",
+    "categoryPlant":"ornamental",
+    "name": "Lirio",
+    "description": "El lirio es una planta perenne que se destaca por su belleza y elegancia atemporal. Sus flores, en forma de trompeta, vienen en una amplia gama de colores, desde el blanco puro hasta el naranja brillante, el rosa suave y el púrpura intenso. Con tallos altos y esbeltos, el lirio agrega una dimensión vertical impresionante a cualquier jardín. Estas flores emiten un aroma dulce y atractivo que atrae a mariposas y abejas. Los lirios prosperan en suelos bien drenados y necesitan una exposición al sol para florecer en plenitud. Son una elección popular para arreglos florales y jardines.",
+    "shortDescription": "Planta perenne con grandes flores coloridas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/lirio.png?raw=true",
+    "botanicalFamily": "Liliaceae",
+    "birthPlace": "Europa, Asia y América del Norte",
+    "maintenanceNeeds": "Retirar flores marchitas y dividir bulbos cada pocos años.",
+    "scientificName": "Lilium",
+    "applicationsPlant": "Jardinería, arreglos florales, decoración.",
+    "climaticData": "Se adapta a una variedad de climas, prefiere suelo húmedo.",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":2,
+      "sunLight": 2,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
-    }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
+    //3
+    "id": "echineacea",
+    "categoryPlant":"medicinal",
+    "name": "Echinacea",
+    "description": "La equinácea, también conocida como coneflower, es una planta perenne apreciada por sus propiedades medicinales y su belleza ornamental. Sus flores con pétalos de color rosa, púrpura o blanco tienen un característico cono central elevado. Esta planta es conocida por fortalecer el sistema inmunológico y se utiliza a menudo como remedio herbal para combatir resfriados y otras infecciones. En jardinería, la equinácea agrega un toque vibrante de color y atrae a abejas y mariposas. Prefiere la luz solar directa o parcial y suelos bien drenados. Es una elección popular tanto en jardines medicinales como en jardines de flores.",
+    "shortDescription": "Planta medicinal con flores de color rosa púrpura.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/echineacea.png?raw=true",
+    "botanicalFamily": "Asteraceae",
+    "birthPlace": "América del Norte",
+    "maintenanceNeeds": "Resistente a sequías, requiere poco cuidado una vez establecida.",
+    "scientificName": "Echinacea purpurea",
+    "applicationsPlant": "Suplementos de salud, jardinería ornamental.",
+    "climaticData": "Resistente a climas variados, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
-    }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
+    //3
+    "id": "cilantro",
+    "categoryPlant":"aromatica",
+    "name": "Cilantro",
+    "description": "El cilantro es una hierba versátil que se utiliza en una variedad de cocinas alrededor del mundo. Sus hojas verdes y finamente divididas tienen un sabor fresco y cítrico, y se utilizan comúnmente en platos mexicanos, asiáticos y mediterráneos. Además de las hojas, las semillas de cilantro se utilizan como especia en la cocina. El cilantro también es apreciado por su valor medicinal y se cree que tiene propiedades digestivas y antioxidantes. En el jardín, el cilantro prefiere la luz solar parcial y suelos bien drenados. Es una planta anual que puede autosembrarse si se le permite.",
+    "shortDescription": "Hierba aromática con hojas y semillas utilizadas en cocina.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/cilantro.png?raw=true",
+    "botanicalFamily": "Apiaceae",
+    "birthPlace": "Regiones mediterráneas, Europa del Sur",
+    "maintenanceNeeds": "Sembrar sucesivamente y evitar el exceso de calor.",
+    "scientificName": "Coriandrum sativum",
+    "applicationsPlant": "Cocina, medicina natural, aromaterapia.",
+    "climaticData": "Prefiere climas templados y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":2,
+      "sunLight": 2,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
-    }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
+    //3
+    "id": "agave-azul",
+    "categoryPlant":"desertica",
+    "name": "Agave Azul",
+    "description": "El agave azul, científicamente conocido como Agave tequilana, es una planta suculenta originaria de México y es famosa por ser la materia prima principal para la producción de tequila. Tiene hojas largas y puntiagudas de color azul grisáceo que crecen en una forma de roseta. Las hojas del agave azul son gruesas y carnosas, y están cubiertas de espinas en los bordes. Esta planta requiere pleno sol y suelos bien drenados para prosperar. Después de muchos años de crecimiento, el agave azul produce una gran inflorescencia de flores amarillas antes de completar su ciclo de vida.",
+    "shortDescription": "Planta suculenta usada en la producción de tequila.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/agave-azul.png?raw=true",
+    "botanicalFamily": "Asparagaceae",
+    "birthPlace": "México",
+    "maintenanceNeeds": "Riego limitado, resistente a la sequía y al calor.",
+    "scientificName": "Agave tequilana",
+    "applicationsPlant": "Producción de tequila, jardinería ornamental.",
+    "climaticData": "Prefiere climas secos y suelos bien drenados.",
     "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "waterAmount":1,
+      "sunLight": 3,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
-    }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
+    //3
+    "id": "secuoya-roja",
+    "categoryPlant":"arbol",
+    "name": "Secuoya Roja",
+    "description": "La secuoya roja, también conocida como secoya gigante (Sequoiadendron giganteum), es una especie de árbol de hoja perenne que es conocida por ser uno de los árboles más grandes y antiguos del mundo. Las secuoyas rojas son famosas por su inmenso tamaño, con ejemplares que pueden alcanzar alturas de más de 100 metros y tener troncos de gran diámetro. Su corteza es de color rojizo y su follaje es de un verde profundo. Estos árboles son venerados por su longevidad y belleza, y algunos de ellos tienen miles de años de antigüedad.",
+    "shortDescription": "Uno de los árboles más altos del mundo, símbolo de la costa oeste de EE. UU.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/secuoya-roja.png?raw=true",
+    "botanicalFamily": "Cupressaceae",
+    "birthPlace": "Costa oeste de Estados Unidos",
+    "maintenanceNeeds": "Necesita mucho espacio para crecer, prefiere suelo húmedo.",
+    "scientificName": "Sequoia sempervirens",
+    "applicationsPlant": "Conservación de la naturaleza, atractivo turístico.",
+    "climaticData": "Prefiere climas húmedos y neblinosos.",
     "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
-    }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
+    //4
+    "id": "clivia",
+    "categoryPlant":"ornamental",
+    "name": "Clivia",
+    "description": "La clivia es una planta de interior y exterior apreciada por sus atractivas hojas verdes oscuro y flores vibrantes. Produce racimos de flores en forma de campana que varían en tonos de naranja, rojo o amarillo, añadiendo un toque de color a cualquier entorno. Esta planta es resistente y fácil de cuidar, lo que la hace ideal para jardineros principiantes. La clivia prefiere la sombra parcial y suelos bien drenados. Además de su belleza ornamental, también es conocida por purificar el aire interior, lo que la convierte en una elección popular para la decoración de interiores.",
+    "shortDescription": "Planta perenne con flores naranjas, ideal para interiores.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/clivia.png?raw=true",
+    "botanicalFamily": "Amaryllidaceae",
+    "birthPlace": "Sudáfrica",
+    "maintenanceNeeds": "Limitar riego en invierno y proporcionar luz indirecta.",
+    "scientificName": "Clivia miniata",
+    "applicationsPlant": "Decoración interior, jardinería de sombra.",
+    "climaticData": "Prefiere sombra parcial y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+      "waterAmount":2,
+      "sunLight": 1,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
-    }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
+    //4
+    "id": "valeriana",
+    "categoryPlant":"medicinal",
+    "name": "Valeriana",
+    "description": "La valeriana es una hierba perenne conocida por sus propiedades sedantes y relajantes. Sus raíces se utilizan para hacer infusiones y suplementos naturales que ayudan a aliviar el insomnio, la ansiedad y el estrés. La planta tiene hojas con forma de plumas y produce racimos de pequeñas flores blancas o rosadas que desprenden un aroma agradable. La valeriana prefiere la sombra parcial y suelos húmedos y bien drenados. Aunque es apreciada por sus beneficios para la salud, también se cultiva por su atractivo ornamental y su capacidad para atraer a polinizadores como las abejas.",
+    "shortDescription": "Planta perenne con propiedades relajantes, usada en tratamientos para el insomnio.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/valeriana.png?raw=true",
+    "botanicalFamily": "Valerianaceae",
+    "birthPlace": "Europa y Asia",
+    "maintenanceNeeds": "Prefiere sol o sombra parcial y suelo húmedo.",
+    "scientificName": "Valeriana officinalis",
+    "applicationsPlant": "Tratamientos de insomnio, jardinería ornamental.",
+    "climaticData": "Prefiere suelos húmedos y lugares sombreados.",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+      "waterAmount":2,
+      "sunLight": 1,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
-    }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
+    //4
+    "id": "romero",
+    "categoryPlant":"aromatica",
+    "name": "Romero",
+    "description": "El romero es una hierba aromática perenne con hojas lineales y fragantes que emiten un aroma distintivo y delicioso. Originario de la región mediterránea, el romero se ha utilizado en la cocina y la medicina durante siglos. Sus hojas verdes y resistentes son ideales para sazonar carnes, aves, pescados y platos vegetales, y se puede utilizar tanto fresco como seco. Además de su uso culinario, el romero se considera un símbolo de la memoria y la longevidad. En el jardín, el romero prefiere la luz solar directa y suelos bien drenados.",
+    "shortDescription": "Hierba perenne aromática, utilizada en cocina y medicina.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/romero.png?raw=true",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Mediterráneo",
+    "maintenanceNeeds": "Prefiere clima cálido, suelo bien drenado y no requiere mucha agua.",
+    "scientificName": "Rosmarinus officinalis",
+    "applicationsPlant": "Cocina, aceites esenciales, productos de higiene.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+      "waterAmount":3,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
-    }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
+    //4
+    "id": "palo-verde",
+    "categoryPlant":"desertica",
+    "name": "Palo Verde",
+    "description": "El palo verde es un árbol nativo del suroeste de Estados Unidos y el norte de México, conocido por su capacidad para adaptarse a las condiciones desérticas. Su nombre se deriva de su corteza de color verde que realiza la fotosíntesis. Durante la primavera, el palo verde se llena de flores amarillas brillantes, lo que lo convierte en un espectáculo impresionante en el paisaje desértico. Aunque pierde sus hojas durante la temporada seca para conservar la humedad, el palo verde es un árbol resistente y valioso en la reforestación de áreas áridas y jardinería paisajística en regiones desérticas.",
+    "shortDescription": "Árbol desértico con corteza verde, adaptado a condiciones áridas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/palo-verde.png?raw=true",
+    "botanicalFamily": "Fabaceae",
+    "birthPlace": "Desiertos del suroeste de Estados Unidos y México",
+    "maintenanceNeeds": "Adaptable a suelos pobres, requiere poca agua.",
+    "scientificName": "Parkinsonia",
+    "applicationsPlant": "Jardinería xerófila, restauración ecológica.",
+    "climaticData": "Resistente a la sequía, prefiere suelos bien drenados.",
     "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+      "waterAmount":1,
+      "sunLight": 3,
+      "careDifficulty":1,
     },
-    "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
-    }
   },
   {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
+    //4
+    "id": "arce",
+    "categoryPlant":"arbol",
+    "name": "Arce",
+    "description": "El arce es conocido por sus hojas palmadas y sus coloridos cambios de follaje en otoño. Hay muchas especies de arces en todo el mundo, pero los arces japoneses y los arces rojos son particularmente apreciados por su belleza ornamental. Los arces japoneses tienen hojas delicadamente lobuladas que adquieren tonos rojos, naranjas y amarillos espectaculares durante el otoño. Los arces rojos son conocidos por sus hojas de cinco lóbulos que se vuelven rojas brillantes en otoño. Además de su atractivo estacional, los arces son valorados por su madera y la savia que se utiliza para hacer jarabe de arce.",
+    "shortDescription": "Árbol famoso por su savia para jarabe y hojas otoñales coloridas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/arce.png?raw=true",
+    "botanicalFamily": "Sapindaceae",
+    "birthPlace":"América del norte",
+    "maintenanceNeeds": "Requiere poda ocasional y suelo bien drenado.",
+    "scientificName": "Acer",
+    "applicationsPlant": "Producción de jarabe de arce, jardinería.",
+    "climaticData": "Prefiere climas templados y suelos fértiles.",
     "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
-    }
   },
   {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
+    //5
+    "id": "lavanda",
+    "categoryPlant":"medicinal",
+    "name": "Lavanda",
+    "description": "La lavanda es una planta aromática conocida por su fragante y relajante aroma, así como por su belleza ornamental. Sus tallos altos están coronados por espigas de flores en forma de cono, que varían en tonos de violeta a azul y lilas suaves. Esta planta perenne es apreciada por su uso en la aromaterapia y la fabricación de aceites esenciales. Su aroma suave tiene propiedades calmantes que ayudan a aliviar el estrés y promover el sueño. En el jardín, la lavanda prospera bajo el sol directo en suelos bien drenados.",
+    "shortDescription": "Planta aromática con flores púrpura, usada en cosmética y aromaterapia.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/lavanda.png?raw=true",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Mediterráneo",
+    "maintenanceNeeds": "Requiere sol pleno, suelo bien drenado y poda regular.",
+    "scientificName": "Lavandula",
+    "applicationsPlant": "Aceites esenciales, perfumería, gastronomía.",
+    "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":3,
     },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
-    }
   },
   {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
+    //5
+    "id": "oregano",
+    "categoryPlant":"aromatica",
+    "name": "Orégano",
+    "description": "El orégano es una hierba aromática con hojas pequeñas y ovaladas que emanan un aroma fuerte y sabroso. Es un ingrediente esencial en muchas cocinas, especialmente en la cocina italiana y mediterránea. El orégano se utiliza para sazonar pizzas, pastas, ensaladas, salsas y mucho más. Su sabor es cálido, terroso y ligeramente picante. Además de su uso culinario, el orégano tiene propiedades medicinales y se cree que tiene beneficios para la digestión y la salud en general. Es una planta perenne que se propaga fácilmente y es una adición valiosa tanto para jardines de hierbas como para macetas.",
+    "shortDescription": "Hierba clave en la cocina mediterránea y mexicana.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/oregano.png?raw=true",
+    "botanicalFamily": "Lamiaceae",
+    "birthPlace": "Europa occidental, Mediterráneo",
+    "maintenanceNeeds": "Cortar tallos para promover un crecimiento más tupido.",
+    "scientificName": "Origanum vulgare",
+    "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
+    "climaticData": "Adaptable a varios climas, prefiere suelo bien drenado.",
     "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
+      "waterAmount":3,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
-    }
   },
   {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
+    //5
+    "id": "yucca",
+    "categoryPlant":"desertica",
+    "name": "Yucca",
+    "description": "La yuca, también conocida como yuca desértica (Yucca schidigera), es una planta suculenta que se encuentra en regiones áridas del suroeste de Estados Unidos y México. Tiene hojas largas y puntiagudas que forman una roseta en la base de la planta. La yuca produce una espectacular inflorescencia de flores blancas y campaniformes en el extremo de un alto tallo durante la primavera. Esta planta es resistente y se ha adaptado a las condiciones desérticas, lo que la convierte en una elección popular en jardines de xeriscape.",
+    "shortDescription": "Planta suculenta con hojas en forma de espada y flores blancas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/yuca.png?raw=true",
+    "botanicalFamily": "Asparagaceae",
+    "birthPlace": "América del Norte y Central",
+    "maintenanceNeeds": "Resistente a la sequía, requiere poco mantenimiento.",
+    "scientificName": "Yucca",
+    "applicationsPlant": "Jardinería en zonas áridas, ornamentación, uso medicinal.",
+    "climaticData": "Resistente a la sequía, prefiere suelos arenosos.",
     "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
+      "waterAmount":1,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
   },
   {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
+    //5
+    "id": "baobab",
+    "categoryPlant":"arbol",
+    "name": "Baobab",
+    "description": "El baobab es inconfundible que se encuentra en diversas regiones de África, especialmente en las zonas secas y áridas. Lo más llamativo del baobab es su tronco grueso y bulboso que almacena agua, lo que le permite sobrevivir en condiciones de sequía. Su apariencia peculiar, con el tronco ancho y ramas que se asemejan a raíces hacia arriba, le ha valido el nombre de \"árbol boca abajo\" en algunas culturas. Además de su resistencia y valor como fuente de agua y alimento en las comunidades locales, el baobab produce frutos ricos en nutrientes que se utilizan en alimentos y bebidas.",
+    "shortDescription": "Árbol con tronco grueso, símbolo de vida en regiones áridas.",
+    "imageUrl": "https://github.com/Etelbina/dataverse/blob/main/src/resources/Images/baobab.png?raw=true",
+    "botanicalFamily": "Malvaceae",
+    "birthPlace": "África, Madagascar, Australia",
+    "maintenanceNeeds": "Extremadamente resistente a la sequía, requiere muy poco riego.",
+    "scientificName": "Adansonia",
+    "applicationsPlant": "Conservación ecológica, uso medicinal y alimenticio.",
+    "climaticData": "Adaptado a regiones áridas y semiáridas.",
     "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
+      "waterAmount":2,
+      "sunLight": 3,
+      "careDifficulty":2,
     },
-    "extraInfo": {
-      "imageSource": ""
-    }
   }
 ];
+
+
+
