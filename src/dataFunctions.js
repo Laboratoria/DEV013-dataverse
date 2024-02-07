@@ -33,6 +33,8 @@ export const sortData = (data, sortBy, sortOrder) => {
       return a[sortBy] > b[sortBy] ? 1 : -1;
     } else if (sortOrder === 2) {
       return a[sortBy] < b[sortBy] ? 1 : -1;
+    } else {
+      return;
     }
   });
 };
@@ -116,9 +118,6 @@ export const computeStats = (data) => {
     const sumCare = statsByCategory[category].factsByPlants.reduce((accumulator, fact) => accumulator + fact.careDifficulty, 0);
     const averageCare = parseInt(sumCare/statsByCategory[category].factsByPlants.length);
     statsByCategory[category].average.careAverage=averageCare;
-
-    //parsefloat, parse int, 
-
   });
   
   return statsByCategory;

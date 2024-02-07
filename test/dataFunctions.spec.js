@@ -1,10 +1,7 @@
-import { filterData, sortData } from '../src/dataFunctions.js';
+import { filterData, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
-//console.log(fakeData);
-
 describe('filterData', () => {
-
   it('returns an array with filtered data by category', () => {
     const result = filterData(fakeData, "categoryPlant", "ornamental");
     expect(result).toEqual([
@@ -16,6 +13,11 @@ describe('filterData', () => {
         "scientificName": "Begonia",
         "applicationsPlant": "Jardinería decorativa, colecciones botánicas.",
         "climaticData": "Prefiere ambientes húmedos y sombreados.",
+        "facts": {
+          "waterAmount":1,
+          "sunLight": 1,
+          "careDifficulty":3,
+        },
       },
       {
         "id": "azalea",
@@ -25,7 +27,12 @@ describe('filterData', () => {
         "scientificName": "Rhododendron",
         "applicationsPlant": "Jardinería ornamental, cultivo en macetas.",
         "climaticData": "Prefiere climas templados y suelo bien drenado.",
-      },
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 1,
+          "careDifficulty":2,
+        }
+      }
     ]);
   });
   it ('returns an array with filtered data by id', () => {
@@ -33,12 +40,17 @@ describe('filterData', () => {
     expect(result).toEqual([
       {
         "id": "roble",
-        "categoryPlant":"trees",
+        "categoryPlant":"arbol",
         "name": "Roble",
         "maintenanceNeeds": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
         "scientificName": "Quercus",
         "applicationsPlant": "Construcción, muebles, barriles para vino.",
         "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 3,
+          "careDifficulty":2,
+        },
       },
     ])
   })
@@ -50,13 +62,32 @@ describe('sortData', () => {
     sortData(fakeData, "id", 1);
     expect(fakeData).toEqual([
       {
-        "id": "aloe-vera",
+        "id": "albahaca",
+        "categoryPlant":"aromatica",
+        "name": "Albahaca",
+        "maintenanceNeeds": "Requiere sol pleno y riego regular, evitar exceso de humedad.",
+        "scientificName": "Ocimum basilicum",
+        "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
+        "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
+        "facts": {
+          "waterAmount":3,
+          "sunLight": 2,
+          "careDifficulty":3,
+        },
+      },
+      {
+        "id": "aloevera",
         "categoryPlant":"medicinal",
         "name": "Aloe Vera",
         "maintenanceNeeds": "Riego escaso y exposición a pleno sol o sombra parcial.",
         "scientificName": "Aloe barbadensis miller",
         "applicationsPlant": "Productos medicinales y cosméticos, jardinería.",
         "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":1,
+        },
       },
       {
         "id": "azalea",
@@ -66,6 +97,11 @@ describe('sortData', () => {
         "scientificName": "Rhododendron",
         "applicationsPlant": "Jardinería ornamental, cultivo en macetas.",
         "climaticData": "Prefiere climas templados y suelo bien drenado.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 1,
+          "careDifficulty":2,
+        }
       },
       {
         "id": "begonia",
@@ -75,33 +111,67 @@ describe('sortData', () => {
         "scientificName": "Begonia",
         "applicationsPlant": "Jardinería decorativa, colecciones botánicas.",
         "climaticData": "Prefiere ambientes húmedos y sombreados.",
+        "facts": {
+          "waterAmount":1,
+          "sunLight": 1,
+          "careDifficulty":3,
+        },
       },
       {
-        "id": "cactus-saguaro",
-        "categoryPlant":"desert",
-        "name": "Cactus Saguaro",
-        "maintenanceNeeds": "Mínimo riego, evitar temperaturas bajo cero.",
-        "scientificName": "Carnegiea gigantea",
-        "applicationsPlant": "Jardinería desértica, simbolismo cultural.",
-        "climaticData": "Resistente a la sequía, prefiere climas cálidos y secos.",
+        "id": "manzanilla",
+        "categoryPlant":"medicinal",
+        "name": "Manzanilla",
+        "maintenanceNeeds": "Necesita sol pleno y suelo bien drenado.",
+        "scientificName": "Matricaria chamomilla",
+        "applicationsPlant": "Infusiones, remedios naturales, cosmética.",
+        "climaticData": "Prefiere climas templados y suelo bien drenado.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":3,
+        },
       },
       {
         "id": "menta",
-        "categoryPlant":"aromatic",
+        "categoryPlant":"aromatica",
         "name": "Menta",
         "maintenanceNeeds": "Controlar su crecimiento invasivo y proporcionar suficiente agua.",
         "scientificName": "Mentha",
         "applicationsPlant": "Cocina, bebidas, productos de higiene, remedios naturales.",
         "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":2,
+        },
+      },
+      {
+        "id": "ocotillo",
+        "categoryPlant":"desertica",
+        "name": "Ocotillo",
+        "maintenanceNeeds": "Requiere poca agua y suelo bien drenado.",
+        "scientificName": "Fouquieria splendens",
+        "applicationsPlant": "Jardinería xerófila, ornamentación, cercas vivas.",
+        "climaticData": "Adaptable a condiciones áridas, prefiere suelo bien drenado.",
+        "facts": {
+          "waterAmount":1,
+          "sunLight": 3,
+          "careDifficulty":2,
+        },
       },
       {
         "id": "roble",
-        "categoryPlant":"trees",
+        "categoryPlant":"arbol",
         "name": "Roble",
         "maintenanceNeeds": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
         "scientificName": "Quercus",
         "applicationsPlant": "Construcción, muebles, barriles para vino.",
         "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 3,
+          "careDifficulty":2,
+        },
       },
     ]);
   });
@@ -110,30 +180,59 @@ describe('sortData', () => {
     expect(fakeData).toEqual([
       {
         "id": "roble",
-        "categoryPlant":"trees",
+        "categoryPlant":"arbol",
         "name": "Roble",
         "maintenanceNeeds": "Requiere espacio para crecer, poco mantenimiento una vez establecido.",
         "scientificName": "Quercus",
         "applicationsPlant": "Construcción, muebles, barriles para vino.",
         "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 3,
+          "careDifficulty":2,
+        },
+      },
+      {
+        "id": "ocotillo",
+        "categoryPlant":"desertica",
+        "name": "Ocotillo",
+        "maintenanceNeeds": "Requiere poca agua y suelo bien drenado.",
+        "scientificName": "Fouquieria splendens",
+        "applicationsPlant": "Jardinería xerófila, ornamentación, cercas vivas.",
+        "climaticData": "Adaptable a condiciones áridas, prefiere suelo bien drenado.",
+        "facts": {
+          "waterAmount":1,
+          "sunLight": 3,
+          "careDifficulty":2,
+        },
       },
       {
         "id": "menta",
-        "categoryPlant":"aromatic",
+        "categoryPlant":"aromatica",
         "name": "Menta",
         "maintenanceNeeds": "Controlar su crecimiento invasivo y proporcionar suficiente agua.",
         "scientificName": "Mentha",
         "applicationsPlant": "Cocina, bebidas, productos de higiene, remedios naturales.",
         "climaticData": "Prefiere suelos húmedos y lugares con sombra parcial.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":2,
+        },
       },
       {
-        "id": "cactus-saguaro",
-        "categoryPlant":"desert",
-        "name": "Cactus Saguaro",
-        "maintenanceNeeds": "Mínimo riego, evitar temperaturas bajo cero.",
-        "scientificName": "Carnegiea gigantea",
-        "applicationsPlant": "Jardinería desértica, simbolismo cultural.",
-        "climaticData": "Resistente a la sequía, prefiere climas cálidos y secos.",
+        "id": "manzanilla",
+        "categoryPlant":"medicinal",
+        "name": "Manzanilla",
+        "maintenanceNeeds": "Necesita sol pleno y suelo bien drenado.",
+        "scientificName": "Matricaria chamomilla",
+        "applicationsPlant": "Infusiones, remedios naturales, cosmética.",
+        "climaticData": "Prefiere climas templados y suelo bien drenado.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":3,
+        },
       },
       {
         "id": "begonia",
@@ -143,6 +242,11 @@ describe('sortData', () => {
         "scientificName": "Begonia",
         "applicationsPlant": "Jardinería decorativa, colecciones botánicas.",
         "climaticData": "Prefiere ambientes húmedos y sombreados.",
+        "facts": {
+          "waterAmount":1,
+          "sunLight": 1,
+          "careDifficulty":3,
+        },
       },
       {
         "id": "azalea",
@@ -152,16 +256,143 @@ describe('sortData', () => {
         "scientificName": "Rhododendron",
         "applicationsPlant": "Jardinería ornamental, cultivo en macetas.",
         "climaticData": "Prefiere climas templados y suelo bien drenado.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 1,
+          "careDifficulty":2,
+        }
       },
       {
-        "id": "aloe-vera",
+        "id": "aloevera",
         "categoryPlant":"medicinal",
         "name": "Aloe Vera",
         "maintenanceNeeds": "Riego escaso y exposición a pleno sol o sombra parcial.",
         "scientificName": "Aloe barbadensis miller",
         "applicationsPlant": "Productos medicinales y cosméticos, jardinería.",
         "climaticData": "Resistente a la sequía, prefiere climas cálidos.",
+        "facts": {
+          "waterAmount":2,
+          "sunLight": 2,
+          "careDifficulty":1,
+        },
       },
-    ])
-  })
+      {
+        "id": "albahaca",
+        "categoryPlant":"aromatica",
+        "name": "Albahaca",
+        "maintenanceNeeds": "Requiere sol pleno y riego regular, evitar exceso de humedad.",
+        "scientificName": "Ocimum basilicum",
+        "applicationsPlant": "Cocina, jardinería ornamental, aceites esenciales.",
+        "climaticData": "Prefiere climas cálidos y suelo bien drenado.",
+        "facts": {
+          "waterAmount":3,
+          "sunLight": 2,
+          "careDifficulty":3,
+        },
+      },
+    ]);
+  });
+  it('returns the same length', () => {
+    sortData(fakeData, "id", 2);
+    expect(fakeData).toHaveLength(8);
+  });
+  it('returns the same length', () => {
+    sortData(fakeData, "id", 0);
+    expect(fakeData).toHaveLength(8);
+  });
+});
+
+describe('computeStats', () => {
+  it('returns the average', () => {
+    const result = computeStats(fakeData);
+    expect(result).toEqual(
+      {
+        "aromatica":{
+          average:{
+            waterAverage:2,
+            lightAverage:2,
+            careAverage:2
+          },
+          factsByPlants:[
+            {
+              waterAmount: 2,
+              sunLight: 2,
+              careDifficulty:2
+            },
+            {
+              waterAmount:3,
+              sunLight: 2,
+              careDifficulty:3
+            },
+          ],
+        },
+        "medicinal":{
+          average:{
+            waterAverage:2,
+            lightAverage:2,
+            careAverage:2
+          },
+          factsByPlants:[
+            {
+              waterAmount:2,
+              sunLight: 2,
+              careDifficulty:3
+            },
+            {
+              waterAmount: 2,
+              sunLight: 2,
+              careDifficulty:1
+            },
+          ],
+        },
+        "ornamental":{
+          average:{
+            waterAverage:1,
+            lightAverage:1,
+            careAverage:2
+          },
+          factsByPlants:[
+            {
+              waterAmount: 1,
+              sunLight: 1,
+              careDifficulty: 3
+            },
+            {
+              waterAmount:2,
+              sunLight: 1,
+              careDifficulty:2
+            },
+          ],
+        },
+        "arbol":{
+          average:{
+            waterAverage:2,
+            lightAverage:3,
+            careAverage:2
+          },
+          factsByPlants:[
+            {
+              waterAmount: 2,
+              sunLight: 3,
+              careDifficulty: 2
+            },
+          ],
+        },
+        "desertica":{
+          average:{
+            waterAverage:1,
+            lightAverage:3,
+            careAverage:2
+          },
+          factsByPlants:[
+            {
+              waterAmount: 1,
+              sunLight: 3,
+              careDifficulty: 2
+            }
+          ]
+        },
+      }
+    );
+  });
 });
