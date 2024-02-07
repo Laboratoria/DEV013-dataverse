@@ -45,3 +45,63 @@ const valorOrdenar = (item, sortBy) => {
     return String(item[sortBy]).toLowerCase();
   }
 };
+
+//estadisticas
+//Estadistica de Paises de Nacimiento
+/*export const computeStats = (data) => {
+  const countryStats = data.reduce((accumulator, writer) => {
+    const pais = writer.facts.countryNacimiento;
+
+    // Verificar si el país ya está en el acumulador
+    if (!accumulator[pais]) {
+      accumulator[pais] = {
+        count: 0,
+        writers: []
+      };
+    }
+    // Incrementar la frecuencia y agregar la escritora a la lista
+    accumulator[pais].count += 1;
+    accumulator[pais].writers.push(writer.name);
+
+    return accumulator;
+  }, {});
+
+  return countryStats;
+};*/
+
+export const computeStats = (data) => {
+  const stats = {
+    countries: computeCountryStats(data),
+    genres: computeGenreStats(data),
+  };
+
+  return stats;
+};
+
+const computeCountryStats = (data) => {
+  return data.reduce((accumulator, writer) => {
+    const country = writer.facts.countryNacimiento;
+
+    if (!accumulator[country]) {
+      accumulator[country] = 1;
+    } else {
+      accumulator[country] += 1;
+    }
+
+    return accumulator;
+  }, {});
+};
+
+const computeGenreStats = (data) => {
+  return data.reduce((accumulator, writer) => {
+    const genre = writer.facts.mainField;
+
+    if (!accumulator[genre]) {
+      accumulator[genre] = 1;
+    } else {
+      accumulator[genre] += 1;
+    }
+
+    return accumulator;
+  }, {});
+};
