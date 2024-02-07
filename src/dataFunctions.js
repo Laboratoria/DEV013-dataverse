@@ -15,18 +15,18 @@ export const filterData = (data, filterBy, value) => {
 };
 
 //----------------------
-/**
- * This function decides with a condition
- * wich order needs to me used
- * a-z / z-a
- * is call by dropdown function when an option is clicked
- * 
- * @param { data } data - currentData
- * @param { property } sortBy - id of every element of the array object
- * @param { option } sortOrder - selectedIndex from dropdown
- * 
- * 
- */
+// /**
+//  * This function decides with a condition
+//  * wich order needs to me used
+//  * a-z / z-a
+//  * is call by dropdown function when an option is clicked
+//  * 
+//  * @param { data } data - currentData
+//  * @param { property } sortBy - id of every element of the array object
+//  * @param { option } sortOrder - selectedIndex from dropdown
+//  * 
+//  * 
+//  */
 export const sortData = (data, sortBy, sortOrder) => {
   data.sort(function(a,b){
     if (sortOrder === 1) {
@@ -37,28 +37,23 @@ export const sortData = (data, sortBy, sortOrder) => {
   });
 };
 
-//----------------------
-/**
- * This function creates the structure
- * stores the numbers into an array
- * calculate the sum of every type of fact
- * calculates the average of every type of fact
- * and stores them into the structure
- * in call by statiscis variable to be use in ststisticsButton
- * 
- * @param { every plant } data - From clonedData
- * 
- * @returns the new populated object
- */
+// //----------------------
+// /**
+//  * This function creates the structure
+//  * stores the numbers into an array
+//  * calculate the sum of every type of fact
+//  * calculates the average of every type of fact
+//  * and stores them into the structure
+//  * in call by statiscis variable to be use in ststisticsButton
+//  * 
+//  * @param { every plant } data - From clonedData
+//  * 
+//  * @returns the new populated object
+//  */
 export const computeStats = (data) => {
   //1 - Create empty structure to host categories in arrays
   const statsByCategory = {
     "ornamental":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0,
-      },
       average:{
         waterAverage:0,
         lightAverage:0,
@@ -67,11 +62,6 @@ export const computeStats = (data) => {
       factsByPlants:[]
     },
     "medicinal":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
       average:{
         waterAverage:0,
         lightAverage:0,
@@ -80,11 +70,6 @@ export const computeStats = (data) => {
       factsByPlants:[]
     },
     "aromatica":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
       average:{
         waterAverage:0,
         lightAverage:0,
@@ -93,11 +78,6 @@ export const computeStats = (data) => {
       factsByPlants:[]
     },
     "desertica":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
       average:{
         waterAverage:0,
         lightAverage:0,
@@ -106,11 +86,6 @@ export const computeStats = (data) => {
       factsByPlants:[]
     },
     "arbol":{
-      sum: {
-        waterSum:0,
-        lightSum:0,
-        careSum:0
-      },
       average:{
         waterAverage:0,
         lightAverage:0,
@@ -126,36 +101,41 @@ export const computeStats = (data) => {
     //4 - Extracts facts
     //5 - Store facts in array corresponding category
     statsByCategory[category].factsByPlants.push(plant.facts);
+  });
+  
+  Object.keys(statsByCategory).forEach(category => {
     
-    //6 - Calculate average by category
-    statsByCategory[category].sum.waterSum+=plant.facts.waterAmount;
-    //6.1 - Save total facts by category in dedicated structure
-    statsByCategory[category].average.waterAverage=Math.round(statsByCategory[category].sum.waterSum/statsByCategory[category].factsByPlants.length);
+    const sumWater = statsByCategory[category].factsByPlants.reduce((accumulator, fact) => accumulator + fact.waterAmount, 0);
+    const averageWater = parseInt(sumWater/statsByCategory[category].factsByPlants.length);
+    statsByCategory[category].average.waterAverage=averageWater;
 
-    //repeat for light
-    statsByCategory[category].sum.lightSum+=plant.facts.sunLight;
-    statsByCategory[category].average.lightAverage=Math.round(statsByCategory[category].sum.lightSum/statsByCategory[category].factsByPlants.length);
+    const sumLight = statsByCategory[category].factsByPlants.reduce((accumulator, fact) => accumulator + fact.sunLight, 0);
+    const averageLight = parseInt(sumLight/statsByCategory[category].factsByPlants.length);
+    statsByCategory[category].average.lightAverage=averageLight;
 
-    //repeat for care
-    statsByCategory[category].sum.careSum+=plant.facts.careDifficulty;
-    statsByCategory[category].average.careAverage=Math.round(statsByCategory[category].sum.careSum/statsByCategory[category].factsByPlants.length);
+    const sumCare = statsByCategory[category].factsByPlants.reduce((accumulator, fact) => accumulator + fact.careDifficulty, 0);
+    const averageCare = parseInt(sumCare/statsByCategory[category].factsByPlants.length);
+    statsByCategory[category].average.careAverage=averageCare;
+
+    //parsefloat, parse int, 
+
   });
   
   return statsByCategory;
 }
 
-export const computeStats2 =(data, propiedadDeseada) => {
-  const propertyValues=[];
+// export const computeStats2 =(data, propiedadDeseada) => {
+//   const propertyValues=[];
 
-  data.forEach(object => {
-    //acceder a la propiedad
-    const factToExtract = object.facts[propiedadDeseada];
-    //agregar el resultado al array
-    propertyValues.push(factToExtract);
-  });
+//   data.forEach(object => {
+//     //acceder a la propiedad
+//     const factToExtract = object.facts[propiedadDeseada];
+//     //agregar el resultado al array
+//     propertyValues.push(factToExtract);
+//   });
 
-  const suma = propertyValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  const promedio = suma/data.length;
+//   const suma = propertyValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+//   const promedio = suma/data.length;
   
-  return Math.round(promedio);
-};
+//   return Math.round(promedio);
+// };
