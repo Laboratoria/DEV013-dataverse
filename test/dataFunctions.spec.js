@@ -27,7 +27,9 @@ describe('filterData', () => {
         "climaticData": "Prefiere climas templados y suelo bien drenado.",
       },
     ]);
+    expect(result).toHaveLength(2);
   });
+
   it ('returns an array with filtered data by id', () => {
     const result = filterData(fakeData, "id", "roble");
     expect(result).toEqual([
@@ -40,7 +42,8 @@ describe('filterData', () => {
         "applicationsPlant": "Construcción, muebles, barriles para vino.",
         "climaticData": "Adaptable a diversos climas, prefiere suelos profundos.",
       },
-    ])
+    ]);
+    expect(result).toHaveLength(1);
   })
 });
 

@@ -55,10 +55,12 @@
 La información y las imágenes fueron generadas mediante inteligencia artificial utilizando prompts, y posteriormente, las imágenes fueron mejoradas y detalladas utilizando recursos como Canva. Este enfoque combinado de tecnologías de IA y herramientas de diseño permitió crear contenido informativo y visualmente atractivo.
 
 ```javascript
-// Ejemplo ficticio de cómo se utilizó un prompt con OpenAI GPT-3 para obtener información sobre cuidado de plantas.
-const prompt = "Genera un array con al menos tres objetos que representen plantas. Cada objeto debe tener propiedades como 'nombre', 'tipo' y 'cuidados'.";
-const response = openAI.generate(prompt, { model: 'text-davinci-003', temperature: 0.7, max_tokens: 200 });
+// Ejemplo de cómo se utilizó un prompt con OpenAI GPT-3 para obtener información sobre cuidado de plantas.
+const prompt = "Hola, estoy trabajando en un proyecto y como requisito los datos a usar deben ser generados por IA. Necesito un set de objetos dentro de un arreglo en formato JSON. El arreglo debe contener 24 objetos con información sobre plantas específicas que indicaré. La plantilla sería la siguiente {plantilla}";
 
+const response = openAI.generate(prompt, "Entiendo, necesitas un conjunto de datos en formato JSON para 24 plantas diferentes, siguiendo la plantilla que proporcionaste. Para cada planta, se requiere información específica como su nombre, descripción, imagen, y datos adicionales. Dado que necesitas información detallada y precisa para cada planta, puedo comenzar generando datos de ejemplo para una variedad de plantas. Podrías proporcionar la lista de las 24 plantas específicas sobre las que necesitas información?. Esto me ayudará a crear un set de datos más personalizado y útil para tu proyecto.");
+// Se envía la lista
+//continúa
 console.log(response);
 ```
 
@@ -162,7 +164,74 @@ La organización del proyecto se gestionó utilizando Notion y Trello, plataform
 
 
 ### Testeos de Usabilidad
-Se llevaron a cabo testeos de usabilidad para evaluar la eficacia y la experiencia del usuario. Estos procesos de prueba garantizaron que la aplicación fuera intuitiva y cumpliera con los objetivos previstos, proporcionando retroalimentación valiosa para mejoras continuas.
+Se llevaron a cabo testeos de usabilidad para evaluar la eficacia y la experiencia del usuario. Estos procesos de prueba garantizaron que la aplicación fuera intuitiva y cumpliera con los objetivos previstos, proporcionando retroalimentación valiosa para mejoras continuas. Dentro de esta mejoras destacamos:
+
+- Reubicación del Menú en Dispositivos Móviles: Tras observar dificultades de navegación en dispositivos móviles, movimos el menú de la parte superior a la inferior en el prototipo móvil, lo que optimizó la accesibilidad y la experiencia de usuario en estos dispositivos.
+
+- Refinamiento del Diseño de Tarjetas y Utilización de Modales: Para evitar que la parte posterior de las tarjetas se viera sobrecargada, parte de la información se trasladó a modales emergentes, lo que mejoró la organización y legibilidad del contenido.
+
+- Optimización de los Tamaños y Diseño de Elementos: Se realizaron ajustes en los tamaños de los elementos y en el diseño de ciertos botones para mejorar la usabilidad y claridad de la función que realizan (por ejemplo, al botón que abre el modal de estadísticas se le agregó la imagen de una mini gráfica). 
+
+- Ajuste de Colores en los Modales: Después de recibir comentarios de los usuarios sobre la legibilidad, se modificaron los colores de las letras en los modales para mejorar la visibilidad y facilitar la lectura.
+
+### Historias de Usuario 
+
+El proyecto se consideró finalizado una vez que se completaron exitosamente las seis historias de usuario establecidas. Se incluye la plantilla de la primera historia como referencia y ejemplo para el desarrollo y la implementación de las demás funcionalidades.
+
+> Yo como: Clienta interesada en adquirir plantas.
+> 
+
+> Quiero: Ver el catálogo de plantas en línea.
+> 
+
+> Para: Poder visualizar las opciones disponibles y tomar decisiones de compra sin necesidad de visitar la tienda física.
+> 
+- Definici**ó**n de terminado
+    
+    La clienta puede acceder al catálogo en línea y navegar fácilmente por las opciones disponibles.
+    
+- Criterios de aceptación
+    La interfaz debe contener:
+
+    Elementos de HTML
+
+    Un header
+
+            [x]  Nombre de la tienda
+            [x]  Logo de la tienda
+
+    Un  aside
+
+            [x]  Cinco iconos uno para cada categoria.
+            [x]  Seccion de filtro para ordenar alfabéticamente.
+            [x]  Cuadro de búsqueda por nombre.
+
+    Cuerpo de página
+
+    Tarjetas de plantas
+
+              Front
+
+                [x]  Nombre de planta
+                [x]  Imagen de planta
+                [x]  Información sobre requerimientos de Luz
+                [x]  Información sobre requerimientos de Cuidado
+                [x]  Información sobre requerimientos de Riego
+                [x]  Botón para leer más detalles.
+
+    Footer
+
+            [x]  Informacion estática sobre el desarrollo.
+
+    Estilo CSS aplicado para mejorar la presentación de la página y las tarjetas de plantas.
+
+            [x]  Aplicados a los elementos mencionados de acuerdo al prototipo.
+
+    Funcionalidad de JavaScript para mostrar las tarjetas de plantas en el DOM, enlazando los datos proporcionados.
+
+            [x]  Los datos deben estar en el formato correcto.
+            [x]  Importación de datos en el archivo principal.
+            [x]  Creación dinámica de las tarjetas de plantas.
 
 ## 5. Enfoque de Desarrollo
 "My Beauty Plant" se ha gestado bajo un enfoque de desarrollo que abarca más allá de la elección de tecnologías. Aspectos importantes de nuestro enfoque incluyen:
