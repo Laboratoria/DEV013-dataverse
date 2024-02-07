@@ -34,7 +34,9 @@ describe('filterData', () => {
         }
       }
     ]);
+    expect(result).toHaveLength(2);
   });
+
   it ('returns an array with filtered data by id', () => {
     const result = filterData(fakeData, "id", "roble");
     expect(result).toEqual([
@@ -52,7 +54,8 @@ describe('filterData', () => {
           "careDifficulty":2,
         },
       },
-    ])
+    ]);
+    expect(result).toHaveLength(1);
   })
 });
 
