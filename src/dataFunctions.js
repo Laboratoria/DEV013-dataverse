@@ -45,3 +45,41 @@ const valorOrdenar = (item, sortBy) => {
     return String(item[sortBy]).toLowerCase();
   }
 };
+
+//Estadísticas
+export const computeStats = (data) => {
+  const stats = {
+    countries: computeCountryStats(data),
+    genres: computeGenreStats(data),
+  };
+
+  return stats;
+};
+
+const computeCountryStats = (data) => {
+  return data.reduce((accumulator, writer) => {
+    const country = writer.facts.countryNacimiento;
+
+    if (!accumulator[country]) {
+      accumulator[country] = 1;
+    } else {
+      accumulator[country] += 1;
+    }
+
+    return accumulator;
+  }, {});
+};
+
+const computeGenreStats = (data) => {
+  return data.reduce((accumulator, writer) => {
+    const genre = writer.facts.mainField;
+
+    if (!accumulator[genre]) {
+      accumulator[genre] = 1;
+    } else {
+      accumulator[genre] += 1;
+    }
+
+    return accumulator;
+  }, {});
+};

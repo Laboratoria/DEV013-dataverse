@@ -1,18 +1,10 @@
 import { renderItems } from './view.js';
-import { filterData, sortData } from './dataFunctions.js';
+import { filterData, sortData, computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 const dataList = document.querySelector("#root");
 let result = data;
 dataList.appendChild(renderItems(data));
-
-/*const filteredLiteratura = filterData(data, 'mainField', 'Literatura');
-console.log(filteredLiteratura);
-const filteredPoesía = filterData(data, 'mainField', 'Poesía');
-console.log(filteredPoesía);
-const filternoedPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela');
-console.log(filteredPoesiaLiteratura);*/
-
 
 //filterData
 //selecciona los elementos select
@@ -35,6 +27,8 @@ btnClear.addEventListener("click", function () {
   // Limpia los filtros y renderiza los datos originales
   resetFilters();
   renderItems(data);
+  clearStats();
+
 });
 
 // Función para restablecer los filtros
@@ -42,7 +36,7 @@ function resetFilters() {// Recorre los selectores y establece sus valores en va
   filterSelectors.forEach(({ selector }) => {
     document.querySelector(selector).value = "";
   });
-  sortName.value = "none"; 
+  sortName.value = "none";
   result = sortData(data, "name", "asc");//agregado
   renderDataList();
 }
@@ -92,17 +86,99 @@ function renderDataList() { // Función para renderizar la lista con los datos a
   dataList.appendChild(resultList);
 }
 
-//estadísticas
+//// Estadisticas///
+const buttonFacts = document.querySelector('[data-testid="button-facts"]');
 
-const buttonFacts = document.getElementById("button-facts");
-
-// Agrega un event listener
-buttonFacts.addEventListener("click", (e) => {
-  e.preventDefault();
-  dataList.innerHTML = "";
-  filterSelectors.innerHTML = "Facts";
-  dataList.appendChild(renderItems());
-  const data = document.querySelector("#data");
-  data.textContent = "Sabías qué " + computeStats(data, "mainField") + "---------";
-  const result = document.querySelector()
+// Agrega un event listener al botón
+buttonFacts.addEventListener('click', () => {
+  try {
+    // Calcular las estadísticas al hacer clic en el botón
+    const stats = computeStats(data);
+    // Mostrar las estadísticas en un contenedor HTML
+    renderStats(stats);
+  } catch (error) {
+    // Manejar errores de manera global o proporcionar algún mecanismo de retroalimentación
+    console.error('Error al calcular estadísticas:', error);
+  }
 });
+
+// Función para renderizar las estadísticas en el contenedor
+function renderStats(stats) {
+  // Obtener la referencia al contenedor de estadísticas por su id
+  const statsContainer = document.getElementById('stats-container');
+
+  // Verificar si el contenedor de estadísticas existe
+  if (statsContainer) {
+    // Limpiar contenido anterior
+    statsContainer.innerHTML = '';
+
+    // Mostrar las estadísticas en el contenedor
+    statsContainer.appendChild(renderStatsElement(stats));
+  } else {
+    // Manejar el caso en el que el contenedor no existe
+    console.error('No se encontró el contenedor de estadísticas.');
+  }
+}
+
+// Función para renderizar las estadísticas como elementos HTML
+function renderStatsElement(stats) {
+  // Crear elementos HTML para mostrar las estadísticas (puedes personalizar según tus necesidades)
+  const statsElement = document.createElement('div');
+  statsElement.textContent = 'ESTADÍSTICAS';
+
+  // Agregar estadísticas de países
+  statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por nacionalidad', stats.countries));
+
+  // Agregar estadísticas de géneros
+  statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por género literario', stats.genres));
+
+  return statsElement;
+}
+
+// Función para renderizar estadísticas de una categoría específica
+function renderStatsCategory(categoryName, categoryStats) {
+  const categoryElement = document.createElement('div');
+  categoryElement.textContent = `${categoryName}:`;
+
+  // Iterar sobre las estadísticas y agregarlas al elemento
+  for (const item in categoryStats) {
+    const itemStats = categoryStats[item];
+    const itemElement = document.createElement('div');
+    itemElement.textContent = `${item}: ${itemStats}`;
+    categoryElement.appendChild(itemElement);
+  }
+
+  return categoryElement;
+}
+
+function clearStats() {
+  const statsContainer = document.getElementById('stats-container');
+  if (statsContainer) {
+    statsContainer.innerHTML = '';
+  }
+}
+
+//abrir pantalla emergente
+const statsDialog = document.getElementById('statsDialog');
+buttonFacts.addEventListener('click', () => {
+  statsDialog.showModal();
+});
+
+// Cierra el modal
+statsDialog.addEventListener('click', (event) => {
+  if (event.target === statsDialog) {
+    closeStatsDialog();
+  }
+});
+
+// Función para cerrar el modal de estadísticas
+function closeStatsDialog() {
+  statsDialog.close();
+}
+
+
+
+
+
+
+
