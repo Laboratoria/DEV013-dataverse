@@ -46,29 +46,7 @@ const valorOrdenar = (item, sortBy) => {
   }
 };
 
-//estadisticas
-//Estadistica de Paises de Nacimiento
-/*export const computeStats = (data) => {
-  const countryStats = data.reduce((accumulator, writer) => {
-    const pais = writer.facts.countryNacimiento;
-
-    // Verificar si el país ya está en el acumulador
-    if (!accumulator[pais]) {
-      accumulator[pais] = {
-        count: 0,
-        writers: []
-      };
-    }
-    // Incrementar la frecuencia y agregar la escritora a la lista
-    accumulator[pais].count += 1;
-    accumulator[pais].writers.push(writer.name);
-
-    return accumulator;
-  }, {});
-
-  return countryStats;
-};*/
-
+//Estadísticas
 export const computeStats = (data) => {
   const stats = {
     countries: computeCountryStats(data),

@@ -6,14 +6,6 @@ const dataList = document.querySelector("#root");
 let result = data;
 dataList.appendChild(renderItems(data));
 
-/*const filteredLiteratura = filterData(data, 'mainField', 'Literatura');
-console.log(filteredLiteratura);
-const filteredPoesía = filterData(data, 'mainField', 'Poesía');
-console.log(filteredPoesía);
-const filternoedPoesiaLiteratura = filterData(data, 'mainField', 'Poesía, Novela');
-console.log(filteredPoesiaLiteratura);*/
-
-
 //filterData
 //selecciona los elementos select
 const filterSelectors = [
@@ -44,7 +36,7 @@ function resetFilters() {// Recorre los selectores y establece sus valores en va
   filterSelectors.forEach(({ selector }) => {
     document.querySelector(selector).value = "";
   });
-  sortName.value = "none"; 
+  sortName.value = "none";
   result = sortData(data, "name", "asc");//agregado
   renderDataList();
 }
@@ -94,21 +86,6 @@ function renderDataList() { // Función para renderizar la lista con los datos a
   dataList.appendChild(resultList);
 }
 
-//estadísticas
-
-/*const buttonFacts = document.getElementById("button-facts");
-
-// Agrega un event listener
-buttonFacts.addEventListener("click", (e) => {
-  e.preventDefault();
-  dataList.innerHTML = "";
-  filterSelectors.innerHTML = "Facts";
-  dataList.appendChild(renderItems());
-  const data = document.querySelector("#data");
-  data.textContent = "Sabías qué " + computeStats(data, "mainField") + "---------";
-  const result = document.querySelector()
-});*/
-
 //// Estadisticas///
 const buttonFacts = document.querySelector('[data-testid="button-facts"]');
 
@@ -147,13 +124,13 @@ function renderStats(stats) {
 function renderStatsElement(stats) {
   // Crear elementos HTML para mostrar las estadísticas (puedes personalizar según tus necesidades)
   const statsElement = document.createElement('div');
-  statsElement.textContent = 'Estadísticas:';
+  statsElement.textContent = 'ESTADÍSTICAS';
 
   // Agregar estadísticas de países
-  statsElement.appendChild(renderStatsCategory('Países', stats.countries));
+  statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por nacionalidad', stats.countries));
 
   // Agregar estadísticas de géneros
-  statsElement.appendChild(renderStatsCategory('Géneros', stats.genres));
+  statsElement.appendChild(renderStatsCategory('📶 Cantidad de escritoras por género literario', stats.genres));
 
   return statsElement;
 }
@@ -179,4 +156,22 @@ function clearStats() {
   if (statsContainer) {
     statsContainer.innerHTML = '';
   }
+}
+
+//abrir pantalla emergente
+const statsDialog = document.getElementById('statsDialog');
+buttonFacts.addEventListener('click', () => {
+  statsDialog.showModal();
+});
+
+// Cierra el modal
+statsDialog.addEventListener('click', (event) => {
+  if (event.target === statsDialog) {
+    closeStatsDialog();
+  }
+});
+
+// Función para cerrar el modal de estadísticas
+function closeStatsDialog() {
+  statsDialog.close();
 }

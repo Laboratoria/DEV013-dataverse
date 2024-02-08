@@ -36,35 +36,44 @@ h1 {
   margin: auto;
   background-color: #f1e3c9;
   margin-bottom: 1%;
-  padding: 20px;
+  padding: 1%;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
-}
-
+  display: flex;
+ }
 
 label {
   margin-bottom: 2%;
   font-weight: bold;
-  display: inline-block;
+  display: flex;
   margin-left: 3%;
   margin-top: 2%;
-}
+  }
 
 select {
-  width: 15%;
+  width: 13%;
+  height: 0.5%;
   padding: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
+  margin-top: 1%;
   border: 1% #ccc;
   border-radius: 10%;
   font-family: 'Marcellus', serif;
-}
+  display:flex
+  }
 
-#button-clear {
+#button-clear,
+#button-facts{
   font-family: 'Marcellus', serif;
-  margin-left: 3%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
   font-weight: bold;  
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
   background-color: #332D40;
   color:#f8edda;
+  display: flex;
+  text-align: center;
+  width: auto;
+  margin: auto;
   }
 
 .card img {
@@ -104,6 +113,7 @@ dd[itemprop="name"] {
   font-weight: bold;
   text-align: center;
   font-size: medium;
+  display:flex;
  }
 
 dd[itemprop="shortDescription"] {
@@ -124,6 +134,7 @@ dt[itemprop="LugarNacimiento"],
 dt[itemprop="género"] {
   text-align: justify;
   margin: 0;
+  display:flex;
 }
 
 dt {
@@ -152,3 +163,19 @@ footer {
   margin-top: 1%;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
+
+.modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px; 
+ 
+}
+
+#statsDialog {
+  display: flexbox;
+  background-color:  #f1e3c9;
+  padding: 1px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
