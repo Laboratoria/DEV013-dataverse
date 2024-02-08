@@ -8,51 +8,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
       rel="stylesheet">
     <title>Ghibli Lovers</title>
+    <link rel="icon" type="image/png" href="imagenes/icono-ramita.png">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header>
-      <img src="Imagenes/Totoro-png.png"
-      alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli" />
-      <h1>スタジオジブリ<br/>STUDIO GHIBLI</h1>
+      <div class="title">
+        <img
+          src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/image-removebg-preview.png"
+          alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli"
+          class="logo" />
+        <h1>スタジオジブリ <br />STUDIO GHIBLI</h1>
+        <div class="input">
+          <label for="input" class="movieSearch">
+            <input type="text" class="movie-search" placeholder="Buscar" />
+          </label>
+        </div>
+      </div>
     </header>
 
-    <label for="input">
-      <input type="text" class="movie-search" placeholder="Buscar" />
-    </label>
-      
-    <label for="filter">Filtrar por: </label>
-    <select data-testid="select-filter" name="genres" id="filter">
-      <option value="genres">Géneros</option>
-      <option value="romance">Romance</option>
-      <option value="fantasía">Fantasía</option>
-      <option value="cienciaFicción">Ciencia Ficción</option>
-      <option value="terror">Terror</option>
-      <option value="bélico">Bélico</option>
-      <option value="suspenso">Suspenso</option>
-      <option value="infantil">Infantil</option>
-      <option value="familiar">Familiar</option>
-      <option value="comedia">Comedia</option>
-      <option value="drama">Drama</option>
-      <option value="aventura">Aventura</option>
-    </select>
+    <div class="filter">
+      <label for="filter">Filtrar por: </label>
+      <select data-testid="select-filter" name="genres" id="filter">
+        <option value="genres">Géneros</option>
+        <option value="Romance">Romance</option>
+        <option value="Fantasía">Fantasía</option>
+        <option value="Ciencia Ficción">Ciencia Ficción</option>
+        <option value="Terror">Terror</option>
+        <option value="Bélico">Bélico</option>
+        <option value="Suspenso">Suspenso</option>
+        <option value="Infantil">Infantil</option>
+        <option value="Familiar">Familiar</option>
+        <option value="Comedia">Comedia</option>
+        <option value="Drama">Drama</option>
+        <option value="Aventura">Aventura</option>
+      </select>
+    </div>
 
-    <label for="order">Ordenar: </label>
-    <select data-testid="select-filter" name="sortOrder" id="orderFilms">
-      <option value="todos">Defecto</option>
-      <option value="asc">A-Z</option>
-      <option value="desc">Z-A</option>
-    </select>
+    <div class="sortOrder">
+      <label for="order">Ordenar por: </label>
+      <select data-testid="select-filter" name="sortOrder" id="order">
+        <option value="todos">Defecto</option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </div>
 
-    <label for="button">
+    <label for="button" class="button">
       <button class="cleanerButton" type="button">Limpiar</button>
     </label>
   
     <div id="root"></div>
-
-    <div id = "card-container"></div>
-
+    
     <footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
     <script src="main.js" type="module"></script>
   </body>

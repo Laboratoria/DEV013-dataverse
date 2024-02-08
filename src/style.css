@@ -1,6 +1,8 @@
 :root {
     --soft-blue: #48AEF0;
     --sky-blue: #B6DFF9;
+    --pastel-blue: #94B8D1;
+    --grey: #D2E9F9;
     --white: #FFFFFF;
     --soft-grey: #F9F8F8;
     --black: #000000;
@@ -9,47 +11,95 @@
   body {
     font-family: 'Average', serif, 'Cabin Condensed', sans-serif;
     background-color: var(--sky-blue);
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-  h1 {
-    color: var(--black);
+}
+.title {
+    display: flex;
     background-color: var(--soft-blue);
-    font-family: 'Average', serif;
-  }
+
+}
+.logo {
+    width: 10%;
+    height: 5%;
+    display: flex;
+}
+h1 {
+    color: var(--black);
+    font-family: 'Average', serif;  }
+
   
   .card {
-    border: 1px solid;
+    background-color: var(--white);
+    background-size: contain;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
+    position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    display: inline-block;
+    flex-wrap: wrap;
   }
   
-  .card img {
-    max-width: 100%;
+  .container {
+    padding: 2px, 16px;
+  }
+
+  .root {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+  }
+
+img {
+    width:100%;
     height: auto;
-  }
-  
-  .card h2 {
-    margin-top: 10px;
-  }
-  
-  .card ul {
+    border-radius: 5px 5px 0 0;
+}
+
+.movie-search {
+    background-color: var(--pastel-blue);
+    border: var(--grey);
+    border: none;
+    text-align: justify;
+    border: none;
+    border-radius: 2rem;
+    font-size: 16px;
+    margin: 10%;
+    width: 50%;
+    padding: 40%, 70%;
+    background-color: var(--pastel-blue);
+}
+.filter {
+    background-color: var(--soft-grey);
+    border-color: var(--pastel-blue);
+    width: 15%;
+    height: 20%;
+    margin: 1%;
+    padding: 0.5;
+}
+#filter {
+    border-color: var(--soft-grey);
+}
+.sortOrder {
+    background-color: var(--soft-grey);
+    border-color: var(--pastel-blue);
+    width: 15%;
+    height: 20%;
+    margin: 1%;
+}
+#order {
+    border-color: var(--soft-grey);
+}
+.cleanerButton {
+    background-color: var(--soft-blue);
+    border-color: var(--pastel-blue);
+    width: 15%;
+    height: 20%;
+    margin: 1%;
+    padding: 0.6%;
+}
+
+li {
     list-style: none;
-    padding: 0;
-  }
-  
-  .card li {
-    margin-bottom: 5px;
-  }
+}
