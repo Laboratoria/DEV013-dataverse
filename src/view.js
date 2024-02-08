@@ -5,7 +5,7 @@ export const renderItems = (data) => {
 
     const itemList = document.createElement("li");
     const itemContainer = document.createElement("dl");
-    itemContainer.classList.add("card");
+    itemList.classList.add("card");
 
     itemContainer.innerHTML = `
         <img src=${data.imageUrl} alt=${data.name}/><br>
