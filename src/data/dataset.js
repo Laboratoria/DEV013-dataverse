@@ -11,7 +11,7 @@ export default [
     facts: {
       duration: "1h 57m",
       releaseYear: "1984",
-      genders: "Fantasía, Ciencia Ficción",
+      genders: "Fantasía,  Ciencia Ficción",
       boxOfficeRevenue: "$10 millones USD en taquilla.",
     },
   },
@@ -360,7 +360,7 @@ export default [
     facts: {
       duration: "1h 22m",
       releaseYear: "2020",
-      genders: "Aventura,  Fantasía",
+      genders: "Aventura, Fantasía",
       boxOfficeRevenue: "$842 mil USD en taquilla.",
     },
   },

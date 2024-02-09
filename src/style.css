@@ -24,7 +24,10 @@
 }
 h1 {
     color: var(--black);
-    font-family: 'Average', serif;  }
+    font-family: 'Average', serif;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
 
   
   .card {
@@ -35,7 +38,7 @@ h1 {
     padding: 10px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 20%;
+    width: 15%;
     display: inline-block;
     flex-wrap: wrap;
   }
@@ -65,7 +68,8 @@ img {
     border: none;
     border-radius: 2rem;
     font-size: 16px;
-    margin: 10%;
+    margin-top: 50%;
+    margin-left: 100%;
     width: 50%;
     padding: 40%, 70%;
     background-color: var(--pastel-blue);

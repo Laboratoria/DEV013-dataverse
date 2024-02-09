@@ -10,15 +10,15 @@ export const renderItems = (data) => {
     <ul itemscope itemtype="nausicaa-del-valle-del-viento">
     <div class="container">
     <li itemtype="name">${film.name}</li>
-    <li itemtype"genres">Género: ${film.facts["genders"]}</li>
+    <li itemtype="genders">Género: ${film.facts["genders"]}</li>
     </div>
     </div>
     <div class="noVisual"> 
+    <li itemtype="releaseYear">Estreno: ${film.facts["releaseYear"]}</li>
+    <li itemtype="duration">Duración: ${film.facts["duration"]}</li>
+    <li itemtype="boxOfficeRevenue">Recaudación: ${film.facts["boxOfficeRevenue"]}</li>
     <li itemtype"shortDescription">Sinopsis: ${film.shortDescription}</li>
     <li itemtype="description">Descripción: ${film.description}</li>
-    <li itemtype="duration">Duración: ${film.facts["duration"]}</li>
-    <li itemtype="releaseYear">Estreno: ${film.facts["releaseYear"]}</li>
-    <li itemtype="boxOfficeRevenue">Recaudación: ${film.facts["boxOfficeRevenue"]}</li>
     </div>
     </ul>
     </div>
