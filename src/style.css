@@ -1,10 +1,11 @@
 :root {
     --soft-blue: #48AEF0;
-    --sky-blue: #B6DFF9;
     --pastel-blue: #94B8D1;
+    --sky-blue: #B6DFF9;
     --grey: #D2E9F9;
-    --white: #FFFFFF;
     --soft-grey: #F9F8F8;
+    --dark-grey: #2C2C2C;
+    --white: #FFFFFF;
     --black: #000000;
 }
 
@@ -56,19 +57,19 @@ h1 {
     width: 200px;
     height: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 15px;
-    text-align: center;
     margin: 10px;
-
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--soft-grey);
+    color: var(--dark-grey);
+    border: var(--grey);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-#filter {
-    border-color: var(--soft-grey);
-}
-
-#order {
-    border-color: var(--soft-grey);
+.buttons:hover {
+    background-color: var(--soft-blue);
+    border: var(--pastel-blue);
+    color: var(--white);
 }
 .cleanerButton {
     width: 200px;
@@ -80,18 +81,31 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--soft-blue);
     border-color: var(--pastel-blue);
+    color: var(--white);
+    border: var(--grey);
+}
+.cleanerButton:hover {
+    background-color: var(--soft-grey);
+    border: var(--grey);
+    color: var(--dark-grey);
 }
 .card {
-    background-color: var(--white);
-    padding: auto;
-    margin: 1%;
+  display: inline-block;
 }
-img {
+.visual {
+    background-color: var(--white);
+    padding: 30px;
+    margin: 20px;
+}
+.visual > img {
     width: 200px;
     border-radius: 10px;
     margin: 10px;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.425);
 }
 li {
     list-style: none;
+}
+.noVisual {
+    display: none;
 }

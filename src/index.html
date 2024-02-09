@@ -30,43 +30,33 @@
       </div>
     </header>
 
-    <label for="filter"></label>
-    <select
-      data-testid="select-filter"
-      name="genders"
-      id="filter"
-      class="buttons"
-    >
-      <option value="genres"><strong>Filtrar por:</strong></option>
-      <option value="Romance">Romance</option>
-      <option value="Fantasía">Fantasía</option>
-      <option value="Ciencia Ficción">Ciencia Ficción</option>
-      <option value="Terror">Terror</option>
-      <option value="Bélico">Bélico</option>
-      <option value="Suspenso">Suspenso</option>
-      <option value="Infantil">Infantil</option>
-      <option value="Familiar">Familiar</option>
-      <option value="Comedia">Comedia</option>
-      <option value="Drama">Drama</option>
-      <option value="Aventura">Aventura</option>
-    </select>
+    <label for="filter">
+      <select data-testid="select-filter" name="genders"  id="filter" class="buttons">
+        <option value="genres">Filtrar por:</option>
+        <option value="Romance">Romance</option>
+        <option value="Fantasía">Fantasía</option>
+        <option value="Ciencia Ficción">Ciencia Ficción</option>
+        <option value="Terror">Terror</option>
+        <option value="Bélico">Bélico</option>
+        <option value="Suspenso">Suspenso</option>
+        <option value="Infantil">Infantil</option>
+        <option value="Familiar">Familiar</option>
+        <option value="Comedia">Comedia</option>
+        <option value="Drama">Drama</option>
+        <option value="Aventura">Aventura</option>
+      </select>
+    </label>
 
-    <label for="order"> </label>
-    <select
-      data-testid="select-filter"
-      name="sortOrder"
-      id="order"
-      class="buttons"
-    >
-      <option value="todos">Ordenar por:</option>
-      <option value="asc">A-Z</option>
-      <option value="desc">Z-A</option>
-    </select>
-
+    <label for="order">
+      <select data-testid="select-filter" name="sortOrder" id="order" class="buttons">
+        <option value="todos">Ordenar por:</option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </label>
+    
     <label for="button">
-      <button class="cleanerButton" type="button">
-        Limpiar
-      </button>
+      <button class="cleanerButton" type="button">Limpiar</button>
     </label>
   
     <div id="root"></div>
