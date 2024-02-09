@@ -1,7 +1,7 @@
 import { filterGenders, sortFilms } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
-let newData = [...data]
+const newData = [...data]
 
 const movieCards = document.querySelector("#root");
 const cleanerButton = document.querySelector(".cleanerButton");
@@ -47,13 +47,5 @@ orderFilms.addEventListener("change", function () {
 
   movieCards.appendChild(renderItems(filmAsc));
 });
-
-// filterGenres.addEventListener("change", function () {
-//   const selectedGenre = filterGenres.value;
-//   const filteredData = filterByGenre(data, selectedGenre);
-  
-//   movieCards.innerHTML = "";
-//   movieCards.appendChild(renderItems(filteredData));
-// });
 
 cleanerButton.addEventListener("click", function () {});

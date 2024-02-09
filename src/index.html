@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
-      rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
-      rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Average&family=Cabin+Condensed&display=swap"
+      rel="stylesheet"
+    />
     <title>Ghibli Lovers</title>
     <link rel="icon" type="image/png" href="imagenes/icono-ramita.png">
     <link rel="stylesheet" href="style.css">
@@ -16,10 +17,11 @@
     <header>
       <div class="title">
         <img
-          src="https://github.com/Addis-cx/DEV013-dataverse/blob/html/src/Imagenes/Totoro-transparente.png?raw=true"
+          src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/Totoro-transparente.png"
           alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli"
           class="logo" />
         <h1>スタジオジブリ <br />STUDIO GHIBLI</h1>
+        <div class="linea"></div>
         <div class="input">
           <label for="input" class="movieSearch">
             <input type="text" class="movie-search" placeholder="Buscar" />
@@ -28,35 +30,43 @@
       </div>
     </header>
 
-    <div class="filter">
-      <label for="filter">Filtrar por: </label>
-      <select data-testid="select-filter" name="genders" id="filter">
-        <option value="genres">Géneros</option>
-        <option value="Romance">Romance</option>
-        <option value="Fantasía">Fantasía</option>
-        <option value="Ciencia Ficción">Ciencia Ficción</option>
-        <option value="Terror">Terror</option>
-        <option value="Bélico">Bélico</option>
-        <option value="Suspenso">Suspenso</option>
-        <option value="Infantil">Infantil</option>
-        <option value="Familiar">Familiar</option>
-        <option value="Comedia">Comedia</option>
-        <option value="Drama">Drama</option>
-        <option value="Aventura">Aventura</option>
-      </select>
-    </div>
+    <label for="filter"></label>
+    <select
+      data-testid="select-filter"
+      name="genders"
+      id="filter"
+      class="buttons"
+    >
+      <option value="genres"><strong>Filtrar por:</strong></option>
+      <option value="Romance">Romance</option>
+      <option value="Fantasía">Fantasía</option>
+      <option value="Ciencia Ficción">Ciencia Ficción</option>
+      <option value="Terror">Terror</option>
+      <option value="Bélico">Bélico</option>
+      <option value="Suspenso">Suspenso</option>
+      <option value="Infantil">Infantil</option>
+      <option value="Familiar">Familiar</option>
+      <option value="Comedia">Comedia</option>
+      <option value="Drama">Drama</option>
+      <option value="Aventura">Aventura</option>
+    </select>
 
-    <div class="sortOrder">
-      <label for="order">Ordenar por: </label>
-      <select data-testid="select-filter" name="sortOrder" id="order">
-        <option value="todos">Defecto</option>
-        <option value="asc">A-Z</option>
-        <option value="desc">Z-A</option>
-      </select>
-    </div>
+    <label for="order"> </label>
+    <select
+      data-testid="select-filter"
+      name="sortOrder"
+      id="order"
+      class="buttons"
+    >
+      <option value="todos">Ordenar por:</option>
+      <option value="asc">A-Z</option>
+      <option value="desc">Z-A</option>
+    </select>
 
-    <label for="button" class="button">
-      <button class="cleanerButton" type="button">Limpiar</button>
+    <label for="button">
+      <button class="cleanerButton" type="button">
+        Limpiar
+      </button>
     </label>
   
     <div id="root"></div>

@@ -6,104 +6,92 @@
     --white: #FFFFFF;
     --soft-grey: #F9F8F8;
     --black: #000000;
-  }
-  
-  body {
-    font-family: 'Average', serif, 'Cabin Condensed', sans-serif;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+
+}
+body {
+    font-family: 'Cabin Condensed', sans-serif;
     background-color: var(--sky-blue);
 }
 .title {
     display: flex;
     background-color: var(--soft-blue);
-
 }
 .logo {
-    width: 10%;
-    height: 5%;
+    width: 240px;
+    height: 160px;
     display: flex;
+    justify-content: center;
 }
 h1 {
     color: var(--black);
-    font-family: 'Average', serif;
-    font-size: 3rem;
-    margin-top: 1rem;
+    font-family: sans-serif;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 10px;
 }
-
-  
-  .card {
-    background-color: var(--white);
-    background-size: contain;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 10px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 15%;
-    display: inline-block;
-    flex-wrap: wrap;
-  }
-  
-  .container {
-    padding: 2px, 16px;
-  }
-
-  .root {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 100px;
-  }
-
-img {
-    width:100%;
-    height: auto;
-    border-radius: 5px 5px 0 0;
+.linea {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
 }
-
 .movie-search {
-    background-color: var(--pastel-blue);
-    border: var(--grey);
-    border: none;
-    text-align: justify;
-    border: none;
-    border-radius: 2rem;
-    font-size: 16px;
-    margin-top: 50%;
-    margin-left: 100%;
-    width: 50%;
-    padding: 40%, 70%;
-    background-color: var(--pastel-blue);
+    background-color: var(--grey);
+    border: var(--pastel-blue);
+    width: 400px;
+    height: 40px;
+    font-size: 15px;
+    padding-left: 17px;
+    border-radius: 9999px;
+    margin-top: 67px;
+    margin-left: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.filter {
-    background-color: var(--soft-grey);
-    border-color: var(--pastel-blue);
-    width: 15%;
-    height: 20%;
-    margin: 1%;
-    padding: 0.5;
+.buttons {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+
 }
+
 #filter {
     border-color: var(--soft-grey);
 }
-.sortOrder {
-    background-color: var(--soft-grey);
-    border-color: var(--pastel-blue);
-    width: 15%;
-    height: 20%;
-    margin: 1%;
-}
+
 #order {
     border-color: var(--soft-grey);
 }
 .cleanerButton {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: var(--soft-blue);
     border-color: var(--pastel-blue);
-    width: 15%;
-    height: 20%;
-    margin: 1%;
-    padding: 0.6%;
 }
+.card {
+    background-color: var(--white);
+    padding: auto;
+    margin: 1%;
+}
+img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
 
+}
 li {
     list-style: none;
 }
