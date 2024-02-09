@@ -8,6 +8,9 @@ const cleanerButton = document.querySelector(".cleanerButton");
 const movieSearch = document.querySelector(".movie-search");
 const gendersFilms = document.querySelector("#filter");
 const orderFilms = document.querySelector("#order");
+const verMas = document.querySelector("#ver-mas");
+const verMenos = document.querySelector("#ver-menos")
+const modal = document.querySelector("#modal")
 
 movieCards.appendChild(renderItems(newData));
 
@@ -49,3 +52,11 @@ orderFilms.addEventListener("change", function () {
 });
 
 cleanerButton.addEventListener("click", function () {});
+
+verMas.addEventListener("click", ()=>{
+  modal.showModal();
+});
+
+verMenos.addEventListener("click", ()=>{
+  modal.close();
+});

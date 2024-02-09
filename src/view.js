@@ -6,25 +6,37 @@ export const renderItems = (data) => {
     <div class="card">
     <div class="visual">
     <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
-    <div class="root">
+    <div id="root">
     <ul itemscope itemtype="nausicaa-del-valle-del-viento">
     <div class="container">
     <li itemtype="name">${film.name}</li>
     <li itemtype="genders">Género: ${film.facts["genders"]}</li>
-    </div>
-    </div>
-    <div class="noVisual"> 
+    <button class="ver-mas">Ver más</button>
+    <div class="noVisual">
+    <dialog id="modal-${film.id}"> 
     <li itemtype="releaseYear">Estreno: ${film.facts["releaseYear"]}</li>
     <li itemtype="duration">Duración: ${film.facts["duration"]}</li>
     <li itemtype="boxOfficeRevenue">Recaudación: ${film.facts["boxOfficeRevenue"]}</li>
     <li itemtype"shortDescription">Sinopsis: ${film.shortDescription}</li>
     <li itemtype="description">Descripción: ${film.description}</li>
+    <button class="ver-menos">Ver menos</button>
+    </dialog>
+    </div>
+
+    </div>
     </div>
     </ul>
     </div>
     </div>
     </div>
     `;
+    card.querySelector(".ver-mas").addEventListener("click", () => {
+      document.getElementById(`modal-${film.id}`).showModal();
+    });
+
+    card.querySelector(".ver-menos").addEventListener("click", () => {
+      document.getElementById(`modal-${film.id}`).close();
+    });
     list.appendChild(card);
   });
   return list;
