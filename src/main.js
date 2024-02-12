@@ -8,9 +8,7 @@ const cleanerButton = document.querySelector(".cleanerButton");
 const movieSearch = document.querySelector(".movie-search");
 const gendersFilms = document.querySelector("#filter");
 const orderFilms = document.querySelector("#order");
-const verMas = document.querySelector("#ver-mas");
-const verMenos = document.querySelector("#ver-menos")
-const modal = document.querySelector("#modal")
+
 
 movieCards.appendChild(renderItems(newData));
 
@@ -51,12 +49,19 @@ orderFilms.addEventListener("change", function () {
   movieCards.appendChild(renderItems(filmAsc));
 });
 
-cleanerButton.addEventListener("click", function () {});
-
-verMas.addEventListener("click", ()=>{
-  modal.showModal();
+cleanerButton.addEventListener("click", function () {
+  const newData = [...data];
+  movieSearch.value = "";
+  movieCards.innerHTML = "";
+  movieCards.appendChild(renderItems(newData));
 });
 
-verMenos.addEventListener("click", ()=>{
-  modal.close();
-});
+
+
+// verMas.addEventListener("click", ()=>{
+//   modal.showModal();
+// });
+
+// verMenos.addEventListener("click", ()=>{
+//   modal.close();
+// });
