@@ -259,7 +259,7 @@ const data = [
       "yearOfDeath": "2014",
       "birthPlace": "St. Louis, Missouri, EE. UU.",
       "countryNacimiento": "EE. UU.",
-      "mainField": "Poesía, Autobiografía", 
+      "mainField": "Poesía", 
       "famousBook": "Todavía me levanto"
     },
     "extraInfo": {

@@ -13,7 +13,7 @@ const filterSelectors = [
   { selector: '[data-testid="filter-data"]', property: "countryNacimiento" },
 ];
 
-let sortName;// Declaracion de sortName
+const sortName = document.querySelector('[data-testid="select-sort"]');
 
 // Agregar EventListenerpara los select
 filterSelectors.forEach(({ selector }) => {
@@ -39,6 +39,7 @@ function resetFilters() {// Recorre los selectores y establece sus valores en va
   sortName.value = "none";
   result = sortData(data, "name", "asc");//agregado
   renderDataList();
+  
 }
 
 // Función para aplicar los filtros
@@ -48,7 +49,9 @@ function applyFilters() {
     property,
     value: document.querySelector(selector).value,
   }));
+  
 
+  
   // Realiza el filtrado de datos
   let filteredData = [...data];
   filters.forEach(({ property, value }) => {
@@ -65,7 +68,7 @@ function applyFilters() {
 
 
   // Realiza el ordenamiento de datos
-  sortName = document.querySelector('[data-testid="select-sort"]');
+  //sortName = document.querySelector('[data-testid="select-sort"]');
   const sortOrder = sortName.value;
   result = sortData(filteredData, { sortBy: "name", sortOrder });
 
@@ -73,11 +76,16 @@ function applyFilters() {
   renderDataList();
 }
 
+
 // Ordenamiento descendente y ascendente
-sortName = document.querySelector('[data-testid="select-sort"]');
+//sortName = document.querySelector('[data-testid="select-sort"]');
 sortName.addEventListener("change", (e) => {
-  e.preventDefault();
-  applyFilters(); // Actualiza la lista al cambiar el ordenamiento
+  const selectedValue = e.target.value;
+  // Realiza acciones con el valor seleccionado, por ejemplo, ordenar los datos
+  result = sortData(result, { sortBy: "name", sortOrder: selectedValue });
+
+  // Renderiza los datos filtrados y ordenados
+  renderDataList();
 });
 
 function renderDataList() { // Función para renderizar la lista con los datos actuales
@@ -89,35 +97,24 @@ function renderDataList() { // Función para renderizar la lista con los datos a
 //// Estadisticas///
 const buttonFacts = document.querySelector('[data-testid="button-facts"]');
 
-// Agrega un event listener al botón
-buttonFacts.addEventListener('click', () => {
-  try {
-    // Calcular las estadísticas al hacer clic en el botón
-    const stats = computeStats(data);
-    // Mostrar las estadísticas en un contenedor HTML
-    renderStats(stats);
-  } catch (error) {
-    // Manejar errores de manera global o proporcionar algún mecanismo de retroalimentación
-    console.error('Error al calcular estadísticas:', error);
-  }
+buttonFacts.addEventListener('click', (e) => {
+  const buttonInfo = e.target.dataset.info; // Obtener el valor del atributo data-info
+  // Acciones al hacer clic en el botón con el valor obtenido
+  const stats = computeStats(data, buttonInfo);
+  renderStats(stats);
 });
 
 // Función para renderizar las estadísticas en el contenedor
 function renderStats(stats) {
   // Obtener la referencia al contenedor de estadísticas por su id
   const statsContainer = document.getElementById('stats-container');
-
   // Verificar si el contenedor de estadísticas existe
   if (statsContainer) {
     // Limpiar contenido anterior
     statsContainer.innerHTML = '';
-
     // Mostrar las estadísticas en el contenedor
     statsContainer.appendChild(renderStatsElement(stats));
-  } else {
-    // Manejar el caso en el que el contenedor no existe
-    console.error('No se encontró el contenedor de estadísticas.');
-  }
+  } 
 }
 
 // Función para renderizar las estadísticas como elementos HTML

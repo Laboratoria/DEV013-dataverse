@@ -1,18 +1,46 @@
-import { example, anotherExample } from '../src/dataFunctions.js';
+import { filterData, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
-console.log(fakeData);
+describe('filterData', () => {
+  it('Filtrado de datos por género', () => {
+    const result = filterData(fakeData, 'mainField', 'Literatura');
+    expect(result).toHaveLength(4);
+    result.forEach((writer) => {
+      expect(writer.facts.mainField).toBe('Literatura');
+    });
+  });
 
-describe('example', () => {
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('should filter data by countryNacimiento', () => {
+    const result = filterData(fakeData, 'countryNacimiento', 'Reino Unido');
+    expect(result).toHaveLength(2);
+    result.forEach((writer) => {
+      expect(writer.facts.countryNacimiento).toBe('Reino Unido');
+    });
   });
 });
 
-describe('anotherExample', () => {
+describe('sortData', () => {
+  it('Ordena los nombres de manera Ascendente ', () => {
+    const result = sortData(fakeData, { sortBy: 'name', sortOrder: 'asc' });
+    expect(result[0].name).toBe('Amy Tan');
+    expect(result[1].name).toBe('Isabel Allende');
+    expect(result[2].name).toBe('Jane Austen');
+    expect(result[3].name).toBe('Virginia Woolf');
+  });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('Ordena los nombres de manera Descendente', () => {
+    const result = sortData(fakeData, { sortBy: 'name', sortOrder: 'desc' });
+    expect(result[0].name).toBe('Virginia Woolf');
+    expect(result[1].name).toBe('Jane Austen');
+    expect(result[2].name).toBe('Isabel Allende');
+    expect(result[3].name).toBe('Amy Tan');
+  });
+});
+
+describe('computeStats', () => {
+  it('Calcula estadisticas de Paises y Generos', () => {
+    const result = computeStats(fakeData);
+    expect(result.countries).toEqual({ 'Reino Unido': 2, 'EE. UU.': 1, 'Chile': 1 });
+    expect(result.genres).toEqual({ 'Literatura': 4 });
   });
 });

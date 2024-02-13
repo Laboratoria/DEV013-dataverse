@@ -13,11 +13,11 @@
 <body>
   <header>
     <a href=""><img class="home" src="./data/img/banner_escritoras.png" alt="banner" /></a>
-    <h1 class="title">EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1><br>
+    <h1>EL MUNDO A TRAVÉS DE GRANDES ESCRITORAS</h1><br>
   </header>
 
     <div class="form-container">
-    <label for="type-select">Género literario:</label>
+    <label for="type-select">Género literario: </label>
     <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opción</option>
       <option value="Literatura">Literatura</option>
@@ -25,7 +25,7 @@
       <option value="Poesía, Novela">Poesía, Novela</option>
     </select>
 
-    <label for="country-select">Nacionalidad:</label>
+    <label for="country-select">Nacionalidad: </label>
     <select name="country" id="country-select" data-testid="filter-data">
       <option value="">Elige una opción</option>
       <option value="Reino Unido">Reino Unido</option>
@@ -40,7 +40,7 @@
       <option value="EE. UU.">EE. UU.</option>
     </select>
 
-    <label for="sort-select">Ordenar por:</label>
+    <label for="sort-select">Ordenar por: </label>
     <select name="ordenar" id="sort-select" data-testid="select-sort">
       <option value="none">Elige una opción</option>
       <option value="asc">A-Z</option>
@@ -51,7 +51,7 @@
 
     <dialog id="statsDialog">
       <div class="modal-content" id="stats-content">
-        <span class="close-btn" onclick="closeStatsDialog()">&times;</span>
+        <span class="close-btn" onclick="closeStatsDialog()"></span>
         <div id="stats-container"></div>
         </div>
     </dialog>
