@@ -11,10 +11,15 @@
 * {
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Cabin Condensed', "sans-serif";
     background-color: var(--sky-blue);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 .title {
     display: flex;
@@ -45,7 +50,7 @@ h1 {
     margin-left: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.buttons {
+[data-testid="select-filter"] {
     width: 200px;
     height: 40px;
     margin: 14px 100px;
@@ -85,17 +90,13 @@ h1 {
     border: var(--grey);
     color: var(--dark-grey);
 }
-.cardWindow {
-    width: 300px;
-    flex-grow: 1;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
+
 .visual {
     background-color: var(--white);
-    padding: 10px;
+    padding: 15px;
     margin: 20px;
+    width: 290px;
+    height: 430px;
     border-radius: 15px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     transition: 0.3s;
@@ -107,7 +108,6 @@ h1 {
     width: 230px;
     height:300px;
     border-radius: 10px;
-    margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.425);
     justify-content: center;
 }
@@ -120,8 +120,65 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    padding: 10px;
 }
-.noVisual {
+.closeWindow {
+    border: none;
+    background-color: var(--soft-blue);
+}
+.windowModal {
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 530px;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: var(--soft-blue);
+}
+h2 {
+    font-size: 40px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.modalCard {
+    width: 700px;
+    height: 430px;
+    margin: 10px 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+
+}
+.modalCard > img {
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.425);
+}
+
+
+.modalFondo {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hiden {
     display: none;
 }
 footer {

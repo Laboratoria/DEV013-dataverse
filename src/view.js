@@ -3,30 +3,34 @@ export const renderItems = (data) => {
   data.forEach((film) => {
     const card = document.createElement("li");
     card.innerHTML += `
-      <div class="card">
-        <div class="visual">
-          <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
-          <div id="root">
-            <ul itemscope itemtype="nausicaa-del-valle-del-viento">
-              <div class="container">
-                <li itemtype="name">${film.name}</li>
-                <li itemtype="genders">Género: ${film.facts["genders"]}</li>
-                <button class="ver-mas">Ver más</button>
-                <div class="noVisual">
-                  <dialog id="modal-${film.id}"> 
-                    <li itemtype="releaseYear">Estreno: ${film.facts["releaseYear"]}</li>
-                    <li itemtype="duration">Duración: ${film.facts["duration"]}</li>
-                    <li itemtype="boxOfficeRevenue">Recaudación: ${film.facts["boxOfficeRevenue"]}</li>
-                    <li itemtype"shortDescription">Sinopsis: ${film.shortDescription}</li>
-                    <li itemtype="description">Descripción: ${film.description}</li>
-                    <button class="ver-menos">Ver menos</button>
-                  </dialog>
-                </div>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="visual"> 
+    <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
+    <ul itemscope itemtype="nausicaa-del-valle-del-viento">
+    <li itemtype="name">${film.name}</li>
+    <li itemtype="genders">Género: ${film.facts["genders"]}</li>
+    </ul>
+    <label for="popUp">
+    <button class="cardsBtn">Ver más</button>
+    </label>
+    </div>
+    <section class="windowModal hiden">
+    <button class="closeWindow">X</button>
+    <h2>${film.name}</h2>
+    <div class="modalCard">
+    <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
+    <ul itemscope itemtype="nausicaa-del-valle-del-viento">
+    <div class="card">
+    <li itemtype="genders">Género: ${film.facts["genders"]}</li>
+    <li itemtype="releaseYear">Estreno: ${film.facts["releaseYear"]}</li>
+    <li itemtype="duration">Duración: ${film.facts["duration"]}</li>
+    <li itemtype="boxOfficeRevenue">Recaudación: ${film.facts["boxOfficeRevenue"]}</li>
+    <li itemtype"shortDescription">Sinopsis: ${film.shortDescription}</li>
+    <li itemtype="description">Descripción: ${film.description}</li>
+    </div>
+    </ul>
+    </div>
+    </section>
+    <div class="modalFondo hiden"></div>
     `;
     card.querySelector(".ver-mas").addEventListener("click", () => {
       document.getElementById(`modal-${film.id}`).showModal();
@@ -36,6 +40,23 @@ export const renderItems = (data) => {
       document.getElementById(`modal-${film.id}`).close();
     });
     list.appendChild(card);
+
+    const popUpWindow = card.querySelector(".windowModal");
+    const buttonWindow = card.querySelector(".cardsBtn");
+    const fondoModal = card.querySelector(".modalFondo");
+    const closeWindow = card.querySelector(".closeWindow")
+
+    buttonWindow.addEventListener("click", function () {
+      popUpWindow.classList.remove("hiden");
+      fondoModal.classList.remove("hiden");
+      return buttonWindow;
+    });
+    closeWindow.addEventListener("click", function () {
+      popUpWindow.classList.add("hiden");
+      fondoModal.classList.add("hiden");
+      return closeWindow;
+    });
+    
   });
   return list;
 };

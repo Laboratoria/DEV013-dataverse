@@ -1,14 +1,13 @@
 import { filterGenders, sortFilms } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
-const newData = [...data]
+const newData = [...data];
 
-const movieCards = document.querySelector("#root");
-const cleanerButton = document.querySelector(".cleanerButton");
 const movieSearch = document.querySelector(".movie-search");
 const gendersFilms = document.querySelector("#filter");
 const orderFilms = document.querySelector("#order");
-
+const movieCards = document.querySelector("#root");
+const cleanerButton = document.querySelector(".cleanerButton");
 
 movieCards.appendChild(renderItems(newData));
 
@@ -32,7 +31,6 @@ gendersFilms.addEventListener("change", function () {
   const filterMovie = filterGenders(newData, "genders", selectedGender);
   sortFilms;
   movieCards.appendChild(renderItems(filterMovie));
-
 });
 
 orderFilms.addEventListener("change", function () {
@@ -55,13 +53,3 @@ cleanerButton.addEventListener("click", function () {
   movieCards.innerHTML = "";
   movieCards.appendChild(renderItems(newData));
 });
-
-
-
-// verMas.addEventListener("click", ()=>{
-//   modal.showModal();
-// });
-
-// verMenos.addEventListener("click", ()=>{
-//   modal.close();
-// });

@@ -19,19 +19,24 @@
         <img
           src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/Totoro-transparente.png"
           alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli"
-          class="logo" />
-        <h1>スタジオジブリ <br />STUDIO GHIBLI</h1>
-        <div class="linea"></div>
+          class="logo"
+        />
+        <h1>
+          スタジオジブリ <br/>
+          STUDIO GHIBLI
+        </h1>
+
         <div class="input">
-          <label for="input" class="movieSearch">
-            <input type="text" class="movie-search" placeholder="Buscar" />
+          <label for="input">
+            <input type="text" class="movie-search" placeholder="Buscar"/>
           </label>
         </div>
       </div>
     </header>
 
-    <label for="filter">
-      <select data-testid="select-filter" name="genders"  id="filter" class="buttons">
+    <div class="superButtons">
+    <label for="filter" class="buttons">
+      <select data-testid="select-filter" name="genders"  id="filter" >
         <option value="genres">Filtrar por:</option>
         <option value="Romance">Romance</option>
         <option value="Fantasía">Fantasía</option>
@@ -40,7 +45,7 @@
         <option value="Bélico">Bélico</option>
         <option value="Suspenso">Suspenso</option>
         <option value="Infantil">Infantil</option>
-        <option value="Familiar">Familiar</option>
+        <option value="Familia">Familia</option>
         <option value="Comedia">Comedia</option>
         <option value="Drama">Drama</option>
         <option value="Aventura">Aventura</option>
@@ -48,7 +53,7 @@
     </label>
 
     <label for="order">
-      <select data-testid="select-filter" name="sortOrder" id="order" class="buttons">
+      <select data-testid="select-filter" name="sortOrder" id="order" >
         <option value="todos">Ordenar por:</option>
         <option value="asc">A-Z</option>
         <option value="desc">Z-A</option>
@@ -58,10 +63,10 @@
     <label for="button">
       <button class="cleanerButton" type="button">Limpiar</button>
     </label>
-  
+    </div>
     <div id="root"></div>
-    
-    <footer>Desarrolladoras Cataline Alarcón y Addis Pérez Castro</footer>
-    <script src="main.js" type="module"></script>
+
+    <footer>Desarrolladoras Cataline Alarcon y Addis Pérez Castro</footer>
   </body>
+  <script src="main.js" type="module"></script>
 </html>

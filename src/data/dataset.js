@@ -59,7 +59,7 @@ export default [
     facts: {
       duration: "1h 26m",
       releaseYear: "1988",
-      genders: "Familiar, Fantasía, Aventura",
+      genders: "Familia, Fantasía, Aventura",
       boxOfficeRevenue: "$30 millones USD en taquilla.",
     },
   },
