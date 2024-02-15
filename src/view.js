@@ -9,9 +9,8 @@ export const renderItems = (data) => {
     <li itemtype="name">${film.name}</li>
     <li itemtype="genders">Género: ${film.facts["genders"]}</li>
     </ul>
-    <label for="popUp">
+    <label for="popUp"> </label>
     <button class="cardsBtn">Ver más</button>
-    </label>
     </div>
     <section class="windowModal hiden">
     <button class="closeWindow">X</button>
@@ -32,13 +31,7 @@ export const renderItems = (data) => {
     </section>
     <div class="modalFondo hiden"></div>
     `;
-    card.querySelector(".ver-mas").addEventListener("click", () => {
-      document.getElementById(`modal-${film.id}`).showModal();
-    });
-
-    card.querySelector(".ver-menos").addEventListener("click", () => {
-      document.getElementById(`modal-${film.id}`).close();
-    });
+    
     list.appendChild(card);
 
     const popUpWindow = card.querySelector(".windowModal");
@@ -56,7 +49,10 @@ export const renderItems = (data) => {
       fondoModal.classList.add("hiden");
       return closeWindow;
     });
-    
+    fondoModal.addEventListener("click", function () {
+      popUpWindow.classList.add("hiden");
+      fondoModal.classList.add("hiden");
+    });
   });
   return list;
 };

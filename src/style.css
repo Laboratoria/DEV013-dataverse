@@ -63,9 +63,9 @@ h1 {
     border: var(--grey);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.buttons:hover {
+[data-testid="select-filter"]:hover {
     background-color: var(--soft-blue);
-    border: var(--pastel-blue);
+    border: var(--soft-blue);
     color: var(--white);
 }
 #filter {
@@ -90,6 +90,27 @@ h1 {
     border: var(--grey);
     color: var(--dark-grey);
 }
+.statsButton {
+    width: 200px;
+    height: 40px;
+    margin: 14px 100px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--soft-grey);
+    color: var(--dark-grey);
+    border: var(--grey);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.statsButton:hover {
+    background-color: var(--soft-blue);
+    border: var(--soft-blue);
+    color: var(--white);
+}
+.noVisual {
+    display: none;
+}
 
 .visual {
     background-color: var(--white);
@@ -110,6 +131,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.425);
     justify-content: center;
+    text-align: center;
 }
 li {
     list-style: none;
@@ -139,22 +161,25 @@ ul {
     background-color: var(--soft-blue);
 }
 h2 {
-    font-size: 40px;
-    margin-top: 5px;
+    font-size: 35px;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
+    color: white;
 }
 .modalCard {
     width: 700px;
-    height: 430px;
+    max-height: 430px;
     margin: 10px 25px;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--white);
-
+    overflow-y: auto;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: justify;
 }
 .modalCard > img {
     width: 300px;
@@ -163,8 +188,34 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.425);
 }
-
-
+.cardsBtn {
+    width: 150px;
+    height:30px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--soft-blue);
+    color: white;
+    border: none;
+    margin-bottom: 100px;
+}
+.cardsBtn:hover {
+    background-color: var(--grey);
+    border: var(--grey);
+    color: var(--black);
+}
+.closeWindow {
+    margin-left: 650px;
+    background-color: var(--pastel-blue);
+    font-size: larger;
+    font-weight: 700px;
+    background-color: var(--soft-blue);
+    color: white;
+    margin-top: 7px;
+}
 .modalFondo {
     position: fixed;
     top: 0;
@@ -177,7 +228,6 @@ h2 {
     backdrop-filter: blur(3px);
     z-index: 1;
 }
-
 .hiden {
     display: none;
 }

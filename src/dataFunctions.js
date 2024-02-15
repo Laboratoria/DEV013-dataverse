@@ -1,6 +1,6 @@
 export const filterGenders = (data, filterBy, value) => {
-  const filter = data.filter(movie => movie.facts[filterBy].includes(value));
-  return filter; 
+  const filter = data.filter((movie) => movie.facts[filterBy].includes(value));
+  return filter;
 };
 
 export const sortFilms = (data, sortBy, sortOrder) => {
@@ -16,11 +16,3 @@ export const sortFilms = (data, sortBy, sortOrder) => {
   });
   return data;
 };
-
-// export const filterByGenre = (data, genre)=> {
-//   if (genre === "all") {
-//     return data;
-//   } else {
-//     return data.filter(elemento => elemento.facts.genders.includes(genre));
-//   }
-// };
