@@ -13,7 +13,7 @@ export const renderItems = (data) => {
     <button class="cardsBtn">Ver más</button>
     </div>
     <section class="windowModal hiden">
-    <button class="closeWindow">X</button>
+    <button class="closeWindow">Ver menos</button>
     <h2>${film.name}</h2>
     <div class="modalCard">
     <img src="${film.imageUrl}" alt="Afiche de la película ${film.name}">
