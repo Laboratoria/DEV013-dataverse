@@ -41,11 +41,11 @@ export default [
     imageUrl:
       "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/La-tumba-de-las-luciernagas.jpg",
     facts: {
-      "duration": "2h 4m",
-      "releaseYear": "1988",
-      "genders": "Drama, Bélico, Terror",
-      "boxOfficeRevenue": "$14 millones USD en taquilla."
-    }
+      duration: "2h 4m",
+      releaseYear: "1988",
+      genders: "Drama, Bélico, Terror",
+      boxOfficeRevenue: "$14 millones USD en taquilla.",
+    },
   },
   {
     id: "mi-vecino-totoro",
@@ -234,7 +234,7 @@ export default [
       "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-castillo-ambulante.jpg",
     facts: {
       duration: "1h 59m",
-      EreleaseYear: "2004",
+      releaseYear: "2004",
       genders: "Fantasía, Romance, Bélico",
       boxOfficeRevenue: "$235 millones USD en taquilla.",
     },
@@ -303,12 +303,15 @@ export default [
       Recaudación: "$61 millones USD en taquilla.",
     },
   },
-{
+  {
     id: "el-viento-se-levanta-",
     name: "EL Viento se Levanta",
-    shortDescription: "Drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial.",
-    description: "EL Viento se Levanta, dirigida por Hayao Miyazaki, es un drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial. La película explora temas de pasión, creatividad y las complejidades morales en tiempos de conflicto.",
-    imageUrl: "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-viento-se-levanta.jpg",
+    shortDescription:
+      "Drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial.",
+    description:
+      "EL Viento se Levanta, dirigida por Hayao Miyazaki, es un drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial. La película explora temas de pasión, creatividad y las complejidades morales en tiempos de conflicto.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-viento-se-levanta.jpg",
     facts: {
       duration: "2h 6m",
       releaseYear: "2013",

@@ -1,4 +1,4 @@
-import { filterGenders, sortFilms } from "./dataFunctions.js";
+import { filterGenders, sortFilms, computeStats} from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 const newData = [...data];
@@ -8,9 +8,11 @@ const orderFilms = document.querySelector("#order");
 const movieCards = document.querySelector("#root");
 const statsButton = document.querySelector(".statsButton");
 const statsWindow = document.querySelector(".statsWindow");
+const statsMovie = document.querySelector(".statsMovie")
 const closeStats = document.querySelector(".closeStats");
 const statsFondo = document.querySelector(".statsFondo");
 const cleanerButton = document.querySelector(".cleanerButton");
+
 movieCards.appendChild(renderItems(newData));
 movieSearch.addEventListener("input", function () {
   const results = [];
@@ -44,22 +46,18 @@ orderFilms.addEventListener("change", function () {
   }
   movieCards.appendChild(renderItems(filmAsc));
 });
-cleanerButton.addEventListener("click", function () {
-  const newData = [...data];
-  movieSearch.value = "";
-  movieCards.innerHTML = "";
-  gendersFilms.value = "genres";
-  orderFilms.value = "todos";
-  movieCards.appendChild(renderItems(newData));
+cleanerButton.addEventListener("click", function () { 
+  const newData = [...data]; 
+  movieSearch.value = ""; 
+  movieCards.innerHTML = ""; 
+  gendersFilms.value = "genres"; 
+  orderFilms.value = "todos"; 
+  movieCards.appendChild(renderItems(newData)); 
 });
 statsButton.addEventListener("click", function () {
-  movieCards.innerHTML = "";
-  const stats = statsButton.value;
-  const genStats = computeStats(newData, "genders", stats);
-  movieCards.appendChild(renderItems(genStats));
+  statsMovie.textContent = computeStats(newData);
   statsWindow.classList.remove("noVisual");
   statsFondo.classList.remove("noVisual");
-  computeStats(newData);
 });
 closeStats.addEventListener("click", function () {
   statsWindow.classList.add("noVisual");
