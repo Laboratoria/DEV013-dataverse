@@ -3,7 +3,9 @@ import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 
-console.log(example, renderItems(data), data);
+const contenedor = document.querySelector('#root')
+
+console.log(contenedor, renderItems(data), data);
 
 
 

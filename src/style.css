@@ -1,4 +1,54 @@
-//uso de selector class para los articulos
-//uso de flexbox en sentido row y column
-//uso de flexbox para elemento que contiene los item
-//uso de flexbox para el elemento que contiene las entradas UI
+
+
+body {
+    
+    background: url("https://img.freepik.com/foto-gratis/fondo-colorido-pastel-suave-abstracto_306501-869.jpg?w=740&t=st=1708452199~exp=1708452799~hmac=3d7b14316661c838995c548932516bdc77b348f9e1b4ec3d8796b8493cbbf4a8") no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+h1{
+    text-align: center;
+    font-family: bold;
+    position: sticky;
+}
+
+
+.card {
+    
+    margin: 2%;
+    text-align: justify;
+    margin:3%;
+    background-color: #85b4aa;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0px 5px 8px rgba(216, 214, 214, 0.1);
+    width: calc(35% - 5%);
+    border-radius: 2%;
+    
+}
+
+.card img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+}
+
+
+/*.opción-back, .opción-front, .opción{
+  
+  text-align: auto;
+  color: rgb(52, 41, 15);
+  font-size: 15px;
+  font: 'bold';
+  position: relative;
+  left: 20%;
+  top: 40%;
+  height: 20px;
+}
+
+
+
+
+

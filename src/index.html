@@ -7,23 +7,50 @@
   </head>
   <header> 
    <titulo> </titulo>
-   <h1>Cientificas</h1>
-   <p>Descubre 24 mujeres que cambiaron el mundo</p>
+   <h1>Las Mejores Científicas del Mundo</h1>
+   <p></p>
   </header>
 
   <main> 
-    <h2></h2>
+    <h2>Descubre 24 mujeres que cambiaron el mundo</h2>
   </main>
-
-  <div id="root" class="contenedor"> 
-
   </div>
   
   <body>
-    <script src="main.js" type="module"></script>
-    //Boton para limpiar metrica 
+    
+     
+    <div id="root" class="conteiner-cards">
+     <label for="tercera">Especialidad</label>
+     <select data-testid="select-sort" name="name" id="tercera">
+       <option value="Ciencia-de-la-Computación">Ciencia de la Computación</option>
+       <option value="matemáticas">Matemáticas</option>
+       <option value="ComposiciónMusicalVideoJuegos">Composición Musical - Video Juegos</option>
+       <option value="CienciasdelaComputación">Ciencias de la Computación</option>
+       <option value="física">Física</option>
+       <option value="FísicadePartículas">Física de Partículas</option>
+       <option value="astronomía">Astronomía</option>
+       <option value="astrofísica">Astrofísica</option>
+       <option value="química">Química</option>
+       <option value="microbiología">Microbiología</option>
+       <option value="bioquímica">Bioquímica</option>
+       <option value="cristalografía">Cristalografía</option>
+     </select>
+    
+     <label>Orden</label>
+     <select data-testid="select-sort" name="name" id="cuarta">
+       <option value="asc">A - Z</option>
+       <option value="desc">Z - A</option>
+     </select>
+    </div> 
+    <button select data-testid="button-clear">Limpiar</button>
+     
+    
+
+
     <footer>
-      By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
+       By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
     </footer>
+
+    <script src="main.js" type="module"></script>
   </body>
 </html>
