@@ -23,23 +23,19 @@
 
   <body>
     <header>
-      <div class="title">
-        <img src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/Totoro-transparente.png"
+      <div class="header">
+        <img
+          src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/Totoro-transparente.png"
           alt="Dibujo del contorno de totoro, similar al logo de Studio Ghibli"
-          class="logo"/>
-          <div class="titulo-container">
-            <div class="titulo1">
-                <h1>スタジオジブリ</h1>
-            </div>
-            <div class="titulo2">
-                <h1>STUDIO GHIBLI</h1>
-            </div>
+          class="logo"
+        />
+        <div class="title">
+        <h1>スタジオジブリ</h1>
+        <h1>STUDIO GHIBLI</h1>
         </div>
-        <div class="input">
           <label for="input">
             <input type="text" class="movie-search" placeholder="Buscar" />
           </label>
-        </div>
       </div>
     </header>
 
@@ -63,7 +59,7 @@
         </select>
       </label>
 
-      <label for="order">
+      <label for="order" class="buttons">
         <select data-testid="select-filter" name="sortOrder" id="order">
           <option value="todos">Ordenar por:</option>
           <option value="asc">A-Z</option>
@@ -71,11 +67,11 @@
         </select>
       </label>
 
-      <label for="button">
+      <label for="button" class="button2">
         <button class="cleanerButton" type="button">Limpiar</button>
       </label>
 
-      <label for="stats">
+      <label for="stats" class="button2">
         <button class="statsButton">
           <img
             src="https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/html/src/Imagenes/estadisticas-transparente.png"
@@ -86,12 +82,12 @@
     </div>
 
     <div class="statsWindow noVisual">
-      <label for="button">
-        <button class="closeStats"><b>X</b></button>
-      </label>
       <div>
         <h3>Estadísticas de Géneros</h3>
         <p class="statsMovie"></p>
+        <label for="button">
+          <button class="closeStats"><b>Ver menos</b></button>
+        </label>
       </div>
     </div>
     <div class="statsFondo noVisual"></div>

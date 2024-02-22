@@ -1,7 +1,8 @@
-import { filterGenders, sortFilms, computeStats} from "./dataFunctions.js";
+import { filterGenders, sortFilms, computeStats } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 const newData = [...data];
+
 const movieSearch = document.querySelector(".movie-search");
 const gendersFilms = document.querySelector("#filter");
 const orderFilms = document.querySelector("#order");
@@ -34,6 +35,15 @@ gendersFilms.addEventListener("change", function () {
   const filterMovie = filterGenders(newData, "genders", selectedGender);
   movieCards.appendChild(renderItems(filterMovie));
 });
+
+gendersFilms.addEventListener("change", function () {
+  movieCards.innerHTML = "";
+  const selectedGender = gendersFilms.value;
+  const filterMovie = filterGenders(newData, "genders", selectedGender);
+  sortFilms;
+  movieCards.appendChild(renderItems(filterMovie));
+
+});
 orderFilms.addEventListener("change", function () {
   movieCards.innerHTML = "";
   gendersFilms.value = "genres";
@@ -46,6 +56,7 @@ orderFilms.addEventListener("change", function () {
   }
   movieCards.appendChild(renderItems(filmAsc));
 });
+
 cleanerButton.addEventListener("click", function () { 
   const newData = [...data]; 
   movieSearch.value = ""; 

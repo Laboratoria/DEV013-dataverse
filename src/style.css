@@ -18,7 +18,7 @@ body {
     background-color: var(--sky-blue);
     position: relative;
 }
-.title {
+.header {
     display: flex;
     background-color: var(--soft-blue);
     width: 100%;
@@ -30,36 +30,24 @@ body {
     width: 19vw;
     height: 26vh;
 }
-.titulo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.title {
+    margin: 0.8rem 15rem 0 0;
 }
-/* h1 {
+h1 {
     display: contents;
     color: var(--black);
     font-family: sans-serif;
-    font-size: 3rem;
-    padding-top: 0.7rem;
-    margin: 0;
-} */
-.titulo1, .titulo2 {
-    font-size: 20px;
-    margin-top: 7px;
-    margin-bottom: 10px;
+    font-size: 2.7em;
 }
 .movie-search {
     background-color: var(--grey);
     border: var(--pastel-blue);
-    width: 26rem;
-    height: 2.5rem;
+    width: 26vw;
+    height: 6.5vh;
     font-size: 0.93em;
     padding-left: 1.3rem;
     border-radius: 9999rem;
-    margin-top: 3rem;
-    margin-left: 15rem;
-    margin-right: 2rem;
+    margin: 3.5rem 2rem 0 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .superButtons{
@@ -134,6 +122,36 @@ body {
     border-radius: 3rem;
     background-color: var(--white);
 }
+h3 {
+    font-size: 1.5rem;
+    font-family: Merriweather;
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+}
+p {
+    font-family: Merriweather;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0.5rem;
+}
+.closeStats {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: Merriweather;
+    background-color: var(--sky-blue);
+    color: var(--dark-grey);
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 0.7rem;
+    width: fit-content;
+    margin: auto;
+    margin-top: 2rem;
+}
 .statsFondo {
     position: fixed;
     top: 0;
@@ -179,10 +197,6 @@ ul {
     text-align: center;
     margin: 1rem 0 0.8rem 0;
 }
-.closeWindow {
-    border: none;
-    background-color: var(--soft-blue);
-}
 .cardsBtn {
     width: 11rem;
     height: 2rem;
@@ -198,6 +212,10 @@ ul {
     background-color: var(--soft-blue);
     border: var(--grey);
     color: var(--white);
+}
+.closeWindow {
+    border: none;
+    background-color: var(--soft-blue);
 }
 .windowModal {
     z-index: 2;
@@ -285,19 +303,95 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-    @media (max-width: 600px) {
-      .title {
-          width: 50%;
-          border: 1px solid red;
-          font-size: 2em;
-      }
-      h
-      .logo {
-          display: flex;
-      }
-      .movie-search {
-          display: flex;
-          flex-direction: column;
-      }
+}
+@media (max-width: 600px) {
+    .logo {
+        width: 25vw;
+        height: 17vh;
     }
+    .title {
+        margin: 1rem 0 0 0;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    .movie-search {
+        margin: 1.6rem 0 0 9rem;
+        height: 1.7rem;
+        font-size: 0.7em;
+    }
+    .superButtons {
+        margin: 0.5rem 0 0 0;
+    }
+    [data-testid="select-filter"] {
+        width: 7rem;
+	    height: 2.1rem;
+	    font-size: 0.7em;
+    }
+    .cleanerButton {
+        width: 7rem;
+	    height: 2.1rem;
+	    font-size: 0.7em;
+    }
+    .statsButton {
+        width: 5rem;
+	    height: 2.1rem;
+    }
+    .statsButton > img {
+        width: 2.5rem;
+        height: auto;
+    }
+    .statsWindow {
+        width: 15rem;
+        height: 10rem;
+    }
+    .visual {
+        margin: 0.4rem;
+        width: 11rem;
+        height: 20rem;
+        padding: 0.5rem;
+        box-shadow: 6px 6px 1px 0.5px rgba(0, 0, 255, .2);
+        font-size: 0.6rem;
+    }
+    .visual > img {
+        width: 9rem;
+        height: 14rem;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.425);
+    }
+    ul {
+        margin: 0.5rem 0 0.4rem 0;
+    }
+    .cardsBtn {
+        width: 6rem;
+        height: 1.5rem;
+        font-size: 1em;
+    }
+    .windowModal {
+       	width: 30rem;
+	    height: 21.5rem;
+    }
+    .closeWindow {
+        margin: 0.5rem 0 0 25rem;
+        font-size: 0.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .modalCard {
+        width: 28rem;
+	    height: 17rem;
+	    margin: 0.2rem 1rem;
+    }
+    .card {
+        font-size: 0.7rem;
+        margin: 0.05rem;
+    }
+    .modalCard > img {
+        width: 10rem;
+        height: 15rem;
+        margin: 0.5rem;
+    }
+    footer {
+        font-size: 0.5rem;
+    }
+}
