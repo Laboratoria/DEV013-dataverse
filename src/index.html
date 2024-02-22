@@ -10,56 +10,51 @@
   </head>
   <header> 
    <titulo> </titulo>
-   <h1>Mujeres Científicas</h1>
-   <p>Descubre 24 mujeres que cambiaron el mundo</p>
+   <h1>Las Mejores Científicas del Mundo</h1>
+   <p></p>
   </header>
 
-  <body>
-   <main> 
-    <h2></h2>
-   <div class="contenedor filtros"> 
-     <div class="filtros">
-       <label for="Especialidad"> Especialidad </label>
-       <select data-testid="select-filter" class="Filtrar" name="Especialidad">
-        <option value="">Escoge una opción</option>
-        <option value="Ciencias de la computación">Ciencias de la computación</option>
-        <option value="Matemáticas">Matemáticas</option>
-        <option value="Filosofía">Filosofía</option>
-        <option value="Composición musical">Composición musical</option>
-        <option value="Video Juegos">Video Juegos</option>
-        <option value="Física">Física</option>
-        <option value="Actuación">Actuación</option>
-        <option value="Física de Partículas">Física de Partículas</option>
-        <option value="Astronomía">Astronomía</option>
-        <option value="Astrofísica">Astrofísica</option>
-        <option value="Química">Química</option>
-        <option value="Microbiología">Microbiología</option>
-        <option value="Bioquímica">Bioquímica</option>
-        <option value="Cristalografía">Cristalografía</option>
-       </select>
-      </div>
-
-     <div class="Ordenar">
-      <label> Ordenado </label>
-      <select data-testid="select-sort" class="Ordenar" name="Nombres">
-        <option value="">----</option>
-        <option value="asc">A - Z</option>
-        <option value="desc">Z - A</option>
-      </select>
-     </div>
-    </div>
-
-
-    <div class="container-cards" id="root"></div>
-  
-  
-    <script src="main.js" type="module"></script>
-    //Boton para limpiar metrica 
-
+  <main> 
+    <h2>Descubre 24 mujeres que cambiaron el mundo</h2>
   </main>
-  <footer>
-    By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
-  </footer>
+  </div>
+  
+  <body>
+    
+     
+    <div id="root" class="conteiner-cards">
+     <label for="tercera">Especialidad</label>
+     <select data-testid="select-sort" name="name" id="tercera">
+       <option value="Ciencia-de-la-Computación">Ciencia de la Computación</option>
+       <option value="matemáticas">Matemáticas</option>
+       <option value="ComposiciónMusicalVideoJuegos">Composición Musical - Video Juegos</option>
+       <option value="CienciasdelaComputación">Ciencias de la Computación</option>
+       <option value="física">Física</option>
+       <option value="FísicadePartículas">Física de Partículas</option>
+       <option value="astronomía">Astronomía</option>
+       <option value="astrofísica">Astrofísica</option>
+       <option value="química">Química</option>
+       <option value="microbiología">Microbiología</option>
+       <option value="bioquímica">Bioquímica</option>
+       <option value="cristalografía">Cristalografía</option>
+     </select>
+    
+     <label>Orden</label>
+     <select data-testid="select-sort" name="name" id="cuarta">
+       <option value="asc">A - Z</option>
+       <option value="desc">Z - A</option>
+     </select>
+    </div> 
+    <button select data-testid="button-clear">Limpiar</button>
+     
+    
+
+
+    <footer>
+       By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
+    </footer>
+
+    <script src="main.js" type="module"></script>
   </body>
 
   
