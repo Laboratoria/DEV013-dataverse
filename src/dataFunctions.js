@@ -1,6 +1,6 @@
 // Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
 
-export const example = () => {
+export const filtroDatos = () => {
   return 'example';
 };
 

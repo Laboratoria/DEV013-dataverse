@@ -16,6 +16,7 @@ export const renderItems = (data) => {
       <dt>Fecha de nacimiento:</dt><dd itemprop="fechaDeNacimiento">${data.facts.yearOfBirth}</dd>
       <dt>Fecha de muerte:</dt><dd itemprop="fechaDeMuerte">${data.facts.yearOfDeath}</dd>
       <dt>Nacionalidad:</dt><dd itemprop="Nacionalidad">${data.facts.birthPlace}</dd>
+      <dt>Especialidad: </dt><dd itemprop="Especialidad">${data.facts.mainField}</dd>
       <dt>Descripción:</dt><dd itemprop="Descripción">${data.description}</dd>
       `
     itemContainer.setAttribute("itemscope", "");
@@ -24,7 +25,7 @@ export const renderItems = (data) => {
     list.appendChild(itemList);
 
   });
-  const divContenedorTarjetas = document.querySelector('#root');//
+  const divContenedorTarjetas = document.querySelector('#root');
   divContenedorTarjetas.appendChild(list);
   return list;
   

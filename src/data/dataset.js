@@ -9,7 +9,7 @@ export default [
       "yearOfBirth": "1815",
       "yearOfDeath": "1852",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "mainField": "Ciencias de la Computación"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"

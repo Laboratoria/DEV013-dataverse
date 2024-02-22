@@ -1,4 +1,30 @@
-//uso de selector class para los articulos
-//uso de flexbox en sentido row y column
-//uso de flexbox para elemento que contiene los item
-//uso de flexbox para el elemento que contiene las entradas UI
+ /*uso de selector class para los articulos
+ uso de flexbox en sentido row y column
+ uso de flexbox para elemento que contiene los item
+ uso de flexbox para el elemento que contiene las entradas UI*/
+ header {
+    font-family: "Exo 2", sans-serif;
+ }
+
+ body {
+    background-image: url(./Imagenes/Imagen\ fondo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    
+ }
+ .container-cards{
+    display: flex;
+    flex-flow: row, wrap;
+    height: 100px;
+    width: 90px;
+    margin: 5px;
+    padding: 20px;
+    justify-content: space-between;
+    line-height: 20px;
+
+ }
+ dl {
+    position: relative;
+    
+    flex-direction: row;
+ }
