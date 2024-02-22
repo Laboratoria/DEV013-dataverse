@@ -9,17 +9,6 @@ export const renderItems = (data) => {
   data.forEach(data=> {
    const itemList = document.createElement('li');
    const itemContainer = document.createElement('dl');
-<<<<<<< HEAD
-   itemContainer.innerHTML = `
-      <img src=${data.imageUrl} alt=${data.name}/>
-      <dd itemprop="name">${data.name}</dd>
-      <dd itemprop="DescripciónC"> ${data.shortDescription}</dd>
-      <dt>Fecha de nacimiento:</dt><dd itemprop="fechaDeNacimiento">${data.facts.yearOfBirth}</dd>
-      <dt>Fecha de muerte:</dt><dd itemprop="fechaDeMuerte">${data.facts.yearOfDeath}</dd>
-      <dt>Nacionalidad:</dt><dd itemprop="Nacionalidad">${data.facts.birthPlace}</dd>
-      <dt>Especialidad: </dt><dd itemprop="Especialidad">${data.facts.mainField}</dd>
-      <dt>Descripción:</dt><dd itemprop="Descripción">${data.description}</dd>
-=======
    itemList.classList.add("card");
    itemContainer.innerHTML = `  
       <dt class= "cards"><img src=${data.imageUrl} alt=${data.name}></dt>
@@ -30,7 +19,6 @@ export const renderItems = (data) => {
       <dt class="opción" >Nacionalidad:</dt> <dd class = "opción-back" itemprop="Nacionalidad">${data.facts.birthPlace}</dd>
       <dt class="opción" >Descripción:</dt> <dd class= "opción-back"itemprop="Descripción">${data.description}</dd> 
     
->>>>>>> 520e72bfc117566624b9a781b0cf03e3a4505b1a
       `
     itemContainer.setAttribute("itemscope", "");
     itemContainer.setAttribute("itemtype", "Científicas");
