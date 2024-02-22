@@ -1,378 +1,387 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
-    "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+    id: "nausicaa-del-valle-del-viento",
+    name: "Nausicaä del Valle del Viento",
+    shortDescription:
+      "Épica historia sobre la princesa Nausicaä y su lucha por salvar su tierra de la contaminación y la guerra.",
+    description:
+      "Nausicaä del Valle del Viento es una obra maestra de Hayao Miyazaki que sigue la historia de la princesa Nausicaä en un mundo postapocalíptico. Con temas de ecología y pacifismo, la película es una emotiva aventura que aborda la relación entre la humanidad y la naturaleza.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Nausica%C3%A4-del-valle-del-viento.jpg",
+    facts: {
+      duration: "1h 57m",
+      releaseYear: "1984",
+      genders: "Fantasía,  Ciencia Ficción",
+      boxOfficeRevenue: "$10 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
-    }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
-    "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+    id: "el-castillo-en-el-cielo",
+    name: "El Castillo en el cielo",
+    shortDescription:
+      "Aventura emocionante de un joven y una niña en busca de un legendario castillo flotante.",
+    description:
+      "El Castillo en el cielo, dirigida por Hayao Miyazaki, sigue las peripecias de Pazu y Sheeta en su búsqueda del legendario Castillo en el Cielo. La película combina acción, misterio y fantasía, ofreciendo una experiencia visualmente impactante y emocionante.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-castillo-en-el-cielo.jpg",
+    facts: {
+      duration: "2h 4m",
+      releaseYear: "1986",
+      genders: "Aventura, Fantasía",
+      boxOfficeRevenue: "$15 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
-    }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
-    "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+    id: "la-tumba-de-las-luciernagas",
+    name: "La Tumba de las Luciérnagas",
+    shortDescription:
+      "Conmovedora historia sobre dos hermanos tratando de sobrevivir en Japón durante la Segunda Guerra Mundial.",
+    description:
+      "La Tumba de las Luciérnagas es una obra maestra dirigida por Isao Takahata que narra la conmovedora historia de Seita y Setsuko, dos hermanos tratando de sobrevivir en Japón durante la Segunda Guerra Mundial. La película aborda temas de pérdida, esperanza y la devastación de la guerra.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/La-tumba-de-las-luciernagas.jpg",
+    facts: {
+      duration: "2h 4m",
+      releaseYear: "1988",
+      genders: "Drama, Bélico, Terror",
+      boxOfficeRevenue: "$14 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
-    }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
-    "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+    id: "mi-vecino-totoro",
+    name: "Mi Vecino Totoro",
+    shortDescription:
+      "Encantadora película de animación sobre dos hermanas que descubren criaturas mágicas en su nuevo hogar.",
+    description:
+      "Mi Vecino Totoro, dirigida por Hayao Miyazaki, es una joya del Studio Ghibli que sigue la historia de dos hermanas, Satsuke y Mei, que se mudan a un nuevo hogar y descubren a criaturas mágicas en el bosque cercano. La película captura la inocencia de la infancia y la magia de la naturaleza, ofreciendo una experiencia cinematográfica única.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Mi-vecino-totoro.png",
+    facts: {
+      duration: "1h 26m",
+      releaseYear: "1988",
+      genders: "Familia, Fantasía, Aventura",
+      boxOfficeRevenue: "$30 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
-    }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
-    "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+    id: "kiki:-entregas-a-domicilio",
+    name: "Kiki: entregas a domicilio",
+    shortDescription:
+      "Encantadora historia de una joven bruja que busca encontrar su lugar en el mundo.",
+    description:
+      "Kiki, la aprendiz de bruja, dirigida por Hayao Miyazaki, sigue la historia de Kiki, una joven bruja que emprende un viaje para encontrar su lugar en el mundo. La película destaca la autoexploración, la amistad y la superación de los desafíos. Una experiencia mágica que ha cautivado a audiencias de todas las edades.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Kiki-entregas-a-domicilio.webp",
+    facts: {
+      duration: "1h 42m",
+      releaseYear: "1989",
+      genders: "Aventura, Fantasía",
+      boxOfficeRevenue: "$18 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
-    "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+    id: "recuerdos-del-ayer",
+    name: "Recuerdos del Ayer",
+    shortDescription:
+      "Emotiva historia que sigue a una joven que redescubre su infancia a través de recuerdos nostálgicos.",
+    description:
+      "Recuerdos del Ayer, dirigida por Isao Takahata, relata la conmovedora historia de Taeko, una mujer que, durante un viaje, redescubre su infancia a través de recuerdos nostálgicos. La película aborda temas de identidad, amor y el impacto duradero de la infancia en la vida adulta.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Recuerdos-del-ayer.webp",
+    facts: {
+      duration: "1h 58m",
+      releaseYear: "1991",
+      genders: "Drama, Romance",
+      boxOfficeRevenue: "$525 mil USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
-    }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
-    "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+    id: "porco-rosso",
+    name: "Porco Rosso",
+    shortDescription:
+      "Aventura fascinante sobre un piloto que, después de transformarse en cerdo, lucha contra piratas aéreos en el Adriático.",
+    description:
+      "Porco Rosso, dirigida por Hayao Miyazaki, es una aventura fascinante que sigue a Marco Pagot, un piloto italiano que, tras una misteriosa transformación en cerdo antropomórfico, lucha contra piratas aéreos en el Mar Adriático. La película aborda temas de identidad, valentía y la belleza del vuelo.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Porco-rosso.jpg",
+    facts: {
+      duration: "1h 42m",
+      releaseYear: "1992",
+      genders: "Aventura, Fantasía",
+      boxOfficeRevenue: "$34 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
-    }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
-    "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+    id: "puedo-escuchar-el-mar",
+    name: "Puedo escuchar el mar",
+    shortDescription:
+      "Romántica historia que sigue a dos estudiantes mientras exploran la complejidad de sus emociones y relaciones.",
+    description:
+      "Puedo escuchar el mar, dirigida por Tomomi Mochizuki, es una romántica historia que sigue a dos estudiantes, Shizuku y Haru, mientras exploran la complejidad de sus emociones y relaciones. La película aborda temas de amor, autodescubrimiento y la importancia de la conexión emocional.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Puedo-escuchar-el-mar.jpg",
+    facts: {
+      duration: "1h 12m",
+      releaseYear: "1993",
+      genders: "Romance, Drama",
+      boxOfficeRevenue: "$41 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
-    }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
-    "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+    id: "pompoko",
+    name: "Pompoko",
+    shortDescription:
+      "Comedia dramática que sigue a un grupo de tanukis luchando contra la destrucción de su hábitat por parte de los humanos.",
+    description:
+      "Pompoko, dirigida por Isao Takahata, es una comedia dramática que sigue a un grupo de tanukis (criaturas mitológicas japonesas) luchando contra la destrucción de su hábitat por parte de los humanos. La película aborda temas de conservación, cambio ambiental y la relación entre la naturaleza y la sociedad.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Pompoko.webp",
+    facts: {
+      duration: "1h 58m",
+      releaseYear: "1994",
+      genders: "Comedia, Fantasía, Aventura",
+      boxOfficeRevenue: "$22 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
-    }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
-    "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "susurros-del-corazon",
+    name: "Susurros del Corazón",
+    shortDescription:
+      "Encantadora historia que sigue a una joven que descubre su pasión por la escritura y la creatividad.",
+    description:
+      "Susurros del Corazón, dirigida por Yoshifumi Kondō, es una encantadora historia que sigue a Shizuku, una joven que descubre su pasión por la escritura y la creatividad mientras se embarca en un viaje de autodescubrimiento. La película celebra la importancia de seguir los sueños y la búsqueda de la propia identidad.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Susurros-del-coraz%C3%B3n.webp",
+    facts: {
+      duration: "1h 46m",
+      releaseYear: "1995",
+      genders: "Romance, Infantil",
+      boxOfficeRevenue: "$15 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
-    }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
-    "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "la-princesa-mononoke",
+    name: "La princesa Mononoke",
+    shortDescription:
+      "Épica aventura que sigue la lucha entre los dioses del bosque y los humanos en busca de recursos.",
+    description:
+      "La princesa Mononoke, dirigida por Hayao Miyazaki, es una épica aventura que sigue la lucha entre los dioses del bosque y los humanos en busca de recursos. La película explora temas de coexistencia, equilibrio ambiental y la complejidad de las relaciones entre la naturaleza y la humanidad.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/La-princesa-Mononoke.webp",
+    facts: {
+      duration: "2h 13m",
+      releaseYear: "1997",
+      genders: "Fantasía, Aventura",
+      boxOfficeRevenue: "$159 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
-    }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
-    "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "mis-vecinos-los-yamada",
+    name: "Mis vecinos Los Yamada",
+    shortDescription:
+      "Comedia familiar que presenta la vida cotidiana de una peculiar familia japonesa.",
+    description:
+      "Mis vecinos Los Yamada, dirigida por Isao Takahata, es una comedia familiar que presenta la vida cotidiana de una peculiar familia japonesa. La película utiliza un estilo de animación único para capturar los momentos divertidos y conmovedores de la vida diaria, mostrando la belleza en lo ordinario.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Mis-vecinos-los-Yamada.jpg",
+    facts: {
+      duration: "1h 44m",
+      releaseYear: "1999",
+      genders: "Comedia, Infantil",
+      boxOfficeRevenue: "$20 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
-    }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
-    "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "el-viaje-de-chihiro",
+    name: "El viaje de Chihiro",
+    shortDescription:
+      "Mágica aventura que sigue a una niña atrapada en un mundo misterioso y su viaje para salvar a sus padres.",
+    description:
+      "El viaje de Chihiro, dirigida por Hayao Miyazaki, es una mágica aventura que sigue a Chihiro, una niña que queda atrapada en un mundo misterioso lleno de seres fantásticos. La película explora temas de valentía, amistad y autodescubrimiento mientras Chihiro lucha por salvar a sus padres y encontrar su camino de regreso a casa.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-viaje-de-Chihiro.png",
+    facts: {
+      duration: "2h 3m",
+      releaseYear: "2001",
+      genders: "Fantasía, Aventura",
+      Recaudación: "$347 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
-    }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
-    "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+    id: "el-regreso-del-gato",
+    name: "El Regreso del Gato",
+    shortDescription:
+      "Encantadora historia sobre una joven que se encuentra en un mundo de gatos y descubre su valentía interior.",
+    description:
+      "El Regreso del Gato, dirigida por Hiroyuki Morita, es una encantadora historia que sigue a Haru, una joven que, después de salvar a un gato, se encuentra en un mundo habitado por gatos y descubre su valentía interior. La película mezcla elementos de fantasía y comedia para contar una historia única sobre el crecimiento personal y la autoaceptación.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/haru-en-el-reino-de-los-gatos.jpg",
+    facts: {
+      duration: "1h 15m",
+      releaseYear: "2002",
+      genders: "Fantasía, Aventura",
+      boxOfficeRevenue: "$54 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
-    }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
-    "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+    id: "el-castillo-ambulante",
+    name: "El Castillo Ambulante",
+    shortDescription:
+      "Aventura mágica que sigue a una joven que, tras ser maldecida, busca la ayuda de un mago en un castillo ambulante.",
+    description:
+      "El Castillo Ambulante, dirigida por Hayao Miyazaki, es una aventura mágica que sigue a Sophie, una joven que, tras ser maldecida y transformada en una anciana, busca la ayuda de un mago en un castillo ambulante. La película aborda temas de autoaceptación, amor y la magia que se encuentra en lo inesperado.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-castillo-ambulante.jpg",
+    facts: {
+      duration: "1h 59m",
+      releaseYear: "2004",
+      genders: "Fantasía, Romance, Bélico",
+      boxOfficeRevenue: "$235 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
-    }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
-    "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+    id: "cuentos-de-terramar",
+    name: "Cuentos de Terramar",
+    shortDescription:
+      "Fantástica historia que sigue a un joven príncipe en su viaje para restaurar el equilibrio en el mundo.",
+    description:
+      "Cuentos de Terramar, dirigida por Gorō Miyazaki, es una fantástica historia que sigue a Arren, un joven príncipe, en su viaje para restaurar el equilibrio en el mundo. La película, basada en la serie de libros de Ursula K. Le Guin, aborda temas de autodescubrimiento, responsabilidad y la conexión entre la humanidad y la naturaleza.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Cuentos-de-Terramar.jpg",
+    facts: {
+      duration: "1h 55m",
+      releaseYear: "2006",
+      genders: "Fantasía, Aventura",
+      boxOfficeRevenue: "$68 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
-    }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
-    "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+    id: "ponyo-y-el-secreto-de-la-sirenita",
+    name: "Ponyo y el secreto de la sirenita",
+    shortDescription:
+      "Encantadora historia sobre la amistad entre un niño y un pez dorado que desea convertirse en humana.",
+    description:
+      "Ponyo en el acantilado, dirigida por Hayao Miyazaki, es una encantadora historia que sigue la amistad entre Sosuke, un niño, y Ponyo, un pez dorado con el deseo de convertirse en humana. La película celebra la imaginación, la conexión con la naturaleza y la pureza de la infancia.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Ponyo.jpg",
+    facts: {
+      duration: "1h 40m",
+      releaseYear: "2008",
+      genders: "Aventura, Fantasía",
+      boxOfficeRevenue: "$201 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
-    }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
-    "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+    id: "arrietty-y-el-mundo-de-los-diminutos",
+    name: "Arrietty y el Mundo de los Diminutos",
+    shortDescription:
+      "Adorable historia que sigue a una familia de diminutos seres que viven bajo el suelo de una casa humana.",
+    description:
+      "Arrietty y el Mundo de los Diminutos, dirigida por Hiromasa Yonebayashi, es una adorable historia que sigue a una familia de diminutos seres, los Diminutos, que viven bajo el suelo de una casa humana. La película explora la conexión entre los mundos de los humanos y los diminutos, destacando la importancia de la empatía y la comprensión mutua.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Arrietty-y-el-mundo-de-los-diminutos.jpg",
+    facts: {
+      duration: "1h 34m",
+      releaseYear: "2010",
+      genders: "Fantasía, Aventura",
+      boxOfficeRevenue: "$145 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
-    }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
-    "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+    id: "la-colina-de-las-amapolas",
+    name: "La colina de las Amapolas",
+    shortDescription:
+      "Conmovedora historia que sigue a dos jóvenes que luchan por proteger su hogar y superar la adversidad.",
+    description:
+      "La colina de las amapolas, dirigida por Goro Miyazaki, es una conmovedora historia que sigue a Umi y Shun, dos jóvenes que luchan por proteger su hogar y superar la adversidad mientras descubren secretos sobre su pasado. La película aborda temas de amor, identidad y la importancia de la memoria.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/La-Colina-de-las-Amapolas.jpg",
+    facts: {
+      duration: "1h 31m",
+      releaseYear: "2011",
+      genders: "Drama, Romance",
+      Recaudación: "$61 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
-    }
   },
   {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
-    "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
+    id: "el-viento-se-levanta-",
+    name: "EL Viento se Levanta",
+    shortDescription:
+      "Drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial.",
+    description:
+      "EL Viento se Levanta, dirigida por Hayao Miyazaki, es un drama animado que sigue la vida de Jiro Horikoshi, el diseñador de aviones japonés, durante la Segunda Guerra Mundial. La película explora temas de pasión, creatividad y las complejidades morales en tiempos de conflicto.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-viento-se-levanta.jpg",
+    facts: {
+      duration: "2h 6m",
+      releaseYear: "2013",
+      genders: "Bélico, Romance",
+      Recaudación: "$136 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
-    }
   },
   {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
-    "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
+    id: "el-cuento-de-la-princesa-kaguya",
+    name: "El cuento de la princesa Kaguya",
+    shortDescription:
+      "Emotiva historia que sigue el viaje de Kaguya-hime, una princesa misteriosa, en busca de la felicidad.",
+    description:
+      "El cuento de la princesa Kaguya, dirigida por Isao Takahata, es una emotiva historia que sigue el viaje de Kaguya-hime, una princesa misteriosa enviada desde la Luna, en busca de la verdadera felicidad. La película utiliza un estilo artístico único y aborda temas de identidad, amor y la efímera naturaleza de la vida.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-cuento-de-la-princesa-Kaguya.jpg",
+    facts: {
+      duration: "2h 17m",
+      releaseYear: "2013",
+      genders: "Drama, Fantasía",
+      boxOfficeRevenue: "$24 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
-    }
   },
   {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
-    "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
+    id: "el-recuerdo-de-marnie",
+    name: "El recuerdo de Marnie",
+    shortDescription:
+      "Emotiva historia que sigue a Anna, una joven solitaria que descubre la amistad y los secretos de una misteriosa chica.",
+    description:
+      "El recuerdo de Marnie, dirigida por Hiromasa Yonebayashi, es una emotiva historia que sigue a Anna, una joven solitaria que descubre la amistad y los secretos de una misteriosa chica llamada Marnie. La película aborda temas de soledad, aceptación y la conexión especial que se forma entre almas afines.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-recuerdo-de-Marnie.jpg",
+    facts: {
+      duration: "1h 43m",
+      releaseYear: "2014",
+      genders: "Drama, Misterio, Suspenso",
+      boxOfficeRevenue: "$30 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
-    }
   },
   {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
-    "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
+    id: "earwig-y-la-bruja",
+    name: "Earwig y la bruja",
+    shortDescription:
+      "Aventura animada que sigue a Earwig, una niña astuta, mientras se enfrenta a una bruja y descubre su propio poder.",
+    description:
+      "Earwig y la bruja, dirigida por Goro Miyazaki, es una aventura animada que sigue a Earwig, una niña astuta, mientras se enfrenta a una bruja y descubre su propio poder. La película, basada en la novela de Diana Wynne Jones, aborda temas de ingenio, valentía y el poder de la autodeterminación.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/Earwig-y-la-bruja.webp",
+    facts: {
+      duration: "1h 22m",
+      releaseYear: "2020",
+      genders: "Aventura, Fantasía",
+      genders: "Aventura, Fantasía",
+      boxOfficeRevenue: "$842 mil USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
   },
   {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
-    "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
+    id: "el-nino-y-la-garza",
+    name: "El niño y la garza",
+    shortDescription:
+      "Mahito, un joven de 12 años, lucha por asentarse en una nueva ciudad tras la muerte de su madre.",
+    description:
+      "El niño y la garza es una película de animación de 2023 escrita y dirigida por Hayao Miyazaki, con producción de Studio Ghibli. Basada en la novela homónima de 1937 de Yoshino Genzaburō, la película presenta una historia original no relacionada con la novela. Miyazaki la considera su película más simbólica y personal, explorando su propia vida. Se estrenó el 14 de julio de 2023 en Japón y ha sido aclamada por la crítica.",
+    imageUrl:
+      "https://raw.githubusercontent.com/Addis-cx/DEV013-dataverse/main/src/Imagenes/El-chico-y-la-garza.jpg",
+    facts: {
+      duration: "2h 4m",
+      releaseYear: "2023",
+      genders: "Drama, Acción, Fantasía",
+      boxOfficeRevenue: "$155 millones USD en taquilla.",
     },
-    "extraInfo": {
-      "imageSource": ""
-    }
-  }
+  },
 ];
