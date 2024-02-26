@@ -1,6 +1,21 @@
-import { example } from './dataFunctions.js';
+import { filtrerData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 
-console.log(example, renderItems(data), data);
+const contenedor = document.querySelector('#root')
+
+console.log(filtrerData(data,"Matemática"));
+console.log(contenedor, renderItems(data), data);
+
+const elementos = document.querySelector('#tercera');
+
+contenedor.addEventListener('change', ()=>{
+    elementos.especialidad
+    
+});
+
+
+
+
+

@@ -9,7 +9,7 @@ export default [
       "yearOfBirth": "1815",
       "yearOfDeath": "1852",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "mainField": "Ciencias de la Computación"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
@@ -66,7 +66,7 @@ export default [
   {
     "id": "shakuntala-devi",
     "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
+    "shortDescription": "Matemática prodígio, conocida como la 'Calculadora Humana'.",
     "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
     "facts": {

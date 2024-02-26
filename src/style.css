@@ -1,0 +1,102 @@
+* { 
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-image: url(./Imagenes/final.jpg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   background-size: cover;
+
+}
+header {
+ height: 200px;
+ background-size: cover;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+}
+
+h1{
+
+   text-align: center;
+   font-family: bold;
+   position: sticky;
+   color: white;
+}
+h2 {
+   color: white;
+}
+
+ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.card {
+    
+   list-style-type: none; 
+   gap: 5px;
+   text-align: justify;
+   padding: 15px;
+    position: relative;
+   background-color: #8fcaca;
+   font-family: 'Times New Roman', Times, serif;
+   width: 350px;
+   border-radius: 5px;
+   margin: 15px;
+    
+}
+
+.card img {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 2%;
+}
+
+
+/*.opción-back, .opción-front, .opción{
+  
+  text-align: auto;
+  color: rgb(52, 41, 15);
+  font-size: 15px;
+  font: 'bold';
+  position: relative;
+  left: 20%;
+  top: 40%;
+  height: 20px;
+}
+
+
+.card {
+    
+   list-style-type: none; //para sacar los puntos o viñetas
+   gap: 5px;
+   margin: 2%;
+   text-align: justify;
+   margin:3%;
+   background-color: #85b4aa;
+   font-family: 'Times New Roman', Times, serif;
+   box-shadow: 0px 5px 8px rgba(216, 214, 214, 0.1);
+   width: calc(35% - 5%);
+   border-radius: 2%;
+
+.card img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;*/
+
