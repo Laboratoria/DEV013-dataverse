@@ -41,7 +41,7 @@ ul {
 
 .card {
     
-   list-style-type: none; //para sacar los puntos o viñetas
+   list-style-type: none; 
    gap: 5px;
    text-align: justify;
    padding: 15px;

@@ -12,7 +12,7 @@ export const renderItems = (data) => {
    itemList.classList.add("card");
    itemContainer.innerHTML = `  
       <dt class= "cards"><img src=${data.imageUrl} alt=${data.name}></dt>
-      <dt class="opción" >Nombre:</dt> <dd class= "opción-front" itemprop="name">${data.name}</dd>
+      <dt class="opción" >Nombre:</dt><dd class= "opción-front" itemprop="name">${data.name}</dd>
       <dt class="opción" >Descripción:</dt> <dd class= "opción-front" itemprop="DescripciónC":>${data.shortDescription}</dd>
       <dt class="opción" >Fecha de nacimiento:</dt> <dd class= "opción-back" itemprop="fechaDeNacimiento">${data.facts.yearOfBirth}</dd>
       <dt class="opción" >Fecha de muerte:</dt> <dd class= "opción-back" itemprop="fechaDeMuerte">${data.facts.yearOfDeath}</dd>
