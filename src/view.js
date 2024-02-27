@@ -12,6 +12,7 @@ export const renderItems = (data) => {
    itemList.classList.add("card");
    itemContainer.innerHTML = `  
       <dt class= "cards"><img src=${data.imageUrl} alt=${data.name}></dt>
+<<<<<<< HEAD
       <dt class="opción" >Nombre:</dt> <dd itemprop="name">${data.name}</dd>
       <dt class="opción" >Descripción:</dt> <dd itemprop="DescripciónC":>${data.shortDescription}</dd>
       <dt class="opción" >Fecha de nacimiento:</dt> <dd itemprop="fechaDeNacimiento">${data.facts.yearOfBirth}</dd>
@@ -19,6 +20,14 @@ export const renderItems = (data) => {
       <dt class="opción" >Nacionalidad:</dt> <dd itemprop="Nacionalidad">${data.facts.birthPlace}</dd>
       <dt class="opción" >Especialidad:</dt> <dd itemprop="Especialidad">${data.facts.mainField}</dd>
       <dt class="opción" >Descripción:</dt> <dd itemprop="Descripción">${data.description}</dd> 
+=======
+      <dt class="opción" >Nombre:</dt><dd class= "opción-front" itemprop="name">${data.name}</dd>
+      <dt class="opción" >Descripción:</dt> <dd class= "opción-front" itemprop="DescripciónC":>${data.shortDescription}</dd>
+      <dt class="opción" >Fecha de nacimiento:</dt> <dd class= "opción-back" itemprop="fechaDeNacimiento">${data.facts.yearOfBirth}</dd>
+      <dt class="opción" >Fecha de muerte:</dt> <dd class= "opción-back" itemprop="fechaDeMuerte">${data.facts.yearOfDeath}</dd>
+      <dt class="opción" >Nacionalidad:</dt> <dd class = "opción-back" itemprop="Nacionalidad">${data.facts.birthPlace}</dd>
+      <dt class="opción" >Descripción:</dt> <dd class= "opción-back"itemprop="Descripción">${data.description}</dd> 
+>>>>>>> 92ed2bcbb25646ba0a03fd1b186b9f963fcd78e6
     
       `
     itemContainer.setAttribute("itemscope", "");

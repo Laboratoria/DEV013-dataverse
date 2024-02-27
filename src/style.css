@@ -47,7 +47,11 @@ ul {
 
 .card {
     
+<<<<<<< HEAD
    list-style-type: none; /*para sacar los puntos o viñetas*/
+=======
+   list-style-type: none; 
+>>>>>>> 92ed2bcbb25646ba0a03fd1b186b9f963fcd78e6
    gap: 5px;
    text-align: justify;
    padding: 15px;
