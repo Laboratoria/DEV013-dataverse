@@ -103,6 +103,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
     "facts": {
       "yearOfBirth": "1967",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Hyogo, Japón",
       "mainField": "Composición Musical, Video Juegos"
     },
@@ -134,8 +135,9 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
     "facts": {
       "yearOfBirth": "1945",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+      "mainField": "Ciencia de la Computación"
     },
     "extraInfo": {
       "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
@@ -149,6 +151,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
     "facts": {
       "yearOfBirth": "1939",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Los Angeles, Estados Unidos",
       "mainField": "Ciencia de la Computación"
     },
@@ -180,6 +183,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
     "facts": {
       "yearOfBirth": "1936",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Paoli, Indiana, Estados Unidos",
       "mainField": "Ciencia de la Computación"
     },
@@ -195,6 +199,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
     "facts": {
       "yearOfBirth": "1951",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Portsmouth, Estados Unidos",
       "mainField": "Ciencia de la Computación"
     },
@@ -210,6 +215,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
     "facts": {
       "yearOfBirth": "1958",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Nueva York, Estados Unidos",
       "mainField": "Ciencia de la Computación"
     },
@@ -289,6 +295,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
     "facts": {
       "yearOfBirth": "1940",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Hong Kong, China",
       "mainField": "Física de Partículas"
     },
@@ -304,6 +311,7 @@ export default [
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
     "facts": {
       "yearOfBirth": "1943",
+      "yearOfDeath": "Aún vive",
       "birthPlace": "Belfast, Reino Unido",
       "mainField": "Astronomía, Astrofísica"
     },
