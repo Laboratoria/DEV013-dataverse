@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap" rel="stylesheet">
   </head>
   <header> 
-   <h1>CAMBIOSGI</h1>
+   <h1>Mujeres que cambiaron el mundo</h1>
   </header>
 
   <main> 
@@ -19,41 +19,39 @@
   
   <body>
     
-     
     <div id="root" class="conteiner-cards">
-     <label for="tercera">Especialidad</label>
+      
+     <label for="filtro">Especialidad</label>
      <select data-testid="select-sort" name="name" id="filtro">
-       <option value="Ciencia-de-la-Computación">Ciencia de la Computación</option>
-       <option value="matemáticas">Matemáticas</option>
+       <option value="CienciadelaComputación">Ciencia de la Computación</option>
+       <option value="Matemáticas">Matemáticas</option>
        <option value="ComposiciónMusicalVideoJuegos">Composición Musical - Video Juegos</option>
-       <option value="CienciasdelaComputación">Ciencias de la Computación</option>
-       <option value="física">Física</option>
+       <option value="Filosofía">Ciencias de la Computación</option>
+       <option value="Física">Física</option>
        <option value="FísicadePartículas">Física de Partículas</option>
-       <option value="astronomía">Astronomía</option>
-       <option value="astrofísica">Astrofísica</option>
-       <option value="química">Química</option>
-       <option value="microbiología">Microbiología</option>
-       <option value="bioquímica">Bioquímica</option>
-       <option value="cristalografía">Cristalografía</option>
+       <option value="Astronomía">Astronomía</option>
+       <option value="Astrofísica">Astrofísica</option>
+       <option value="Química">Química</option>
+       <option value="Microbiología">Microbiología</option>
+       <option value="Bioquímica">Bioquímica</option>
+       <option value="Actuación">Actuación</option>
+       <option value="Cristalografía">Cristalografía</option>
      </select>
     
-     <label>Ordenar</label>
+     <label for="orden">Ordenar</label>
      <select data-testid="select-sort" name="name" id="orden">
        <option value="asc">A - Z</option>
        <option value="desc">Z - A</option>
      </select>
-    </div> 
-    <button select data-testid="button-clear">Limpiar</button>
-     
     
-
-
-    <footer>
-       By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
-    </footer>
-
+     <button select data-testid="button-clear" id="boton">Limpiar</button>
+    
+    </div> 
+     
     <script src="main.js" type="module"></script>
   </body>
-
+  <footer>
+    By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
+ </footer>
   
 </html>

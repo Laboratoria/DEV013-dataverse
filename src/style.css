@@ -13,30 +13,29 @@ body{
 
 }
 header {
- height: 150px;
- background-color: #8fcaca;
- opacity: 0.8;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
+   background-color: #8fcaca;
+   height: 150px;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 
 }
-
 main {
-height: 70px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
 }
-
 h1{
-
    text-align: center;
    font-family: bold;
    position: sticky;
-   color: black;
-}
-h2, label {
    color: white;
-   margin-top: 15px;
+}
+h2 {
+   color: white;
+   margin: 15px;
 }
 
 ul {
@@ -46,12 +45,7 @@ ul {
 }
 
 .card {
-    
-<<<<<<< HEAD
-   list-style-type: none; /*para sacar los puntos o viñetas*/
-=======
    list-style-type: none; 
->>>>>>> 92ed2bcbb25646ba0a03fd1b186b9f963fcd78e6
    gap: 5px;
    text-align: justify;
    padding: 15px;
@@ -70,11 +64,25 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 10px;
   border-radius: 2%;
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
 }
 
+label {
+   color: white;
+   font-weight: bold;
+   padding: 10px;
+   margin: 7px;
+}
+button {
+   margin: 10px;
+}
+footer {
+   color: white;
+   text-decoration-style: solid;
+   padding: 10px;
+   margin: 15px;
+}
 
 /*.opción-back, .opción-front, .opción{
   
