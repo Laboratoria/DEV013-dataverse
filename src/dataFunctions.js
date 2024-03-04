@@ -17,20 +17,25 @@ export const filterData = (data, filterBy, value) => {
 
 // Función para ordenar los datos
 
-/*export const sortData (data, sortBy, sortOrder) {
+export const sortData = (data, sortBy, sortOrder) => {
   const sortedData = [...data];
   sortedData.sort((a, b) => {
-      if (sortOrder === 'asc') {
-          return a[sortBy] > b[sortBy] ? 1 : -1;
-      } else {
-          return a[sortBy] < b[sortBy] ? 1 : -1;
-      }
+    const nombreA = a[sortBy];
+    const nombreB = b[sortBy];
+    if (sortOrder === 'asc') {
+      return nombreA > nombreB ? 1 : -1;
+    } else {
+      return nombreB < nombreA ? -1 : 1;
+    }
+  
   });
   return sortedData;
-}*/
+  
+
+};
 
 //export const computeStats = (data) => {
-
+//}
 
 
 

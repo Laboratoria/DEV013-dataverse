@@ -9,7 +9,7 @@ export default [
       "yearOfBirth": "1815",
       "yearOfDeath": "1852",
       "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencias de la Computación"
+      "mainField": "Ciencia de la Computación"
     },
     "extraInfo": {
       "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
@@ -345,7 +345,7 @@ export default [
       "yearOfBirth": "1867",
       "yearOfDeath": "1934",
       "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
+      "mainField": "Física, Química"
     },
     "extraInfo": {
       "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
