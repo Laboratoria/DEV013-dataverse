@@ -7,8 +7,8 @@ export const filterData = (data, filterBy, value) => {
   return data.filter((data) => {
     // Verifica si el campo filterBy existe en el objeto de datos
     if (data.facts[filterBy]) {
-      // Si existe, compara el valor del campo con el valor deseado
-      return data.facts[filterBy] === value;
+      // Si existe, compara el valor del campo con el valor deseado, y poner includes para que lo incluya en caso de tener más opciones
+      return data.facts[filterBy].includes(value);
     }
     // Si el campo filterBy no existe, devuelve false para excluir este dato del resultado
     return false;
@@ -36,6 +36,6 @@ export const sortData = (data, sortBy, sortOrder) => {
 
 //export const computeStats = (data) => {
 //}
-
-
+//esta función debe usar el método reduce.npm run test:oas-js
+//que tiene al menos un parámetro (data) y devuelve un valor computado
 
