@@ -34,8 +34,6 @@ ordenarData.addEventListener('change', (event)=>{
   console.log(resultadoOrdenar);
   contenedor.innerHTML= " ";
   ordenarData.appendChild(renderItems(resultadoOrdenar));
-  contenedor.appendChild(ordenarData);
-
 });
 
 

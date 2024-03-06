@@ -9,19 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap" rel="stylesheet">
   </head>
   <header> 
-   <h1>Mujeres que cambiaron el mundo</h1>
+    
+    <h1 class=" texto">Mujeres que cambiaron el mundo</h1>
+    
   </header>
 
   <main> 
-    <h2>Ellas fueron las primeras científicas</h2>
+    <h2> </h2>
   </main>
   
   <body>
-    
-    <div id="root" class="conteiner-cards">
       
-     <label for="filtro">Especialidad</label>
-     <select data-testid="select-sort" name="name" id="filtro">
+    <label class= "espe"for="filtro">Especialidad</label>
+    <select class = "cuadro" data-testid="select-sort" name="name" id="filtro">
        <option value="">--Seleccione--</option>
        <option value="Ciencia de la Computación">Ciencia de la Computación</option>
        <option value="Matemáticas">Matemáticas</option>
@@ -36,20 +36,32 @@
        <option value="Bioquímica">Bioquímica</option>
        <option value="Actuación">Actuación</option>
        <option value="Cristalografía">Cristalografía</option>
-     </select>
+    </select>
     
-     <label for="orden">Ordenar</label>
-     <select data-testid="select-sort" name="name" id="orden">
-       <option value="">--Seleccione--</option>
-       <option value="asc">A - Z</option>
-       <option value="desc">Z - A</option>
-     </select>
+    <label class="espe" for="orden">Ordenar</label>
+    <select class = "cuadro" data-testid="select-sort" name="name" id="orden">
+      <option value="">--Seleccione--</option>
+      <option value="asc">A - Z</option>
+      <option value="desc">Z - A</option>
+    </select>
     
-     <button select data-testid="button-clear" id="boton">Limpiar</button>
+    <button select data-testid="button-clear" id="boton">Limpiar</button>
     
-    </div> 
+    <div id="root" class="conteiner-cards">
+    </div>
+    
+
+    <script> type= "text/javacript"
+      window.addEventListener("scroll",function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('active', window.scrollY> 0);
+      });
+    
      
-    <script src="main.js" type="module"></script>
+    </script>
+
+     
+   <script src="main.js" type="module"></script>
   </body>
   <footer>
     By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
