@@ -2,971 +2,116 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Funcionalidades](#4-funcionalidades)
-* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
-* [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Objetivos de aprendizaje](#8-objetivos-de-aprendizaje)
-* [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
-* [10. Consideraciones para pedir tu Project Feedback](#10-consideraciones-para-pedir-tu-project-feedback)
+* [1. Introduccion](#1-Introduccion)
+* [2. Prototipo ](#2-Prototipo)
+* [3. ¿Como usar Cuantos Cuentos?](#3-¿Como-usar-Cuantos-Cuanetos?)
+* [4. Ejemplos de filtrado](#4-Ejemplos-de-filtros)
+* 
+* [5. Instalacion](#5Instalacion)
+* [6. Creditoso](#6Creditos)
+* [7. Contacto](#7Contacto)
+* [8. Estado de Proyecto](#8Estado-de-Proyecto)
+* [9. Despedida](#9Despedida)
 
 ***
 
-## 1. Preámbulo
+## 1. Introduccion
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Bienvenido a Cuantos Cuentos, un lugar donde la magia de la lectura cobra vida y se convierte en una experiencia inolvidable para las madres y sus pequeños aventureros. En Cuantos Cuentos, nos dedicamos a hacer que la búsqueda y la exploración de cuentos sean simples y emocionantes, permitiendo que tanto los pequeños como los grandes encuentren rápidamente las historias perfectas para disfrutar juntos.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-las usuarias, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+Nuestra página web ofrece una amplia variedad de cuentos, desde los clásicos que han resistido el paso del tiempo hasta los más populares en la actualidad. ¿Estás buscando sumergirte en los cuentos que han sido amados por generaciones? ¿O prefieres descubrir las últimas historias que están cautivando a los niños de hoy en día? Con Cuantos Cuentos, tienes la libertad de explorar y descubrir cuentos que se adapten a tus gustos y necesidades.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+Utilizando nuestra herramienta de filtrado y visualización de datos, podrás navegar fácilmente a través de nuestra colección y encontrar los cuentos que más te interesan. ¿Quieres buscar por género, edad recomendada o tema? ¡No hay problema! Con solo unos pocos clics, podrás personalizar tu experiencia de lectura y descubrir nuevas aventuras que te encantarán.
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+Así que adelante, comienza tu viaje de lectura con Cuantos Cuentos y crea recuerdos mágicos con tus pequeños. Sumérgete en un mundo de imaginación y aventura, donde cada página es una nueva oportunidad para explorar, aprender y soñar juntos. ¡Bienvenido a Cuantos Cuentos, donde los cuentos cobran vida y las aventuras nunca terminan!
 
-## 2. Resumen del proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que vas a generar con [prompting](https://www.itmadrid.com/que-es-un-prompt-en-inteligencia-artificial-ia/).
-Esta página web se adecuará a lo que descubras que tu usuaria
-necesita.
+## 2. Prototipo
 
-Además, en este proyecto utilizarás herramientas de
-[inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial)
-como [ChatGPT](https://openai.com/chatgpt), [ExplainDev](https://explain.dev/),
-entre otras para generar un set de datos en un archivo javascript.
+![Pagina Diseño ](Pagina.jpeg)
 
-El propósito de generar los datos en esta manera es brindarte la oportunidad de
-adentrarte en el empleo de herramientas impulsadas por la inteligencia
-artificial, así como en [técnicas de
-prompting](https://learnprompting.org/es/docs/intro).
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**. Con estadística
-nos referimos a distintos cálculos que puedes hacer con los datos para mostrar
-información aún más relevante a las usuarias (promedio, el valor máximo
-o mínimo, etc).
+## 3. ¿Como usar Cuantos Cuentos?
 
-## 3. Consideraciones generales
+* Bienvenida: Al acceder a Cuantos Cuentos, serás recibido con una cálida bienvenida en la parte superior de la página, que te invita a explorar una amplia selección de cuentos para niños y sus madres.
+![Bienvenida ](Bienvenida.jpeg)
+* Barra de filtros y Ordenamiento  En la parte superior de la página, encontrarás filtros intuitivos que te permiten refinar tu búsqueda según el género del cuento y el rango de edad recomendado para los lectores. Esto te ayuda a encontrar rápidamente los cuentos más adecuados para tus necesidades y preferencias.
+Además de los filtros, tienes la opción de ordenar los cuentos de manera alfabética, ya sea ascendente (A-Z) o descendente (Z-A), lo que facilita aún más la navegación y la búsqueda de cuentos específicos.
+![Barra de filtros ](Filtros.jpeg)
+* Explorar los Cuentos: En el cuerpo de la página, encontrarás una matriz de 24 tarjetas, cada una representando un cuento diferente. Al posicionar el cursor sobre una tarjeta, se mostrará información detallada del cuento, incluyendo el rango de edad recomendado, el género, una curiosidad y otras características destacadas.
+![Trajetas ](Trajetas.jpeg)
+* Interacción Intuitiva: Con esta presentación visual y la información detallada al posicionar el cursor sobre cada tarjeta, la página brinda una experiencia interactiva y envolvente tanto para las madres como para los pequeños. Pueden explorar los cuentos, descubrir nuevos favoritos y tomar decisiones informadas sobre qué historias leer juntos.
+![Muestra data ](Data.jpeg)
+*
+* ¡Y eso es todo! Con Cuantos Cuentos, la experiencia de encontrar y disfrutar de cuentos para niños se vuelve fácil, divertida y memorable para todas las familias.
 
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 4 a 5 Sprints.
-* El tiempo estimado que deberías dedicar a la [generación de los datos](#generar-los-datos)
-  es de máximo un sprint. Además, al final del proyecto deberás presentar
-  un [screenshot del prompt utilizado](#prompt-utilizado).
-* Si ves que te va a tomar más tiempo,
-  deberás utilizar los datos de ejemplo que los vas a encontrar en
-  esta ruta: `./src/data/dataset.js`.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 
-## 4. Funcionalidades
+## 4. Ejemplos de filtrado 
+Con estas opciones de filtrado, encontrarás fácilmente los cuentos que se adaptan a tus preferencias y necesidades específicas, ¡permitiéndote disfrutar al máximo de la experiencia de Cuantos Cuentos!
+* ¿Quieres sumergirte en un mundo de fantasía y magia? Selecciona el género "Fantasía" y descubre una selección de cuentos que te transportarán a tierras lejanas, llenas de criaturas mágicas y aventuras emocionantes.
+  ![Filtr Genero](Genero.jpeg)
+* ¿Estás buscando cuentos adecuados para niños de 11 a 13 años? Utiliza el filtro de rango de edad y encuentra historias especialmente recomendadas para esta etapa de desarrollo, que desafiarán la imaginación y cautivarán la mente de tus hijos preadolescentes.
+    ![Filtro Edad](Edad.jpeg)
+* Si tienes en mente el nombre de un cuento específico y deseas encontrarlo rápidamente, utiliza la opción de ordenar de manera ascendente. Simplemente introduce el nombre en el campo de búsqueda y selecciona la opción de ordenar de manera ascendente para encontrar el cuento deseado en la lista de resultados.
+![Ordenamiento](Ordenamiento.jpeg)
+* ¿Quieres empezar de nuevo y explorar nuevas opciones? Utiliza el botón de limpieza para borrar los filtros aplicados y volver a la lista completa de cuentos. Esto te permite reiniciar tu búsqueda y explorar sin restricciones, para encontrar el cuento perfecto para ti y tus pequeños.
+###  "¡Explora nuestra colección de cuentos y sumérgete en un mundo de imaginación y aventura! Personaliza tu experiencia de lectura seleccionando tus categorías favoritas y descubre nuevos cuentos para disfrutar juntos".
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**.
+## 5. Instalacion
+* Para empezar a disfrutar de la experiencia de Cuantos Cuentos, sigue estos simples pasos de instalación:
+  1.-Clonar el Repositorio: Primero, asegúrate de tener Git instalado en tu sistema. Luego, clona el repositorio de Cuantos Cuentos desde GitHub a tu máquina local utilizando el siguiente comando en tu terminal:
+  * **git clone https://github.com/tu_usuario/cuantos-cuentos.git**
+  2.- Abrir el Proyecto en Visual Studio Code: Abre Visual Studio Code (VSC) y navega hasta la carpeta del proyecto que acabas de clonar. Puedes abrir la carpeta directamente desde VSC seleccionando "File" > "Open Folder" y eligiendo la carpeta del proyecto.
+  3.-Instalar Dependencias: Una vez que tengas el proyecto abierto en VSC, abre la terminal integrada (puedes hacerlo seleccionando "Terminal" > "New Terminal") y ejecuta el siguiente comando para instalar todas las dependencias necesarias:
+    * **npm install**
+  4.-Ejecutar el Proyecto: Una vez que todas las dependencias se hayan instalado correctamente, puedes ejecutar el proyecto usando el siguiente comando en la terminal:
+   * **npm satart**
+  5.-Explorar Cuantos Cuentos: ¡Y listo! Ahora deberías poder acceder a Cuantos Cuentos a través de tu navegador web. Simplemente abre tu navegador favorito y visita la dirección http://localhost:3000 para empezar a explorar los cuentos y disfrutar de la experiencia interactiva tanto para las madres como para los pequeños.
+     
+ * ### ¡Y eso es todo! Ahora estás listo para sumergirte en el mundo de Cuantos Cuentos y disfrutar de la magia de la lectura con tus seres queridos.
 
-Aquí definimos en más detalle las funcionalidades mínimas que debe tener:
+   
+## 6. Creditos
+Queremos expresar nuestro sincero agradecimiento a todas las personas y proyectos que han contribuido al desarrollo y éxito de Cuantos Cuentos. Su dedicación, apoyo y talento han sido fundamentales para hacer realidad esta plataforma de cuentos interactiva y emocionante.
 
-* La aplicación debe permitir a la usuaria ver los items de la data en una visualización,
-  que puede ser [tipo tarjetas](http://www.uxables.com/diseno-ux-ui/que-es-y-como-disenar-una-card/)
-  o cualquier otra forma que tú decidas como la adecuada (pero desde aquí
-  referimos a los items como "tarjetas"). **Cada una de las tarjetas debe estar
-  contenida en un elemento `<li>` y estos a su vez contenido en
-  un elemento `<ul>`.**
+Yenny Alexandra  Castro Manjarrez: Por su invaluable ayuda en el diseño de la interfaz de usuario, que ha hecho que la experiencia de Cuantos Cuentos sea visualmente atractiva y fácil de usar.
+Julieta Guadalupe Mora Angeles:Por sus valiosas contribuciones al código del proyecto, que han mejorado significativamente la funcionalidad y la eficiencia de Cuantos Cuentos.
 
-* El elemento `<ul>` deberá ser hijo de un elemento con atributo _id_
-  de valor "root". **Este es un paso importante para que tu**
-  **aplicación tenga la estructura requerida**
+Queremos expresar nuestro más sincero agradecimiento a equipo de Laboratoria, quienes generosamente brindaron su tiempo y conocimiento para proporcionar orientación y asesoramiento durante el desarrollo de Cuantos Cuentos. Su dedicación y apoyo fueron fundamentales para superar desafíos y resolver problemas técnicos, lo que contribuyó significativamente al éxito de este proyecto.
 
-* Las tarjetas deben resaltar los valores de las propiedades de la data que
-  le interesaría a la usuaria ver. Por ejemplo: nombre, fecha, imagen, etc.
-  **Si vas a filtrar u ordenar por una propiedad, la tarjeta tiene que mostrar
-  el valor de esta propiedad a la usuaria.**
 
-* La interfaz debe estructurar semánticamente la data usando el estándar [microdatos](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata).
-  Es obligatorio usar al menos los atributos [`itemscope`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope),
-  [`itemtype`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype)
-  y el atributo [`itemprop`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop).
+## 7. Contacto
+ Correo:julietamoraangeles1@gmail.com
+ *
+ Correo:castroyenny74@gmail.com
 
-  Por ejemplo, la siguiente data correspondiente a Ada Lovelace:
+## 8. Estado de Proyecto
+* ### Versión Actual: 1.0.0
 
-  ```json
-    {
-      "id": "ada-lovelace",
-      "name": "Ada Lovelace",
-      "shortDescription": "Pionera de la informática, fue la primera programadora.",
-      "description": "Una visionaria del siglo XIX ...",
-      "imageUrl": "URL_DE_LA_IMAGEN_GENERADA",
-      "facts": {
-        "yearOfBirth": 1843,
-        "placeOfBirth": "London, England",
-        "mainField": "Computer Science",
-      }
-    }
-  ```
+* ### Descripción:
+*  Cuantos Cuentos se encuentra actualmente en su versión 1.0.0, que marca el lanzamiento inicial de la plataforma. En esta versión, ofrecemos una amplia selección de cuentos para niños y madres, con funcionalidades de filtrado intuitivas y una experiencia de usuario atractiva.
+* ### Problemas Conocidos
+* En la versión actual de Cuantos Cuentos, uno de los problemas conocidos es la limitación de aplicar solo un filtro a la vez. Actualmente, los usuarios no pueden aplicar simultáneamente múltiples filtros, como el filtro por género y el filtro por rango de edad, lo que puede dificultar la búsqueda de cuentos específicos que cumplan con múltiples criterios.
 
-  puede ser estructurada semánticamente en HTML como:
+* Estamos conscientes de esta limitación y entendemos que poder aplicar múltiples filtros al mismo tiempo sería una mejora significativa para la experiencia de usuario. Estamos trabajando en una solución para permitir que los usuarios apliquen y combinen varios filtros de manera efectiva, lo que facilitará la búsqueda y la exploración de cuentos según sus preferencias individuales.
 
-  ```html
-  <dl itemscope itemtype="WomenInTech">
-    <img src="URL_DE_LA_IMAGEN_GENERADA" alt="Ada Lovelace" />
-    <dt>Nombre:</dt><dd itemprop="name">Ada Lovelace</dd>
-    <dt>Descripción:</dt><dd itemprop="description">Pionera de la informática, fue la primera programadora.</dd>
-    <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">1843</dd>
-    <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">London, England</dd>
-    <dt>Campo de desempeño:</dt><dd itemprop="mainField">Computer Science</dd>
-  </dl>
-  ```
+Apreciamos su paciencia y comprensión mientras trabajamos en resolver este problema y mejorar la funcionalidad de Cuantos Cuentos para brindar una experiencia aún mejor a nuestros usuarios.
 
-* La aplicación debe calcular y visualizar una estadística de la data. Puede
-  ser una propiedad computada de cada item, como una propiedad adicional
-  (por ejemplo, el índice de masa corporal de cada pokemon) o unas estadísticas
-  de la data completa (por ejemplo, total de personas nacidas en los años 80s).
+### Actualizaciones Futuras Planeadas:
 
-* La aplicación debe permitir a la usuaria filtrar la data. Deberás usar
-  un elemento [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
-  con [un atributo de datos](https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes)
-  `data-testid="select-filter"`, y un atributo `name` con el nombre
-  de la propiedad por la que filtrará (por ejemplo, si vas a filtrar por "type",
-  el `<select>` tendrá  `name="type"`). Los `<option>` de este `<select>` deberán
-  tener en el atributo `value` el valor del filtro (por ejemplo, si vas a filtrar
-  por type "fire" sería `<option value="fire">Fire</option>`).
+* En las próximas actualizaciones de Cuantos Cuentos, estamos comprometidos a abordar y mejorar la funcionalidad del filtro para brindar una experiencia más completa y satisfactoria a nuestros usuarios. Algunas de las actualizaciones planeadas incluyen:
 
-* La aplicación debe permitir a la usuaria ordenar la data.
-  - Tendrá al menos un control `<select>` para ordenar.
-  - Si usas solo un control `<select>`, debe tener
-    [un atributo de datos](https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes)
-    `data-testid="select-sort"` y un atributo `name` con el nombre de la
-    propiedad por la que ordenará. (por ejemplo, si vas a ordenar por
-    "num" seria `name="num"`). Este `<select>` tendrá dos [`<option>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
-    con `value` `asc` y `desc`, para ordenar ascendente y descendente la data
-    respectivamente (por ejemplo, `<option value="asc">A - Z</option>`).
-  - Una alternativa es ofrecer la usuaria un ordenamiento mas complejo.
-    Podrías implementar ordenar por varios propiedades. En este caso sería con
-    un `<select>` con un atributo de datos `data-testid="select-sort"`, y que
-    contiene hijos `<option>` con un `value` del nombre de la propiedad con
-    cual vas a ordenar. (Por ejemplo, `<option value="name">Nombre</option>`).
-    También, necesitarás otro control (`<radio>`,`<select>`, etc.) para decir
-    que el ordenamiento es ascendente o descendente. Este control secundaria
-    tendrá un atributo `name="sort-order"`, y tiene values `asc` y `desc`.
+* Corrección del Problema de los Filtros: Estamos trabajando activamente en una solución para permitir que los usuarios apliquen múltiples filtros simultáneamente. Esto incluirá la capacidad de combinar filtros, como el filtro por género y el filtro por rango de edad, para una búsqueda más precisa y eficiente de cuentos que cumplan con varios criterios.
 
-* Las funcionalidades de ordenar deben operar sobre la data filtrada.
-  Por ejemplo, si filtro los pokemones de tipo fuego y luego los ordeno por
-  nombre ascendentemente, la aplicación deberá mantener el filtro aplicado y
-  ordenar los pokemones de tipo fuego.
+* Optimización de la Interfaz de Usuario: Además de la corrección del problema de los filtros, planeamos realizar mejoras en la interfaz de usuario para hacer que la experiencia de navegación y búsqueda sea aún más intuitiva y atractiva. Esto incluirá mejoras en la presentación de los filtros y una mayor claridad en la aplicación de selecciones.
 
-* La aplicación debe permitir a la usuaria reiniciar la aplicación, limpiando
-  filtros y ordenamiento, con un `<button>` con un atributo de datos
-  `data-testid="button-clear"`.
+* Ampliación de la Biblioteca de Cuentos: Continuaremos agregando nuevos cuentos emocionantes y populares a nuestra biblioteca, ampliando así las opciones disponibles para nuestros usuarios y brindando una experiencia de lectura más enriquecedora.
 
-* Las operaciones de filtrar, ordenar, limpiar, etc. no deben recargar
-  la página, si no que deben agregar el contenido en una manera
-  dinámica via javascript.
+### Estamos comprometidos a seguir escuchando los comentarios de nuestros usuarios y trabajar en mejoras significativas que hagan de Cuantos Cuentos la mejor plataforma posible para explorar y disfrutar de cuentos para niños. Estén atentos para futuras actualizaciones que reflejarán nuestro compromiso continuo con la excelencia y la satisfacción del usuario.
 
-* La aplicación será _responsive_, es decir, debe visualizarse sin problemas
-  desde distintos tamaños de pantallas: móviles, tablets y desktops.
+## 9. Despedida
+*¡Gracias por visitar Cuantos Cuentos y explorar nuestra plataforma de cuentos interactiva! Esperamos que hayas disfrutado tu tiempo aquí y que encuentres muchos cuentos maravillosos para compartir con tus seres queridos.
 
-Los siguientes wireframes, son ejemplos de una interfaz que puede cumplir con esta
-funcionalidad. Como podrás ver, estos diseños cumplen con la metodología
-[Mobile First](https://developer.mozilla.org/es/docs/Glossary/Mobile_First), la misma
-que te recomendamos utilizar en todos tus proyectos:
+Si tienes alguna pregunta, sugerencia o comentario, no dudes en ponerte en contacto con nosotros. Estamos siempre aquí para ayudarte y mejorar tu experiencia en Cuantos Cuentos.
 
-Diseño Mobile:
-
-* [Wireframe mobile 1](https://github.com/Laboratoria/curriculum/assets/123121338/54711bb7-cb05-448e-b677-3cbd9bf13c14)
-* [Wireframe mobile 2](https://github.com/Laboratoria/curriculum/assets/123121338/bf96d3ce-150f-47a2-a605-2efac2e0497b)
-
-Diseño Desktop:
-
-* [Wireframe desktop 1](https://github-production-user-asset-6210df.s3.amazonaws.com/92090/261137084-1625aeb8-883c-4b79-86da-5fab34fa5b88.png)
-* [Wireframe desktop 2](https://github-production-user-asset-6210df.s3.amazonaws.com/92090/261137087-6cef16bc-643a-4d6d-bc1c-e0daaeb21c88.png)
-
-## 5. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#7-hacker-edition) más arriba.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── README.md
-├── package.json
-├── src
-|  ├── data 
-|  |  └── dataset.js (La que hayas generado con la IA)
-|  ├── dataFunctions.js
-|  ├── view.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.js
-   └── dataFunctions.spec.js
-   └── tests-read-only
-
-```
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará a la usuaria. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_).
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ listos para _cargar_
-las diferentes fuentes de datos.
-
-Por ejemplo, lost datos con los que vas a trabajar,
-los encontrarás en la siguiente línea:
-
-```js
-import data from './data/dataset.js';
-```
-
-### `src/dataFunctions.js`
-
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
-
-Este archivo va a contener toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
-
-* `filterData(data, filterBy, value)`: esta función recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `filterBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere filtrar.
-  El tercer parámetro, `value`, indica el valor de campo que queremos filtrar.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada, esta función debe usar el método reduce.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que la usuaria interactúe
-(click, filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos con los que vas a trabajar (los datos de ejemplo
-o los datos que generarías con ayuda de la inteligencia artificial).
-
-### `test/dataFunctions.spec.js`
-
-En este archivo tendrás hacer pruebas unitarias de las funciones
-implementadas en el archivo `dataFunctions.js`. (`filterBy`, `sortBy`, etc.)
-
-### `test/data.js`
-
-En esta archivo puedes construir y exportar data "mock" para usar en los tests.
-Es mas fácil probar un arreglo de 5 elementos de un arreglo de 24, por eso
-vas a crear una muestra de la data que quieres probar. Como mínimo
-debes exportar un variable se llama `data`, pero puedes definir y exportar mas
-si sea necesario para tus tests.
-
-### `src/view.js`
-
-Para alcanzar mejor separación de responsabilidades en el código este
-archivo debe tener todas las funciones que utilizara para renderizar
-los elementos dinámicamente.
-
-Al menos se requeriere una función obligatoria:
-
-* `renderItems(data)`: esta función recibe el arreglo de data para renderizar
-  los elementos de cada item, y debería volver un elemento DOM o
-  un string de HTML.
-
-## 6. Criterios de aceptación mínimos del proyecto
-
-### Criterios de código
-
-Con cada objetivo de aprendizaje, evaluamos que el código cumpla con algunos
-criterios. Lo cual no excluye que puedas usar otras opciones, por ejemplo
-en el caso de los selectores, proponemos el uso de `querySelector`,
-no significa que no puedes usar `querySelectorAll` o `getElementId` también.
-
-Puedes ejecutar las pruebas de cada grupo de objetivos de aprendizaje de manera
-individual con los siguientes comandos:
-
-``` sh
-npm run test:oas-html
-npm run test:oas-css
-npm run test:oas-web-api
-npm run test:oas-js
-npm run test:oas-prompting
-npm run test:oas // Esto es para correr todos los tests de OAs
-```
-
-#### HTML
-
-* **Uso de HTML semántico**
-
-  - [ ] Tiene un `<header>` con `<h1>`
-  - [ ] Tiene un `<footer>`
-  - [ ] Tiene un `<main>` con `<h2>`
-  - [ ] Todas las etiquetas de controles (inputs, selects, radio, etc) tienen `<label>`
-  - [ ] `<ul>` esta usado para dibujar la data
-  - [ ] Los hijos de `<li>` usan attributos de microdata `itemscope` e `itemprop`
-
-#### CSS
-
-* **Uso de selectores de CSS**
-
-  - [ ] Uso de selector class para los items <li>
-  - [ ] Uso de flexbox en sentido `row` y `column`
-  - [ ] Uso de flexbox para el elemento que contiene los items
-  - [ ] Uso de flexbox para el elemento que contiene los UI inputs
-
-#### Web APIs
-
-* **Uso de selectores del DOM**
-
-  - [ ] La aplicación usa [`querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-    para buscar los elementos del DOM
-  
-* **Manejo de eventos del DOM (listeners, propagación, delegación)**
-
-  - [ ] `addEventListener` con callback que tiene parámetro de `event`,
-    lo que permite el uso del objeto [`event`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
-    con `event.target` o `event.currentTarget`
-  - [ ] La aplicación registra [Event Listeners](https://developer.mozilla.org/en/docs/Web/API/EventTarget/addEventListener)
-    para escuchar `click`, `change`, `keyup` dependiendo del evento que
-    se quiere escuchar
-
-* **Manipulación dinámica del DOM**
-
-  - [ ] La aplicación actualiza el atributo [`innerHTML`](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML).
-  - [ ] La aplicación usa `createElement` y `appendChild`, o template strings
-    para crear elementos
-
-#### JavaScript
-
-* **Variables (declaración, asignación, ámbito)**
-
-  - [ ] La aplicación declara variables con [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
-    y [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-    en manera adecuada
-
-* **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  - [ ] La aplicación usa el statement
-    [`if..else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-      para evaluar condiciones
-
-* **Uso de bucles/ciclos (while, for, for..of)**
-
-  - [ ] La aplicación usa el statement [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-    o método [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-    para iterar
-
-* **Funciones (params, args, return)**
-
-  En el archivo `dataFunctions.js` define las siguientes funciones:
-  - [ ] una función `sortBy` que tiene 3 parámetros (`data`, `sortBy`, `sortOrder`)
-    y devuelve el arreglo ordenado
-  - [ ] una función `filterBy` que tiene 3 parámetros (`data`, `filterBy`, `value`)
-    y devuelve el arreglo filtrado
-  - [ ] una función `computeStats` que tiene al menos un parámetro (`data`)
-    y devuelve un valor computado
-
-  Más sobre estos puntos en [la sección dataFunctions.js](#src/dataFunctions.js)
-
-* **Arrays (arreglos)**
-
-  - [ ] Uso de [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  - [ ] Uso de [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-    o [Array.prototype.toSorted - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
-  - [ ] Uso de [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  - [ ] Uso de [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  - [ ] Uso de [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  - [ ] Uso de [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-
-* **Objetos**
-
-  - [ ] Uso de notación de punto para [acceder propiedades](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-  - [ ] Uso de notación de brackets para [acceder propiedades](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-
-* **Módulos de ECMAScript (ES Modules)**
-
-  - [ ] La aplicación usa [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-    y [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
-    para importar y exportar valores desde un modulo JavaScript.
-
-### Criterios del proyecto
-
-#### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuaria.
-
-#### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarias, escribe las [Historias
-de Usuaria](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que la usuaria necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarias.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-Usa tus historias de usuario para planificar tus sprints dividiendo
-cada historia en tareas.
-
-En la medida de lo posible, termina una Historia de Usuario antes de pasar
-a la siguiente (cumpliendo con la Definición de Terminado y los Criterios de Aceptación).
-
-#### Generar los datos
-
-La temática será a tu gusto, por ejemplo, pueden ser personajes importantes
-en la historia, personajes inventados, países, películas... etc.
-
-En el próximo proyecto, con la ayuda de la inteligencia artificial, deberás
-hacer que la usuaria pueda chatear con la data generada.
-Por ejemplo, si la data está mostrando un país, la usuaria podría
-preguntarle en que año fue fundado o cual es su capital, etc.
-Tenlo en cuenta a la hora de generar tu dataset.
-
-Esta data la vas a guardar en un archivo javascript. Este archivo,
-debe exportar un arreglo con 24 objetos. Y la estructura de cada objeto
-debe ser la siguiente:
-
-* `id`: Identificador único (no pueden haber dos elementos con el mismo `id`).
-  Debe ser un string de no más de 32 characteres, en minúscula, compuesto solo
-  por letras, números, underscore (`_`) o guión (`-`). Por ejemplo: `"ada-lovelace"`.
-* `name`: El nombre del personaje, país, película, etc.
-* `shortDescription`: Descripción corta del elemento. Esta descripción deberá
-  tener como máximo 20 palabras.
-* `description`: Descripción extendida del elemento. Esta descripción deberá
-  tener entre 80 y 100 palabras. Al momento de mostrar este dato en pantalla
-  puedes truncarlo para que no ocupe tanto espacio.
-* `imageUrl`: URL de la imagen. Esta imagen será generada a través de alguna
-  herramienta basada en inteligencia artifical. Una vez generada la imagen,
-  y guardada en tu repo, deberás agregar la URL en este campo.
-* `facts`: Un objeto con al menos **3** "hechos" o "info" sobre este elemento, en
-  formato `"nombre": "valor"`, por ejemplo:
-
-  ```json
-  "facts": {
-    "yearOfBirth": 1843,
-    "placeOfBirth": "London, England",
-    "mainField": "Computer Science",
-  }
-  ```
-
-  Los _nombres de las propiedades_, deben estar en formato _camelCase_.
-  Por ejemplo **ninguno** de los siguientes nombres sería válido:
-
-  ```json
-  "facts": {
-    "year_of_birth": 1843,
-    "Place of Birth": "London, England",
-    "MainField": "Computer Science",
-  }
-  ```
-
-  Los _valores de las propiedades_, sólo pueden ser de tipo `number`, `boolean`
-  o un `string` de no más de 64 caracteres (este **no** tiene restricciones sobre
-  el tipo de caracteres que puede contener).
-
-  Y por último ten en cuenta 2 cosas:
-  - Todos los elementos del dataset deben compartir las mismas propiedades en
-    `facts`, es decir, que si un elemento tiene una propiedad `yearOfBirth`,
-    el resto de elementos del array también deben tener esa propiedad.
-  - No es necesario que los nombres de las propiedades estén en inglés,
-    `"lugarDeNacimiento"` es un nombre igual de válido.
-
-* `extraInfo`: Y por último un campo libre opcional, similar a `facts`. Si lo
-  necesitas, aquí puedes poner cualquier otro tipo de información en formato
-  donde puedes poner otra info que necesites en formato `"nombre": "valor"`,
-  pero sin restricciones sobre el tipo de dato del valor. Por ejemplo:
-
-  ```json
-  "extraInfo": {
-    "imagePrompt": "Un texto bien, bien largo...",
-    "writings": [
-      "Vol. 1",
-      "Vol. 2",
-      "Vol. 3",
-      "Vol. 4"
-    ]
-  }
-  ```
-
-Un ejemplo de data, según los requisitos anteriores podría ser:
-
-```js
-export default [
-  {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera de la informática, fue la primera programadora.",
-    "description": "Una visionaria del siglo XIX ...",
-    "imageUrl": "URL_DE_LA_IMAGEN_GENERADA",
-    "facts": {
-      "yearOfBirth": 1843,
-      "placeOfBirth": "London, England",
-      "mainField": "Computer Science",
-    }
-  },
-  //... 23 objetos más
-]
-```
-
-La data generada deberás reemplazarla por el contenido de este archivo:
-`./src/data/dataset.js`.
-
-**El tiempo estimado que deberías dedicar a la generación de estos datos
-es de máximo un sprint.** Si transcurrido un sprint, no tienes un
-conjunto de datos generados, deberás
-utilizar los datos de ejemplo ubicados en la ruta:
-`./src/data/dataset.js`.
-
-Las URLs de las imágenes dentro del archivo javascript, deben enlazar
-a las imágenes para cada elemento del array.
-Estas imágenes pueden ser generadas por la inteligencia artificial o imágenes
-que puedas encontrar en la web.
-Para la generación de imágenes te recomendamos usar el
-[generador de imágenes de Bing](https://www.bing.com/create).
-Una vez que tengas la imagen, descárgala u obtiene su URL, para agregársela
-al dataset.
-
-Una vez que tengas el archivo javascript completo, recuerda correr los test con
-`npm run test` para verificar que el archivo esté cumpliendo con lo
-solicitado.
-
-Una vez que hayas delimitado tu campo de interés y generado el archivo
-javascript con la asistencia de la inteligenica artificial, dedica
-tiempo a comprender a fondo a tu usuaria y sus
-necesidades específicas. A partir de esta comprensión, podrás diseñar la
-interfaz que facilite una interacción más efectiva y una comprensión más
-completa de los datos presentados.
-
-#### Prompt utilizado
-
-Dentro del readme que armarás, debe incluir una captura de pantalla
-de tu prompt utilizado para generar los datos. Si utilizaste varios prompts,
-puedes adjuntar todas las capturas que necesites.
-
-#### Diseño de la Interfaz de Usuaria
-
-##### Prototipo de alta fidelidad
-
-Usando los wireframes o bocetos (_sketches_) de tu solución de interfaz
-como base, lo siguiente es diseñar tu Interfaz de Usuaria (UI por sus
-siglas en inglés - _User Interface_). Para eso debes aprender a
-utilizar alguna herramienta de diseño visual.
-Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-Recuerda pedir feedback de tu prototipo a tus compañeras y/o coaches.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarias,
-y con base en los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
-
-#### Implementación de la Interfaz de Usuaria (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuaria deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar.
-
-Revisa [las funcionalidades](#3-funcionalidades) que el proyecto pide del interfaz.
-
-#### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas. Este proyecto usa
-el framework [Jest](https://jestjs.io/) para ejecutar las pruebas unitarias por lo
-que te recomendamos consultar su documentación.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/dataFunctions.js` que contenga tus funciones y
-está detallado en la sección de [Consideraciones técnicas](#src/data.js).
-
-## 7. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* Visualizar la estadística calculada mediante un gráfico. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
-## 8. Objetivos de aprendizaje
-
-
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
-
-### HTML
-
-- [ ] **Uso de HTML semántico**
-
-  <details><summary>Links</summary><p>
-
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/html5/semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
-
-### CSS
-
-- [ ] **Uso de selectores de CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/css/intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
-
-- [ ] **Modelo de caja (box model): borde, margen, padding**
-
-  <details><summary>Links</summary><p>
-
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/css/boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
-
-- [ ] **Uso de flexbox en CSS**
-
-  <details><summary>Links</summary><p>
-
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
-
-### Web APIs
-
-- [ ] **Uso de selectores del DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/dom/1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
-
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
-
-- [ ] **Manipulación dinámica del DOM**
-
-  <details><summary>Links</summary><p>
-
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
-
-### JavaScript
-
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
-
-- [ ] **Arrays (arreglos)**
-
-  <details><summary>Links</summary><p>
-
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
-
-- [ ] **Objetos (key, value)**
-
-  <details><summary>Links</summary><p>
-
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/objects/objects)
-</p></details>
-
-- [ ] **Variables (declaración, asignación, ámbito)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/basics/values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/basics/variables)
-</p></details>
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/flow-control/conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/flow-control/loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/flow-control/functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/functions/classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/functions/arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-### Centrado en el usuario
-
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
-
-### Diseño de producto
-
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-- [ ] **Seguir los principios básicos de diseño visual**
-
-### Investigación
-
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
-
-### AI Prompting
-
-- [ ] **Dando Instrucciones**
-
-  <details><summary>Links</summary><p>
-
-  * [Dando Instrucciones | Learn Prompting: Your Guide to Communicating with AI](https://learnprompting.org/es/docs/basics/instructions)
-</p></details>
-
-- [ ] **Few shot prompting**
-
-  <details><summary>Links</summary><p>
-
-  * [Few shot prompting | Learn Prompting: Your Guide to Communicating with AI](https://learnprompting.org/es/docs/basics/few_shot)
-</p></details>
-
-## 9. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Súmate al canal de Slack
-[#project-dataverse](https://claseslaboratoria.slack.com/archives/C03MV35EP5M)
-para conversar y pedir ayuda del proyecto.
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el
-producto con base en el conocimiento que puedas obtener de tu usuaria.
-Estas preguntas te pueden ayudar:
-
-* ¿Quiénes son las principales usuarias del producto?
-* ¿Cuáles son los objetivos de estas usuarias en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuaria de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-### Contenido de referencia
-
-#### Desarrollo Front-end
-
-* [Tópicos en la currícula de Laboratoria](https://curriculum.laboratoria.la/es/web-dev/topics)
-  testing, arreglos, objetos, funciones, DOM en Browser Javascript.
-* [Buscando elementos con querySelector*](https://es.javascript.info/searching-elements-dom)
-* [Objeto del evento](https://es.javascript.info/introduction-browser-events#objeto-del-evento)
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.toSorted en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Atributos de datos](https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [Datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Módulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Módulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-* [Diferencia entre array y objetos](https://youtu.be/mJJloQY7A8Y)
-* [¿Cómo puedo recorrer un objeto?](https://youtube.com/01RHn23Bn_0)
-* [`map`, `filter`, `sort` y `reduce` también son métodos para objetos](https://youtu.be/bUl1R2lQvKo)
-* [Diferencia entre expression y statements](https://youtu.be/wlukoWco2zk)
-* [Diferencia entre createElement e innerHTML](https://www.javascripttutorial.net/javascript-dom/javascript-innerhtml-vs-createelement/)
-* [¿Qué es el Scope?](https://youtu.be/s-7C09ymzK8)
-
-#### Herramientas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Para preguntas sobre Git recomendamos ver este playlist](https://www.youtube.com/watch?v=F1EoBbvhaqU&list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-
-## 10. Consideraciones para pedir tu Project Feedback
-
-Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
-
-* [ ] Cumple con todos los criterios mínimos de aceptación al ejecutar `npm run test:oas`
-* [ ] Cumple con todas las pruebas _end to end_ al ejecutar `npm run test:e2e`
-* [ ] Cumple con todas las pruebas unitarias al ejecutar `npm run test` y
-  que tienen una cobertura del 70% de _statements_ (_sentencias_),
-  _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-* [ ] Esta libre de _errores_ de `eslint` al ejecutar `npm run pretest`
-* [ ] Está subido a GitHub y desplegado en GitHub Pages
-* [ ] Captura de pantalla del prompt utilizado para generar los datos.
-* Tiene un `README.md` con la siguente:
-  - [ ] _Definición del producto_ clara e informativa
-  - [ ] Historias de usuario
-  - [ ] Un _Diseño de la Interfaz de Usuaria_ (prototipo de alta fidelidad)
-  - [ ] El listado de problemas que detectaste a través de tests
-    de usabilidad en el `README.md`
-* Tiene un UI que cumple las funcionalidades:
-  - [ ] Muestra lista con datos y/o indicadores
-  - [ ] Permite ordenar data por uno o más campos (asc y desc)
-  - [ ] Permite filtrar data con base en una condición
-  - [ ] Permite limpiar los filtros con un botón
-  - [ ] Es _responsive_
-
-Recuerda que debes hacer una autoevaluación de _objetivos de aprendizaje_ y
-_life skills_ desde tu dashboard de estudiante.
-
-Si no has completado todo lo anterior, no consideramos que estás lista para
-tu sesión de Project Feedback.
+¡Que tus aventuras de lectura sean emocionantes y llenas de magia! ¡Hasta pronto!

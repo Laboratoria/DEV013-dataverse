@@ -1,378 +1,315 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
+    "id": "Pinocho",
+    "name": "Pinocho",
+    "shortDescription": "Muñeco de madera que cobra vida",
+    "description": "Pinocho es un clásico cuento para niños escrito por Carlo Collodi. Narra la historia de un muñeco de madera tallado por el bondadoso Geppetto, quien sueña con tener un hijo. La marioneta cobra vida gracias a la hada Azul, pero su nariz crece cuando miente. Pinocho se embarca en diversas aventuras, enfrentando peligros y aprendiendo lecciones sobre la honestidad y la responsabilidad. Con personajes entrañables y situaciones emocionantes, el cuento enseña valiosas lecciones morales de una manera divertida y cautivadora",
+    "imageUrl": "https://th.bing.com/th/id/OIG.Hx9k0_XgQwnbWEsPAQnf?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
+      "curiousFact1": "Anhela ser un niño de verdad",
+      "curiousFact2": "Acompañado por su conciencia, Pepito Grillo",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
+    "id": "ElefanteBernardo",
+    "name": "El Elefante Bernardo",
+    "shortDescription": "Gigante y amigable elefante",
+    "description": "El Elefante Bernardo es un gigante elefante que vive en la selva. A pesar de su imponente tamaño, es conocido por su naturaleza amigable y su amor por la naturaleza.",
+    "imageUrl": "https://th.bing.com/th/id/OIG3.o7I461DRPog9_U20saVV?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
+      "curiousFact1": "Tiene una memoria excepcional",
+      "curiousFact2": "Siempre lleva consigo una mariposa como amuleto de la suerte",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "3 a 5 años"
     }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
+    "id": "UgaLaTortuga",
+    "name": "Uga la Tortuga",
+    "shortDescription": "Anciana y sabia tortuga",
+    "description": "Huga la Tortuga es un encantador cuento para niños escrito por Diane Redfield Massie. La historia sigue a Huga, una tortuga que sueña con explorar el mundo más allá de su hogar en el océano. A pesar de las dudas y burlas de sus amigos, Huga persevera y emprende un emocionante viaje. En su aventura, descubre la importancia del valor, la determinación y la autoaceptación. A través de ilustraciones coloridas y una narrativa cautivadora, este cuento inspira a los lectores a seguir sus sueños y creer en sí mismos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.4cMd5Q7B07Hb3fD7_amy?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
+      "curiousFact1": "Guardiana de cuentos antiguos",
+      "curiousFact2": "Puede predecir cambios en el clima",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "6 a 10 años"
     }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
+    "id": "LiebreYTortuga",
+    "name": "La Liebre y la Tortuga",
+    "shortDescription": "Personajes de la famosa fábula",
+    "description": "Huga la Tortuga es un encantador cuento para niños escrito por Diane Redfield Massie. La historia sigue a Huga, una tortuga que sueña con explorar el mundo más allá de su hogar en el océano. A pesar de las dudas y burlas de sus amigos, Huga persevera y emprende un emocionante viaje. En su aventura, descubre la importancia del valor, la determinación y la autoaceptación. A través de ilustraciones coloridas y una narrativa cautivadora, este cuento inspira a los lectores a seguir sus sueños y creer en sí mismos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.22ARtDnxN8DdvuwaTf3B?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
+      "curiousFact1": "Fábula atribuida a Esopo",
+      "curiousFact2": "Enseñanza popular en la cultura mundial",
+      "genero": "Fábula",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
+    "id": "HuevoQuePia",
+    "name": "El Huevo que Pia",
+    "shortDescription": "Un huevo especial con sorpresa",
+    "description": "El Huevo que pía es un cuento clásico infantil, donde un grupo de animales se encuentra un misterioso huevo en el bosque. Ninguno sabe qué animal podría salir de él, pero todos están emocionados por descubrirlo. Durante días, observan el huevo con ansias hasta que finalmente se rompe y nace... un pequeño patito. Al principio, los animales se sienten decepcionados, pero luego aprenden a aceptar y amar al patito, quien resulta ser muy especial. La historia enseña valores de tolerancia, aceptación y amor por la diferencia, mostrando que lo que parece diferente puede ser maravilloso.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.cJTRrmCVSPuCqzwD5a9V?pid=ImgGnhttps://th.bing.com/th/id/OIG.cJTRrmCVSPuCqzwD5a9V?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "curiousFact1": "Fuente de asombro en la granja",
+      "curiousFact2": "Siempre rodeado de misterio",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "3 a 5 años"
     }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
+    "id": "PatitoFeo",
+    "name": "El Patito Feo",
+    "shortDescription": "Pequeño patito con un destino sorprendente",
+    "description": "El Patito Feo es un cuento clásico de Hans Christian Andersen. Cuenta la historia de un patito que, desde su nacimiento, es objeto de burlas y rechazo debido a su aspecto diferente y poco agraciado. Después de sufrir numerosas adversidades y ser rechazado por los demás animales de la granja, el patito decide huir en busca de un lugar donde ser aceptado. Tras un largo viaje, descubre que es un cisne, una de las aves más hermosas y admiradas. La historia enseña valiosas lecciones sobre la autoaceptación, la perseverancia y la belleza interior.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.trUAtSaEEfBWO5uOTztQ?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "curiousFact1": "Escrito por Hans Christian Andersen",
+      "curiousFact2": "Mensaje de aceptación y autovaloración",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
+    "id": "OsitoCurioso",
+    "name": "El Osito Curioso",
+    "shortDescription": "Aventuras de un osito que ama aprender",
+    "description": "El Patito Feo es un cuento clásico de Hans Christian Andersen. Cuenta la historia de un patito que, desde su nacimiento, es objeto de burlas y rechazo debido a su aspecto diferente y poco agraciado. Después de sufrir numerosas adversidades y ser rechazado por los demás animales de la granja, el patito decide huir en busca de un lugar donde ser aceptado. Tras un largo viaje, descubre que es un cisne, una de las aves más hermosas y admiradas. La historia enseña valiosas lecciones sobre la autoaceptación, la perseverancia y la belleza interior.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.ooZJ3fAbRb4qUtqYHx65?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
+      "curiousFact1": "Siempre lleva consigo su mochila de explorador",
+      "curiousFact2": "Tiene muchos amigos animales",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "3 a 5 años"
     }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
+    "id": "AventuraPececitoAzul",
+    "name": "La Aventura del Pececito Azul",
+    "shortDescription": "Un pececito curioso explora el océano",
+    "description": "Acompaña al Pececito Azul en su emocionante aventura por el océano, donde descubre la importancia de la amistad y la superación.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.vvwIdPTH10GErdhizrqo?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
-    },
-    "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
+      "curiousFact1": "Tiene escamas brillantes",
+      "curiousFact2": "Aprende a nadar en espirales",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "6 a 10 años"
     }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
+    "id": "RatonaRosita",
+    "name": "Las Travesuras de la Ratona Rosita",
+    "shortDescription": "Ratona traviesa en busca de diversión",
+    "description": "Ratona Rosita es un cuento infantil que sigue las aventuras de una pequeña ratón llamada Rosita. Rosita es curiosa y valiente, y siempre está buscando nuevas experiencias en su entorno. Un día, mientras explora un granero, descubre un rincón secreto lleno de deliciosos quesos. Sin embargo, al intentar llevarse uno, queda atrapada en una trampa para ratones. Con ingenio y determinación, Rosita logra liberarse y regresa a su madriguera con la lección aprendida: la importancia de la prudencia y la astucia. Este cuento enseña valores como la valentía, la perseverancia y la prudencia.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.ut23lB.pqFl2rWuTU4g1?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
+      "curiousFact1": "Siempre lleva un lazo rojo",
+      "curiousFact2": "Tiene una colección de cuentos",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "3 a 5 años"
     }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
+    "id": "CenicientaAmigosAnimales",
+    "name": "Cenicienta y sus Amigos Animales",
+    "shortDescription": "Una versión encantadora del clásico cuento",
+    "description": "El cuento de Cenicienta y sus amigos animales es una versión adaptada del clásico cuento de hadas. Narra la historia de Cenicienta, una joven maltratada por su madrastra y hermanastras, que encuentra consuelo en la amistad de los animales del bosque: ratones, pájaros y otros animales pequeños. Estos amigos, con su ingenio y solidaridad, ayudan a Cenicienta a superar las adversidades y lograr su sueño de asistir al baile real. A través de la lealtad y el trabajo en equipo, el cuento resalta la importancia de la amistad y la bondad, mostrando cómo el apoyo mutuo puede conducir a la realización de los deseos más profundos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.HrtZwjx795WPJHIxWauj?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
+      "curiousFact1": "Los amigos animales tienen nombres divertidos",
+      "curiousFact2": "El hada madrina también juega un papel importante",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
+    "id": "GatoConBotasAventuraReino",
+    "name": "El Gato con Botas y la Aventura en el Reino",
+    "shortDescription": "El astuto gato que conquista el corazón del reino",
+    "description": "El Gato con Botas y la Aventura en el Reino es una versión moderna y adaptada del clásico cuento de hadas. En esta historia, el astuto gato con botas, que pertenece a un joven granjero, se embarca en una emocionante aventura para ayudar a su amo a conquistar el corazón de la princesa y salvar el reino de una malvada bruja. Con ingenio y astucia, el gato con botas supera numerosos desafíos y enemigos, demostrando que el coraje y la inteligencia pueden superar cualquier obstáculo. Esta versión del cuento enseña lecciones sobre la importancia de la valentía, la astucia y la amistad verdadera.",
+    "imageUrl": "https://th.bing.com/th/id/OIG2.j4NowxnjROOoSoPbvsxZ?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
+      "curiousFact1": "Siempre lleva sus botas mágicas",
+      "curiousFact2": "Tiene una habilidad especial para la estrategia",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
+    "id": "BlancanievesSieteEnanitos",
+    "name": "Blancanieves y los Siete Enanitos",
+    "shortDescription": "La historia mágica de amistad y superación",
+    "description": "Blanca Nieve y los Siete Enanitos es un cuento de hadas clásico que narra la historia de una joven princesa llamada Blanca Nieve, quien es perseguida por su malvada madrastra, la Reina Grimhilde, debido a su belleza. Blanca Nieve encuentra refugio en una cabaña en el bosque, donde vive con siete enanitos amables y trabajadores. A través de sus aventuras, Blanca Nieve aprende lecciones sobre la bondad, la amistad y la importancia de mantenerse fiel a uno mismo. Con la ayuda de los enanitos y otros personajes, logra vencer los obstáculos y encontrar su felicidad. Este cuento enseña valores de amor, compasión y valentía.",
+    "imageUrl": "https://th.bing.com/th/id/OIG3..kOh.Mpjmqdq7JgPjcWH?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
+      "curiousFact1": "Cada enanito tiene una personalidad única",
+      "curiousFact2": "La malvada madrastra juega un papel importante en la trama",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
+    "id": "LoboTresCerditos",
+    "name": "El Lobo y los Tres Cerditos",
+    "shortDescription": "Aventuras de los cerditos y el astuto lobo",
+    "description": "El lobo y los tres cerditos es un cuento popular que sigue la historia de tres cerditos que construyen casas para protegerse del lobo feroz. Cada cerdito construye su casa de un material diferente: paja, madera y ladrillos. El lobo intenta derribar las casas para atrapar a los cerditos y comérselos. Sin embargo, solo el cerdito que construyó su casa con ladrillos logra resistir el embate del lobo. Al final, el lobo es derrotado y los cerditos aprenden la importancia del trabajo duro y la planificación. Este cuento enseña lecciones sobre la importancia de la previsión y la construcción de bases sólidas para enfrentar los desafíos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG2.JH4vKuk8UrOIFOwKx.Q3?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
+      "curiousFact1": "Cada cerdito tiene su enfoque único para construir su casa",
+      "curiousFact2": "El lobo tiene trucos ingeniosos para intentar derribar las casas",
+      "genero": "Cuento popular",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
+    "id": "SirenitaAmigosMarinos",
+    "name": "La Sirenita y sus Amigos Marinos",
+    "shortDescription": "La historia mágica de la sirenita y sus amigos bajo el mar",
+    "description": "La Sirenita y sus amigos marinos es un cuento clásico que narra la historia de una joven sirena llamada Ariel, quien sueña con vivir en la superficie y explorar el mundo humano. A lo largo de la historia, Ariel se hace amiga de diversos personajes marinos, como Flounder, un pez payaso, y Sebastián, un cangrejo músico. Juntos, experimentan aventuras emocionantes y ayudan a Ariel a alcanzar su deseo de vivir en tierra firme. Sin embargo, también enfrentan desafíos y peligros, incluyendo la malvada bruja del mar, Úrsula. Este cuento enseña lecciones sobre la importancia de la amistad, la valentía y la búsqueda de los propios sueños.",
+    "imageUrl": "https://th.bing.com/th/id/OIG1.WgDkarCNSDkZfW7nUJRl?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
+      "curiousFact1": "La Sirenita tiene una cola de escamas brillantes",
+      "curiousFact2": "Los amigos marinos tienen habilidades especiales",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
+    "id": "HanselGretelBosqueEncantado",
+    "name": "Hansel y Gretel en el Bosque Encantado",
+    "shortDescription": "Aventuras de los hermanos en un bosque lleno de magia",
+    "description": "Hansel y Gretel en el Bosque Encantado es una adaptación del clásico cuento de hadas de los hermanos Grimm. En esta versión, Hansel y Gretel se adentran en un bosque misterioso, donde descubren un mundo encantado lleno de criaturas mágicas y sorpresas. Mientras exploran, se encuentran con desafíos y peligros, incluyendo la malvada bruja que intenta engañarlos con su casa de dulces. Con astucia y valentía, los hermanos superan los obstáculos y demuestran la importancia del amor fraternal y la perseverancia. Esta adaptación del cuento clásico añade elementos de fantasía y aventura para cautivar a nuevos públicos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.5SCkT9zOjtYGs1yRwulG?w=1024&h=1024&rs=1&pid=ImgDetMaingit",
     "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
+      "curiousFact1": "Dejan migas de pan para encontrar el camino de regreso",
+      "curiousFact2": "La bruja tiene trucos mágicos",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
+    "id": "LeonRatonAmigo",
+    "name": "El León y el Ratón Amigo",
+    "shortDescription": "Una historia de amistad improbable entre un león y un ratón",
+    "description": "El León y el Ratón Amigo es una fábula clásica atribuida a Esopo y también se encuentra en las colecciones de fábulas de otros escritores, como Jean de la Fontaine. Narra la historia de un león poderoso atrapado en una red por unos cazadores. El ratón, inicialmente menospreciado por su tamaño, roe la red y libera al león. Más tarde, el león devuelve el favor al ratón al liberarlo de una trampa. Esta fábula enseña la lección de que la amistad y la gratitud son valiosas, independientemente del tamaño o la fuerza.",
+    "imageUrl": "https://th.bing.com/th/id/OIG2.Ogz8cNU1BkECJvzqIXho?w=1024&h=1024&rs=1&pid=ImgDetMain",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
+      "curiousFact1": "El ratón ayuda al león en un momento crucial",
+      "curiousFact2": "Ambos personajes tienen habilidades únicas",
+      "genero": "Fábula",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
+    "id": "BellaDurmienteReinoSuenos",
+    "name": "La Bella Durmiente y el Reino de los Sueños",
+    "shortDescription": "Una versión encantada del clásico cuento de hadas",
+    "description": "La Bella Durmiente y el Reino de los Sueños es una adaptación moderna del clásico cuento de hadas. En esta versión, la princesa Aurora, conocida como la Bella Durmiente, cae en un sueño profundo después de ser hechizada por una malvada bruja. Sin embargo, en lugar de esperar a ser despertada por el beso de un príncipe, Aurora emprende un viaje a través de un mundo de ensueño para encontrar la clave que la liberará del hechizo. Con la ayuda de amigos mágicos y criaturas fantásticas, Aurora descubre el poder de la valentía, el amor propio y la esperanza mientras lucha por salvar a su reino de la oscuridad. Esta versión del cuento enfatiza el empoderamiento femenino y la importancia de seguir tus propios sueños.",
+    "imageUrl": "https://th.bing.com/th/id/OIG3.eLzUSyzgDIEiMkmnTil5?w=1024&h=1024&rs=1&pid=ImgDetMain",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
+      "curiousFact1": "Un hechizo de sueño profundo",
+      "curiousFact2": "Príncipe valiente en busca del amor",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
+    "id": "PulgarcitoSecretosBosqueEncantado",
+    "name": "Pulgarcito y los Secretos del Bosque Encantado",
+    "shortDescription": "Aventuras del pequeño Pulgarcito en un bosque lleno de sorpresas",
+    "description": "Pulgarcito y los Secretos del Bosque Encantado es una adaptación del clásico cuento de hadas que narra las aventuras de un niño diminuto llamado Pulgarcito. En esta versión, Pulgarcito se aventura en un bosque mágico lleno de criaturas fantásticas y secretos ocultos. Con ingenio y valentía, Pulgarcito debe superar desafíos y enfrentarse a peligros para descubrir los secretos que protegen el equilibrio del bosque y salvar a su familia de la adversidad. En el camino, Pulgarcito aprende lecciones valiosas sobre la amistad, la solidaridad y la importancia de confiar en sí mismo. Esta adaptación del cuento clásico añade elementos de fantasía y misterio para cautivar a nuevos públicos.",
+    "imageUrl": "https://th.bing.com/th/id/OIG2.sM5h9xN07xF43Wr6Cfdw?w=1024&h=1024&rs=1&pid=ImgDetMain",
     "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
+      "curiousFact1": "Utiliza migas de pan para encontrar su camino",
+      "curiousFact2": "Amigos animales le ayudan en sus travesías",
+      "genero": "Literatura infantil",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
+    "id": "PeterPanTierraNuncaJamas",
+    "name": "Peter Pan y la Tierra de Nunca Jamás",
+    "shortDescription": "Las emocionantes aventuras de Peter Pan y sus amigos en la tierra de la fantasía",
+    "description": "Peter Pan y la Tierra de Nunca Jamás es una historia clásica que sigue las aventuras del niño que nunca crece, Peter Pan, y sus amigos en una tierra mágica donde el tiempo no avanza, llamada Nunca Jamás. En esta tierra, Peter Pan lidera a los Niños Perdidos, un grupo de niños que huyeron de sus hogares para vivir en la libertad de Nunca Jamás. Junto con Wendy, John y Michael Darling, Peter Pan y sus amigos enfrentan al malvado Capitán Garfio y sus piratas, exploran islas perdidas, y viven emocionantes aventuras que desafían la imaginación. Esta historia enseña sobre la importancia de la imaginación, la amistad y la libertad.",
+    "imageUrl": "https://th.bing.com/th/id/OIG2.Kqb50ddaIBE8fvSXIERm?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
-    },
-    "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
+      "curiousFact1": "Acompañado por Campanilla y los Niños Perdidos",
+      "curiousFact2": "Nunca crece y vive en la isla mágica",
+      "genero": "Fantasía",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
+    "id": "AventuraZapatosMagicos",
+    "name": "La Aventura de los Zapatos Mágicos en el País de los Calcetines Coloridos",
+    "shortDescription": "Un cuento encantado sobre zapatos que cobran vida en un mundo lleno de calcetines de colores",
+    "description": "Acompaña a unos zapatos mágicos mientras emprenden una aventura inesperada en el País de los Calcetines Coloridos, donde descubren la importancia de la diversidad y la cooperación.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.kUS4XL9v0zMPq3m4qEMP?w=1024&h=1024&rs=1&pid=ImgDetMain",
     "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
-    },
-    "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
+      "curiousFact1": "Cada zapato tiene un cordón mágico",
+      "curiousFact2": "Los calcetines tienen personalidades únicas",
+      "genero": "Fantasía",
+      "RangoDeEdad": "6 a 10 años"
     }
   },
   {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
+    "id": "FlautistaHamelinAventuraMusical",
+    "name": "El Flautista de Hamelín y la Aventura Musical",
+    "shortDescription": "La clásica historia del flautista que encanta a toda la ciudad",
+    "description": "El Flautista de Hamelín y la Aventura Musical es una versión adaptada del famoso cuento folclórico. Narra la historia de un misterioso flautista que llega a la ciudad de Hamelín, donde los habitantes sufren una plaga de ratas. El flautista ofrece liberar la ciudad de las ratas con su música encantadora a cambio de una recompensa, pero al no recibirla, decide vengarse. Utilizando su flauta mágica, lleva a todos los niños de Hamelín a una mágica aventura musical, enseñándoles lecciones de amistad, bondad y valentía en el camino. Esta versión añade elementos de fantasía y música para cautivar a nuevas audiencias.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.ZLFi5eNV5PHT45G8H.6C?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
+      "curiousFact1": "Encanta a ratones y humanos con su flauta",
+      "curiousFact2": "Resuelve conflictos a través de la música",
+      "genero": "Cuento de hadas",
+      "RangoDeEdad": "Todas las edades"
     }
   },
   {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
+    "id": "GirasolTraviesoJardinEncantado",
+    "name": "El Girasol Travieso en el Jardín Encantado",
+    "shortDescription": "Aventuras de un girasol que cobra vida en un jardin magico",
+    "description": "El Girasol Travieso en el Jardín Encantado es una historia encantadora que sigue las travesuras de un girasol curioso que vive en un jardín mágico. Este girasol, llamado Travieso, siempre está buscando aventuras y nuevas experiencias en el colorido jardín. Un día, mientras explora, se encuentra con otros habitantes del jardín, como mariposas, abejas y mariquitas, quienes le enseñan lecciones importantes sobre la amistad, la naturaleza y la importancia de ser responsable. A través de sus travesuras y aprendizajes, Travieso descubre la belleza y la magia que se encuentra en su propio hogar. Esta historia está llena de color, diversión y enseñanzas para los más pequeños.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.6E_sPKJI5tu.Y.n0_g2Y?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
-    },
-    "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
+      "curiousFact1": "Sus pétalos brillan cuando está feliz",
+      "curiousFact2": "Tiene una risa contagiosa",
+      "genero": "Fantasía",
+      "RangoDeEdad": "3 a 5 años"
+    }
+  },
+
+  {
+    "id": "LibroColoresOlvidados",
+    "name": "El Libro de los Colores Olvidados",
+    "shortDescription": "Una historia mágica sobre colores que cobran vida",
+    "description": "El Libro de los Colores Olvidados es una narrativa mágica sobre un mundo donde los colores han desaparecido misteriosamente. En esta historia, seguimos a un valiente grupo de amigos que emprenden un viaje épico para encontrar el legendario Libro de los Colores Olvidados. A lo largo de su búsqueda, enfrentan desafíos emocionantes, descubren secretos ancestrales y se encuentran con personajes mágicos que los ayudan en su misión. A medida que avanzan, aprenden lecciones sobre la importancia de la diversidad, la creatividad y la alegría que aportan los colores a nuestras vidas. Esta historia cautivadora invita a los lectores a explorar la magia de la imaginación y la belleza de la diversidad.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.QR2ywz.2RjTBEI2teDzt?pid=ImgGn",
+    "facts": {
+      "curiousFact1": "Cada color tiene su propia personalidad",
+      "curiousFact2": "Los personajes viajan por diferentes paisajes de colores",
+      "genero": "Fantasía",
+      "RangoDeEdad": "11 a 13 años"
     }
   },
   {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
+    "id": "IslaPeluchesPerdidos",
+    "name": "La Isla de los Peluches Perdidos",
+    "shortDescription": "Aventuras de peluches en una isla mágica",
+    "description": "La Isla de los Peluches Perdidos es un cuento encantador que sigue la historia de un grupo de peluches que viven en una isla misteriosa y olvidada. Estos peluches, abandonados por sus dueños, han creado su propia comunidad en la isla, donde viven aventuras emocionantes y comparten momentos de amistad y solidaridad. Sin embargo, su paz se ve amenazada cuando un malvado villano intenta apoderarse de la isla y destruir su hogar. Con valentía y trabajo en equipo, los peluches deben unirse para proteger su hogar y encontrar una solución pacífica. A lo largo de su viaje, descubren el verdadero significado de la amistad, la lealtad y el valor. Esta historia captura la imaginación de los lectores y les enseña valiosas lecciones sobre el amor y la importancia de cuidar a los demás.",
+    "imageUrl": "https://th.bing.com/th/id/OIG.oqXndIJxJtMe7_sXLk2K?pid=ImgGn",
     "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
-    },
-    "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
-    }
-  },
-  {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
-    "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
-    },
-    "extraInfo": {
-      "imageSource": ""
+      "curiousFact1": "Cada peluche tiene una habilidad única",
+      "curiousFact2": "La isla tiene paisajes y criaturas mágicas",
+      "genero": "Aventura",
+      "RangoDeEdad": "6 a 10 años"
     }
   }
 ];

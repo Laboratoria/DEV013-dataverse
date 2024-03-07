@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(assets/img/bienvenida.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100vh;
+  max-width: 1900px;
+  padding-top: 80px;
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenido visible */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+h1 {
+
+  font-family: "Cinzel", serif;
+  font-weight: 620;
+  text-align: center;
+  font-size: 130px;
+  color: #ffffff;
+  text-shadow:
+    1px 1px 2px rgb(255, 115, 1),
+    0 0 1em rgb(243, 243, 243),
+    0 0 0.2em rgb(255, 249, 247);
+  padding: 1px;
+  margin-top: -300px;
+
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  margin-top: -490px;
+  text-align: center;
+  font-size: 30px;
+  color: #e0d3cd;
+  text-shadow:
+    1px 1px 2px rgb(255, 102, 0),
+    0 0 1em rgb(255, 143, 6),
+    0 0 0.2em rgb(248, 49, 49);
+  padding: 390px;
+  white-space: nowrap;
+}
+
+#icon-menu{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  padding: 10px;
+  font-size: 20px;
+  background: #eeeeeefa;
+  border-radius: 100%;
+  color: #787878;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer {
+  font-family: 'Poppins', sans-serif;
+  text-align: start;
+  font-weight: 30;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.seccion {
+  display: flex;
+  justify-content: center;
+  padding: 320px;
+  /* Espacio alrededor del contenido */
+  display: grid;
+  margin-top: 80px;
+}
+
+.seccion3 {
+  padding: 520px;
+  /* Espacio alrededor del contenido */
+  background-image: url(assets/img/footer.png);
+  background-size: cover;
+  /* Cubrir todo el fondo */
+  background-position: center bottom;
+  /* Posición de la imagen (centrada en el fondo y en la parte inferior) */
+  background-attachment: scroll;
+  /* Fijar la imagen al fondo */
+
+}
+
+/*Las tarjetas */
+.card {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  /*border: 10px solid  rgba(12, 141, 253, 0.685);*/
+  position: relative;
+  overflow: hidden;
+  transition: heigth 0.5s ease;
+  flex-basis: calc(33.33% - 20px);
+  transition: flex-basis 0.5s;
+  transition: transform 0.3 ease;
+  width: 300px;
+  /*Ancho de mis card*/
+  margin: 6%;
+}
+
+/*Diseño de primera cara */
+.PrimeraCara {
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos li se envuelvan  de PrimeraCara*/
+}
+
+/*texto de la tarjeta primeracara*/
+.PrimeraCara h2 {
+  position: absolute;
+  bottom: 0;
+  /*Posiciona mi titulo en la parte inferior*/
+  text-align: center;
+  /*Posision de mi texto Titulo*/
+  font-size: 1.9vw;
+  /* tamaño de texto en relacion con el ancho de la ventana*/
+  color: #ffffff;
+  background-color: rgba(54, 52, 54, 0.671);
+  /*Fondo de Titulo de cuento*/
+  border-bottom-left-radius: 25%;
+  /* Borde de parte inferior izquierda*/
+  border-bottom-right-radius: 25%;
+  /* Borde de parte inferior derecha */
+  padding-left: 20px;
+  /* Relleno izquierdo del fondo */
+  width: 300px;
+  /*Ancho d emi fondo tranparente de titulo*/
+}
+
+/* Diseño de solo la imagen */
+#Img {
+  border: 5px solid rgb(255, 255, 255);
+  /*color de borde para imagen*/
+  width: 350px;
+  /*Ancho de mi imagen*/
+  height: 335px;
+  /*Largo d emi imagen*/
+  border-radius: 15%;
+  /* Tipo de brode de mi imagen*/
+}
+
+/*Animacion de tarjeta */
+.card:hover {
+  height: auto;
+  flex-basis: 450px;
+}
+
+/* Diseño de la  data de SegundaCara */
+.card .SegundaCara {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 350px;
+  /*Ancho de mi data SegundaCara*/
+  height: 335px;
+  background-color: rgba(252, 252, 252, 0.692);
+  padding: 20px;
+  /*box-sizing: border-box ;*/
+  transition: top 0.5s ease;
+  border-radius: 15px;
+  /*tipo de borodo para mi segundacara*/
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-y: auto;
+  /* Agrega un scroll vertical si el contenido excede la altura */
+
+}
+
+.card:hover .SegundaCara {
+  top: 0;
+}
+
+/*Termina animacion de SegundaCara*/
+
+/*Se crea las colmnas*/
+.Contenedor {
+  border: 1px, solid black;
+  background: linear-gradient(to top, rgb(5, 22, 66) -10%, rgba(113, 159, 212, 0.856) 50%, rgba(254, 255, 255, 0.911) 100%);
+  /* Degradado de color de fondo */
+  padding: 20px;
+  /*espacio interior de  */
+  display: flex;
+  /* desto es flexbox*/
+  flex-direction: row;
+  /*direciona los elementos en fila*/
+  flex-wrap: wrap;
+  /*ajusta los elementos a multipes linea*/
+  width: 100%;
+  /*amcho de mi contenedor*/
+ 
+}
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0px auto;
+
+  /*FlexBoox*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-search {
+  border: none;
+  padding: 10px 20px 10px 0px;
+  margin: 12px 0px;
+  width: 200px;
+  background: transparent;
+  color: #fff;
+  outline-color: transparent;
+  font-weight: 15;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#main-header {
+  background: #00050a;
+  color: white;
+  height: auto;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  /* hacemos que la cabecera ocupe el ancho completo de la página */
+  left: 0;
+  /* Posicionamos la cabecera al lado izquierdo */
+  top: 0;
+  /* Posicionamos la cabecera pegada arriba */
+  position: fixed;
+  /* Hacemos que la cabecera tenga una posición */
+  z-index: 9999;
+  /* Ajusta el valor según sea necesario para asegurar que esté por encima de todo el contenido */
+}
+
+
+
+label {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#filter {
+  font-weight: 15;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+#order {
+  font-weight: 15;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+#orderad {
+  font-weight: 15;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+.clearButton {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 17;
+  font-size: 17px;
+
+}
+
+.ReadMore {
+  display: flex;
+  font-family: "Cinzel", serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: -790px;
+  padding: 400px;
+}
+
+
+#scrollButton {
+  font-size: 39px;
+  color: rgb(252, 252, 252);
+  text-shadow:
+    1px 1px 2px rgb(255, 115, 1),
+    0 0 1em rgb(243, 243, 243),
+    0 0 0.2em rgb(255, 249, 247);
+  background-color: rgb(255, 101, 44);
+  font-family: "Cinzel", serif;
+  border-radius: 5px;
+  border-color: #fff;
+  padding: 14px 28px;
+  cursor: pointer;
+
+}
+
+/*Seccioón Responsive*/
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 1200px) {
+  /* Aquí van tus estilos actuales */
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 1199px) {
+
+
+  .card {
+    flex-basis: calc(50% - 20px);
+    width: 45%;
+  }
+  .PrimeraCara h2 {
+    font-size: 1.3em;
+    width: 250px;
+  }
+  #Img {
+    width: 280px;
+    height: 270px;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 20px;
+  }
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    margin-top: -150px; /* Ajuste del margen superior para centrar en pantallas pequeñas */
+    text-align: center;
+  }
+
+  p {
+  font-family: 'Poppins', sans-serif; /* Mantén la misma fuente que tenías */
+  font-size: 20px; /* Tamaño de fuente */
+  margin: 0 auto; /* Centra vertical y horizontalmente */
+  max-width: 80%; /* Limita el ancho del texto para que no se extienda demasiado */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 20%;
+    }
+  }
+}
+  @media only screen and (max-width: 768px) {
+    .ReadMore {
+      font-size: 8px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+      margin-top: -300px; /* Ajuste del margen superior para centrar en pantallas pequeñas */
+      padding: 1px; /* Ajuste del padding para pantallas pequeñas */
+    }
+  }
+
