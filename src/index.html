@@ -17,51 +17,42 @@
   <main> 
     <h2> </h2>
   </main>
-  
+
   <body>
-      
-    <label class= "espe"for="filtro">Especialidad</label>
-    <select class = "cuadro" data-testid="select-sort" name="name" id="filtro">
-       <option value="">--Seleccione--</option>
-       <option value="Ciencia de la Computación">Ciencia de la Computación</option>
-       <option value="Matemáticas">Matemáticas</option>
-       <option value="Composición Musical, Video Juegos">Composición Musical - Video Juegos</option>
-       <option value="Filosofía">Ciencias de la Computación</option>
-       <option value="Física">Física</option>
-       <option value="Física de Partículas">Física de Partículas</option>
-       <option value="Astronomía">Astronomía</option>
-       <option value="Astrofísica">Astrofísica</option>
-       <option value="Química">Química</option>
-       <option value="Microbiología">Microbiología</option>
-       <option value="Bioquímica">Bioquímica</option>
-       <option value="Actuación">Actuación</option>
-       <option value="Cristalografía">Cristalografía</option>
-    </select>
-    
-    <label class="espe" for="orden">Ordenar</label>
-    <select class = "cuadro" data-testid="select-sort" name="name" id="orden">
-      <option value="">--Seleccione--</option>
-      <option value="asc">A - Z</option>
-      <option value="desc">Z - A</option>
-    </select>
-    
-    <button select data-testid="button-clear" id="boton">Limpiar</button>
-    
-    <div id="root" class="conteiner-cards">
-    </div>
-    
-
-    <script> type= "text/javacript"
-      window.addEventListener("scroll",function(){
-        var header = document.querySelector("header");
-        header.classList.toggle('active', window.scrollY> 0);
-      });
-    
+    <section class="filtros">
+      <label for="filtro">Especialidad</label>
+      <select data-testid="select-filter" name="name" id="filtro">
+        <option value="">--Seleccione--</option>
+        <option value="Ciencia de la Computación">Ciencia de la Computación</option>
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Composición Musical, Video Juegos">Composición Musical - Video Juegos</option>
+        <option value="Filosofía">Filosofía</option>
+        <option value="Física">Física</option>
+        <option value="Física de Partículas">Física de Partículas</option>
+        <option value="Astronomía">Astronomía</option>
+        <option value="Astrofísica">Astrofísica</option>
+        <option value="Química">Química</option>
+        <option value="Microbiología">Microbiología</option>
+        <option value="Bioquímica">Bioquímica</option>
+        <option value="Actuación">Actuación</option>
+        <option value="Cristalografía">Cristalografía</option>
+      </select>
      
-    </script>
+      <label for="orden">Ordenar</label>
+      <select data-testid="select-sort" name="name" id="orden">
+        <option value="">--Seleccione--</option>
+        <option value="asc">A - Z</option>
+        <option value="desc">Z - A</option>
+      </select>
 
-     
-   <script src="main.js" type="module"></script>
+      <button select data-testid="button-clear" id="boton">Limpiar</button>"
+
+    </section>
+    
+    <div id="root" class="conteiner-cards">    
+    </div> 
+
+    <script src="main.js" type="module"></script>
   </body>
   <footer>
     By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024
