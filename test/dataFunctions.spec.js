@@ -3,12 +3,13 @@ import { data as fakeData } from './data.js';
 
 console.log(fakeData);
 
-
-
-describe('example', () => {
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+describe('filterData', () => {
+  it('filtrado de data por especialidad', () => {
+    const result = filterData(fakeData, 'mainField', 'Especialidad');
+    expect(result).toHaveLength(13);
+    result.forEach((data) => {
+      expect(data.facts.mainField).toBe('Especialidad');
+    });
   });
 });
 
