@@ -19,12 +19,10 @@ elementos.addEventListener('change', (event)=>{ //agregar un addEventListener pa
   const valorOpciones = event.target.value;                  
   const resultadoFiltrado = filterData(dataCompleta, "mainField", valorOpciones);        
   console.log(resultadoFiltrado);       //aplicar la función para filtrar y pasar parametros
-  contenedor.innerHTML= " ";
+  contenedor.innerHTML= " "; //se limpia el HTML para evitar que se acumulen las opciones cuando se filtra varias veces
   //Se visualiza en pantalla
   contenedor.appendChild(renderItems(resultadoFiltrado));
-  //Se ordena dentro de la función filtro
-  //sortData(resultadoFiltrado, "name", valorOpciones);
-  //revisar como pasar los valores de un padre a un hijo y los valores. 
+  
 });
 
 ordenarData.addEventListener('change', (event)=>{
