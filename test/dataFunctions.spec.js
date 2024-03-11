@@ -4,7 +4,6 @@ import { data as fakeData } from './data.js';
 console.log(fakeData);
 
 describe('filterData', () => {
-
   it('filtrado de data por especialidad', () => {
     const result = filterData(fakeData, 'mainField', 'Especialidad');
     expect(result).toHaveLength(13);
@@ -15,26 +14,10 @@ describe('filterData', () => {
 });
 
 
-describe('sortData', () => {
-  const especialidad = [
-    { mainField: 'Actuación'},
-    { mainField: 'Astrofísica'},
-    { mainField: 'Astronomía'},
-    { mainField: 'Bioquímica'},
-    { mainField: 'Ciencia de la Computación'},
-    { mainField: 'Cristalografía'},
-    { mainField: 'Composición Musical, Video Juegos'},
-    { mainField: 'Filosofía'},
-    { mainField: 'Física'},
-    { mainField: 'Física de Partículas'},
-    { mainField: 'Matemáticas'},
-    { mainField: 'Microbiología'},
-    { mainField: 'Química'},
-   
-  ];
 
-  it('ordena los datos por especialidad en orden ascendente', () => {
-    const result = sortData(fakeData, { sortBy: 'mainField', sortOrder: 'asc' });
+describe('sortData', () => {
+  it('ordena los datos por nombre en orden ascendente', () => {
+    const result = sortData(fakeData, { sortBy: 'Especialidad', sortOrder: 'asc' });
     expect(result[0].name).toBe('Actuación');
     expect(result[1].name).toBe('Astrofísica');
     expect(result[2].name).toBe('Astronomía');
@@ -51,8 +34,9 @@ describe('sortData', () => {
    
   });
 
-  it('Ordena los nombres de manera Descendente', () => {
-    const result = sortData(fakeData, { sortBy: 'mainField', sortOrder: 'desc' });
+
+  it('ordena los datos por nombre en orden Descendente', () => {
+    const result = sortData(fakeData, { sortBy: 'Especialidad ', sortOrder: 'desc' });
     expect(result[0].name).toBe('Química');
     expect(result[1].name).toBe('Microbiología');
     expect(result[2].name).toBe('Matemáticas');
