@@ -38,7 +38,7 @@ export default [
     "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
     "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
     "facts": {
-      "yearOfBirth": "circa 360",
+      "yearOfBirth": "Entre el 355 y el 370",
       "yearOfDeath": "415",
       "birthPlace": "Alejandría, Egipto",
       "mainField": "Matemáticas, Filosofía"
