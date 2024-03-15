@@ -27,11 +27,10 @@ elementos.addEventListener('change', (event)=>{ //agregar un addEventListener pa
 
 ordenarData.addEventListener('change', (event)=>{
   const valorOrdenar = event.target.value;
-  console.log(valorOrdenar);
   const resultadoOrdenar = sortData(dataCompleta, "name", valorOrdenar);
   console.log(resultadoOrdenar);
   contenedor.innerHTML= " ";
-  ordenarData.appendChild(renderItems(resultadoOrdenar));
+  contenedor.appendChild(renderItems(resultadoOrdenar));
 });
 
 
