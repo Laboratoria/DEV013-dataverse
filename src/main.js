@@ -6,9 +6,7 @@ console.log(filterData(data,"Matemática"));
 const dataCompleta = [...data];
 console.log(dataCompleta);
 
-//const para el botón de limpiado o reset
-//const selectFilter = document.querySelector('select[data-testid="select-filter"]');
-//const selectSort = document.querySelector('select[data-testid="select-sort"]'); 
+const filtros = document.querySelector('#filtros');
 // aqui renderizamos los item sacados del dataset con la funcion que creamos en view y lo pasamos a html
 const contenedor = document.querySelector('#root');
 contenedor.appendChild(renderItems(dataCompleta)); //se pasa la data renderizada a HTML
@@ -35,6 +33,18 @@ ordenarData.addEventListener('change', (event)=>{
   
 });
 
+const btn = document.querySelector('#boton');
+btn.addEventListener('click', (e)=>{
+ const eventCurrentTarget = e.currentTarget;
+ elementos;
+ ordenarData;
+ 
+});
 
+/*
+Traer el boton con un querySelector 
+Hacer un evento click para el boton resetear
+Identificar que filtro esta siendo cambiado
+Volver a su valor por defecto
 
-
+*/
