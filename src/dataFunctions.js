@@ -34,6 +34,9 @@ export const sortData = (data, sortBy, sortOrder) => {
 
 };
 
+
+
+
 //export const computeStats = (data) => {
 //}
 //esta función debe usar el método reduce.npm run test:oas-js
