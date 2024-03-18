@@ -33,10 +33,12 @@ ordenarData.addEventListener('change', (event)=>{
 });
 
 const btn = document.querySelector('#boton');
-btn.addEventListener('click', (e)=>{
- const eventCurrentTarget = e.currentTarget;
- elementos;
- ordenarData;
+btn.addEventListener('click', function (){
+ dataCompleta;
+ elementos.value = "";
+ ordenarData.value = "";
+ contenedor.innerHTML = "";
+ contenedor.appendChild(renderItems(dataCompleta));
  
 });
 
