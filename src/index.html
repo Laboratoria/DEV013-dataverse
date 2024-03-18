@@ -7,52 +7,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Harmattan:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
   </head>
   <header> 
     
-    <h1 class=" texto">Mujeres que cambiaron el mundo</h1>
+    <h1 class=" texto">Mujeres que cambiaron el Mundo</h1>
     
   </header>
 
-  <main> 
-    <h2> </h2>
-  </main>
-
   <body>
-    <section class="filtros">
-      <label for="filtro">Especialidad</label>
-      <select data-testid="select-filter" name="name" id="filtro">
-        <option value="">--Seleccione--</option>
-        <option value="Ciencia de la Computación">Ciencia de la Computación</option>
-        <option value="Matemáticas">Matemáticas</option>
-        <option value="Composición Musical, Video Juegos">Composición Musical - Video Juegos</option>
-        <option value="Filosofía">Filosofía</option>
-        <option value="Física">Física</option>
-        <option value="Física de Partículas">Física de Partículas</option>
-        <option value="Astronomía">Astronomía</option>
-        <option value="Astrofísica">Astrofísica</option>
-        <option value="Química">Química</option>
-        <option value="Microbiología">Microbiología</option>
-        <option value="Bioquímica">Bioquímica</option>
-        <option value="Actuación">Actuación</option>
-        <option value="Cristalografía">Cristalografía</option>
-      </select>
-     
-      <label for="orden">Ordenar</label>
-      <select data-testid="select-sort" name="name" id="orden">
-        <option value="">--Seleccione--</option>
-        <option value="asc">A - Z</option>
-        <option value="desc">Z - A</option>
-      </select>
-
-      <button select data-testid="button-clear" id="boton">Limpiar</button>"
-
-    </section>
+      
+    <label 
+     class="spec" for="filtro"> Especialidad
+    </label>
+    <select class = "cuadro" data-testid="select-sort" name="name" id="filtro">
+       <option value="">--Seleccione--</option>
+       <option value="Ciencia de la Computación">Ciencia de la Computación</option>
+       <option value="Matemáticas">Matemáticas</option>
+       <option value="Composición Musical, Video Juegos">Composición Musical - Video Juegos</option>
+       <option value="Filosofía">Ciencias de la Computación</option>
+       <option value="Física">Física</option>
+       <option value="Física de Partículas">Física de Partículas</option>
+       <option value="Astronomía">Astronomía</option>
+       <option value="Astrofísica">Astrofísica</option>
+       <option value="Química">Química</option>
+       <option value="Microbiología">Microbiología</option>
+       <option value="Bioquímica">Bioquímica</option>
+       <option value="Actuación">Actuación</option>
+       <option value="Cristalografía">Cristalografía</option>
+    </select>
     
-    <div id="root" class="conteiner-cards">    
-    </div> 
+    <label class="spec" for="orden">Ordenar</label>
+    <select class = "cuadro" data-testid="select-sort" name="name" id="orden">
+      <option value="">--Seleccione--</option>
+      <option value="asc">A - Z</option>
+      <option value="desc">Z - A</option>
+    </select>
+    
+    <button select data-testid="button-clear" id="boton">Limpiar</button>
+    
+    <div id="root" class="conteiner-cards">
+    </div>
+    
 
-    <script src="main.js" type="module"></script>
+    <script> type= "text/javacript"
+      window.addEventListener("scroll",function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('active', window.scrollY> 0);
+      });
+    
+     
+    </script>
+
+     
+   <script src="main.js" type="module"></script>
   </body>
   <footer>
     By: Dana Córdoba &amp; Elisabeth Crisóstomo DEV013 Laboratoria 2024

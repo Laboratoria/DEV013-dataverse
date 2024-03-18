@@ -20,6 +20,7 @@ describe('filterData', () => {
     });
   });
 });
+
 describe('sortData', () => {
   it('ordena los datos por nombre en orden ascendente', () => {
     const result = sortData(fakeData, { sortBy: 'Especialidad', sortOrder: 'asc' });
@@ -37,6 +38,9 @@ describe('sortData', () => {
     expect(result[11].name).toBe('Microbiología');
     expect(result[12].name).toBe('Química');
   });
+   
+  });
+
   it('ordena los datos por nombre en orden Descendente', () => {
     const result = sortData(fakeData, { sortBy: 'Especialidad ', sortOrder: 'desc' });
     expect(result[0].name).toBe('Química');
@@ -52,5 +56,5 @@ describe('sortData', () => {
     expect(result[10].name).toBe('Astronomía');
     expect(result[11].name).toBe('Astrofísica');
     expect(result[12].name).toBe('Actuación');
-  });
+  
 });
