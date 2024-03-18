@@ -1,49 +1,37 @@
 * { 
    margin: 0;
-   padding: 0;
    box-sizing: border-box;
 }
 
 body{
    background:#5E7CE2;
-   background-position: center center;
    background-attachment: fixed;
    background-size: cover;
+  
 
 }
 
+
 header {
-   position: fixed;
+   
    background-image: url(./Imagenes/29134.jpg);
    background-attachment: fixed;
    box-shadow: 0 0 10px black;
    height: 150px;
    top: 0%;
-   left: 0;
    width: 100%;
    background-size: cover;
-   display: flex;
-   justify-content: center;
    transition: 0.7s;
-   z-index: 1;
    padding: 30px 20px;
-
+   position: relative;
 }
 
 header.active{
    background-image: url(./Imagenes/29134.jpg);
-   padding: 15px 20px;
-
 }
 
 header.abajo .texto{
    color: black;
-}
-
-main {
-   height: 50px;
-   display: flex;
-   justify-content: center;
 }
 
 .texto{
@@ -56,18 +44,15 @@ h1{
    position: sticky;
    color: rgb(255, 255, 255);
    font-size: 70px;
-   
-}
-h2 {
-   color: white;
-   margin: 15px;
 }
 
 ul {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   
 }
+
 
 
 .front{
@@ -98,6 +83,7 @@ ul {
    margin-top: 10px;
    position: relative;
    cursor: pointer;
+   
     
 }
 
@@ -117,6 +103,7 @@ ul {
    text-align: left;
    font-size: 17px;
    font-style: italic;
+
    
 }
 
@@ -136,42 +123,55 @@ ul {
 }
 .card img {
   width: 90%;
-  display: flex;
-  flex-direction: column;
   margin: 13px;
   padding-top: 3px;
   padding-left: 5px;
   border-radius: 5%;
 }
 
-.spec{
+.spec,
+.cuadro,
+#filtro{
    text-shadow: 1px 1px 2px black;
-   font-size: 25px;
+   font-size: 15px;
    font-family: "Poppins", sans-serif;
+   width: 15%;
    
-
 }
 
-.conteiner-cards{
-   padding-right: 85px;
+
+#filtro{
+   margin-right: 10px;
    
-   display: flex;
-   justify-content: center;
+}
+
+.spec{
+  font-size: 22px
+ 
+}
+
+
+.conteiner-cards{
+   padding-right: 15px;
+   
 }
 
 .cuadro {
-   font-size: 15px;
+   font-size: 20px;
+   padding: 5px;
+   margin-left: 56px;
+   
 }
 
 label {
    color: white;
    font-family: Georgia, 'Times New Roman', Times, serif;
-   padding-bottom: 50px ;
+   padding-bottom: 10px ;
    padding-top: 10px;
    margin: 10px;
-   position: relative;
-   
 }
+
+
 button {
    margin:120px;
    
