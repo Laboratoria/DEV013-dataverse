@@ -1,7 +1,15 @@
-import { filterData, sortData } from '../src/dataFunctions.js';
+import { filterData } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
 console.log(fakeData);
+
+describe('pruebas a la función filtrar', () => {
+  it('Se espera que filterData sea truthy', () => {
+    expect(filterData).toBeTruthy();
+  });
+  // Con toBeTruthy esperamos que exista nuestro método
+
+});
 
 describe('filterData', () => {
   it('filtrado de data por especialidad', () => {
@@ -12,9 +20,6 @@ describe('filterData', () => {
     });
   });
 });
-
-
-
 describe('sortData', () => {
   it('ordena los datos por nombre en orden ascendente', () => {
     const result = sortData(fakeData, { sortBy: 'Especialidad', sortOrder: 'asc' });
@@ -31,10 +36,7 @@ describe('sortData', () => {
     expect(result[10].name).toBe('Matemáticas');
     expect(result[11].name).toBe('Microbiología');
     expect(result[12].name).toBe('Química');
-   
   });
-
-
   it('ordena los datos por nombre en orden Descendente', () => {
     const result = sortData(fakeData, { sortBy: 'Especialidad ', sortOrder: 'desc' });
     expect(result[0].name).toBe('Química');
@@ -51,5 +53,4 @@ describe('sortData', () => {
     expect(result[11].name).toBe('Astrofísica');
     expect(result[12].name).toBe('Actuación');
   });
-
 });
