@@ -5,7 +5,6 @@
 
 body{
    background:#5E7CE2;
-   background:#5E7CE2;
    background-position: center center;
    background-attachment: fixed;
    background-size: cover;
@@ -28,9 +27,6 @@ header {
    
 }
 
-header.active{
-   background-image: url(./Imagenes/29134.jpg);
-}
 
 header.abajo .texto{
    color: black;
@@ -177,8 +173,28 @@ footer {
    margin: 15px;
 }
 
+@media (max-width: 1978px){
+   body{
+      background:#5E7CE2;
+   }
+   header{
+      text-align: center;
+      font-size: 90px;
+   }
+}
 
+@media (min-width: 375px){
+   body{
+      background:#5E7CE2;
+   }
+   header{
+      text-align: center;
 
+   }
+   h1 {
+      font-size: 50px;
+   }
+}
 /*.opción-back, .opción-front, .opción{
   
   text-align: auto;
